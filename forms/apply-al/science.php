@@ -475,17 +475,13 @@
                                     <option value="Art"> Art </option>
                                     <option value="DancingOriental"> Dancing (Oriental) </option>
                                     <option value="DancingBharata"> Dancing (Bharata) </option>
-                                    <option value="AppreciationEnglishLiterary"> Appreciation of English Literary Texts
-                                    </option>
-                                    <option value="AppreciationSinhalaLiterary"> Appreciation of Sinhala Literary Texts
-                                    </option>
-                                    <option value="AppreciationTamilLiterary"> Appreciation of Tamil Literary Texts
-                                    </option>
-                                    <option value="AppreciationArabicLiterary"> Appreciation of Arabic Literary Texts
-                                    </option>
-                                    <option value="DramaTheatreSinhala"> Drama and Theatre (Sinhala) </option>
-                                    <option value="DramaTheatreTamil"> Drama and Theatre (Tamil) </option>
-                                    <option value="DramaTheatreEnglish"> Drama and Theatre (English) </option>
+                                    <option value="English Lit">English Lit</option>
+                                    <option value="Sinhala Lit">Sinhala Lit</option>
+                                    <option value="Tamil Lit">Tamil Lit</option>
+                                    <option value="Arabic Lit">Arabic Lit</option>
+                                    <option value="DramaTheatreSinhala"> Drama(Sinhala) </option>
+                                    <option value="DramaTheatreTamil"> Drama (Tamil) </option>
+                                    <option value="DramaTheatreEnglish"> Drama (English) </option>
 
                                 </select>
                             </td>
@@ -504,17 +500,18 @@
                         <tr>
                             <th scope="row">9 </th>
                             <td> <select id="op3" name="op3">
-                                    <option value="AgricultureFoodTech"> Agriculture & Food Technology </option>
-                                    <option value="AquaticBioresourcesTech"> Aquatic Bioresources Technology </option>
-                                    <option value="ArtCrafts"> Art & Crafts </option>
-                                    <option value="HomeEconomics"> Home Economics </option>
-                                    <option value="HealthPhysicalEducation"> Health & Physical Education </option>
-                                    <option value="CommunicationMediaStudies"> Communication & Media Studies </option>
-                                    <option value="DesignConstructionTech"> Design & Construction Technology </option>
-                                    <option value="DesignMechanicalTech"> Design & Mechanical Technology </option>
-                                    <option value="DesignElectricalElectronicTech"> Design, Electrical & Electronic Technology </option>
-                                    <option value="ElectronicWritingShorthandSinhala"> Electronic Writing & Shorthand (Sinhala) </option>
-                                    <option value="ElectronicWritingShorthandTamil"> Electronic Writing & Shorthand (Tamil) </option>
+                                    <option value="Information and Communication Technology">ICT</option>
+                                    <option value="AgricultureFoodTech">Agriculture</option>
+                                    <option value="AquaticBioresourcesTech">Aquatic Bioresources Tech</option>
+                                    <option value="ArtCrafts">Art & Crafts</option>
+                                    <option value="Home Economics">Home Econ</option>
+                                    <option value="Health Physical Education"> Health</option>
+                                    <option value="Communication Media Studies">Media Studies</option>
+                                    <option value="Design Construction Tech"> Design & Construction Tech </option>
+                                    <option value="Design Mechanical Tech"> Design & Mechanical Tech </option>
+                                    <option value="Design Electrical Electronic Tech"> Design, trical & tronic Tech</option>
+                                    <option value="Electronic Writing Shorthand Sinhala"> Electronic Writing (Sinhala) </option>
+                                    <option value="Electronic Writing Shorthand Tamil"> Electronic Writing (Tamil) </option>
 
                                 </select>
                             </td>
