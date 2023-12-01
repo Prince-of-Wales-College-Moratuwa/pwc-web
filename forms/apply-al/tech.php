@@ -131,11 +131,11 @@ and open the template in the editor.
                 </div>
 
                 <div class="col-sm-2 col-form-label">
-                    <label for="nic">School Addmission Number</label>
+                    <label for="nic">School Registration Number</label>
                 </div>
                 <div class="col-sm-2">
                     <input type="text" class="form-control" id="SchoolIndexNo" name="SchoolIndexno" 
-                        placeholder="School Addmission No" required>
+                        placeholder="School Registration No" required>
                 </div>
 
             </div>
