@@ -135,11 +135,11 @@
       
 
                 <div class="col-sm-2 col-form-label">
-                    <label for="nic">School Registration Number</label>
+                    <label for="nic">School Addmission Number</label>
                 </div>
                 <div class="col-sm-2">
                     <input type="text" class="form-control" id="SchoolIndexNo" name="SchoolIndexno" 
-                        placeholder="School Index No" required>
+                        placeholder="School Addmission No" required>
                 </div>
 
             </div>
