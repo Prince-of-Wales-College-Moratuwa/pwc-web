@@ -15,36 +15,30 @@ and open the template in the editor.
     <meta name="author" content="">
 
     <!-- Primary Meta Tags -->
-    <meta name="title"
-        content="Art Stream - Application for Advanced Level Admission Registration" />
-    <meta name="description"
-        content="" />
+    <meta name="title" content="Art Stream - Application for Advanced Level Admission Registration" />
+    <meta name="description" content="" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://princeofwales.edu.lk/apply-al/art.php" />
-    <meta property="og:title"
-        content="Art Stream - Application for Advanced Level Admission Registration" />
-    <meta property="og:description"
-        content="" />
+    <meta property="og:title" content="Art Stream - Application for Advanced Level Admission Registration" />
+    <meta property="og:description" content="" />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al/art.php" />
-    <meta property="twitter:title"
-        content="Art Stream - Application for Advanced Level Admission Registration" />
-    <meta property="twitter:description"
-        content="" />
+    <meta property="twitter:title" content="Art Stream - Application for Advanced Level Admission Registration" />
+    <meta property="twitter:description" content="" />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
 
 
 
     <title>Art Stream - Application for Advanced Level Admission Registration</title>
 
- <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
 
- <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <?php 
@@ -69,10 +63,10 @@ and open the template in the editor.
             });
         });
 
-        $(document).ready(function() {
-            $('#schoolname').on('input', function(e) {
+        $(document).ready(function () {
+            $('#schoolname').on('input', function (e) {
                 var value = $(this).val();
-                var newValue = value.replace(/['"]/g, ''); 
+                var newValue = value.replace(/['"]/g, '');
                 $(this).val(newValue);
             });
         });
@@ -97,46 +91,46 @@ and open the template in the editor.
             </div>
             <!--Subject Selection-->
             <div class="form-group">
-            <div class="form-group">
-                <label for="subject_selection" class="col-sm-2 col-form-label"> Subjects wish to apply </label>
-                <div class="col-sm-3">
-                    <select id="subject" name="sart1" style="min-height:30px;">
-                        <option value="None"> Category 1</option>
+                <div class="form-group">
+                    <label for="subject_selection" class="col-sm-2 col-form-label"> Subjects wish to apply </label>
+                    <div class="col-sm-3">
+                        <select id="subject" name="sart1" style="min-height:30px;">
+                            <option value="None"> Category 1</option>
 
-                        <option value="Dancing-Indigenous">Dancing-Indigenous</option>
-                        <option value="Art">Art</option>
-                        <option value="Music Oriental">Music Oriental</option>
-                        <option value="Music Western">Music Western</option>
-                        <option value="Drama & Theatre">Drama & Theatre</option>
-                        <option value="Japanese Language">Japanese Language</option>
-                        <option value="Political Science">Political Science</option>
-                    </select> </div>
-                <div class="col-sm-1">&nbsp;</div>
+                            <option value="Dancing-Indigenous">Dancing-Indigenous</option>
+                            <option value="Art">Art</option>
+                            <option value="Music Oriental">Music Oriental</option>
+                            <option value="Music Western">Music Western</option>
+                            <option value="Drama & Theatre">Drama & Theatre</option>
+                            <option value="Japanese Language">Japanese Language</option>
+                            <option value="Political Science">Political Science</option>
+                        </select> </div>
+                    <div class="col-sm-1">&nbsp;</div>
 
-                <div class="col-sm-3">
-                    <select id="subject" name="sart2" style="min-height:30px;">
-                        <option value="None"> Category 2</option>
+                    <div class="col-sm-3">
+                        <select id="subject" name="sart2" style="min-height:30px;">
+                            <option value="None"> Category 2</option>
 
-                        <option value="Sinhala"> Sinhala </option>
-                        <option value="Media & Communication Studies"> Media & Communication Studies </option>
-                        <option value="ICT (Sinhala Medium)"> ICT (Sinhala Medium) </option>
-                        <option value="ICT (English Medium)"> ICT (English Medium) </option>
-                        <option value="Geography"> Geography </option>
-                    </select>
+                            <option value="Sinhala"> Sinhala </option>
+                            <option value="Media & Communication Studies"> Media & Communication Studies </option>
+                            <option value="ICT (Sinhala Medium)"> ICT (Sinhala Medium) </option>
+                            <option value="ICT (English Medium)"> ICT (English Medium) </option>
+                            <option value="Geography"> Geography </option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1">&nbsp;</div>
+
+                    <div class="col-sm-2">
+                        <select id="subject" name="sart3" style="min-height:30px;">
+                            <option value="None"> Category 3</option>
+                            <option value="Economics"> Economics </option>
+                            <option value="Logic and Scientific Method"> Logic and Scientific Method </option>
+                            <option value="Buddhist Civilization"> Buddhist Civilization </option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col-sm-1">&nbsp;</div>
-
-                <div class="col-sm-2">
-                    <select id="subject" name="sart3" style="min-height:30px;">
-                        <option value="None"> Category 3</option>
-                        <option value="Economics"> Economics </option>
-                        <option value="Logic and Scientific Method"> Logic and Scientific Method </option>
-                        <option value="Buddhist Civilization"> Buddhist Civilization </option>
-                    </select>
-                </div>
-            </div>
-            <hr>
-    </DIV>
+                <hr>
+            </DIV>
 
 
 
@@ -155,10 +149,10 @@ and open the template in the editor.
                 </div>
 
                 <div class="col-sm-2 col-form-label">
-                    <label for="nic">School Index Number</label>
+                    <label for="nic">School Registration Number</label>
                 </div>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control" id="SchoolIndexNo" name="SchoolIndexno" 
+                    <input type="text" class="form-control" id="SchoolIndexNo" name="SchoolIndexno"
                         placeholder="School Index No" required>
                 </div>
 
@@ -249,8 +243,8 @@ and open the template in the editor.
                     <input type="text" class="form-control" name="gname" required>
                 </div>
             </div>
-                       <!--Contact Number-->
-                       <div class="form-group">
+            <!--Contact Number-->
+            <div class="form-group">
                 <label for="contact" class=" col-sm-2 col-form-label ">Contact No.</label>
                 <div class="col-sm-2">
                     <input type="tel" class="form-control" id="residential" placeholder="Residential No."
@@ -258,14 +252,16 @@ and open the template in the editor.
                 </div>
                 <div class="col-sm-1">&nbsp;</div>
                 <div class="col-sm-2">
-                    <input type="tel" class="form-control" id="mobile1" placeholder="Mobile 1" name="mobile1" pattern="[0-9()+-\s]*">
+                    <input type="tel" class="form-control" id="mobile1" placeholder="Mobile 1" name="mobile1"
+                        pattern="[0-9()+-\s]*">
                 </div>
                 <div class="col-sm-1">&nbsp;</div>
                 <div class="col-sm-2">
-                    <input type="tel" class="form-control" id="mobile" placeholder="Mobile 2" name="mobile2" pattern="[0-9()+-\s]*">
+                    <input type="tel" class="form-control" id="mobile" placeholder="Mobile 2" name="mobile2"
+                        pattern="[0-9()+-\s]*">
                 </div>
             </div>
-            
+
 
             <!-- Email-->
 
@@ -284,7 +280,7 @@ and open the template in the editor.
                     <label for="nic">Distance to the Prince of Wales' College from your place (in Km)</label>
                 </div>
                 <div class="col-sm-3">
-                    <input type="number" class="form-control" id="distance" name="distance" 
+                    <input type="number" class="form-control" id="distance" name="distance"
                         placeholder="Enter numeric values only" required>
                 </div>
 
@@ -313,7 +309,7 @@ and open the template in the editor.
                     <label for="nic">Examination Index Number</label>
                 </div>
                 <div class="col-xs-6 col-sm-3">
-                    <input type="text" class="form-control" id="indexno" name="indexno" 
+                    <input type="text" class="form-control" id="indexno" name="indexno"
                         placeholder="Examination Index No" required>
                 </div>
 
@@ -452,6 +448,20 @@ and open the template in the editor.
                                     </option>
                                     <option value="Geography"> Geography</option>
                                     <option value="Civic"> Civic Education </option>
+                                    <option value="Entrepreneurship"> Entrepreneurship Studies </option>
+                                    <option value="SecondLanguageSinhala"> Second Language (Sinhala) </option>
+                                    <option value="SecondLanguageTamil"> Second Language (Tamil) </option>
+                                    <option value="Pali"> Pali </option>
+                                    <option value="Sanskrit"> Sanskrit </option>
+                                    <option value="French"> French </option>
+                                    <option value="German"> German </option>
+                                    <option value="Hindi"> Hindi </option>
+                                    <option value="Japanese"> Japanese </option>
+                                    <option value="Arabic"> Arabic </option>
+                                    <option value="Korean"> Korean </option>
+                                    <option value="Chinese"> Chinese </option>
+                                    <option value="Russian"> Russian </option>
+
                                 </select>
                             </td>
                             <td>
@@ -472,13 +482,23 @@ and open the template in the editor.
                         <tr>
                             <th scope="row">8</th>
                             <td> <select id="op2" name="op2">
-                                    <option value="Music (Oriental)"> Music (Oriental) </option>
-                                    <option value="Music (Western)"> Muisc (Westren)</option>
-                                    <option value="Drama & Theater"> Drama & Theatre</option>
+                                    <option value="MusicOriental"> Music (Oriental) </option>
+                                    <option value="MusicWestern"> Music (Western) </option>
                                     <option value="Art"> Art </option>
-                                    <option value="Dancing"> Dancing </option>
-                                    <option value="Sinhala Literature"> Sinhala Literature </option>
-                                    <option value="English Literature"> English Literature </option>
+                                    <option value="DancingOriental"> Dancing (Oriental) </option>
+                                    <option value="DancingBharata"> Dancing (Bharata) </option>
+                                    <option value="AppreciationEnglishLiterary"> Appreciation of English Literary Texts
+                                    </option>
+                                    <option value="AppreciationSinhalaLiterary"> Appreciation of Sinhala Literary Texts
+                                    </option>
+                                    <option value="AppreciationTamilLiterary"> Appreciation of Tamil Literary Texts
+                                    </option>
+                                    <option value="AppreciationArabicLiterary"> Appreciation of Arabic Literary Texts
+                                    </option>
+                                    <option value="DramaTheatreSinhala"> Drama and Theatre (Sinhala) </option>
+                                    <option value="DramaTheatreTamil"> Drama and Theatre (Tamil) </option>
+                                    <option value="DramaTheatreEnglish"> Drama and Theatre (English) </option>
+
                                 </select>
                             </td>
                             <td>
@@ -496,11 +516,18 @@ and open the template in the editor.
                         <tr>
                             <th scope="row">9 </th>
                             <td> <select id="op3" name="op3">
-                                    <option value="ICT"> Information & Communication Technology </option>
-                                    <option value="Agriculture"> Agriculture & Food Technology</option>
-                                    <option value="Health"> Health & Physical Education </option>
-                                    <option value=" Design, Electrical & Electronic Technology"> Design, Electrical &
-                                        Electronic Technology </option>
+                                    <option value="AgricultureFoodTech"> Agriculture & Food Technology </option>
+                                    <option value="AquaticBioresourcesTech"> Aquatic Bioresources Technology </option>
+                                    <option value="ArtCrafts"> Art & Crafts </option>
+                                    <option value="HomeEconomics"> Home Economics </option>
+                                    <option value="HealthPhysicalEducation"> Health & Physical Education </option>
+                                    <option value="CommunicationMediaStudies"> Communication & Media Studies </option>
+                                    <option value="DesignConstructionTech"> Design & Construction Technology </option>
+                                    <option value="DesignMechanicalTech"> Design & Mechanical Technology </option>
+                                    <option value="DesignElectricalElectronicTech"> Design, Electrical & Electronic Technology </option>
+                                    <option value="ElectronicWritingShorthandSinhala"> Electronic Writing & Shorthand (Sinhala) </option>
+                                    <option value="ElectronicWritingShorthandTamil"> Electronic Writing & Shorthand (Tamil) </option>
+
                                 </select>
                             </td>
                             <td>

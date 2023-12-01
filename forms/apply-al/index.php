@@ -52,7 +52,7 @@
         <p> 4. You cannot alter your submission so be careful and check thoroughly before submission.</p>
         <p> 5. You will get a registration reference number after successful submission. Keep that for your future
           reference</p>
-          <a href="Application Details.pdf" download><p>Instructions to fill the application click here</p></a>
+          <!-- <a href="Application Details.pdf" download><p>Instructions to fill the application click here</p></a> -->
         <hr><br>
         <p style="text-align:center"> <b>Please select one of the stream that you wish to apply.</b></p>
     

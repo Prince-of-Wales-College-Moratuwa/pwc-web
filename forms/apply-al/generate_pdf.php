@@ -70,7 +70,7 @@ $pdf->Cell(0, 7, "1. Subjects wish to apply: $Subject | Medium: $almedium", 0, 1
 $pdf->Cell(0, 10, "2. Are you a student of Prince of Wales' College: $pwc_Other", 0, 1);
 
 if ($pwc_Other == "Yes") {
-    $pdf->Cell(0, 10, "3. School Index Number: $SchoolIndexNo ", 0, 1);
+    $pdf->Cell(0, 10, "3. School Registration Number: $SchoolIndexNo ", 0, 1);
 } else {
     $pdf->Cell(0, 10, "3. Name of the School studied GCE O/L: $School | District: $S_District", 0, 1);
 }
