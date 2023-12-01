@@ -135,7 +135,7 @@ and open the template in the editor.
                 </div>
                 <div class="col-sm-2">
                     <input type="text" class="form-control" id="SchoolIndexNo" name="SchoolIndexno" 
-                        placeholder="School Index No" required>
+                        placeholder="School Registration No" required>
                 </div>
 
             </div>
