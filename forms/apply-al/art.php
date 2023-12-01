@@ -100,7 +100,6 @@ and open the template in the editor.
                             <option value="Dancing-Indigenous">Dancing-Indigenous</option>
                             <option value="Art">Art</option>
                             <option value="Music Oriental">Music Oriental</option>
-                            <option value="Music Western">Music Western</option>
                             <option value="Drama & Theatre">Drama & Theatre</option>
                             <option value="Japanese Language">Japanese Language</option>
                             <option value="Political Science">Political Science</option>
