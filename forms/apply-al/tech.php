@@ -428,6 +428,20 @@ and open the template in the editor.
                                     </option>
                                     <option value="Geography"> Geography</option>
                                     <option value="Civic"> Civic Education </option>
+                                    <option value="Entrepreneurship"> Entrepreneurship Studies </option>
+                                    <option value="SecondLanguageSinhala"> Second Language (Sinhala) </option>
+                                    <option value="SecondLanguageTamil"> Second Language (Tamil) </option>
+                                    <option value="Pali"> Pali </option>
+                                    <option value="Sanskrit"> Sanskrit </option>
+                                    <option value="French"> French </option>
+                                    <option value="German"> German </option>
+                                    <option value="Hindi"> Hindi </option>
+                                    <option value="Japanese"> Japanese </option>
+                                    <option value="Arabic"> Arabic </option>
+                                    <option value="Korean"> Korean </option>
+                                    <option value="Chinese"> Chinese </option>
+                                    <option value="Russian"> Russian </option>
+
                                 </select>
                             </td>
                             <td>
@@ -448,13 +462,23 @@ and open the template in the editor.
                         <tr>
                             <th scope="row">8</th>
                             <td> <select id="op2" name="op2">
-                                    <option value="Music (Oriental)"> Music (Oriental) </option>
-                                    <option value="Music (Western)"> Muisc (Westren)</option>
-                                    <option value="Drama & Theater"> Drama & Theatre</option>
+                                    <option value="MusicOriental"> Music (Oriental) </option>
+                                    <option value="MusicWestern"> Music (Western) </option>
                                     <option value="Art"> Art </option>
-                                    <option value="Dancing"> Dancing </option>
-                                    <option value="Sinhala Literature"> Sinhala Literature </option>
-                                    <option value="English Literature"> English Literature </option>
+                                    <option value="DancingOriental"> Dancing (Oriental) </option>
+                                    <option value="DancingBharata"> Dancing (Bharata) </option>
+                                    <option value="AppreciationEnglishLiterary"> Appreciation of English Literary Texts
+                                    </option>
+                                    <option value="AppreciationSinhalaLiterary"> Appreciation of Sinhala Literary Texts
+                                    </option>
+                                    <option value="AppreciationTamilLiterary"> Appreciation of Tamil Literary Texts
+                                    </option>
+                                    <option value="AppreciationArabicLiterary"> Appreciation of Arabic Literary Texts
+                                    </option>
+                                    <option value="DramaTheatreSinhala"> Drama and Theatre (Sinhala) </option>
+                                    <option value="DramaTheatreTamil"> Drama and Theatre (Tamil) </option>
+                                    <option value="DramaTheatreEnglish"> Drama and Theatre (English) </option>
+
                                 </select>
                             </td>
                             <td>
@@ -472,11 +496,18 @@ and open the template in the editor.
                         <tr>
                             <th scope="row">9 </th>
                             <td> <select id="op3" name="op3">
-                                    <option value="ICT"> Information & Communication Technology </option>
-                                    <option value="Agriculture"> Agriculture & Food Technology</option>
-                                    <option value="Health"> Health & Physical Education </option>
-                                    <option value=" Design, Electrical & Electronic Technology"> Design, Electrical &
-                                        Electronic Technology </option>
+                                    <option value="AgricultureFoodTech"> Agriculture & Food Technology </option>
+                                    <option value="AquaticBioresourcesTech"> Aquatic Bioresources Technology </option>
+                                    <option value="ArtCrafts"> Art & Crafts </option>
+                                    <option value="HomeEconomics"> Home Economics </option>
+                                    <option value="HealthPhysicalEducation"> Health & Physical Education </option>
+                                    <option value="CommunicationMediaStudies"> Communication & Media Studies </option>
+                                    <option value="DesignConstructionTech"> Design & Construction Technology </option>
+                                    <option value="DesignMechanicalTech"> Design & Mechanical Technology </option>
+                                    <option value="DesignElectricalElectronicTech"> Design, Electrical & Electronic Technology </option>
+                                    <option value="ElectronicWritingShorthandSinhala"> Electronic Writing & Shorthand (Sinhala) </option>
+                                    <option value="ElectronicWritingShorthandTamil"> Electronic Writing & Shorthand (Tamil) </option>
+
                                 </select>
                             </td>
                             <td>
