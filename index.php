@@ -38,6 +38,20 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
+
+    <style>
+        .al-page-header {
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-clubs/club-header.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .al-page-header-inner {
+            background: rgba(15, 23, 43, .7);
+        }
+    </style>
+
 </head>
 
 <!-- Carousel Start -->
@@ -63,6 +77,21 @@
 </div>
 
 <!-- Carousel End -->
+
+<!-- <div class="container-fluid bg-primary py-5 mb-5 al-page-header">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+            <h1 class=" text-white animated slideInDown">Admission Registration - Advanced Level 2025</h1>
+            <h5 class="text-white animated slideInDown">text..</h5>
+            <center>
+                <a href="forms/apply-al"
+                    style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
+                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Apply Now!</a>
+            </center>
+
+        </div>
+    </div>
+</div> -->
 
 
 
@@ -123,8 +152,7 @@ if($statement->rowCount() > 0)
     </div>
 
 </div>
-<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="news/" 
-        data-wow-delay="0.1s">Read More</a></center>
+<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="news/" data-wow-delay="0.1s">Read More</a></center>
 </div>
 
 
@@ -136,7 +164,7 @@ if($statement->rowCount() > 0)
             <h6 class="section-title bg-white text-center text-primary px-3">Featured</h6>
             <h1 class="mb-5">UPDATES</h1>
 
-<?php
+            <?php
 
 //https://dash.elfsight.com/
 
@@ -209,15 +237,14 @@ if($statement->rowCount() > 0)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" style="width: auto;" src="content/img/img-events/<?php echo($row["img"]) ?>"
-                            alt="<?php echo($row["title"]) ?>">
+                        <img class="img-fluid" style="width: auto;"
+                            src="content/img/img-events/<?php echo($row["img"]) ?>" alt="<?php echo($row["title"]) ?>">
                     </div>
                     <div class="text-center p-4 pb-0">
                         <h4 class="mb-4"><?php echo($row["title"]) ?></h4>
                     </div>
                     <div class="w-100 d-flex justify-content-center bottom-0 start-0 mb-4">
-                        <a href="events/<?php echo $row["slug"]; ?>"
-                            class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                        <a href="events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3"
                             style="border-radius: 30px 30 30 30px;">Read More</a>
                     </div>
                     <div class="d-flex border-top">
@@ -247,8 +274,8 @@ if($statement->rowCount() > 0)
 
     </div>
     <br><br>
-    <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="events/" 
-            data-wow-delay="0.1s">View More</a></center>
+    <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="events/" data-wow-delay="0.1s">View More</a>
+    </center>
 </div>
 
 
@@ -366,8 +393,9 @@ if($statement->rowCount() > 0)
                     <a href="principal-message">Read More...</a>
 
                 </p>
-                
-                <a class="btn btn-primary py-3 px-5 mt-2" href="about/school-administration">View School Administration</a>
+
+                <a class="btn btn-primary py-3 px-5 mt-2" href="about/school-administration">View School
+                    Administration</a>
             </div>
         </div>
     </div>
@@ -431,8 +459,8 @@ if($statement->rowCount() > 0)
                 </a>
             </div>
             <br><br><br><br>
-            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="sports"
-                    data-wow-delay="0.1s">Explore More</a></center>
+            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="sports" data-wow-delay="0.1s">Explore
+                    More</a></center>
 
         </div>
 
@@ -460,7 +488,7 @@ if($statement->rowCount() > 0)
                     Sebastian's College.</p>
 
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="battle-of-the-golds"
-                 data-wow-delay="0.1s">Explore</a>
+                    data-wow-delay="0.1s">Explore</a>
 
             </div>
         </div>
@@ -500,7 +528,8 @@ if($statement->rowCount() > 0)
                     </div>
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                         <a class="position-relative d-block overflow-hidden" href="clubs#tech-clubs">
-                            <img class="img-fluid" src="content/img/img-home/tech-clubs-home-pwc.webp" alt="tech clubs" style="width: auto;">
+                            <img class="img-fluid" src="content/img/img-home/tech-clubs-home-pwc.webp" alt="tech clubs"
+                                style="width: auto;">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Technological Clubs</h5>
@@ -520,8 +549,8 @@ if($statement->rowCount() > 0)
                 </a>
             </div>
             <br>
-            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="clubs" 
-                    data-wow-delay="0.1s">Explore More</a></center>
+            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="clubs" data-wow-delay="0.1s">Explore
+                    More</a></center>
 
         </div>
     </div>
@@ -550,7 +579,7 @@ if($statement->rowCount() > 0)
                 </p>
 
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="golden-book"
-                     data-wow-delay="0.1s">Explore</a>
+                    data-wow-delay="0.1s">Explore</a>
 
             </div>
         </div>
@@ -579,7 +608,7 @@ if($statement->rowCount() > 0)
                 <h5 class=" text-white animated slideInDown"><br> Explore college history and discover 147 years of rich
                     heritage and academic excellence. <br><br> </h5>
                 <center><a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history"
-                         data-wow-delay="0.1s">Explore College History</a></center>
+                        data-wow-delay="0.1s">Explore College History</a></center>
             </div>
         </div>
     </div>
