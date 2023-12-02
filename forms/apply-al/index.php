@@ -41,18 +41,19 @@
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3"></h6>
                 <h1 class="mb-5">Admission Registration - Advanced Level 2025</h1>
+               <h1 class="mb-5"> උසස් පෙළ 2025 - ඇතුලත් වීමේ අයදුම්පත </h1>
             </div>
 
 
 <div class="form-group wow fadeInUp" data-wow-delay="0.1s">
         <p> 1. First Select the relevant stream you wished to apply.</p>
-        <p> 2. Select one of the subject in three categories. Refer the details on subject selection for each category.
+        <p> 2. Select one of the subject in three category. Refer the details on subject selection for each category.
         </p>
         <p> 3. Make sure to answer for all questions given.</p>
         <p> 4. You cannot alter your submission so be careful and check thoroughly before submission.</p>
         <p> 5. You will get a registration reference number after successful submission. Keep that for your future
           reference</p>
-          <!-- <a href="Application Details.pdf" download><p>Instructions to fill the application click here</p></a> -->
+         <a href="Application Details.pdf" download><p>අයදුම්පත උපදෙස් පත්‍රිකාව සහ විෂය සංයෝජන - click here</p></a> 
         <hr><br>
         <p style="text-align:center"> <b>Please select one of the stream that you wish to apply.</b></p>
     
