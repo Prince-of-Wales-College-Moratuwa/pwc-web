@@ -56,13 +56,12 @@ function Count_total_published_news($connect)
 	return $total;
 }
 
-function Count_total_draft_news($connect)
+function Count_total_form_submission($connect)
 {
 	$total = 0;
 
 	$query = "
-	SELECT COUNT(id) AS Total FROM pwc_db_news
-	WHERE posted = 'draft'
+	SELECT COUNT(Reference_no) AS Total FROM pwc_db_al25
 	";
 
 	$result = $connect->query($query);
