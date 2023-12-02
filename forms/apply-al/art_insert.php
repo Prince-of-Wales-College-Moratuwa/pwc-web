@@ -135,20 +135,27 @@ if(mysqli_query($db, $sql)){
     </script>';
 
 
-  echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
-  echo '    <div class="container text-center">';
-  echo '        <div class="row justify-content-center">';
-  echo '            <div class="col-lg-6">';
-  echo '                <i class="bi bi-check-circle display-1 text-primary"></i>';
-  echo '                <h1 class="mb-4">Thank You!</h1>';
-  echo '                <p class="mb-4">Your Records Added Successfully.</p>';
-  echo '                <p class="mb-4">Your Referrence number for the submission is <b>'. $referenceno .'</b></p>';
-  echo '                <p class="mb-4">Keep this Reference Number for future use.</p>';  
- echo '<a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="generate_pdf.php?ref=' . $referenceno . '" download>Download Your Submissions</a>';
-  echo '            </div>';
-  echo '        </div>';
-  echo '    </div>';
-  echo '</div>';
+    echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
+    echo '    <div class="container text-center">';
+    echo '        <div class="row justify-content-center">';
+    echo '            <div class="col-lg-6">';
+    echo '                <i class="bi bi-check-circle display-1 text-primary"></i>';
+    echo '                <h1 class="mb-4">Thank You!</h1>';
+    echo '                <p class="mb-4">Your Records Added Successfully.</p>';
+    echo '                <p class="mb-4">Your Referrence number for the submission is <b>'. $referenceno .'</b></p>';
+    echo '                <p class="mb-4">Keep this Reference Number for future use.</p>';  
+    echo '<a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="generate_pdf.php?ref=' . $referenceno . '" download onclick="redirectHome()">Download Your Submissions</a>';
+    echo '<script>';
+    echo 'function redirectHome() {';
+    echo '  setTimeout(function() {';
+    echo '    window.location.href = "/";';
+    echo '  }, 4000);';
+    echo '}';
+    echo '</script>';
+    echo '            </div>';
+    echo '        </div>';
+    echo '    </div>';
+    echo '</div>';
 
 }
 else{
