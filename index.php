@@ -82,7 +82,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
             <h1 class=" text-white animated slideInDown">Online Registration - Advanced Level 2025</h1>
-		<p>With a proud history spanning 150 years, we invite you to become a part of the Cambrian community.</p>
+		<p>With a proud history spanning 150 years, we invite you to become a part of the Cambrian community</p>
             <h6 class="text-white animated slideInDown">Deadline for submission is 8th December </h6>
             <center>
                 <a href="forms/apply-al"
