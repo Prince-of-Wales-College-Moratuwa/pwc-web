@@ -137,7 +137,7 @@ and open the template in the editor.
                     <label for="nic">School Addmission Number</label>
                 </div>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control" id="SchoolIndexNo" name="SchoolIndexno" 
+                    <input type="text" class="form-control" id="SchoolIndexNo" name="SchoolIndexNo" 
                         placeholder="School Addmission No" required>
                 </div>
 
