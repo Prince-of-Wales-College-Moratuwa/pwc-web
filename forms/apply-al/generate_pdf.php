@@ -90,7 +90,7 @@ $pdf->Cell(0, 10, "6. Birthday: $Birthday | National Identity Card No. (if any):
 
 // Personal Address
 $pdf->Cell(0, 10, "7. Personal Address: $Address1, $Address2, $City", 0, 1);
-$pdf->Cell(0, 10, "8. Distance to the Prince of Wales' College from your place (in Km): $Distance | Mode of Transport: $Transport", 0, 1);
+$pdf->Cell(0, 10, "8. Distance to the Prince of Wales' College from your Place (in Km): $Distance | Mode of Transport: $Transport", 0, 1);
 $pdf->Cell(0, 10, "9. Email address (if any): $E_mail", 0, 1);
 $pdf->Cell(0, 10, "10. Father/Mother/Guardian's Name: $Guardian_Name", 0, 1);
 $pdf->Cell(0, 10, "11. Contact No.: $ResidentialNo, $Mobile1, $Mobile2", 0, 1);
