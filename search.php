@@ -87,13 +87,13 @@
                             // Generate the HTML output for each record
                             echo '<div class="col-md-4 animate-box">
                                     <article class="article-entry">
-                                        <a href="news/news.php?id=' . $row["id"] . '" class="blog-img">
+                                        <a href="news/' . $row["slug"] . '" class="blog-img">
                                             <img src="content/img/img-news/' . $row["photo"] . '" alt="' . $row["photo"] . '"><br><br>
                                             <p class="meta"><span class="day">' . $row["date"] . '</span> │ <span></span>
                                                 <span>' . $row["category"] . '</span></p>
                                         </a>
                                         <div class="desc">
-                                            <h4><a href="news/news.php?id=' . $row["id"] . '">' . $row["title"] . '</a></h4>
+                                            <h4><a href="news/' . $row["slug"] . '">' . $row["title"] . '</a></h4>
                                             <p>' . $row["excerpt"] . '...</p>
                                         </div>
                                     </article>
@@ -153,7 +153,7 @@
                             echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
                             echo '</div>';
                             echo '<div class="w-100 d-flex justify-content-center bottom-0 start-0 mb-4">';
-                            echo '<a href="event.php?id=' . $row["id"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;">Read More</a>';
+                            echo '<a href="events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;">Read More</a>';
                             echo '</div>';
                             echo '<div class="d-flex border-top">';
                             echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>' . $row["organizer_name"] . '</small>';
