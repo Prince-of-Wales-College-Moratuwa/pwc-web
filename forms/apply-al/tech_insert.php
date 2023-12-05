@@ -4,7 +4,6 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <title>Success Submission</title>
     <!-- Favicon -->
     <link href="/content/icons/logo-70x70-pwc.png" rel="icon">
     <link rel="icon" href="/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
@@ -93,6 +92,34 @@ $op3 = $_POST['op3'];
 $optional3 = $_POST['optional3'];
 $referenceno= rand();
 
+
+$nicCheckQuery = "SELECT * FROM pwc_db_al25 WHERE NIC = '$nic'";
+$nicCheckResult = mysqli_query($db, $nicCheckQuery);
+
+if (mysqli_num_rows($nicCheckResult) > 0) {
+
+      $existingRecord = mysqli_fetch_assoc($nicCheckResult);
+      $existingReferenceNo = $existingRecord['Reference_no'];
+
+  echo '<head><title>You are Already Submitted</title></head>';
+
+
+  echo '<br> <br> <br>';
+  echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
+  echo '    <div class="container text-center">';
+  echo '        <div class="row justify-content-center">';
+  echo '            <div class="col-lg-6">';
+  echo '                <i class="bi bi-exclamation-triangle display-1 text-primary"></i>';
+  echo '                <h1 class="mb-4">You are Already Submitted</h1>';
+  echo '                <p class="mb-4">The reference number for the existing record is <b>' . $existingReferenceNo .'</b></p>';  
+  echo '<a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="generate_pdf.php?ref=' . $existingReferenceNo . '" download onclick="redirectHome()">Download Your Previous Submissions</a>';
+  echo '            </div>';
+  echo '        </div>';
+  echo '    </div>';
+  echo '</div>';
+  
+} else {
+
 $sql = "INSERT INTO pwc_db_al25
 (Reference_no,Stream,Subject,almedium,pwc_Other,SchoolIndexNo,School_Private_Candidate,School,S_District,Name,Name_with_Initials,Birthday,NIC,Address1,Address2,City,Guardian_Name,ResidentialNo,Mobile1,Mobile2,E_mail,Distance,Transport,IndexNo,olMedium,Religion,Sinhala,English,Science,Mathematics,History,Optional1,Result1,Optional2,Result2,Optional3,Result3) 
 VALUES
@@ -132,6 +159,7 @@ if(mysqli_query($db, $sql)){
       }());
     </script>';
 
+    echo '<head><title>Sucess Submission</title></head>';
 
     echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
     echo '    <div class="container text-center">';
@@ -175,7 +203,7 @@ if(mysqli_query($db, $sql)){
 }
      mysqli_close($db);
 
-
+}
 } ?>
 
 </body>
