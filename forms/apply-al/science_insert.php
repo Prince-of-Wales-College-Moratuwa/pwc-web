@@ -4,7 +4,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <title>Success Submission</title>
+
     <!-- Favicon -->
     <link href="/content/icons/logo-70x70-pwc.png" rel="icon">
     <link rel="icon" href="/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
