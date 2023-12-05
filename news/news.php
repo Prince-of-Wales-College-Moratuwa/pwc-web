@@ -63,7 +63,7 @@ if (stripos($category, "Achievement") !== false) {
     // Run the confetti animation script
     echo '
     <script>
-      var end = Date.now() + (3 * 1000);
+      var end = Date.now() + (2 * 1000);
       var colors = [\'#800080\', \'#ffd700\', \'#800000\'];
     
       (function frame() {
