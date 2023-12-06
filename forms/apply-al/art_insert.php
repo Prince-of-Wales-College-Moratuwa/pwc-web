@@ -102,20 +102,64 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
       $existingRecord = mysqli_fetch_assoc($nicCheckResult);
       $existingReferenceNo = $existingRecord['Reference_no'];
 
-  echo '<head><title>You are Already Submitted</title></head>';
+  
+      $sql = "UPDATE pwc_db_al25 
+      SET 
+        Stream = 'Science',
+        Subject = '$sscience',
+        almedium = '$almedium',
+        pwc_Other = '$school',
+        SchoolIndexNo = '$SchoolIndexNo',
+        School_Private_Candidate = '$school_private',
+        School = '$schoolname',
+        S_District = '$schooldistrict',
+        Name = '$fname',
+        Name_with_Initials = '$iname',
+        Birthday = '$birthday',
+        NIC = '$nic',
+        Address1 = '$address1',
+        Address2 = '$address2',
+        City = '$city',
+        Guardian_Name = '$gname',
+        ResidentialNo = '$residential',
+        Mobile1 = '$mobile1',
+        Mobile2 = '$mobile2',
+        E_mail = '$email',
+        Distance = '$distance',
+        Transport = '$transport',
+        IndexNo = '$indexno',
+        olMedium = '$olmedium',
+        Religion = '$religion',
+        Sinhala = '$sinhala',
+        English = '$english',
+        Science = '$science',
+        Mathematics = '$maths',
+        History = '$history',
+        Optional1 = '$op1',
+        Result1 = '$optional1',
+        Optional2 = '$op2',
+        Result2 = '$optional2',
+        Optional3 = '$op3',
+        Result3 = '$optional3'
+      WHERE Reference_no = '$existingReferenceNo'";
+      
+  echo '<head><title>Sucessfully Updated</title></head>';
+
+
   echo '<br> <br> <br>';
   echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
   echo '    <div class="container text-center">';
   echo '        <div class="row justify-content-center">';
   echo '            <div class="col-lg-6">';
-  echo '                <i class="bi bi-exclamation-triangle display-1 text-primary"></i>';
-  echo '                <h1 class="mb-4">You are Already Submitted</h1>';
-  echo '                <p class="mb-4">The reference number for the existing record is <b>' . $existingReferenceNo .'</b></p>';  
-  echo '<a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="generate_pdf.php?ref=' . $existingReferenceNo . '" download onclick="redirectHome()">Download Your Previous Submissions</a>';
+  echo '                <i class="bi bi-pencil display-1 text-primary"></i>';
+  echo '                <h1 class="mb-4">Sucessfully Updated</h1>';
+  echo '                <p class="mb-4">You have already Submitted This Form. Your Reference No. is <b>' . $existingReferenceNo .'</b>. and We have Updated Your New Submissions</p>';  
+  echo '<a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="generate_pdf.php?ref=' . $existingReferenceNo . '" download onclick="redirectHome()">Download Your New Submissions</a>';
   echo '            </div>';
   echo '        </div>';
   echo '    </div>';
   echo '</div>';
+
   
 } else {
 
