@@ -33,7 +33,7 @@ RewriteRule ^principal-message$ principal-msg.php [NC,L]
 
 RewriteRule ^admin-access$ admin_login.php [NC,L]
 
-RewriteRule ^forms/students-info/$ forms/students-info/form.php [NC,L]
+RewriteRule ^forms/students-information$ forms/students-info/form.php [NC,L]
 
 RewriteRule ^forms/apply-al/science$ forms/apply-al/science.php [NC,L]
 RewriteRule ^forms/apply-al/commerce$ forms/apply-al/commerce.php [NC,L]

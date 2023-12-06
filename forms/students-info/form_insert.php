@@ -1,35 +1,10 @@
 <html>
 
 <head>
-    <title>Success Submission</title>
-    <!-- Favicon -->
-    <link href="../../content/icons/logo-70x70-pwc.png" rel="icon">
-    <link rel="icon" href="../../content/icons/logo-70x70-pwc.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../content/icons/logo-apple-touch-icon-pwc.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../../content/icons/logo-android-chrome-icon-pwc.png">
-    <meta name="msapplication-TileImage" content="../../content/icons/logo-70x70-pwc.png">
-    <meta name="msapplication-TileColor" content="#800000">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="../../resources/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../../resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="../../resources/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link href="../../resources/css/style.css" rel="stylesheet">
+    <?php
+include 'header.php';
+?>
 
 
     <style>
@@ -54,14 +29,16 @@ if (isset($_POST['submit'])) {
     $month = isset($_POST['month']) ? $_POST['month'] : "";
     $year = isset($_POST['year']) ? $_POST['year'] : "";
 
-    $grade = isset($_POST['grade']) ? $_POST['grade'] : "";
-    $class = isset($_POST['class']) ? $_POST['class'] : "";
-
-    $grade_class = ""; 
-
-    if ($grade && $class) {
-        $grade_class = $grade . $class;
+    $selectedGrade = isset($_POST['grade']) ? $_POST['grade'] : "";
+    $selectedClassColor = isset($_POST['colorOptions']) ? $_POST['colorOptions'] : "";
+    $selectedClassLetter = isset($_POST['letterOptions']) ? $_POST['letterOptions'] : "";
+    
+    $selectedClass = "";
+    
+    if ($selectedGrade && ($selectedClassColor || $selectedClassLetter)) {
+        $selectedClass = $selectedGrade . ($selectedClassColor ?: $selectedClassLetter);
     }
+    
 
     $birthday = ""; 
 
@@ -96,7 +73,7 @@ if (isset($_POST['submit'])) {
     guardian_name, guardian_occupation, guardian_employer, 
     brother_count) 
     VALUES 
-    ('$IndexNo', '$fname', '$grade_class', '$birthday', '$address1', '$address2', '$city', '$mobile', '$whatsapp', '$email', '$religion',
+    ('$IndexNo', '$fname', '$selectedClass', '$birthday', '$address1', '$address2', '$city', '$mobile', '$whatsapp', '$email', '$religion',
     '$father_name', '$father_occupation', '$father_employer', 
     '$mother_name', '$mother_occupation', '$mother_employer', 
     '$guardian_name', '$guardian_occupation', '$guardian_employer', 
@@ -104,6 +81,40 @@ if (isset($_POST['submit'])) {
 
 
     if(mysqli_query($db, $sql)){
+
+        echo '<div class="confetti-container"></div>';
+    
+        echo '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>';
+        
+        echo '
+        <script>
+          var end = Date.now() + (1 * 1000);
+          var colors = [\'#800080\', \'#ffd700\', \'#800000\'];
+        
+          (function frame() {
+            confetti({
+              particleCount: 3,
+              angle: 60,
+              spread: 55,
+              origin: { x: 0 },
+              colors: colors
+            });
+            confetti({
+              particleCount: 3,
+              angle: 120,
+              spread: 55,
+              origin: { x: 1 },
+              colors: colors
+            });
+        
+            if (Date.now() < end) {
+              requestAnimationFrame(frame);
+            }
+          }());
+        </script>';
+
+    echo '<head><title>Sucess Submission</title></head>';
+
         echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
         echo '    <div class="container text-center">';
         echo '        <div class="row justify-content-center">';
@@ -118,7 +129,9 @@ if (isset($_POST['submit'])) {
         echo '</div>';
     
     } else {
-        echo '<br> <br> <br>';
+
+    echo '<head><title>ERROR :(</title></head>';
+
         echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
         echo '    <div class="container text-center">';
         echo '        <div class="row justify-content-center">';
@@ -137,6 +150,10 @@ if (isset($_POST['submit'])) {
     mysqli_close($db);
 }
 
+?>
+
+<?php
+include 'footer.php';
 ?>
 
 </body>
