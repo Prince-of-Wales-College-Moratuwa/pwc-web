@@ -66,6 +66,59 @@ if (isset($_POST['submit'])) {
     $guardian_employer = isset($_POST['guardian-employer']) ? $_POST['guardian-employer'] : "";
     $brother_count = $_POST['brother-count'];
 
+
+    $IndexCheckQuery = "SELECT * FROM student_information WHERE IndexNo = '$IndexNo'";
+  $IndexCheckResult = mysqli_query($db, $IndexCheckQuery);
+
+if (mysqli_num_rows($IndexCheckResult) > 0) {
+
+      $existingRecord = mysqli_fetch_assoc($IndexCheckResult);
+      $existingIndex = $existingRecord['IndexNo'];
+
+      $sql = "UPDATE student_information 
+        SET 
+        fname = '$fname', 
+        grade_class = '$selectedClass', 
+        birthday = '$birthday', 
+        address1 = '$address1', 
+        address2 = '$address2', 
+        city = '$city', 
+        mobile = '$mobile', 
+        whatsapp = '$whatsapp', 
+        email = '$email', 
+        religion = '$religion',
+        father_name = '$father_name', 
+        father_occupation = '$father_occupation', 
+        father_employer = '$father_employer', 
+        mother_name = '$mother_name', 
+        mother_occupation = '$mother_occupation', 
+        mother_employer = '$mother_employer', 
+        guardian_name = '$guardian_name', 
+        guardian_occupation = '$guardian_occupation', 
+        guardian_employer = '$guardian_employer', 
+        brother_count = '$brother_count'
+        WHERE IndexNo = '$IndexNo'";
+
+          if(mysqli_query($db, $sql)){
+                          
+            echo '<head><title>Sucessfully Updated</title></head>';
+
+            echo '<br> <br> <br>';
+            echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
+            echo '    <div class="container text-center">';
+            echo '        <div class="row justify-content-center">';
+            echo '            <div class="col-lg-6">';
+            echo '                <i class="bi bi-pencil display-1 text-primary"></i>';
+            echo '                <h1 class="mb-4">Sucessfully Updated</h1>';
+            echo '                <p class="mb-4">You have already Submitted This Form. Your Index No. is <b>' . $existingIndex .'</b>. and We have Updated Your New Submissions</p>';  
+            echo '            </div>';
+            echo '        </div>';
+            echo '    </div>';
+            echo '</div>';
+          }
+
+} else {
+
     $sql = "INSERT INTO student_information 
     (IndexNo, fname, grade_class, birthday, address1, address2, city, mobile, whatsapp, email, religion,
     father_name, father_occupation, father_employer, 
@@ -114,7 +167,7 @@ if (isset($_POST['submit'])) {
         </script>';
 
     echo '<head><title>Sucess Submission</title></head>';
-
+    echo '<meta http-equiv="refresh" content="3;url=/"></head>';
         echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
         echo '    <div class="container text-center">';
         echo '        <div class="row justify-content-center">';
@@ -148,6 +201,8 @@ if (isset($_POST['submit'])) {
     }
 
     mysqli_close($db);
+}
+
 }
 
 ?>
