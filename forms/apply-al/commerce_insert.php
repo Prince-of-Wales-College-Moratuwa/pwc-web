@@ -141,22 +141,25 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
         Result3 = '$optional3'
       WHERE Reference_no = '$existingReferenceNo'";
       
-  echo '<head><title>Sucessfully Updated</title></head>';
+      if(mysqli_query($db, $sql)){
+                
+        echo '<head><title>Sucessfully Updated</title></head>';
 
 
-  echo '<br> <br> <br>';
-  echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
-  echo '    <div class="container text-center">';
-  echo '        <div class="row justify-content-center">';
-  echo '            <div class="col-lg-6">';
-  echo '                <i class="bi bi-pencil display-1 text-primary"></i>';
-  echo '                <h1 class="mb-4">Sucessfully Updated</h1>';
-  echo '                <p class="mb-4">You have already Submitted This Form. Your Reference No. is <b>' . $existingReferenceNo .'</b>. and We have Updated Your New Submissions</p>';  
-  echo '<a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="generate_pdf.php?ref=' . $existingReferenceNo . '" download onclick="redirectHome()">Download Your New Submissions</a>';
-  echo '            </div>';
-  echo '        </div>';
-  echo '    </div>';
-  echo '</div>';
+        echo '<br> <br> <br>';
+        echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
+        echo '    <div class="container text-center">';
+        echo '        <div class="row justify-content-center">';
+        echo '            <div class="col-lg-6">';
+        echo '                <i class="bi bi-pencil display-1 text-primary"></i>';
+        echo '                <h1 class="mb-4">Sucessfully Updated</h1>';
+        echo '                <p class="mb-4">You have already Submitted This Form. Your Reference No. is <b>' . $existingReferenceNo .'</b>. and We have Updated Your New Submissions</p>';  
+        echo '<a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="generate_pdf.php?ref=' . $existingReferenceNo . '" download onclick="redirectHome()">Download Your New Submissions</a>';
+        echo '            </div>';
+        echo '        </div>';
+        echo '    </div>';
+        echo '</div>';
+      }
 
   
 } else {

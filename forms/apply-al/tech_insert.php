@@ -142,6 +142,8 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
         Result3 = '$optional3'
       WHERE Reference_no = '$existingReferenceNo'";
       
+ if(mysqli_query($db, $sql)){
+                
   echo '<head><title>Sucessfully Updated</title></head>';
 
 
@@ -158,6 +160,7 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
   echo '        </div>';
   echo '    </div>';
   echo '</div>';
+}
 
   
 } else {
