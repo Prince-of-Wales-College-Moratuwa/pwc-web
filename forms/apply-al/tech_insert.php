@@ -104,8 +104,8 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
  
       $sql = "UPDATE pwc_db_al25 
       SET 
-        Stream = 'Science',
-        Subject = '$sscience',
+        Stream = 'Technology',
+        Subject = '$stech',
         almedium = '$almedium',
         pwc_Other = '$school',
         SchoolIndexNo = '$SchoolIndexNo',
