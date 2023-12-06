@@ -31,7 +31,8 @@ foreach ($rows as $row) {
 <meta name="description" content="<?php echo $row["excerpt"]; ?>" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_GB" />
 <meta property="og:url" content="https://princeofwales.edu.lk/news/<?php echo $row["slug"]; ?>" />
 <meta property="og:title" content="<?php echo $row["title"]; ?>" />
 <meta property="og:description" content="<?php echo $row["excerpt"]; ?>" />
