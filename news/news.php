@@ -50,6 +50,12 @@ foreach ($rows as $row) {
 
 <body>
 
+<span>
+<link itemprop="thumbnailUrl" href="https://princeofwales.edu.lk/content/img/img-news/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
+<span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+<link itemprop="url" href="https://princeofwales.edu.lk/content/img/img-news/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
+</span>
+
 <?php
 // Assuming you have fetched the category field value from the database into $row["category"]
 $category = $row["category"];
