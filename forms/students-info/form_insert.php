@@ -29,22 +29,23 @@ if (isset($_POST['submit'])) {
     $month = isset($_POST['month']) ? $_POST['month'] : "";
     $year = isset($_POST['year']) ? $_POST['year'] : "";
 
-    $selectedGrade = isset($_POST['grade']) ? $_POST['grade'] : "";
-    $selectedClassColor = isset($_POST['colorOptions']) ? $_POST['colorOptions'] : "";
-    $selectedClassLetter = isset($_POST['letterOptions']) ? $_POST['letterOptions'] : "";
-    
-    $selectedClass = "";
-    
-    if ($selectedGrade && ($selectedClassColor || $selectedClassLetter)) {
-        $selectedClass = $selectedGrade . ($selectedClassColor ?: $selectedClassLetter);
-    }
-    
-
     $birthday = ""; 
 
     if ($day && $month && $year) {
         $birthday = sprintf("%04d-%02d-%02d", $year, $month, $day);
     }
+
+    $grade = isset($_POST['grade']) ? $_POST['grade'] : "";
+$colorOption = isset($_POST['colorOptions']) ? $_POST['colorOptions'] : "";
+$letterOption = isset($_POST['letterOptions']) ? $_POST['letterOptions'] : "";
+
+$combinedClass = $grade;
+
+if ($grade == "1" || $grade == "2") {
+    $combinedClass .= "-" . $colorOption;
+} else {
+    $combinedClass .= "-" . $letterOption;
+}
 
     $IndexNo = $_POST['IndexNo'];
     $fname = strtoupper($_POST['fname']);
@@ -78,7 +79,7 @@ if (mysqli_num_rows($IndexCheckResult) > 0) {
       $sql = "UPDATE student_information 
         SET 
         fname = '$fname', 
-        grade_class = '$selectedClass', 
+        grade_class = '$combinedClass', 
         birthday = '$birthday', 
         address1 = '$address1', 
         address2 = '$address2', 
@@ -126,7 +127,7 @@ if (mysqli_num_rows($IndexCheckResult) > 0) {
     guardian_name, guardian_occupation, guardian_employer, 
     brother_count) 
     VALUES 
-    ('$IndexNo', '$fname', '$selectedClass', '$birthday', '$address1', '$address2', '$city', '$mobile', '$whatsapp', '$email', '$religion',
+    ('$IndexNo', '$fname', '$combinedClass', '$birthday', '$address1', '$address2', '$city', '$mobile', '$whatsapp', '$email', '$religion',
     '$father_name', '$father_occupation', '$father_employer', 
     '$mother_name', '$mother_occupation', '$mother_employer', 
     '$guardian_name', '$guardian_occupation', '$guardian_employer', 
@@ -167,7 +168,7 @@ if (mysqli_num_rows($IndexCheckResult) > 0) {
         </script>';
 
     echo '<head><title>Sucess Submission</title></head>';
-    echo '<meta http-equiv="refresh" content="3;url=/"></head>';
+    // echo '<meta http-equiv="refresh" content="3;url=/"></head>';
         echo '<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">';
         echo '    <div class="container text-center">';
         echo '        <div class="row justify-content-center">';
