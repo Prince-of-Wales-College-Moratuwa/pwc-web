@@ -322,44 +322,41 @@
                             <option value="business-specialist">Business Operations or Financial Specialist</option>
                             <option value="business-owner">Business Owner</option>
                             <option value="furniture-business">Furniture Business</option>
-                            <option value="other-business">Other Business, Executive, Management, Financial
-                                Occupation
+                            <option value="other-business">Other
                             </option>
                         </optgroup>
 
                         <optgroup label="Architecture and Engineering Occupations">
                             <option value="architect-surveyor">Architect, Surveyor, or Cartographer</option>
                             <option value="engineer">Engineer</option>
-                            <option value="other-architecture">Other Architecture and Engineering Occupation
+                            <option value="other-architecture">Other
                             </option>
                         </optgroup>
 
                         <optgroup label="Education, Training, and Library Occupations">
                             <option value="postsecondary-teacher">Postsecondary Teacher (e.g., College Professor)
                             </option>
-                            <option value="school-teacher">Primary, Secondary, or Special Education School Teacher
+                            <option value="school-teacher">Primary/Secondary/Special Education Teacher
                             </option>
                             <option value="other-teacher">Other Teacher or Instructor</option>
-                            <option value="other-education">Other Education, Training, and Library Occupation
+                            <option value="other-education">Other
                             </option>
                         </optgroup>
 
                         <optgroup label="Other Professional Occupations">
-                            <option value="arts-design">Arts, Design, Entertainment, Sports, and Media Occupations
+                            <option value="arts-design">Arts/Design/Entertainment/Sports/Media Occupations
                             </option>
                             <option value="computer-specialist">Computer Specialist, Mathematical Science</option>
-                            <option value="counselor-social-worker">Counselor, Social Worker, or Other Community and
+                            <option value="counselor-social-worker">Community and
                                 Social Service Specialist</option>
                             <option value="lawyer-judge">Lawyer, Judge</option>
-                            <option value="life-scientist">Life Scientist (e.g., Animal, Food, Soil, or Biological
-                                Scientist, Zoologist)</option>
+                            <option value="life-scientist">Animal/Food/Soil/Biological Scientist/Zoologist</option>
                             <option value="physical-scientist">Physical Scientist (e.g., Astronomer, Physicist,
                                 Chemist,
                                 Hydrologist)</option>
-                            <option value="religious-worker">Religious Worker (e.g., Clergy, Director of Religious
-                                Activities or Education)</option>
-                            <option value="social-scientist">Social Scientist and Related Worker</option>
-                            <option value="other-professional">Other Professional Occupation</option>
+                            <option value="religious-worker">Religious Worker</option>
+                            <option value="social-scientist">Social Scientist</option>
+                            <option value="other-professional">Other</option>
                         </optgroup>
 
                         <optgroup label="Office and Administrative Support Occupations">
@@ -367,52 +364,43 @@
                             </option>
                             <option value="financial-clerk">Financial Clerk</option>
                             <option value="secretary-admin-assistant">Secretary or Administrative Assistant</option>
-                            <option value="material-recording">Material Recording, Scheduling, and Dispatching
+                            <option value="material-recording">Material Recording/Scheduling/Dispatching
                                 Worker
                             </option>
-                            <option value="other-admin-support">Other Office and Administrative Support Occupation
+                            <option value="other-admin-support">Other
                             </option>
                         </optgroup>
 
                         <optgroup label="Services Occupations">
-                            <option value="protective-service">Protective Service (e.g., Fire Fighting, Police
-                                Officer,
-                                Correctional Officer)</option>
+                            <option value="protective-service">Fire Fighting, Police Officer</option>
                             <option value="chef-head-cook">Chef or Head Cook</option>
                             <option value="cook-food-prep">Cook or Food Preparation Worker</option>
                             <option value="food-beverage-serving">Food and Beverage Serving Worker (e.g., Bartender,
                                 Waiter, Waitress)</option>
                             <option value="building-maintenance">Building and Grounds Cleaning and Maintenance
                             </option>
-                            <option value="personal-care-service">Personal Care and Service (e.g., Hairdresser,
-                                Flight
-                                Attendant, Concierge)</option>
+                            <option value="personal-care-service">Hairdresser, Flight Attendant, Concierge</option>
                             <option value="sales-supervisor">Sales Supervisor, Retail Sales</option>
                             <option value="retail-sales-worker">Retail Sales Worker</option>
                             <option value="insurance-sales-agent">Insurance Sales Agent</option>
                             <option value="sales-representative">Sales Representative</option>
                             <option value="real-estate-sales-agent">Real Estate Sales Agent</option>
-                            <option value="other-services">Other Services Occupation</option>
+                            <option value="other-services">Other</option>
                         </optgroup>
 
                         <optgroup label="Agriculture, Maintenance, Repair, and Skilled Crafts Occupations">
-                            <option value="construction-extraction">Construction and Extraction (e.g., Construction
-                                Laborer, Electrician)</option>
+                            <option value="construction-extraction">Construction Laborer, Electrician</option>
                             <option value="farming-fishing-forestry">Farming, Fishing, and Forestry</option>
                             <option value="installation-maintenance-repair">Installation, Maintenance, and Repair
                             </option>
                             <option value="production-occupations">Production Occupations</option>
-                            <option value="other-agriculture">Other Agriculture, Maintenance, Repair, and Skilled
-                                Crafts
-                                Occupation</option>
+                            <option value="other-agriculture">Other </option>
                         </optgroup>
 
                         <optgroup label="Transportation Occupations">
                             <option value="aircraft-pilot">Aircraft Pilot or Flight Engineer</option>
-                            <option value="motor-vehicle-operator">Motor Vehicle Operator (e.g., Ambulance, Bus,
-                                Taxi,
-                                or Truck Driver)</option>
-                            <option value="other-transportation">Other Transportation Occupation</option>
+                            <option value="motor-vehicle-operator">Vehicle Driver</option>
+                            <option value="other-transportation">Other</option>
                         </optgroup>
 
                         <optgroup label="Other Occupations">
