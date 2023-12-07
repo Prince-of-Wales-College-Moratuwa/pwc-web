@@ -71,6 +71,126 @@
         </div>
     </div>
 
+    <div class="container-lg my-3" id="launching-event">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3"></h6>
+                <h1 class="mb-5">Website Launching Event</h1>
+            </div>
+
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="7"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="8"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="9"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="10"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="11"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="12"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="13"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="14"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="15"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="16"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="17"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="18"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="19"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="20"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="21"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="22"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="23"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="24"></li>
+            </ol>
+
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="content/img/web-launch/web-launch.webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (1).webp" class="d-block w-100"
+                        alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (2).webp" class="d-block w-100"
+                        alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (3).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (4).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (5).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (6).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (7).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (8).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (9).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (10).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (11).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (12).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/web-launch/web-launch (13).webp" class="d-block w-100"
+                        alt="Slide 1">
+                </div>
+
+                
+            </div>
+
+            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        <br>
+        <p>Snapshots from launching event of princeofwales.edu.lk Held on 15th September 2023 at School Auditorium</p>
+    </div>
+
+    <script>
+  var myCarousel = document.getElementById('myCarousel');
+
+  var interval = 7000; 
+
+  function startCarousel() {
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: interval
+    });
+  }
+  startCarousel();
+</script>
 
 
     <?php include 'footer.php'; ?>
