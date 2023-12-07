@@ -281,8 +281,7 @@
                             <option value="therapist">Therapist</option>
                             <option value="veterinarian">Veterinarian</option>
                             <option value="health-technologist">Health Technologist or Technician</option>
-                            <option value="other-healthcare">Other Healthcare Practitioners and Technical Occupation
-                            </option>
+                            <option value="other-healthcare">Other</option>
                         </optgroup>
 
                         <optgroup label="Healthcare Support Occupations">
@@ -316,7 +315,7 @@
                         <optgroup label="Education, Training, and Library Occupations">
                             <option value="postsecondary-teacher">College Professor
                             </option>
-                            <option value="school-teacher">Primary/Secondary/Special Education Teacher
+                            <option value="school-teacher">Primary/Secondary Teacher
                             </option>
                             <option value="other-teacher">Other Teacher or Instructor</option>
                             <option value="other-education">Other
@@ -338,13 +337,10 @@
                         </optgroup>
 
                         <optgroup label="Office and Administrative Support Occupations">
-                            <option value="supervisor-admin-support">Supervisor of Administrative Support Workers
-                            </option>
+                            <option value="supervisor-admin-support">Administrative Support Workers</option>
                             <option value="financial-clerk">Financial Clerk</option>
                             <option value="secretary-admin-assistant">Secretary or Administrative Assistant</option>
-                            <option value="material-recording">Material Recording/Scheduling/Dispatching
-                                Worker
-                            </option>
+                            <option value="material-recording">Material Recording Worker</option>
                             <option value="other-admin-support">Other
                             </option>
                         </optgroup>
@@ -356,7 +352,7 @@
                             <option value="food-beverage-serving">Bartender/Waiter/Waitress</option>
                             <option value="building-maintenance">Building and Maintenance
                             </option>
-                            <option value="personal-care-service">Hairdresser, Flight Attendant, Concierge</option>
+                            <option value="personal-care-service">Hairdresser, Flight Attendant</option>
                             <option value="sales-supervisor">Sales Supervisor, Retail Sales</option>
                             <option value="retail-sales-worker">Retail Sales Worker</option>
                             <option value="insurance-sales-agent">Insurance Sales Agent</option>
