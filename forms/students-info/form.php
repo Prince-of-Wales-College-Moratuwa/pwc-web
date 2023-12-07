@@ -46,20 +46,6 @@
     include 'header.php';
     ?>
 
-<style>
-    @media (max-width: 767px) {
-        #father-occupation {
-            width: 100%; /* Make the select box full width */
-            max-width: 200px; /* Set a maximum width to avoid stretching too much */
-        }
-
-        /* Reduce the font size for better fit */
-        #father-occupation option {
-            font-size: 12px;
-        }
-    }
-</style>
-
 </head>
 
 <body>
@@ -300,26 +286,20 @@
                         </optgroup>
 
                         <optgroup label="Healthcare Support Occupations">
-                            <option value="nursing-aide">Nursing, Psychiatric, or Home Health Aide</option>
-                            <option value="therapist-assistant">Occupational and Physical Therapist Assistant or
-                                Aide
-                            </option>
-                            <option value="other-healthcare-support">Other Healthcare Support Occupation</option>
+                            <option value="nursing-aide">Nursing</option>
+                            <option value="therapist-assistant">Physical Therapist Assistant</option>
+                            <option value="other-healthcare-support">Other</option>
                         </optgroup>
 
                         <optgroup label="Business, Executive, Management, and Financial Occupations">
                             <option value="chief-executive">Chief Executive</option>
                             <option value="operations-manager">General and Operations Manager</option>
-                            <option value="marketing-manager">Advertising, Marketing, Promotions, Public Relations,
-                                and
-                                Sales Manager</option>
-                            <option value="operations-specialties-manager">Operations Specialties Manager (e.g., IT
-                                or
-                                HR Manager)</option>
+                            <option value="marketing-manager">Marketing Manager</option>
+                            <option value="it-hr-manager">IT or HR Manager</option>
                             <option value="construction-manager">Construction Manager</option>
                             <option value="engineering-manager">Engineering Manager</option>
                             <option value="accountant">Accountant, Auditor</option>
-                            <option value="business-specialist">Business Operations or Financial Specialist</option>
+                            <option value="business-specialist">Business Specialist</option>
                             <option value="business-owner">Business Owner</option>
                             <option value="furniture-business">Furniture Business</option>
                             <option value="other-business">Other
@@ -327,14 +307,14 @@
                         </optgroup>
 
                         <optgroup label="Architecture and Engineering Occupations">
-                            <option value="architect-surveyor">Architect, Surveyor, or Cartographer</option>
+                            <option value="architect-surveyor">Architect/Surveyor/Cartographer</option>
                             <option value="engineer">Engineer</option>
                             <option value="other-architecture">Other
                             </option>
                         </optgroup>
 
                         <optgroup label="Education, Training, and Library Occupations">
-                            <option value="postsecondary-teacher">Postsecondary Teacher (e.g., College Professor)
+                            <option value="postsecondary-teacher">College Professor
                             </option>
                             <option value="school-teacher">Primary/Secondary/Special Education Teacher
                             </option>
@@ -350,10 +330,8 @@
                             <option value="counselor-social-worker">Community and
                                 Social Service Specialist</option>
                             <option value="lawyer-judge">Lawyer, Judge</option>
-                            <option value="life-scientist">Animal/Food/Soil/Biological Scientist/Zoologist</option>
-                            <option value="physical-scientist">Physical Scientist (e.g., Astronomer, Physicist,
-                                Chemist,
-                                Hydrologist)</option>
+                            <option value="life-scientist">Zoologist</option>
+                            <option value="physical-scientist">Physical Scientist </option>
                             <option value="religious-worker">Religious Worker</option>
                             <option value="social-scientist">Social Scientist</option>
                             <option value="other-professional">Other</option>
@@ -375,9 +353,8 @@
                             <option value="protective-service">Fire Fighting, Police Officer</option>
                             <option value="chef-head-cook">Chef or Head Cook</option>
                             <option value="cook-food-prep">Cook or Food Preparation Worker</option>
-                            <option value="food-beverage-serving">Food and Beverage Serving Worker (e.g., Bartender,
-                                Waiter, Waitress)</option>
-                            <option value="building-maintenance">Building and Grounds Cleaning and Maintenance
+                            <option value="food-beverage-serving">Bartender/Waiter/Waitress</option>
+                            <option value="building-maintenance">Building and Maintenance
                             </option>
                             <option value="personal-care-service">Hairdresser, Flight Attendant, Concierge</option>
                             <option value="sales-supervisor">Sales Supervisor, Retail Sales</option>
