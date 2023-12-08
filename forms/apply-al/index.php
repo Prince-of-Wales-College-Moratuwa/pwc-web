@@ -80,7 +80,7 @@ if ($currentDate < $deadlineDate) {
     echo '        <div class="row justify-content-center">';
     echo '            <div class="col-lg-6">';
     echo '                <i class="bi bi-stopwatch display-1 text-primary"></i>';
-    echo '                <h1 class="mb-4">Oops!</h1>';
+    echo '                <h1 class="mb-4">Timed Out!</h1>';
     echo '                <p class="mb-4">The admission registration deadline has passed. Please contact the administration for further assistance.</p>';
     echo '            </div>';
     echo '        </div>';
