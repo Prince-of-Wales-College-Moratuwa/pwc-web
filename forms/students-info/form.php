@@ -51,6 +51,7 @@
 
 legend {
     font-size: 18px;
+    margin-top: 17px;
 }
 
 input[type="radio"] {
@@ -163,16 +164,10 @@ input[type="radio"]:checked {
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
                     </select>
 
                     <select class="class form-control" name="colorOptions" style="min-height:30px; display: none;">
-                        <option value="+">+</option>
+                        <option value="+">Class:</option>
                         <option value="Purple">Purple</option>
                         <option value="Gold">Gold</option>
                         <option value="Maroon">Maroon</option>
@@ -182,7 +177,7 @@ input[type="radio"]:checked {
                     </select>
 
                     <select class="class form-control" name="letterOptions" style="min-height:30px; display: none;">
-                        <option value="+">+</option>
+                        <option value="+">Class:</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
