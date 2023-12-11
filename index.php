@@ -79,6 +79,8 @@
 <!-- Carousel End -->
 
 
+<!--
+
 <div class="container-fluid bg-primary py-5 mb-5 al-page-header">
     <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
@@ -93,8 +95,9 @@
 
         </div>
     </div>
-</div> 
+</div>
 
+-->
 
 
 <div class="colorlib-blog colorlib-light-grey">
