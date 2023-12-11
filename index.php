@@ -79,14 +79,14 @@
 <!-- Carousel End -->
 
 
-<!--
+
 
 <div class="container-fluid bg-primary py-5 mb-5 al-page-header">
     <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
             <h1 class=" text-white animated slideInDown">Online Registration - Advanced Level 2025</h1>
 		<p class=" text-white animated slideInDown">With a proud history spanning 150 years, we invite you to become a part of the Cambrian community</p>
-            <h6 class="text-white animated slideInDown">Deadline for submission is 8th December </h6>
+            <h6 class="text-white animated slideInDown">Deadline for submission is 15th December </h6>
             <center>
                 <a href="forms/apply-al"
                     style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
@@ -97,7 +97,6 @@
     </div>
 </div>
 
--->
 
 
 <div class="colorlib-blog colorlib-light-grey">

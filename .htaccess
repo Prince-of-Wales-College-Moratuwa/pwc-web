@@ -35,10 +35,10 @@ RewriteRule ^admin-access$ admin_login.php [NC,L]
 
 RewriteRule ^forms/students-information$ forms/students-info/form.php [NC,L]
 
-RewriteRule ^forms/apply-al/science-closed$ forms/apply-al/science.php [NC,L]
-RewriteRule ^forms/apply-al/commerce-closed$ forms/apply-al/commerce.php [NC,L]
-RewriteRule ^forms/apply-al/tech-closed$ forms/apply-al/tech.php [NC,L]
-RewriteRule ^forms/apply-al/art-closed$ forms/apply-al/art.php [NC,L]
+RewriteRule ^forms/apply-al/science$ forms/apply-al/science.php [NC,L]
+RewriteRule ^forms/apply-al/commerce$ forms/apply-al/commerce.php [NC,L]
+RewriteRule ^forms/apply-al/tech$ forms/apply-al/tech.php [NC,L]
+RewriteRule ^forms/apply-al/art$ forms/apply-al/art.php [NC,L]
 
 
 ErrorDocument 404 http://princeofwales.edu.lk/404
