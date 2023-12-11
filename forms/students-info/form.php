@@ -46,6 +46,34 @@
     include 'header.php';
     ?>
 
+
+<style>
+
+legend {
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Create a custom radio button */
+    width: 15px;
+    height: 15px;
+    border: 2px solid maroon;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: maroon; /
+}
+
+
+</style>
+
 </head>
 
 <body>
@@ -253,7 +281,16 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <label for="brother-count" class="col-sm-2 col-form-label">Number of Brother(s) Studying in
+                    School</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control" name="brother-count" required>
+                </div>
+            </div>
+
             <br>
+
 
             <!--father's Name-->
             <div class="form-group">
@@ -262,6 +299,8 @@
                     <input type="text" class="form-control" name="father-name" id="father-name">
                 </div>
             </div>
+
+
             <!--Mother's Name-->
             <div class="form-group">
                 <label for="mother-name" class="col-sm-2 col-form-label">Mother's Name</label>
@@ -269,7 +308,6 @@
                     <input type="text" class="form-control" name="mother-name" id="mother-name">
                 </div>
             </div>
-            <br>
             <!--Guardian's Name-->
             <div class="form-group">
                 <label for="guardian-name" class="col-sm-2 col-form-label">Guardian's Name</label>
@@ -277,6 +315,10 @@
                     <input type="text" class="form-control" name="guardian-name" id="guardian-name">
                 </div>
             </div>
+
+            <br>
+
+            <hr>
 
             <div class="form-group">
                 <label for="father-occupation" class="col-sm-2 col-form-label">Father's Occupation</label>
@@ -469,283 +511,199 @@
                     <input type="text" class="form-control" name="father-employer" id="father-employer">
                 </div>
             </div>
-            <br>
-            <!--Mother's Name-->
-            <div class="form-group">
-                <label for="mother-name" class="col-sm-2 col-form-label">Mother's Name</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" name="mother-name" id="mother-name">
-                </div>
-            </div>
+
+<hr>
+
+
             <div class="form-group">
                 <label for="mother-occupation" class="col-sm-2 col-form-label">Mother's Occupation</label>
-                <div class="col-sm-5">
-                    <select id="mother-occupation" class="form-control" style="width: 200px;" name="mother-occupation">
-                        <option value="default">-- Select one --</option>
-
-                        <optgroup label="Healthcare Practitioners and Technical Occupations">
-                            <option value="chiropractor">Chiropractor</option>
-                            <option value="dentist">Dentist</option>
-                            <option value="dietitian">Dietitian or Nutritionist</option>
-                            <option value="optometrist">Optometrist</option>
-                            <option value="pharmacist">Pharmacist</option>
-                            <option value="physician">Physician</option>
-                            <option value="physician-assistant">Physician Assistant</option>
-                            <option value="podiatrist">Podiatrist</option>
-                            <option value="registered-nurse">Registered Nurse</option>
-                            <option value="therapist">Therapist</option>
-                            <option value="veterinarian">Veterinarian</option>
-                            <option value="health-technologist">Health Technologist or Technician</option>
-                            <option value="other-healthcare">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Healthcare Support Occupations">
-                            <option value="nursing-aide">Nursing</option>
-                            <option value="therapist-assistant">Physical Therapist Assistant</option>
-                            <option value="other-healthcare-support">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Business, Executive, Management, and Financial Occupations">
-                            <option value="chief-executive">Chief Executive</option>
-                            <option value="operations-manager">General and Operations Manager</option>
-                            <option value="marketing-manager">Marketing Manager</option>
-                            <option value="it-hr-manager">IT or HR Manager</option>
-                            <option value="construction-manager">Construction Manager</option>
-                            <option value="engineering-manager">Engineering Manager</option>
-                            <option value="accountant">Accountant, Auditor</option>
-                            <option value="business-specialist">Business Specialist</option>
-                            <option value="business-owner">Business Owner</option>
-                            <option value="furniture-business">Furniture Business</option>
-                            <option value="other-business">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Architecture and Engineering Occupations">
-                            <option value="architect-surveyor">Architect/Surveyor/Cartographer</option>
-                            <option value="engineer">Engineer</option>
-                            <option value="other-architecture">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Education, Training, and Library Occupations">
-                            <option value="postsecondary-teacher">College Professor
-                            </option>
-                            <option value="school-teacher">Primary/Secondary Teacher
-                            </option>
-                            <option value="other-teacher">Other Teacher or Instructor</option>
-                            <option value="other-education">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Other Professional Occupations">
-                            <option value="arts-design">Arts/Design/Entertainment/Sports/Media Occupations
-                            </option>
-                            <option value="computer-specialist">Computer Specialist, Mathematical Science</option>
-                            <option value="counselor-social-worker">Community and
-                                Social Service Specialist</option>
-                            <option value="lawyer-judge">Lawyer, Judge</option>
-                            <option value="life-scientist">Zoologist</option>
-                            <option value="physical-scientist">Physical Scientist </option>
-                            <option value="religious-worker">Religious Worker</option>
-                            <option value="social-scientist">Social Scientist</option>
-                            <option value="other-professional">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Office and Administrative Support Occupations">
-                            <option value="supervisor-admin-support">Administrative Support Workers</option>
-                            <option value="financial-clerk">Financial Clerk</option>
-                            <option value="secretary-admin-assistant">Secretary or Administrative Assistant</option>
-                            <option value="material-recording">Material Recording Worker</option>
-                            <option value="other-admin-support">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Services Occupations">
-                            <option value="protective-service">Fire Fighting, Police Officer</option>
-                            <option value="chef-head-cook">Chef or Head Cook</option>
-                            <option value="cook-food-prep">Cook or Food Preparation Worker</option>
-                            <option value="food-beverage-serving">Bartender/Waiter/Waitress</option>
-                            <option value="building-maintenance">Building and Maintenance
-                            </option>
-                            <option value="hairdresser/flight-attendant">Hairdresser, Flight Attendant</option>
-                            <option value="sales-supervisor">Sales Supervisor, Retail Sales</option>
-                            <option value="retail-sales-worker">Retail Sales Worker</option>
-                            <option value="insurance-sales-agent">Insurance Sales Agent</option>
-                            <option value="sales-representative">Sales Representative</option>
-                            <option value="real-estate-sales-agent">Real Estate Sales Agent</option>
-                            <option value="other-services">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Agriculture, Maintenance, Repair, and Skilled Crafts Occupations">
-                            <option value="construction-extraction">Construction Laborer, Electrician</option>
-                            <option value="farming-fishing-forestry">Farming, Fishing, and Forestry</option>
-                            <option value="installation-maintenance-repair">Installation, Maintenance, and Repair
-                            </option>
-                            <option value="production-occupations">Production Occupations</option>
-                            <option value="other-agriculture">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Transportation Occupations">
-                            <option value="aircraft-pilot">Aircraft Pilot or Flight Engineer</option>
-                            <option value="motor-vehicle-operator">Vehicle Driver</option>
-                            <option value="other-transportation">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Other Occupations">
-                            <option value="military">Military</option>
-                            <option value="homemaker">Homemaker</option>
-                            <option value="other-occupation">Other Occupation</option>
-                            <option value="dont-know">Don't Know</option>
-                            <option value="not-applicable">Not Applicable</option>
-                        </optgroup>
-                    </select>
-
-                </div>
             </div>
+            <div class="form-group" id="mother-occupation">
+                <fieldset class="form-check">
+                    <legend>Healthcare Practitioners and Technical Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="chiropractor"> Chiropractor</label><br>
+                    <label><input type="radio" name="mother-occupation" value="dentist"> Dentist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="dietitian_nutritionist"> Dietitian or
+                        Nutritionist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="optometrist"> Optometrist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="pharmacist"> Pharmacist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="physician"> Physician</label><br>
+                    <label><input type="radio" name="mother-occupation" value="physician_assistant"> Physician
+                        Assistant</label><br>
+                    <label><input type="radio" name="mother-occupation" value="podiatrist"> Podiatrist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="registered_nurse"> Registered
+                        Nurse</label><br>
+                    <label><input type="radio" name="mother-occupation" value="therapist"> Therapist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="veterinarian"> Veterinarian</label><br>
+                    <label><input type="radio" name="mother-occupation" value="health_technologist_technician"> Health
+                        Technologist or Technician</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_healthcare_practitioners"> Other
+                        Healthcare Practitioners and Technical Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Healthcare Support Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="nursing_psychiatric_home_health_aide">
+                        Nursing, Psychiatric, or Home Health Aide</label><br>
+                    <label><input type="radio" name="mother-occupation" value="therapist_aide"> Occupational and
+                        Physical Therapist Assistant or Aide</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_healthcare_support"> Other
+                        Healthcare Support Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Business, Executive, Management, and Financial Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="chief_executive"> Chief
+                        Executive</label><br>
+                    <label><input type="radio" name="mother-occupation" value="operations_manager"> General and
+                        Operations Manager</label><br>
+                    <label><input type="radio" name="mother-occupation" value="advertising_marketing_manager">
+                        Advertising, Marketing, Promotions, Public Relations, and Sales Manager</label><br>
+                    <label><input type="radio" name="mother-occupation" value="operations_specialties_manager">
+                        Operations Specialties Manager (e.g., IT or HR Manager)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="construction_manager"> Construction
+                        Manager</label><br>
+                    <label><input type="radio" name="mother-occupation" value="engineering_manager"> Engineering
+                        Manager</label><br>
+                    <label><input type="radio" name="mother-occupation" value="accountant_auditor"> Accountant,
+                        Auditor</label><br>
+                    <label><input type="radio" name="mother-occupation" value="business_operations_specialist"> Business
+                        Operations or Financial Specialist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="business_owner"> Business
+                        Owner</label><br>
+                    <label><input type="radio" name="mother-occupation" value="furniture_business"> Furniture
+                        Business</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_business_executive_management">
+                        Other Business, Executive, Management, Financial Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Architecture and Engineering Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="architect_surveyor_cartographer">
+                        Architect, Surveyor, or Cartographer</label><br>
+                    <label><input type="radio" name="mother-occupation" value="engineer"> Engineer</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_architecture_engineering"> Other
+                        Architecture and Engineering Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Education, Training, and Library Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="postsecondary_teacher"> Postsecondary
+                        Teacher (e.g., College Professor)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="school_teacher"> Primary, Secondary, or
+                        Special Education School Teacher</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_teacher_instructor"> Other Teacher
+                        or Instructor</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_education_training_library"> Other
+                        Education, Training, and Library Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Other Professional Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="arts_design_entertainment_sports_media">
+                        Arts, Design, Entertainment, Sports, and Media Occupations</label><br>
+                    <label><input type="radio" name="mother-occupation"
+                            value="computer_specialist_mathematical_science"> Computer Specialist, Mathematical
+                        Science</label><br>
+                    <label><input type="radio" name="mother-occupation"
+                            value="counselor_social_worker_community_service"> Counselor, Social Worker, or Other
+                        Community and Social Service Specialist</label><br>
+                    <label><input type="radio" name="mother-occupation" value="lawyer_judge"> Lawyer, Judge</label><br>
+                    <label><input type="radio" name="mother-occupation" value="life_scientist"> Life Scientist (e.g.,
+                        Animal, Food, Soil, or Biological Scientist, Zoologist)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="physical_scientist"> Physical Scientist
+                        (e.g., Astronomer, Physicist, Chemist, Hydrologist)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="religious_worker"> Religious Worker
+                        (e.g., Clergy, Director of Religious Activities or Education)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="social_scientist_related_worker"> Social
+                        Scientist and Related Worker</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_professional_occupation"> Other
+                        Professional Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Office and Administrative Support Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation"
+                            value="supervisor_administrative_support_workers"> Supervisor of Administrative Support
+                        Workers</label><br>
+                    <label><input type="radio" name="mother-occupation" value="financial_clerk"> Financial
+                        Clerk</label><br>
+                    <label><input type="radio" name="mother-occupation" value="secretary_administrative_assistant">
+                        Secretary or Administrative Assistant</label><br>
+                    <label><input type="radio" name="mother-occupation"
+                            value="material_recording_scheduling_dispatching_worker"> Material Recording, Scheduling,
+                        and Dispatching Worker</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_office_administrative_support">
+                        Other Office and Administrative Support Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Services Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="protective_service"> Protective Service
+                        (e.g., Fire Fighting, Police Officer, Correctional Officer)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="chef_head_cook"> Chef or Head
+                        Cook</label><br>
+                    <label><input type="radio" name="mother-occupation" value="cook_food_preparation_worker"> Cook or
+                        Food Preparation Worker</label><br>
+                    <label><input type="radio" name="mother-occupation" value="food_beverage_serving_worker"> Food and
+                        Beverage Serving Worker (e.g., Bartender, Waiter, Waitress)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="building_grounds_cleaning_maintenance">
+                        Building and Grounds Cleaning and Maintenance</label><br>
+                    <label><input type="radio" name="mother-occupation" value="personal_care_service"> Personal Care and
+                        Service (e.g., Hairdresser, Flight Attendant, Concierge)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="sales_supervisor_retail_sales"> Sales
+                        Supervisor, Retail Sales</label><br>
+                    <label><input type="radio" name="mother-occupation" value="retail_sales_worker"> Retail Sales
+                        Worker</label><br>
+                    <label><input type="radio" name="mother-occupation" value="insurance_sales_agent"> Insurance Sales
+                        Agent</label><br>
+                    <label><input type="radio" name="mother-occupation" value="sales_representative"> Sales
+                        Representative</label><br>
+                    <label><input type="radio" name="mother-occupation" value="real_estate_sales_agent"> Real Estate
+                        Sales Agent</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_services_occupation"> Other
+                        Services Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Agriculture, Maintenance, Repair, and Skilled Crafts Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="construction_extraction"> Construction
+                        and Extraction (e.g., Construction Laborer, Electrician)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="farming_fishing_forestry"> Farming,
+                        Fishing, and Forestry</label><br>
+                    <label><input type="radio" name="mother-occupation" value="installation_maintenance_repair">
+                        Installation, Maintenance, and Repair</label><br>
+                    <label><input type="radio" name="mother-occupation" value="production_occupations"> Production
+                        Occupations</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_agriculture_maintenance_repair">
+                        Other Agriculture, Maintenance, Repair, and Skilled Crafts Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Transportation Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="aircraft_pilot_flight_engineer"> Aircraft
+                        Pilot or Flight Engineer</label><br>
+                    <label><input type="radio" name="mother-occupation" value="motor_vehicle_operator"> Motor Vehicle
+                        Operator (e.g., Ambulance, Bus, Taxi, or Truck Driver)</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_transportation_occupation"> Other
+                        Transportation Occupation</label><br>
+                </fieldset>
+
+                <fieldset class="form-check">
+                    <legend>Other Occupations:</legend>
+                    <label><input type="radio" name="mother-occupation" value="military"> Military</label><br>
+                    <label><input type="radio" name="mother-occupation" value="homemaker"> Homemaker</label><br>
+                    <label><input type="radio" name="mother-occupation" value="other_occupation"> Other
+                        Occupation</label><br>
+                    <label><input type="radio" name="mother-occupation" value="dont_know"> Don't Know</label><br>
+                    <label><input type="radio" name="mother-occupation" value="not_applicable"> Not Applicable</label>
+                </fieldset>
+            </div>
+
             <div class="form-group">
                 <label for="mother-employer" class="col-sm-2 col-form-label">Mother's Employer Address</label>
                 <div class="col-sm-3">
                     <input type="text" class="form-control" name="mother-employer" id="mother-employer">
-                </div>
-            </div>
-            <br>
-            <!--Guardian's Name-->
-            <div class="form-group">
-                <label for="guardian-name" class="col-sm-2 col-form-label">Guardian's Name</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" name="guardian-name" id="guardian-name">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="guardian-occupation" class="col-sm-2 col-form-label">Guardian's Occupation</label>
-                <div class="col-sm-5">
-                    <select id="guardian-occupation" class="form-control" style="width: 200px;"
-                        name="guardian-occupation">
-                        <option value="default">-- Select one --</option>
-
-                        <optgroup label="Healthcare Practitioners and Technical Occupations">
-                            <option value="chiropractor">Chiropractor</option>
-                            <option value="dentist">Dentist</option>
-                            <option value="dietitian">Dietitian or Nutritionist</option>
-                            <option value="optometrist">Optometrist</option>
-                            <option value="pharmacist">Pharmacist</option>
-                            <option value="physician">Physician</option>
-                            <option value="physician-assistant">Physician Assistant</option>
-                            <option value="podiatrist">Podiatrist</option>
-                            <option value="registered-nurse">Registered Nurse</option>
-                            <option value="therapist">Therapist</option>
-                            <option value="veterinarian">Veterinarian</option>
-                            <option value="health-technologist">Health Technologist or Technician</option>
-                            <option value="other-healthcare">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Healthcare Support Occupations">
-                            <option value="nursing-aide">Nursing</option>
-                            <option value="therapist-assistant">Physical Therapist Assistant</option>
-                            <option value="other-healthcare-support">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Business, Executive, Management, and Financial Occupations">
-                            <option value="chief-executive">Chief Executive</option>
-                            <option value="operations-manager">General and Operations Manager</option>
-                            <option value="marketing-manager">Marketing Manager</option>
-                            <option value="it-hr-manager">IT or HR Manager</option>
-                            <option value="construction-manager">Construction Manager</option>
-                            <option value="engineering-manager">Engineering Manager</option>
-                            <option value="accountant">Accountant, Auditor</option>
-                            <option value="business-specialist">Business Specialist</option>
-                            <option value="business-owner">Business Owner</option>
-                            <option value="furniture-business">Furniture Business</option>
-                            <option value="other-business">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Architecture and Engineering Occupations">
-                            <option value="architect-surveyor">Architect/Surveyor/Cartographer</option>
-                            <option value="engineer">Engineer</option>
-                            <option value="other-architecture">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Education, Training, and Library Occupations">
-                            <option value="postsecondary-teacher">College Professor
-                            </option>
-                            <option value="school-teacher">Primary/Secondary Teacher
-                            </option>
-                            <option value="other-teacher">Other Teacher or Instructor</option>
-                            <option value="other-education">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Other Professional Occupations">
-                            <option value="arts-design">Arts/Design/Entertainment/Sports/Media Occupations
-                            </option>
-                            <option value="computer-specialist">Computer Specialist, Mathematical Science</option>
-                            <option value="counselor-social-worker">Community and
-                                Social Service Specialist</option>
-                            <option value="lawyer-judge">Lawyer, Judge</option>
-                            <option value="life-scientist">Zoologist</option>
-                            <option value="physical-scientist">Physical Scientist </option>
-                            <option value="religious-worker">Religious Worker</option>
-                            <option value="social-scientist">Social Scientist</option>
-                            <option value="other-professional">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Office and Administrative Support Occupations">
-                            <option value="supervisor-admin-support">Administrative Support Workers</option>
-                            <option value="financial-clerk">Financial Clerk</option>
-                            <option value="secretary-admin-assistant">Secretary or Administrative Assistant</option>
-                            <option value="material-recording">Material Recording Worker</option>
-                            <option value="other-admin-support">Other
-                            </option>
-                        </optgroup>
-
-                        <optgroup label="Services Occupations">
-                            <option value="protective-service">Fire Fighting, Police Officer</option>
-                            <option value="chef-head-cook">Chef or Head Cook</option>
-                            <option value="cook-food-prep">Cook or Food Preparation Worker</option>
-                            <option value="food-beverage-serving">Bartender/Waiter/Waitress</option>
-                            <option value="building-maintenance">Building and Maintenance
-                            </option>
-                            <option value="hairdresser/flight-attendant">Hairdresser, Flight Attendant</option>
-                            <option value="sales-supervisor">Sales Supervisor, Retail Sales</option>
-                            <option value="retail-sales-worker">Retail Sales Worker</option>
-                            <option value="insurance-sales-agent">Insurance Sales Agent</option>
-                            <option value="sales-representative">Sales Representative</option>
-                            <option value="real-estate-sales-agent">Real Estate Sales Agent</option>
-                            <option value="other-services">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Agriculture, Maintenance, Repair, and Skilled Crafts Occupations">
-                            <option value="construction-extraction">Construction Laborer, Electrician</option>
-                            <option value="farming-fishing-forestry">Farming, Fishing, and Forestry</option>
-                            <option value="installation-maintenance-repair">Installation, Maintenance, and Repair
-                            </option>
-                            <option value="production-occupations">Production Occupations</option>
-                            <option value="other-agriculture">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Transportation Occupations">
-                            <option value="aircraft-pilot">Aircraft Pilot or Flight Engineer</option>
-                            <option value="motor-vehicle-operator">Vehicle Driver</option>
-                            <option value="other-transportation">Other</option>
-                        </optgroup>
-
-                        <optgroup label="Other Occupations">
-                            <option value="military">Military</option>
-                            <option value="homemaker">Homemaker</option>
-                            <option value="other-occupation">Other Occupation</option>
-                            <option value="dont-know">Don't Know</option>
-                            <option value="not-applicable">Not Applicable</option>
-                        </optgroup>
-                    </select>
-
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="guardian-employer" class="col-sm-2 col-form-label">Guardian's Employer Address</label>
-                <div class="col-sm-3">
-                    <input type="text" class="form-control" name="guardian-employer" id="guardian-employer">
                 </div>
             </div>
 
@@ -754,19 +712,13 @@
                     const fatherName = document.getElementById('father-name').value;
                     const motherName = document.getElementById('mother-name').value;
                     const guardianNameField = document.getElementById('guardian-name');
-                    const guardianOccupationField = document.getElementById('guardian-occupation');
-                    const guardianEmployerField = document.getElementById('guardian-employer');
 
                     if (fatherName || motherName) {
                         // If either father or mother fields have input, disable guardian fields
                         guardianNameField.disabled = true;
-                        guardianOccupationField.disabled = true;
-                        guardianEmployerField.disabled = true;
                     } else {
                         // If neither father nor mother fields have input, enable guardian fields
                         guardianNameField.disabled = false;
-                        guardianOccupationField.disabled = false;
-                        guardianEmployerField.disabled = false;
                     }
                 }
 
@@ -780,15 +732,7 @@
 
 
 
-            <br>
 
-            <div class="form-group">
-                <label for="brother-count" class="col-sm-2 col-form-label">Number of Brother(s) Studying in
-                    School</label>
-                <div class="col-sm-2">
-                    <input type="number" class="form-control" name="brother-count" required>
-                </div>
-            </div>
 
             <hr>
 

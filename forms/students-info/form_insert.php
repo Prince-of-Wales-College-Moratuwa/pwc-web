@@ -57,14 +57,12 @@ if ($grade == "1" || $grade == "2") {
     $mobile = $_POST['mobile'];
     $whatsapp = $_POST['whatsapp'];
     $father_name = $_POST['father-name'];
-    $father_occupation = $_POST['father-occupation'];
+    $father_occupation = isset($_POST['father-occupation']) ? $_POST['father-occupation'] : "";
     $father_employer = $_POST['father-employer'];
     $mother_name = $_POST['mother-name'];
-    $mother_occupation = $_POST['mother-occupation'];
+    $mother_occupation = isset($_POST['mother-occupation']) ? $_POST['mother-occupation'] : "";
     $mother_employer = $_POST['mother-employer'];
     $guardian_name = isset($_POST['guardian-name']) ? $_POST['guardian-name'] : "";
-    $guardian_occupation = isset($_POST['guardian-occupation']) ? $_POST['guardian-occupation'] : "";
-    $guardian_employer = isset($_POST['guardian-employer']) ? $_POST['guardian-employer'] : "";
     $brother_count = $_POST['brother-count'];
 
 
@@ -95,8 +93,6 @@ if (mysqli_num_rows($IndexCheckResult) > 0) {
         mother_occupation = '$mother_occupation', 
         mother_employer = '$mother_employer', 
         guardian_name = '$guardian_name', 
-        guardian_occupation = '$guardian_occupation', 
-        guardian_employer = '$guardian_employer', 
         brother_count = '$brother_count'
         WHERE IndexNo = '$IndexNo'";
 
@@ -124,14 +120,12 @@ if (mysqli_num_rows($IndexCheckResult) > 0) {
     (IndexNo, fname, grade_class, birthday, address1, address2, city, mobile, whatsapp, email, religion,
     father_name, father_occupation, father_employer, 
     mother_name, mother_occupation, mother_employer, 
-    guardian_name, guardian_occupation, guardian_employer, 
-    brother_count) 
+    guardian_name, brother_count) 
     VALUES 
     ('$IndexNo', '$fname', '$combinedClass', '$birthday', '$address1', '$address2', '$city', '$mobile', '$whatsapp', '$email', '$religion',
     '$father_name', '$father_occupation', '$father_employer', 
     '$mother_name', '$mother_occupation', '$mother_employer', 
-    '$guardian_name', '$guardian_occupation', '$guardian_employer', 
-    '$brother_count')";
+    '$guardian_name', '$brother_count')";
 
 
     if(mysqli_query($db, $sql)){
