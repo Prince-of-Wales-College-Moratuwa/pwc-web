@@ -158,7 +158,7 @@ input[type="radio"]:checked {
                 <label for="grade" class="col-sm-2 col-form-label">Grade</label>
                 <div class="col-sm-2">
                     <select class="grade form-control" name="grade" style="min-height:30px;" onchange="showOptions()">
-                        <option value="+">+</option>
+                       
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
