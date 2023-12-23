@@ -54,18 +54,18 @@ include 'admin-header.php';
 							<div id="content"></div>
 
 							<input type="hidden" name="editorContent" id="editorContent" value="">
-            <script>
-                ClassicEditor
-                    .create(document.querySelector('#content'))
-                    .then(editor => {
-                        editor.model.document.on('change:data', () => {
-                            document.querySelector('#editorContent').value = editor.getData();
-                        });
-                    })
-                    .catch(error => {
-                        console.error(error);
-                    });
-            </script>
+							<script>
+								ClassicEditor
+									.create(document.querySelector('#content'))
+									.then(editor => {
+										editor.model.document.on('change:data', () => {
+											document.querySelector('#editorContent').value = editor.getData();
+										});
+									})
+									.catch(error => {
+										console.error(error);
+									});
+							</script>
 						</div>
 						<div class="col-md-6">
 							<div class="mb-3">
@@ -86,10 +86,27 @@ include 'admin-header.php';
 					<div class="col-md-6">
 						<div class="mb-3">
 							<label class="form-label">Featured Image</label>
-							<input type="file" class="form-control" name="photo" placeholder="Featured Image"
-								id="photo">
+							<input type="file" class="form-control" name="photo" placeholder="Featured Image" id="photo"
+								onchange="checkFileType()">
+							<p id="fileMessage"></p>
 						</div>
 					</div>
+
+					<script>
+						function checkFileType() {
+							const fileInput = document.getElementById('photo');
+							const fileMessage = document.getElementById('fileMessage');
+
+							const allowedExtensions = /(\.webp)$/i;
+
+							if (!allowedExtensions.test(fileInput.value)) {
+								fileInput.value = ''; 
+								fileMessage.innerHTML = 'Please upload .webp file.';
+							} else {
+								fileMessage.innerHTML = ''; 
+							}
+						}
+					</script>
 
 				</div>
 				<div class="mt-4 mb-3 text-center">

@@ -153,12 +153,30 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 					<div class="mb-3">
 						<label class="form-label">Featured Image</label>
-						<input type="file" name="image" id="featured_img" class="form-control"
-							accept=".jpg, .jpeg, .png, .webp" />
+						<input type="file" name="image" id="featured_img" class="form-control" accept=".webp"
+							onchange="checkFileType()">
+						<p id="fileMessage"></p>
 						<?php if (!empty($row['img'])): ?>
 						<p>Current Image: <?php echo $row['img']; ?></p>
 						<?php endif; ?>
 					</div>
+
+					<script>
+						function checkFileType() {
+							const fileInput = document.getElementById('featured_img');
+							const fileMessage = document.getElementById('fileMessage');
+
+							const allowedExtensions = /(\.webp)$/i;
+
+							if (!allowedExtensions.test(fileInput.value)) {
+								fileInput.value = ''; 
+								fileMessage.innerHTML = 'Please upload a valid .webp file.';
+							} else {
+								fileMessage.innerHTML = ''; 
+							}
+						}
+					</script>
+
 
 				</div>
 				<div class="mt-4 mb-3 text-center">

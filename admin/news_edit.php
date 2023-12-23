@@ -106,14 +106,31 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="col-md-6">
-                    <div class="mb-3">
-                        <label class="form-label">Featured Image</label>
-                        <input type="file" name="image" id="featured_img" class="form-control" accept=".jpg, .jpeg, .png, .webp" />
-                        <?php if (!empty($row['photo'])): ?>
-                            <p>Current Image: <?php echo $row['photo']; ?></p>
-                        <?php endif; ?>
-                    </div>
-                </div>
+    <div class="mb-3">
+        <label class="form-label">Featured Image</label>
+        <input type="file" name="image" id="featured_img" class="form-control" accept=".webp" onchange="checkFileType()">
+        <p id="fileMessage"></p>
+        <?php if (!empty($row['photo'])): ?>
+            <p>Current Image: <?php echo $row['photo']; ?></p>
+        <?php endif; ?>
+    </div>
+</div>
+
+<script>
+    function checkFileType() {
+        const fileInput = document.getElementById('featured_img');
+        const fileMessage = document.getElementById('fileMessage');
+
+        const allowedExtensions = /(\.webp)$/i;
+
+        if (!allowedExtensions.test(fileInput.value)) {
+            fileInput.value = ''; 
+            fileMessage.innerHTML = 'Please upload a valid .webp file.';
+        } else {
+            fileMessage.innerHTML = ''; 
+        }
+    }
+</script>
 
                 <div class="mt-4 mb-3 text-center">
                     <input type="submit" name="submit" class="btn btn-success" value="Edit" />
