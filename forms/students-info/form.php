@@ -158,7 +158,7 @@ input[type="radio"]:checked {
                 <label for="grade" class="col-sm-2 col-form-label">Grade</label>
                 <div class="col-sm-2">
                     <select class="grade form-control" name="grade" style="min-height:30px;" onchange="showOptions()">
-                        <option value="+">+</option>
+                       
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -184,8 +184,7 @@ input[type="radio"]:checked {
                         <option value="D">D</option>
                         <option value="E">E</option>
                         <option value="F">F</option>
-                        <option value="G">G</option>
-                        <option value="H">H</option>
+                       
                     </select>
                 </div>
 
@@ -320,7 +319,7 @@ input[type="radio"]:checked {
             </div>
             <div class="form-group" id="father-occupation">
                 <fieldset class="form-check">
-                    <legend>Healthcare Practitioners and Technical Occupations:</legend>
+                    <legend><b>Healthcare Practitioners and Technical Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="chiropractor"> Chiropractor</label><br>
                     <label><input type="radio" name="father-occupation" value="dentist"> Dentist</label><br>
                     <label><input type="radio" name="father-occupation" value="dietitian_nutritionist"> Dietitian or
@@ -342,7 +341,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Healthcare Support Occupations:</legend>
+                    <legend><b>Healthcare Support Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="nursing_psychiatric_home_health_aide">
                         Nursing, Psychiatric, or Home Health Aide</label><br>
                     <label><input type="radio" name="father-occupation" value="therapist_aide"> Occupational and
@@ -352,7 +351,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Business, Executive, Management, and Financial Occupations:</legend>
+                    <legend><b>Business, Executive, Management, and Financial Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="chief_executive"> Chief
                         Executive</label><br>
                     <label><input type="radio" name="father-occupation" value="operations_manager"> General and
@@ -378,7 +377,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Architecture and Engineering Occupations:</legend>
+                    <legend<b>Architecture and Engineering Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="architect_surveyor_cartographer">
                         Architect, Surveyor, or Cartographer</label><br>
                     <label><input type="radio" name="father-occupation" value="engineer"> Engineer</label><br>
@@ -387,7 +386,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Education, Training, and Library Occupations:</legend>
+                    <legend<b>Education, Training, and Library Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="postsecondary_teacher"> Postsecondary
                         Teacher (e.g., College Professor)</label><br>
                     <label><input type="radio" name="father-occupation" value="school_teacher"> Primary, Secondary, or
@@ -399,7 +398,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Other Professional Occupations:</legend>
+                    <legend><b>Other Professional Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="arts_design_entertainment_sports_media">
                         Arts, Design, Entertainment, Sports, and Media Occupations</label><br>
                     <label><input type="radio" name="father-occupation"
@@ -422,7 +421,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Office and Administrative Support Occupations:</legend>
+                    <legend><b>Office and Administrative Support Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation"
                             value="supervisor_administrative_support_workers"> Supervisor of Administrative Support
                         Workers</label><br>
@@ -438,7 +437,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Services Occupations:</legend>
+                    <legend><b>Services Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="protective_service"> Protective Service
                         (e.g., Fire Fighting, Police Officer, Correctional Officer)</label><br>
                     <label><input type="radio" name="father-occupation" value="chef_head_cook"> Chef or Head
@@ -466,7 +465,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Agriculture, Maintenance, Repair, and Skilled Crafts Occupations:</legend>
+                    <legend><b>Agriculture, Maintenance, Repair, and Skilled Crafts Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="construction_extraction"> Construction
                         and Extraction (e.g., Construction Laborer, Electrician)</label><br>
                     <label><input type="radio" name="father-occupation" value="farming_fishing_forestry"> Farming,
@@ -490,7 +489,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Other Occupations:</legend>
+                    <legend><b>Other Occupations:</b></legend>
                     <label><input type="radio" name="father-occupation" value="military"> Military</label><br>
                     <label><input type="radio" name="father-occupation" value="homemaker"> Homemaker</label><br>
                     <label><input type="radio" name="father-occupation" value="other_occupation"> Other
@@ -515,7 +514,7 @@ input[type="radio"]:checked {
             </div>
             <div class="form-group" id="mother-occupation">
                 <fieldset class="form-check">
-                    <legend>Healthcare Practitioners and Technical Occupations:</legend>
+                    <legend><b>Healthcare Practitioners and Technical Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="chiropractor"> Chiropractor</label><br>
                     <label><input type="radio" name="mother-occupation" value="dentist"> Dentist</label><br>
                     <label><input type="radio" name="mother-occupation" value="dietitian_nutritionist"> Dietitian or
@@ -537,7 +536,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Healthcare Support Occupations:</legend>
+                    <legend><b>Healthcare Support Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="nursing_psychiatric_home_health_aide">
                         Nursing, Psychiatric, or Home Health Aide</label><br>
                     <label><input type="radio" name="mother-occupation" value="therapist_aide"> Occupational and
@@ -547,7 +546,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Business, Executive, Management, and Financial Occupations:</legend>
+                    <legend><b>Business, Executive, Management, and Financial Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="chief_executive"> Chief
                         Executive</label><br>
                     <label><input type="radio" name="mother-occupation" value="operations_manager"> General and
@@ -573,7 +572,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Architecture and Engineering Occupations:</legend>
+                    <legend><b>Architecture and Engineering Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="architect_surveyor_cartographer">
                         Architect, Surveyor, or Cartographer</label><br>
                     <label><input type="radio" name="mother-occupation" value="engineer"> Engineer</label><br>
@@ -582,7 +581,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Education, Training, and Library Occupations:</legend>
+                    <legend><b>Education, Training, and Library Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="postsecondary_teacher"> Postsecondary
                         Teacher (e.g., College Professor)</label><br>
                     <label><input type="radio" name="mother-occupation" value="school_teacher"> Primary, Secondary, or
@@ -594,7 +593,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Other Professional Occupations:</legend>
+                    <legend><b>Other Professional Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="arts_design_entertainment_sports_media">
                         Arts, Design, Entertainment, Sports, and Media Occupations</label><br>
                     <label><input type="radio" name="mother-occupation"
@@ -617,7 +616,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Office and Administrative Support Occupations:</legend>
+                    <legend><b>Office and Administrative Support Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation"
                             value="supervisor_administrative_support_workers"> Supervisor of Administrative Support
                         Workers</label><br>
@@ -633,7 +632,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Services Occupations:</legend>
+                    <legend><b>Services Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="protective_service"> Protective Service
                         (e.g., Fire Fighting, Police Officer, Correctional Officer)</label><br>
                     <label><input type="radio" name="mother-occupation" value="chef_head_cook"> Chef or Head
@@ -661,7 +660,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Agriculture, Maintenance, Repair, and Skilled Crafts Occupations:</legend>
+                    <legend><b>Agriculture, Maintenance, Repair, and Skilled Crafts Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="construction_extraction"> Construction
                         and Extraction (e.g., Construction Laborer, Electrician)</label><br>
                     <label><input type="radio" name="mother-occupation" value="farming_fishing_forestry"> Farming,
@@ -675,7 +674,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Transportation Occupations:</legend>
+                    <legend><b>Transportation Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="aircraft_pilot_flight_engineer"> Aircraft
                         Pilot or Flight Engineer</label><br>
                     <label><input type="radio" name="mother-occupation" value="motor_vehicle_operator"> Motor Vehicle
@@ -685,7 +684,7 @@ input[type="radio"]:checked {
                 </fieldset>
 
                 <fieldset class="form-check">
-                    <legend>Other Occupations:</legend>
+                    <legend><b>Other Occupations:</b></legend>
                     <label><input type="radio" name="mother-occupation" value="military"> Military</label><br>
                     <label><input type="radio" name="mother-occupation" value="homemaker"> Homemaker</label><br>
                     <label><input type="radio" name="mother-occupation" value="other_occupation"> Other
