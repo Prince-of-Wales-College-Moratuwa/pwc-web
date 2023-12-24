@@ -92,11 +92,19 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Category</label>
-                            <input type="text" name="category" id="category" class="form-control" value="<?php echo $row['category']; ?>" />
-                        </div>
-                    </div>
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="category" id="category" class="form-control">
+            <option value="Achievements - Sport Sector" <?php echo ($row['category'] == 'Achievements - Sport Sector') ? 'selected' : ''; ?>>Achievements - Sport Sector</option>
+            <option value="Achievements - Aesthetic Sector" <?php echo ($row['category'] == 'Achievements - Aesthetic Sector') ? 'selected' : ''; ?>>Achievements - Aesthetic Sector</option>
+            <option value="Achievements - Education Sector" <?php echo ($row['category'] == 'Achievements - Education Sector') ? 'selected' : ''; ?>>Achievements - Education Sector</option>
+            <option value="Achievements - Academic Sector" <?php echo ($row['category'] == 'Achievements - Academic Sector') ? 'selected' : ''; ?>>Achievements - Academic Sector</option>
+            <option value="Principal Announcements" <?php echo ($row['category'] == 'Principal Announcements') ? 'selected' : ''; ?>>Principal Announcements</option>
+            <option value="Exclusives" <?php echo ($row['category'] == 'Exclusives') ? 'selected' : ''; ?>>Exclusives</option>
+        </select>
+    </div>
+</div>
+
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Slug</label>

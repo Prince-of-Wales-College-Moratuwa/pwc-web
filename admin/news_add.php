@@ -70,9 +70,20 @@ include 'admin-header.php';
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label class="form-label">Category</label>
-								<input type="text" name="category" id="category" class="form-control" />
+								<select name="category" id="category" class="form-control">
+									<option value="Achievements - Sport Sector">Achievements - Sport Sector</option>
+									<option value="Achievements - Aesthetic Sector">Achievements - Aesthetic Sector
+									</option>
+									<option value="Achievements - Education Sector">Achievements - Education Sector
+									</option>
+									<option value="Achievements - Academic Sector">Achievements - Academic Sector
+									</option>
+									<option value="Principal Announcements">Principal Announcements</option>
+									<option value="Exclusives">Exclusives</option>
+								</select>
 							</div>
 						</div>
+
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label class="form-label">Slug</label>
@@ -100,10 +111,10 @@ include 'admin-header.php';
 							const allowedExtensions = /(\.webp)$/i;
 
 							if (!allowedExtensions.test(fileInput.value)) {
-								fileInput.value = ''; 
+								fileInput.value = '';
 								fileMessage.innerHTML = 'Please upload .webp file.';
 							} else {
-								fileMessage.innerHTML = ''; 
+								fileMessage.innerHTML = '';
 							}
 						}
 					</script>
