@@ -46,7 +46,18 @@
         }
     </style>
 
+<?php 
+$birthYear = 1876;
+$currentDate = date("m-d");
+$birthday = "09-14";
 
+if ($currentDate < $birthday) {
+    $age = date("Y") - $birthYear - 1;
+} else {
+    $age = date("Y") - $birthYear;
+}
+
+?>
 
 </head>
 
@@ -84,9 +95,7 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-award text-primary mb-4"></i>
                         <h1 class="mb-3">
-                            <?php $currentYear = date("Y");
-                        $result = $currentYear - 1876;
-                        echo $result; ?>
+                        echo $age; ?>
                         </h1>
                         <h5 class="mb-3">Years of Excellence</h5>
                     </div>
