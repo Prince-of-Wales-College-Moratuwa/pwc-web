@@ -1,6 +1,6 @@
 <?php
 
-$page = 'news';
+$page = 'blog';
 
 include '../database_connection.php';
 
@@ -28,8 +28,8 @@ include 'admin-header.php';
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-		<li class="breadcrumb-item"><a href="news.php">News</a></li>
-		<li class="breadcrumb-item active">Write New News</li>
+		<li class="breadcrumb-item"><a href="blog.php">Blog</a></li>
+		<li class="breadcrumb-item active">Write New Article</li>
 	</ol>
 
 
@@ -96,6 +96,19 @@ include 'admin-header.php';
 
 					<div class="col-md-6">
 						<div class="mb-3">
+							<label class="form-label">Author</label>
+							<select name="author" id="author" class="form-control">
+								<option value="Web Team">Web Team</option>
+								<option value="Principal">Principal</option>
+								<option value="Admin">Admin</option>
+								<option value="Teacher">Teacher</option>
+								<option value="Student">Student</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="mb-3">
 							<label class="form-label">Featured Image</label>
 							<input type="file" class="form-control" name="photo" placeholder="Featured Image" id="photo"
 								onchange="checkFileType()">
@@ -137,6 +150,7 @@ if(isset($_POST["add_news"]))
     $formdata['title'] = trim($_POST["title"]);
     $formdata['content'] = isset($_POST["editorContent"]) ? trim($_POST["editorContent"]) : '';
     $formdata['category'] = trim($_POST["category"]); 
+	$formdata['author'] = isset($_POST["author"]) ? trim($_POST["author"]) : '';
     $formdata['slug'] = trim($_POST["slug"]); 
 
     $data = array(
@@ -144,11 +158,12 @@ if(isset($_POST["add_news"]))
         ':content'  => $formdata['content'],
         ':category' => $formdata['category'],
         ':slug'     => $formdata['slug'],
+        ':author'   => $formdata['author'],
     );
 
 	$file = $_FILES['photo']['name'];
 	$file_loc = $_FILES['photo']['tmp_name'];
-	$folder = "../content/img/img-news/";
+	$folder = "../content/img/img-blog/";
 	$new_file_name = strtolower($file);
 	$final_file = str_replace(' ', '-', $new_file_name);
 	$final_file = rand() . "-" . $final_file; 
@@ -156,8 +171,8 @@ if(isset($_POST["add_news"]))
 		$image = $final_file;
 		$query = "
 		INSERT INTO pwc_db_news 
-		(title, content, category, slug, photo, date, excerpt) 
-		VALUES (:title, :content, :category, :slug, '".$image."', CURDATE(), :content)
+		(title, content, category, slug, photo, date, excerpt, author) 
+		VALUES (:title, :content, :category, :slug, '".$image."', CURDATE(), :content, :author)
 		";
 
 	}

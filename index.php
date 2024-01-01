@@ -117,7 +117,7 @@ if ($currentDate < $birthday) {
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Latest</h6>
-            <h1 class="mb-5">NEWS</h1>
+            <h1 class="mb-5">ARTICLES</h1>
         </div>
 
         <div class="row">
@@ -144,14 +144,14 @@ if($statement->rowCount() > 0)
 
             <div class="col-md-4 animate-box">
                 <article class="article-entry">
-                    <a href="news/<?php echo $row["slug"]; ?>" class="blog-img">
-                        <img src="content/img/img-news/<?php echo $row["photo"]; ?>"
+                    <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
+                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>"
                             alt="<?php echo $row["photo"]; ?>"><br><br>
                         <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
                     <div class="desc">
-                        <h4><a href="news/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h4>
+                        <h4><a href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h4>
                         <p><?php echo htmlspecialchars(strip_tags($row["excerpt"])); echo "......"; ?></p>
                     </div>
                 </article>
@@ -170,7 +170,7 @@ if($statement->rowCount() > 0)
     </div>
 
 </div>
-<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="news/" data-wow-delay="0.1s">Read More</a></center>
+<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="blog/" data-wow-delay="0.1s">Read More</a></center>
 </div>
 
 

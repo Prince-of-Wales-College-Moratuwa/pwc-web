@@ -33,19 +33,19 @@ foreach ($rows as $row) {
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_GB" />
-  <meta property="og:url" content="https://princeofwales.edu.lk/news/<?php echo $row["slug"]; ?>" />
+  <meta property="og:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="og:title" content="<?php echo $row["title"]; ?>" />
   <meta property="og:description" content="<?php echo $row["excerpt"]; ?>" />
   <meta property="og:image"
-    content="https://princeofwales.edu.lk/content/img/img-news/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+    content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
 
   <!-- Twitter / WA / TG -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://princeofwales.edu.lk/news/<?php echo $row["slug"]; ?>" />
+  <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="twitter:title" content="<?php echo $row["title"]; ?>" />
   <meta property="twitter:description" content="<?php echo $row["excerpt"]; ?>" />
   <meta property="twitter:image"
-    content="https://princeofwales.edu.lk/content/img/img-news/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+    content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
 
 
 </head>
@@ -54,24 +54,21 @@ foreach ($rows as $row) {
 
   <span>
     <link itemprop="thumbnailUrl"
-      href="https://princeofwales.edu.lk/content/img/img-news/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
+      href="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
     <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
       <link itemprop="url"
-        href="https://princeofwales.edu.lk/content/img/img-news/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
+        href="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
     </span>
 
     <?php
-// Assuming you have fetched the category field value from the database into $row["category"]
 $category = $row["category"];
 
 if (stripos($category, "Achievement") !== false) {
 
     echo '<div class="confetti-container"></div>';
     
-    // Include the confetti script
     echo '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>';
     
-    // Run the confetti animation script
     echo '
     <script>
       var end = Date.now() + (2 * 1000);
@@ -113,10 +110,11 @@ if (stripos($category, "Achievement") !== false) {
             <div class="col-12 wow fadeInUp">
               <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
               <h2 class="mb-4"><?php echo $row["title"]; ?></h2>
+              <h6 class="bg-white text-start ">By<?php echo $row["author"]; ?></h6>
               <h6 class="bg-white text-start text-primary"><?php echo $row["date"]; ?></h6>
               <br>
               <div class="position-relative">
-                <img class="img-fluid w-100 h-100" src="../../content/img/img-news/<?php echo $row["photo"]; ?>"
+                <img class="img-fluid w-100 h-100" src="../../content/img/img-blog/<?php echo $row["photo"]; ?>"
                   alt="<?php echo $row["title"]; ?>" style="object-fit: cover; border-radius: 8px;">
                 <br><br>
               </div>
@@ -133,12 +131,13 @@ if (stripos($category, "Achievement") !== false) {
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
               <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
               <h2 class="mb-4"><?php echo $row["title"]; ?></h2>
+              <h6 class="bg-white text-start ">By <?php echo $row["author"]; ?></h6>
               <h6 class="bg-white text-start text-primary "><?php echo $row["date"]; ?></h6>
               <p class="mb-4"><?php echo $row["content"]; ?></p>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
               <div class="position-relative ">
-                <img class="img-fluid w-100 h-100" src="../../content/img/img-news/<?php echo $row["photo"]; ?>"
+                <img class="img-fluid w-100 h-100" src="../../content/img/img-blog/<?php echo $row["photo"]; ?>"
                   alt="<?php echo $row["title"]; ?>" style="object-fit: cover; border-radius: 8px;">
               </div>
             </div>

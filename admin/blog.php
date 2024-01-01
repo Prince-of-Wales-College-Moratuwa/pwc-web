@@ -1,6 +1,6 @@
 <?php
 
-$page = 'news';
+$page = 'blog';
 
 
 
@@ -23,18 +23,18 @@ include 'admin-header.php';
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>News</h1>
+	<h1>Blog</h1>
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-		<li class="breadcrumb-item active">News</li>
+		<li class="breadcrumb-item active">Blog</li>
 	</ol>
 
 	<div class="card mb-4">
 		<div class="card-header">
 			<div class="row">
 				<div class="col col-md-6">
-					<i class="fas fa-table me-1"></i> News
+					<i class="fas fa-table me-1"></i> Blog
 				</div>
 				<div class="col col-md-6" align="right">
 					<a href="news_add.php" class="btn btn-success btn-sm">Add</a>
@@ -75,7 +75,7 @@ $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
 						<td><?php echo($row["category"]) ?></td>
 
 						<td>
-							<a href="../news/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
+							<a href="../blog/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
 							<a href="news_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
 							<a href="news_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
 						</td>

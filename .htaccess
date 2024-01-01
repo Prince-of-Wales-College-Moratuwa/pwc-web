@@ -1,6 +1,12 @@
 RewriteEngine On
 
-RewriteRule ^news/([a-zA-Z0-9_-]+)$ news/news.php?slug=$1 [L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^news/(.*)$ /blog/$1 [R=301,L]
+</IfModule>
+
+
+RewriteRule ^blog/([a-zA-Z0-9_-]+)$ blog/blog.php?slug=$1 [L]
 RewriteRule ^events/([a-zA-Z0-9_-]+)$ events/event.php?slug=$1 [L]
 
 RewriteRule ^golden-book$ the-golden-book.php [NC,L]

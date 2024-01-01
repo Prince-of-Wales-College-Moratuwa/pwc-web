@@ -1,5 +1,5 @@
 <?php
-$page = 'news';
+$page = 'blog';
 include '../database_connection.php';
 include '../functions.php';
 

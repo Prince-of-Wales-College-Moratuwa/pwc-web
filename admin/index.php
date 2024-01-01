@@ -24,7 +24,7 @@ include 'admin-header.php';
 
 	<div class="dropdown-content">
 			<a class="nav-link <?php if ($page === 'index') echo 'active'; ?>" href="index.php"><img src="ion-icon/dashboard.png" width="20px">&nbsp <b>DASHBOARD</b></a>
-            <a class="nav-link <?php if ($page === 'news') echo 'active'; ?>" href="news.php"><img src="ion-icon/news.png" width="20px">&nbsp <b>NEWS</b></a>
+            <a class="nav-link <?php if ($page === 'blog') echo 'active'; ?>" href="blog.php"><img src="ion-icon/news.png" width="20px">&nbsp <b>Blog</b></a>
              <a class="nav-link <?php if ($page === 'events') echo 'active'; ?>" href="events.php"><img src="ion-icon/events.png" width="20px">&nbsp <b>EVENTS</b></a>
 
         </div>
@@ -35,7 +35,7 @@ include 'admin-header.php';
 			<div class="card bg-primary text-white mb-4">
 				<div class="card-body">
 					<h1 class="text-center"><?php echo Count_total_news($connect); ?></h1>
-					<h5 class="text-center">News</h5>
+					<h5 class="text-center">Articles</h5>
 				</div>
 			</div>
 		</div>

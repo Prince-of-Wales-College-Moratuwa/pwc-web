@@ -11,13 +11,13 @@
 			<image:loc>https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/1254165904-achivements-1.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/1254165904-achivements-1.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/22938104-rugby.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/22938104-rugby.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/441935520-achivements-3-copy-%282%29.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/441935520-achivements-3-copy-%282%29.webp</image:loc>
 	</image:image>
 	<image:image>
 			<image:loc>https://princeofwales.edu.lk/content/img/img-events/1040048686-373662867_632755345656187_5316122287395985578_n.jpg</image:loc>
@@ -71,29 +71,29 @@
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/</loc>
+	<loc>https://princeofwales.edu.lk/blog/</loc>
 	<lastmod>2023-10-09T06:03:52+01:00</lastmod>
 	<priority>0.8</priority>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/1826833991-achivements-copy-%282%29.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/1826833991-achivements-copy-%282%29.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/1710761248-achivements-carrom-%282%29.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/1710761248-achivements-carrom-%282%29.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/1186430182-basketball-09-16-pwc.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/1186430182-basketball-09-16-pwc.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/374442436-principal-announcement-9-11.png</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/374442436-principal-announcement-9-11.png</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/252941670-choir-%282%29.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/252941670-choir-%282%29.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/1529616043-handball.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/1529616043-handball.webp</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/content/img/img-news/wm-competitions-2023-pwc.webp</image:loc>
+			<image:loc>https://princeofwales.edu.lk/content/img/img-blog/wm-competitions-2023-pwc.webp</image:loc>
 	</image:image>
 </url>
 <url>
@@ -396,17 +396,17 @@
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=9</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=9</loc>
 	<lastmod>2023-10-09T06:03:52+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=10</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=10</loc>
 	<lastmod>2023-10-09T06:03:52+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=7</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=7</loc>
 	<lastmod>2023-10-09T06:03:52+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
@@ -529,7 +529,7 @@
 			<image:loc>https://princeofwales.edu.lk/cmbu/images/dubbing.png</image:loc>
 	</image:image>
 	<image:image>
-			<image:loc>https://princeofwales.edu.lk/cmbu/images/news.png</image:loc>
+			<image:loc>https://princeofwales.edu.lk/cmbu/images/blog.png</image:loc>
 	</image:image>
 	<image:image>
 			<image:loc>https://princeofwales.edu.lk/cmbu/images/photography.png</image:loc>
@@ -572,42 +572,42 @@
 	</image:image>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/index.php</loc>
+	<loc>https://princeofwales.edu.lk/blog/index.php</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=8</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=8</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=6</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=6</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=5</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=5</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=4</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=4</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=2</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=2</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=3</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=3</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://princeofwales.edu.lk/news/news.php?id=1</loc>
+	<loc>https://princeofwales.edu.lk/blog/blog.php?id=1</loc>
 	<lastmod>2023-10-09T06:03:55+01:00</lastmod>
 	<priority>0.8</priority>
 </url>

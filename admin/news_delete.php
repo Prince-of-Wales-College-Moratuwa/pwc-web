@@ -1,5 +1,5 @@
 <?php
-$page = 'news';
+$page = 'blog';
 
 include '../database_connection.php';
 include './admin-functions.php';
@@ -24,11 +24,11 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
         
         if ($stmt->execute()) {
             
-            echo "<script>alert('News deleted successfully'); window.location.href = document.referrer;</script>";
+            echo "<script>alert('Article deleted successfully'); window.location.href = document.referrer;</script>";
             exit();
         } else {
         
-            echo "<script>alert('Error deleting news'); window.location.href = document.referrer;</script>";
+            echo "<script>alert('Error deleting Article'); window.location.href = document.referrer;</script>";
             exit();
         }
     } catch (PDOException $e) {

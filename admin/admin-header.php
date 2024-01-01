@@ -97,7 +97,7 @@
                         <div class="nav">
                             <br>
                             <a class="nav-link <?php if ($page === 'index') echo 'active'; ?>" href="index.php"><img src="ion-icon/dashboard.png" width="20px">&nbsp Dashboard</a>
-                            <a class="nav-link <?php if ($page === 'news') echo 'active'; ?>" href="news.php"><img src="ion-icon/news.png" width="20px">&nbsp News</a>
+                            <a class="nav-link <?php if ($page === 'blog') echo 'active'; ?>" href="blog.php"><img src="ion-icon/news.png" width="20px">&nbsp Blog</a>
                             <a class="nav-link <?php if ($page === 'events') echo 'active'; ?>" href="events.php"><img src="ion-icon/events.png" width="20px">&nbsp Events</a>
 
                             <br><hr><br>

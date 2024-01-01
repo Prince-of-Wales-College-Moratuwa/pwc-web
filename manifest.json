@@ -18,9 +18,9 @@
       ]
     },
     {
-      "name": "News",
-      "short_name": "News",
-      "url": "/news/",
+      "name": "Blog",
+      "short_name": "Blog",
+      "url": "/blog/",
       "icons": [
         {
           "src": "content/icons/pwa-shortcuts/news.png",
