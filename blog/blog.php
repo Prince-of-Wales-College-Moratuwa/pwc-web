@@ -110,7 +110,7 @@ if (stripos($category, "Achievement") !== false) {
             <div class="col-12 wow fadeInUp">
               <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
               <h2 class="mb-4"><?php echo $row["title"]; ?></h2>
-              <h6 class="bg-white text-start ">By<?php echo $row["author"]; ?></h6>
+              <h6 class="bg-white text-start ">By <?php echo $row["author"]; ?></h6>
               <h6 class="bg-white text-start text-primary"><?php echo $row["date"]; ?></h6>
               <br>
               <div class="position-relative">
