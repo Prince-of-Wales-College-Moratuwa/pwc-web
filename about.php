@@ -95,7 +95,7 @@ if ($currentDate < $birthday) {
                     <div class="p-4">
                         <i class="fa fa-3x fa-award text-primary mb-4"></i>
                         <h1 class="mb-3">
-                        echo $age; ?>
+                        <?php echo $age; ?>
                         </h1>
                         <h5 class="mb-3">Years of Excellence</h5>
                     </div>
