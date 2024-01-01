@@ -54,6 +54,19 @@
 
 </head>
 
+<?php 
+$birthYear = 1876;
+$currentDate = date("m-d");
+$birthday = "09-14";
+
+if ($currentDate < $birthday) {
+    $age = date("Y") - $birthYear - 1;
+} else {
+    $age = date("Y") - $birthYear;
+}
+
+?>
+
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
@@ -332,9 +345,7 @@ if($statement->rowCount() > 0)
                     <div class="p-4">
                         <i class="fa fa-3x fa-award text-primary mb-4"></i>
                         <h1 class="mb-3">
-                            <?php $currentYear = date("Y");
-                        $result = $currentYear - 1876;
-                        echo $result; ?>
+                            <?php echo $age ?>
                         </h1>
                         <h5 class="mb-3">Years of Excellence</h5>
                     </div>
@@ -609,8 +620,8 @@ if($statement->rowCount() > 0)
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="display-3 text-white animated slideInDown">147 Years and Counting</h1>
-                <h5 class=" text-white animated slideInDown"><br> Explore college history and discover 147 years of rich
+                <h1 class="display-3 text-white animated slideInDown"><?php echo $age ?> Years and Counting</h1>
+                <h5 class=" text-white animated slideInDown"><br> Explore college history and discover <?php echo $age ?> years of rich
                     heritage and academic excellence. <br><br> </h5>
                 <center><a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history"
                         data-wow-delay="0.1s">Explore College History</a></center>
