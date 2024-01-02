@@ -1,6 +1,6 @@
 <?php
 
-$page = 'prefects-topboard';
+$page = 'past-principals';
 
 include '../database_connection.php';
 
@@ -18,23 +18,24 @@ include 'admin-header.php';
 
 ?>
 
+<script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
 
 
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Add Prefects Topboard Member</h1>
+	<h1>Add Past Principal</h1>
 
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-		<li class="breadcrumb-item active">Add Prefects Topboard Member</li>
+		<li class="breadcrumb-item active">Add Past Principal</li>
 	</ol>
 
 
 
 	<div class="card mb-4">
 		<div class="card-header">
-        Add Prefects Topboard Member
+        Add Past Principal
 		</div>
 		<div class="card-body">
 			<form action="" method="POST" enctype="multipart/form-data">
@@ -50,8 +51,8 @@ include 'admin-header.php';
 
 						<div class="col-md-6">
 							<div class="mb-3">
-								<label class="form-label">post</label>
-								<input type="text" name="post" id="post" class="form-control"
+								<label class="form-label">Years</label>
+								<input type="text" name="years" id="years" class="form-control"
 									oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase()" />
 							</div>
 						</div>
@@ -100,17 +101,17 @@ if (isset($_POST["add_past-principal"])) {
     $formdata = array();
 
     $formdata['name'] = trim($_POST["name"]);
-    $formdata['post'] = trim($_POST["post"]);
+    $formdata['years'] = trim($_POST["years"]);
 
 
     $data = array(
         ':name' => $formdata['name'],
-        ':post' => $formdata['post'],
+        ':years' => $formdata['years'],
     );
 
     $file = $_FILES['img']['name'];
     $file_loc = $_FILES['img']['tmp_name'];
-    $folder = "../content/img/img-about/prefects/";
+    $folder = "../content/img/img-history/former-principals/";
     $new_file_name = strtolower($file);
     $final_file = str_replace(' ', '-', $new_file_name);
     $final_file = rand() . "-" . $final_file;
@@ -118,9 +119,9 @@ if (isset($_POST["add_past-principal"])) {
     if (move_uploaded_file($file_loc, $folder . $final_file)) {
         $image = $final_file;
         $query = "
-        INSERT INTO about_prefect_topboard 
-        (name, post, img) 
-        VALUES (:name, :post, :img)
+        INSERT INTO about_past_principals 
+        (name, years, img) 
+        VALUES (:name, :years, :img)
         ";
 
         $data[':img'] = $image; 
@@ -128,7 +129,7 @@ if (isset($_POST["add_past-principal"])) {
 
         $statement->execute($data);
 
-		echo '<script>window.open("../about/prefects-guild", "_blank");</script>';
+		echo '<script>window.open("../history/former-principals", "_blank");</script>';
         exit();
 
     }

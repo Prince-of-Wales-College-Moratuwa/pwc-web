@@ -1,5 +1,5 @@
 <?php
-$page = 'past-prefects';
+$page = 'past-principals';
 
 include '../database_connection.php';
 include './admin-functions.php';
@@ -17,8 +17,24 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
 
     try {
         
+        $sql_select = "SELECT img FROM about_past_principals WHERE id = :id";
+        $stmt_select = $connect->prepare($sql_select);
+        $stmt_select->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt_select->execute();
+
+        $row = $stmt_select->fetch(PDO::FETCH_ASSOC);
+        $image_name = $row['img'];
+
+       
+        $image_path = '../content/img/img-history/former-principals/' . $image_name;
+
+       
+        if (file_exists($image_path)) {
+            unlink($image_path);
+        }
+
    
-        $sql_delete = "DELETE FROM about_past_headprefects WHERE id = :id";
+        $sql_delete = "DELETE FROM about_past_principals WHERE id = :id";
         $stmt_delete = $connect->prepare($sql_delete);
         $stmt_delete->bindParam(':id', $id, PDO::PARAM_INT);
 
@@ -26,7 +42,7 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
             echo "<script>alert('Record deleted successfully'); window.location.href = document.referrer;</script>";
             exit();
         } else {
-            echo "<script>alert('Error deleting Record'); window.location.href = document.referrer;</script>";
+            echo "<script>alert('Error deleting Article'); window.location.href = document.referrer;</script>";
             exit();
         }
     } catch (PDOException $e) {

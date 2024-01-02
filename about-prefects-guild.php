@@ -92,7 +92,7 @@ if($statement->rowCount() > 0)
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item bg-light">
                             <div class="overflow-hidden">
-                                <img class="img-fluid" src="/<?php echo $row["img"]; ?>" alt="Head Prefect"
+                                <img class="img-fluid" src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>" alt="Head Prefect"
                                     style="width: auto;">
                             </div>
                             <div class="text-center p-4">
@@ -133,7 +133,7 @@ if($statement->rowCount() > 0)
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="/<?php echo $row["img"]; ?>" alt="Deputy Head Prefect"
+                            <img class="img-fluid" src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>" alt="Deputy Head Prefect"
                                 style="width: auto;">
                         </div>
 

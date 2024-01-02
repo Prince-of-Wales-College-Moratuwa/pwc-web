@@ -1,32 +1,38 @@
 <?php
-
-//header.php
-
+// header.php
 ?>
 
 <!doctype html>
 <html lang="en">
-    
-    <head>
-    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="generator" content="">
-        <title>Admin</title>
-        <link rel="canonical" href="">
-        <!-- Bootstrap core CSS -->
-        <style><?php include 'css/styles.css'; ?></style>
-        <style><?php include 'css/simple-datatables-style.css'; ?></style>
-        <style><?php include 'css/select2.min.css'; ?></style>
-        <style><?php include 'css/vanillaSelectBox.css'; ?></style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        <!-- icons -->
-        <link rel="icon" href="../logo-pwc.png">
-        <meta name="theme-color" content="#800000">
-        <style>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>Admin</title>
+    <link rel="canonical" href="">
+    <!-- Bootstrap core CSS -->
+    <style><?php include 'css/styles.css'; ?></style>
+    <style><?php include 'css/simple-datatables-style.css'; ?></style>
+    <style><?php include 'css/select2.min.css'; ?></style>
+    <style><?php include 'css/vanillaSelectBox.css'; ?></style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- icons -->
+    <link rel="icon" href="../logo-pwc.png">
+    <meta name="theme-color" content="#800000">
+    <style>
+
+.breadcrumb {
+            background-color: #f8f9fa;
+            padding: 8px 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
             .bd-placeholder-img {
                 font-size: 1.125rem;
                 text-anchor: middle;
@@ -95,18 +101,19 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <br>
+                         
                             <a class="nav-link <?php if ($page === 'index') echo 'active'; ?>" href="index.php"><img src="ion-icon/dashboard.png" width="20px">&nbsp Dashboard</a>
                             <a class="nav-link <?php if ($page === 'blog') echo 'active'; ?>" href="blog.php"><img src="ion-icon/news.png" width="20px">&nbsp Blog</a>
                             <a class="nav-link <?php if ($page === 'events') echo 'active'; ?>" href="events.php"><img src="ion-icon/events.png" width="20px">&nbsp Events</a>
                             <br>
                             <a class="nav-link <?php if ($page === 'principal-msg') echo 'active'; ?>" href="principal-msg.php?id=1"><img src="ion-icon/events.png" width="20px">&nbsp Principal's Msg</a>
+                            <a class="nav-link <?php if ($page === 'past-principals') echo 'active'; ?>" href="past-principals.php"><img src="ion-icon/events.png" width="20px">&nbsp Past Principals</a>
                             <a class="nav-link <?php if ($page === 'school-admins') echo 'active'; ?>" href="school-admins.php"><img src="ion-icon/events.png" width="20px">&nbsp School Admins</a>
                             <a class="nav-link <?php if ($page === 'prefects-topboard') echo 'active'; ?>" href="prefects-topboard.php"><img src="ion-icon/events.png" width="20px">&nbsp Prefect Topboard</a>
                             <a class="nav-link <?php if ($page === 'past-prefects') echo 'active'; ?>" href="past-prefects.php"><img src="ion-icon/events.png" width="20px">&nbsp Past Headprefects</a>
-                            <a class="nav-link <?php if ($page === 'bigmatch') echo 'active'; ?>" href="bigmatch.php"><img src="ion-icon/events.png" width="20px">&nbsp Big Match</a>
+                            <a class="nav-link <?php if ($page === 'bigmatch') echo 'active'; ?>" href="bigmatch/bigmtach.php"><img src="ion-icon/events.png" width="20px">&nbsp Big Match</a>
 
-                            <br><hr>
+                            <hr>
 
                             <a class="nav-link" href="logout.php"><img src="ion-icon/logout.png" width="20px">&nbsp Logout</a>
                         

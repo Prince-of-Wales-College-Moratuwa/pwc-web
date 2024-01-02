@@ -1,5 +1,5 @@
 <?php
-$page = 'school-admins';
+$page = 'past-principals';
 include '../database_connection.php';
 include '../functions.php';
 
@@ -12,22 +12,22 @@ include 'admin-header.php';
 
 $message = ""; // Initialize the variable
 
-$sql = "SELECT * FROM about_school_administration WHERE id = :id";
+$sql = "SELECT * FROM about_past_principals WHERE id = :id";
 $stmt = $connect->prepare($sql);
 $stmt->execute(array(':id' => (int)$_GET['id']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (count($_POST) > 0) {
-    $sql = "UPDATE about_school_administration SET name = :name, post = :post, img = :img WHERE id = :id";
+    $sql = "UPDATE about_past_principals SET name = :name, years = :years, img = :img WHERE id = :id";
     $params = array(
         ':name' => $_POST['name'],
-        ':post' => $_POST['post'],
+        ':years' => $_POST['years'],
         ':img' => '',
         ':id' => (int)$_GET['id'],
     );
 
     if (!empty($_FILES['image']['name'])) {
-        $uploadDirectory = '../content/img/img-about/administration/';
+        $uploadDirectory = '../content/img/img-history/former-principals/';
         $uploadedFileName = $_FILES['image']['name'];
         $uploadFilePath = $uploadDirectory . $uploadedFileName;
 
@@ -41,7 +41,7 @@ if (count($_POST) > 0) {
     try {
         $stmt = $connect->prepare($sql);
         $stmt->execute($params);
-        $message .= "<script>alert('Article updated successfully'); window.open('../about/school-administration', '_blank');</script>";
+        $message .= "<script>alert('Article updated successfully'); window.open('../history/former-principals', '_blank');</script>";
     } catch (PDOException $e) {
         $message .= "<script>alert('Error: " . $e->getMessage() . "');</script>";
     }
@@ -50,17 +50,17 @@ if (count($_POST) > 0) {
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-    <h1>Edit School Admins</h1>
+    <h1>Edit Past Principals</h1>
 
     <?php if(isset($message)) {echo $message; } ?>
 
     <ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
         <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-        <li class="breadcrumb-item active">Edit School Admin</li>
+        <li class="breadcrumb-item active">Edit Past Principal</li>
     </ol>
     <div class="card mb-4">
         <div class="card-header">
-            Edit School Admin
+            Edit Past Principal
         </div>
         <div class="card-body">
             <form action="" method="POST" enctype="multipart/form-data">
@@ -78,9 +78,9 @@ if (count($_POST) > 0) {
 
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label class="form-label">post</label>
-                            <input type="text" name="post" id="post" class="form-control"
-                                value="<?php echo $row['post']; ?>" />
+                            <label class="form-label">Years</label>
+                            <input type="text" name="years" id="years" class="form-control"
+                                value="<?php echo $row['years']; ?>" />
                         </div>
                     </div>
                 </div>

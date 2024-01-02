@@ -62,7 +62,7 @@ if($statement->rowCount() > 0)
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="/<?php echo $row["img"]; ?>" alt="<?php echo $row["name"]; ?>" style="width: auto;">
+                            <img class="img-fluid" src="/content/img/img-about/administration/<?php echo $row["img"]; ?>" alt="<?php echo $row["name"]; ?>" style="width: auto;">
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0"><?php echo $row["name"]; ?></h5>

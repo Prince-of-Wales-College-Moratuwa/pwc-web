@@ -1,6 +1,6 @@
 <?php
 
-$page = 'past-prefects';
+$page = 'past-principals';
 
 
 
@@ -23,21 +23,21 @@ include 'admin-header.php';
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Past Head Prefects</h1>
+	<h1>Past Principals</h1>
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-		<li class="breadcrumb-item active">Past Head Prefects</li>
+		<li class="breadcrumb-item active">Past Principals</li>
 	</ol>
 
 	<div class="card mb-4">
 		<div class="card-header">
 			<div class="row">
 				<div class="col col-md-6">
-					<i class="fas fa-table me-1"></i> Past Head Prefects
+					<i class="fas fa-table me-1"></i> Past Principals
 				</div>
 				<div class="col col-md-6" align="right">
-					<a href="past-prefects_add.php" class="btn btn-success btn-sm">Add</a>
+					<a href="past-principals_add.php" class="btn btn-success btn-sm">Add</a>
 				</div>
 			</div>
 		</div>
@@ -45,7 +45,7 @@ include 'admin-header.php';
 			<table id="datatablesSimple">
 				<thead>
 					<tr>
-						<th>year</th>
+						<th>Years</th>
 						<th>Title</th>
 						<th>Action</th>
 					</tr>
@@ -55,7 +55,7 @@ include 'admin-header.php';
 
 					<?php 
 
-$query = "SELECT * FROM about_past_headprefects ORDER BY year DESC";
+$query = "SELECT * FROM about_past_principals ORDER BY years DESC";
 
 		$statement = $connect->prepare($query);
 
@@ -67,12 +67,12 @@ $query = "SELECT * FROM about_past_headprefects ORDER BY year DESC";
 			{ 
 				?>
 					<tr>
-						<td><?php echo($row["year"]) ?></td>
+						<td><?php echo($row["years"]) ?></td>
 						<td><?php echo($row["name"]) ?></td>
 
 						<td>
-							<a href="past-prefects_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
-							<a href="past-prefects_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
+							<a href="past-principals_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
+							<a href="past-principals_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
 						</td>
 					</tr>
 

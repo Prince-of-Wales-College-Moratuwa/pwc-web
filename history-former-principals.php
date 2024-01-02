@@ -83,7 +83,7 @@ if($statement->rowCount() > 0)
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid"
-                                src="/<?php echo $row["img"]; ?>"
+                                src="/content/img/img-history/former-principals/<?php echo $row["img"]; ?>"
                                 alt="<?php echo $row["name"]; ?>" style="width: 1000px;">
                         </div>
                         <div class="text-center p-4">
