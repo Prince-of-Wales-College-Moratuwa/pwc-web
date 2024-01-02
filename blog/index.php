@@ -71,10 +71,10 @@
                     <div class="col-lg-9 col-md-6">
                     <p class="mb-4">Filter by Category;</p>
                     <a class="btn btn-link active-link" href="/blog">All</a>
-                    <a class="btn btn-link" href="category/achievements-sport">Sport</a>
-                    <a class="btn btn-link" href="category/achievements-aesthetic">Aesthetic</a>
-                    <a class="btn btn-link" href="category/achievements-education">Education</a>
-                    <a class="btn btn-link" href="category/achievements-academic">Academic</a>
+                    <a class="btn btn-link" href="category/sports">Sports</a>
+                    <a class="btn btn-link" href="category/aesthetic">Aesthetic</a>
+                    <a class="btn btn-link" href="category/education">Education</a>
+                    <a class="btn btn-link" href="category/academic">Academic</a>
                     <a class="btn btn-link" href="category/announcements">Announcements</a>
                     <a class="btn btn-link" href="category/exclusives">Exclusives</a>
 

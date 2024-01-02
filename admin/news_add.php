@@ -72,12 +72,12 @@ include 'admin-header.php';
 							<div class="mb-3">
 								<label class="form-label">Category</label>
 								<select name="category" id="category" class="form-control">
-									<option value="Achievements - Sport Sector">Achievements - Sport Sector</option>
-									<option value="Achievements - Aesthetic Sector">Achievements - Aesthetic Sector
+									<option value="Sportss">Sportss</option>
+									<option value="Aesthetic">Aesthetic
 									</option>
-									<option value="Achievements - Education Sector">Achievements - Education Sector
+									<option value="Education">Education
 									</option>
-									<option value="Achievements - Academic Sector">Achievements - Academic Sector
+									<option value="Academic">Academic
 									</option>
 									<option value="Announcements">Announcements</option>
 									<option value="Exclusives">Exclusives</option>
@@ -151,14 +151,14 @@ if (isset($_POST["add_news"])) {
     $formdata['content'] = isset($_POST["editorContent"]) ? trim($_POST["editorContent"]) : '';
     $formdata['category'] = trim($_POST["category"]);
 
-    if ($formdata['category'] == "Achievements - Sport Sector") {
-        $categoryslug = "achievements-sport";
-    } elseif ($formdata['category'] == "Achievements - Aesthetic Sector") {
-        $categoryslug = "achievements-aesthetic";
-    } elseif ($formdata['category'] == "Achievements - Education Sector") {
-        $categoryslug = "achievements-education";
-    } elseif ($formdata['category'] == "Achievements - Academic Sector") {
-        $categoryslug = "achievements-academic";
+    if ($formdata['category'] == "Sports") {
+        $categoryslug = "sports";
+    } elseif ($formdata['category'] == "Aesthetic") {
+        $categoryslug = "aesthetic";
+    } elseif ($formdata['category'] == "Education") {
+        $categoryslug = "education";
+    } elseif ($formdata['category'] == "Academic") {
+        $categoryslug = "academic";
     } elseif ($formdata['category'] == "Announcements") {
         $categoryslug = "announcements";
     } elseif ($formdata['category'] == "Exclusives") {

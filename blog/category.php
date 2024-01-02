@@ -94,10 +94,10 @@ foreach ($rows as $row) {
                     <div class="col-lg-9 col-md-6">
                     <p class="mb-4">Filter by Category;</p>
                     <a class="btn btn-link" href="/blog">All</a>
-                    <a class="btn btn-link" href="achievements-sport">Sport</a>
-                    <a class="btn btn-link" href="achievements-aesthetic">Aesthetic</a>
-                    <a class="btn btn-link" href="achievements-education">Education</a>
-                    <a class="btn btn-link" href="achievements-academic">Academic</a>
+                    <a class="btn btn-link" href="sports">Sports</a>
+                    <a class="btn btn-link" href="aesthetic">Aesthetic</a>
+                    <a class="btn btn-link" href="education">Education</a>
+                    <a class="btn btn-link" href="academic">Academic</a>
                     <a class="btn btn-link" href="announcements">Announcements</a>
                     <a class="btn btn-link" href="exclusives">Exclusives</a>
                 </center>

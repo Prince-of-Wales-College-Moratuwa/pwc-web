@@ -14,14 +14,14 @@ include 'admin-header.php';
 if (count($_POST) > 0) {
     $formdata['category'] = trim($_POST["category"]);
 
-    if ($formdata['category'] == "Achievements - Sport Sector") {
-        $categoryslug = "achievements-sport";
-    } elseif ($formdata['category'] == "Achievements - Aesthetic Sector") {
-        $categoryslug = "achievements-aesthetic";
-    } elseif ($formdata['category'] == "Achievements - Education Sector") {
-        $categoryslug = "achievements-education";
-    } elseif ($formdata['category'] == "Achievements - Academic Sector") {
-        $categoryslug = "achievements-academic";
+    if ($formdata['category'] == "Sports") {
+        $categoryslug = "sports";
+    } elseif ($formdata['category'] == "Aesthetic") {
+        $categoryslug = "aesthetic";
+    } elseif ($formdata['category'] == "Education") {
+        $categoryslug = "education";
+    } elseif ($formdata['category'] == "Academic") {
+        $categoryslug = "academic";
     } elseif ($formdata['category'] == "Announcements") {
         $categoryslug = "announcements";
     } elseif ($formdata['category'] == "Exclusives") {
@@ -119,18 +119,18 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                         <div class="mb-3">
                             <label class="form-label">Category</label>
                             <select name="category" id="category" class="form-control">
-                                <option value="Achievements - Sport Sector"
-                                    <?php echo ($row['category'] == 'Achievements - Sport Sector') ? 'selected' : ''; ?>>
-                                    Achievements - Sport Sector</option>
-                                <option value="Achievements - Aesthetic Sector"
-                                    <?php echo ($row['category'] == 'Achievements - Aesthetic Sector') ? 'selected' : ''; ?>>
-                                    Achievements - Aesthetic Sector</option>
-                                <option value="Achievements - Education Sector"
-                                    <?php echo ($row['category'] == 'Achievements - Education Sector') ? 'selected' : ''; ?>>
-                                    Achievements - Education Sector</option>
-                                <option value="Achievements - Academic Sector"
-                                    <?php echo ($row['category'] == 'Achievements - Academic Sector') ? 'selected' : ''; ?>>
-                                    Achievements - Academic Sector</option>
+                                <option value="Sports"
+                                    <?php echo ($row['category'] == 'Sports') ? 'selected' : ''; ?>>
+                                    Sports</option>
+                                <option value="Aesthetic"
+                                    <?php echo ($row['category'] == 'Aesthetic') ? 'selected' : ''; ?>>
+                                    Aesthetic</option>
+                                <option value="Education"
+                                    <?php echo ($row['category'] == 'Education') ? 'selected' : ''; ?>>
+                                    Education</option>
+                                <option value="Academic"
+                                    <?php echo ($row['category'] == 'Academic') ? 'selected' : ''; ?>>
+                                    Academic</option>
                                 <option value="Announcements"
                                     <?php echo ($row['category'] == 'Announcements') ? 'selected' : ''; ?>>
                                     Announcements</option>
