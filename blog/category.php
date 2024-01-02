@@ -11,6 +11,23 @@
     include '../functions.php';
     ?>
 
+<?php
+$categoryslug = $_GET['categoryslug'];
+$query = "SELECT * FROM pwc_db_news WHERE categoryslug='$categoryslug'";
+$statement = $connect->prepare($query);
+$statement->execute();
+$rows = $statement->fetchAll();
+
+if (count($rows) === 0) {
+    header("Location: https://princeofwales.edu.lk/404.php");
+}
+
+foreach ($rows as $row) {
+}
+?>
+
+<title><?php echo $row["category"]; ?></title>
+
     <!-- seo -->
 
     <!-- Primary Meta Tags -->
@@ -50,22 +67,6 @@
     </style>
 </head>
 
-<body>
-
-    <?php
-$categoryslug = $_GET['categoryslug'];
-$query = "SELECT * FROM pwc_db_news WHERE categoryslug='$categoryslug'";
-$statement = $connect->prepare($query);
-$statement->execute();
-$rows = $statement->fetchAll();
-
-if (count($rows) === 0) {
-    header("Location: https://princeofwales.edu.lk/404.php");
-}
-
-foreach ($rows as $row) {
-}
-?>
 
     <body>
         <!-- Header Start -->
@@ -93,10 +94,10 @@ foreach ($rows as $row) {
                     <div class="col-lg-9 col-md-6">
                     <p class="mb-4">Filter by Category;</p>
                     <a class="btn btn-link" href="/blog">All</a>
-                    <a class="btn btn-link" href="achievements-sport">Achievements - Sport Sector</a>
-                    <a class="btn btn-link" href="achievements-aesthetic">Achievements - Aesthetic Sector</a>
-                    <a class="btn btn-link" href="achievements-education">Achievements - Education Sector</a>
-                    <a class="btn btn-link" href="achievements-academic">Achievements - Academic Sector</a>
+                    <a class="btn btn-link" href="achievements-sport">Sport</a>
+                    <a class="btn btn-link" href="achievements-aesthetic">Aesthetic</a>
+                    <a class="btn btn-link" href="achievements-education">Education</a>
+                    <a class="btn btn-link" href="achievements-academic">Academic</a>
                     <a class="btn btn-link" href="announcements">Announcements</a>
                     <a class="btn btn-link" href="exclusives">Exclusives</a>
                 </center>
