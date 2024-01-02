@@ -78,7 +78,7 @@ include 'admin-header.php';
 									</option>
 									<option value="Achievements - Academic Sector">Achievements - Academic Sector
 									</option>
-									<option value="Principal Announcements">Principal Announcements</option>
+									<option value="Announcements">Announcements</option>
 									<option value="Exclusives">Exclusives</option>
 								</select>
 							</div>
@@ -98,7 +98,7 @@ include 'admin-header.php';
 						<div class="mb-3">
 							<label class="form-label">Author</label>
 							<select name="author" id="author" class="form-control">
-								<option value="Web Team">Web Team</option>
+								<option value="CMBU">CMBU</option>
 								<option value="Principal">Principal</option>
 								<option value="Admin">Admin</option>
 								<option value="Teacher">Teacher</option>

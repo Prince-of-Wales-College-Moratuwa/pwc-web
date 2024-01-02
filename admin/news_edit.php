@@ -111,9 +111,9 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                                 <option value="Achievements - Academic Sector"
                                     <?php echo ($row['category'] == 'Achievements - Academic Sector') ? 'selected' : ''; ?>>
                                     Achievements - Academic Sector</option>
-                                <option value="Principal Announcements"
-                                    <?php echo ($row['category'] == 'Principal Announcements') ? 'selected' : ''; ?>>
-                                    Principal Announcements</option>
+                                <option value="Announcements"
+                                    <?php echo ($row['category'] == 'Announcements') ? 'selected' : ''; ?>>
+                                    Announcements</option>
                                 <option value="Exclusives"
                                     <?php echo ($row['category'] == 'Exclusives') ? 'selected' : ''; ?>>Exclusives
                                 </option>
@@ -125,8 +125,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                         <div class="mb-3">
                             <label class="form-label">Author</label>
                             <select name="author" id="author" class="form-control">
-                                <option value="Web Team" <?php echo ($row['author'] == 'Web Team') ? 'selected' : ''; ?>>
-                                    Web Team</option>
+                                <option value="CMBU" <?php echo ($row['author'] == 'CMBU') ? 'selected' : ''; ?>>
+                                    CMBU</option>
                                 <option value="Principal"
                                     <?php echo ($row['author'] == 'Principal') ? 'selected' : ''; ?>>Principal</option>
                                 <option value="Admin" <?php echo ($row['author'] == 'Admin') ? 'selected' : ''; ?>>Admin
