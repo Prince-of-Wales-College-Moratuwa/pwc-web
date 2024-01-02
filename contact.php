@@ -3,7 +3,6 @@
 
 <head>
 
-    <head>
         <title>Contact</title>
         <?php
     $page = 'contact';
@@ -110,7 +109,7 @@
                         tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form action="process.php" method="post">
+                    <form onsubmit="sendEmail(); reset(); return false;">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -275,6 +274,25 @@
 
     </div>
 
+    
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+            function sendEmail(){
+                Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "info@princeofwales.edu.lk",
+            Password : "11CC8DEC42CD9A5B3FDFF09DB344DF73FE57",
+            To : 'info@princeofwales.edu.lk',
+            From : document.getElementById("email").value,
+            Subject : document.getElementById("subject").value,
+            Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> <br> " + document.getElementById("message").value
+        }).then(
+        message => alert("Message Sent Succesfully")
+        );
+            }
+    </script>
 
 
     <?php include 'footer.php'; ?>
