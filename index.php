@@ -382,6 +382,21 @@ if($statement->rowCount() > 0)
 <!-- Counter End -->
 
 
+<?php
+
+$query = "SELECT * FROM principal_msg";
+$statement = $connect->prepare($query);
+$statement->execute();
+$rows = $statement->fetchAll();
+
+if (count($rows) === 0) {
+    header("Location: https://princeofwales.edu.lk/404.php");
+}
+
+foreach ($rows as $row) {
+}
+?>
+
 <!-- msg Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -395,18 +410,11 @@ if($statement->rowCount() > 0)
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
                 <h1 class="mb-4">Principal's Message</h1>
-                <p class="mb-4">- Hasitha Kesara Weththimuni</p>
-                <p class="mb-4">It is with great pleasure and deep sense of pride that I address you today as the
-                    Principal of Prince of Wales’ College. In the year 1886, our college started with the generous
-                    donation of Sir Charles Henry De Soyza and till today stands tall and strong as a testimony of our
-                    commitment to academic, co-curricular and extra-curricular activities.<br><br>
-                    It is with great pleasure and pride that we welcome you to our newly designed website on the
-                    occasion of the 147th anniversary of the College. As the Principal of Prince of Wales’ College,
-                    Moratuwa, I am happy to introduce this digital platform where you can know more about our
-                    prestigious college.
-                    <a href="principal-message">Read More...</a>
+                <p class="mb-4">- <?php echo $row["name"]; ?></p>
+                <p class="mb-4"><?php echo substr($row["msg"], 0, 500); ?>
+    <a href="principal-message">Read More...</a>
+</p>
 
-                </p>
 
                 <a class="btn btn-primary py-3 px-5 mt-2" href="about/school-administration">View School
                     Administration</a>
