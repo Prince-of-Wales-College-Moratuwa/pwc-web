@@ -267,8 +267,6 @@ if($statement->rowCount() > 0)
                     </div>
                     <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-2"><i
-                                class="fa fa-user-tie text-primary me-2"></i><?php echo($row["organizer_name"]) ?></small>
-                        <small class="flex-fill text-center border-end py-2"><i
                                 class="fa fa-calendar text-primary me-2"></i><?php echo($row["date"]) ?></small>
                         <small class="flex-fill text-center py-2"><i
                                 class="fa fa-map-marker text-primary me-2"></i><?php echo($row["location"]) ?></small>
