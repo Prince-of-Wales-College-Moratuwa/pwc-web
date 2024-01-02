@@ -72,7 +72,7 @@ include 'admin-header.php';
 							<div class="mb-3">
 								<label class="form-label">Category</label>
 								<select name="category" id="category" class="form-control">
-									<option value="Sportss">Sportss</option>
+									<option value="Sports">Sports</option>
 									<option value="Aesthetic">Aesthetic
 									</option>
 									<option value="Education">Education
