@@ -114,7 +114,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="../" class="navbar-brand d-flex align-items-center px-1 px-lg-4">
+        <a href="/" class="navbar-brand d-flex align-items-center px-1 px-lg-4">
             <img src="../../content/img/logo-pwc.png" alt="pwc logo" class="img-header">
             <h6 class="m-0 text-primary h6-header" style="font-family: 'Arimo', sans-serif; ">&nbsp; &nbsp; PRINCE OF WALES'
                 COLLEGE<br>&nbsp; &nbsp; MORATUWA
