@@ -59,8 +59,23 @@
         <!-- Header End -->
 
 
+        <div class="container-xxl py-1">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <center>
+                    <div class="col-lg-9 col-md-6">
+                    <p class="mb-4">Filter by Category;</p>
+                    <a class="btn btn-link" href="category/achievements-sport">Achievements - Sport Sector</a>
+                    <a class="btn btn-link" href="category/achievements-aesthetic">Achievements - Aesthetic Sector</a>
+                    <a class="btn btn-link" href="category/achievements-education">Achievements - Education Sector</a>
+                    <a class="btn btn-link" href="category/achievements-academic">Achievements - Academic Sector</a>
+                    <a class="btn btn-link" href="category/announcements">Announcements</a>
+                    <a class="btn btn-link" href="category/exclusives">Exclusives</a>
 
+                </center>
+            </div>
+        </div>
 
+        <br><br>
 
 
         <div class="colorlib-blog colorlib-light-grey">
