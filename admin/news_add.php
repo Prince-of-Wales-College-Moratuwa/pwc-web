@@ -144,49 +144,65 @@ include 'admin-header.php';
 
 	<?php
 
-if(isset($_POST["add_news"]))
-{
+if (isset($_POST["add_news"])) {
     $formdata = array();
 
     $formdata['title'] = trim($_POST["title"]);
     $formdata['content'] = isset($_POST["editorContent"]) ? trim($_POST["editorContent"]) : '';
-    $formdata['category'] = trim($_POST["category"]); 
-	$formdata['author'] = isset($_POST["author"]) ? trim($_POST["author"]) : '';
-    $formdata['slug'] = trim($_POST["slug"]); 
+    $formdata['category'] = trim($_POST["category"]);
+
+    if ($formdata['category'] == "Achievements - Sport Sector") {
+        $categoryslug = "achievements-sport";
+    } elseif ($formdata['category'] == "Achievements - Aesthetic Sector") {
+        $categoryslug = "achievements-aesthetic";
+    } elseif ($formdata['category'] == "Achievements - Education Sector") {
+        $categoryslug = "achievements-education";
+    } elseif ($formdata['category'] == "Achievements - Academic Sector") {
+        $categoryslug = "achievements-academic";
+    } elseif ($formdata['category'] == "Announcements") {
+        $categoryslug = "announcements";
+    } elseif ($formdata['category'] == "Exclusives") {
+        $categoryslug = "exclusives";
+    } else {
+        $categoryslug = "unknown-category";
+    }
+
+    $formdata['author'] = isset($_POST["author"]) ? trim($_POST["author"]) : '';
+    $formdata['slug'] = trim($_POST["slug"]);
 
     $data = array(
-        ':title'    => $formdata['title'],
-        ':content'  => $formdata['content'],
+        ':title' => $formdata['title'],
+        ':content' => $formdata['content'],
         ':category' => $formdata['category'],
-        ':slug'     => $formdata['slug'],
-        ':author'   => $formdata['author'],
+        ':slug' => $formdata['slug'],
+        ':author' => $formdata['author'],
+        ':categoryslug' => $categoryslug, 
     );
 
-	$file = $_FILES['photo']['name'];
-	$file_loc = $_FILES['photo']['tmp_name'];
-	$folder = "../content/img/img-blog/";
-	$new_file_name = strtolower($file);
-	$final_file = str_replace(' ', '-', $new_file_name);
-	$final_file = rand() . "-" . $final_file; 
-	if(move_uploaded_file($file_loc, $folder . $final_file)) {
-		$image = $final_file;
-		$query = "
-		INSERT INTO pwc_db_news 
-		(title, content, category, slug, photo, date, excerpt, author) 
-		VALUES (:title, :content, :category, :slug, '".$image."', CURDATE(), :content, :author)
-		";
+    $file = $_FILES['photo']['name'];
+    $file_loc = $_FILES['photo']['tmp_name'];
+    $folder = "../content/img/img-blog/";
+    $new_file_name = strtolower($file);
+    $final_file = str_replace(' ', '-', $new_file_name);
+    $final_file = rand() . "-" . $final_file;
 
-	}
-	
+    if (move_uploaded_file($file_loc, $folder . $final_file)) {
+        $image = $final_file;
+        $query = "
+        INSERT INTO pwc_db_news 
+        (title, content, category, slug, photo, date, excerpt, author, categoryslug) 
+        VALUES (:title, :content, :category, :slug, :photo, CURDATE(), :content, :author, :categoryslug)
+        ";
 
+        $data[':photo'] = $image; 
+        $statement = $connect->prepare($query);
 
-
-	$statement = $connect->prepare($query);
-
-	$statement->execute($data);
+        $statement->execute($data);
+    }
 }
 
 ?>
+
 
 
 	<?php

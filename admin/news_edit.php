@@ -12,26 +12,45 @@ include 'admin-header.php';
 
 
 if (count($_POST) > 0) {
-  
-    $sql = "UPDATE pwc_db_news SET title = :title, content = :editorContent, category = :category, slug = :slug, author = :author";
+    $formdata['category'] = trim($_POST["category"]);
+
+    if ($formdata['category'] == "Achievements - Sport Sector") {
+        $categoryslug = "achievements-sport";
+    } elseif ($formdata['category'] == "Achievements - Aesthetic Sector") {
+        $categoryslug = "achievements-aesthetic";
+    } elseif ($formdata['category'] == "Achievements - Education Sector") {
+        $categoryslug = "achievements-education";
+    } elseif ($formdata['category'] == "Achievements - Academic Sector") {
+        $categoryslug = "achievements-academic";
+    } elseif ($formdata['category'] == "Announcements") {
+        $categoryslug = "announcements";
+    } elseif ($formdata['category'] == "Exclusives") {
+        $categoryslug = "exclusives";
+    } else {
+        $categoryslug = "unknown-category";
+    }
+
+    $formdata['categoryslug'] = $categoryslug;
+
+    $sql = "UPDATE pwc_db_news SET title = :title, content = :editorContent, category = :category, slug = :slug, author = :author, categoryslug = :categoryslug";
     $params = array(
         ':title' => $_POST['title'],
         ':editorContent' => $_POST['editorContent'],
         ':category' => $_POST['category'],
+        ':categoryslug' => $categoryslug,
         ':author' => $_POST['author'],
         ':slug' => $_POST['slug'],
         ':id' => $_GET['id']
     );
-    
+
     if (!empty($_FILES['image']['name'])) {
         $sql .= ", photo = :photo";
         $params[':photo'] = $_FILES['image']['name'];
     }
-    
+
     $sql .= " WHERE id = :id";
-    
+
     $stmt = $connect->prepare($sql);
-    $stmt->execute($params);
 
     try {
         $stmt->execute($params);
@@ -45,6 +64,7 @@ $sql = "SELECT * FROM pwc_db_news WHERE id = :id";
 $stmt = $connect->prepare($sql);
 $stmt->execute(array(':id' => $_GET['id']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">

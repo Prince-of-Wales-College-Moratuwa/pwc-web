@@ -67,7 +67,6 @@ foreach ($rows as $row) {
 }
 ?>
 
-
     <body>
         <!-- Header Start -->
         <div class="container-fluid bg-primary py-5 mb-5 blog-page-header">
@@ -80,6 +79,42 @@ foreach ($rows as $row) {
             </div>
         </div>
         <!-- Header End -->
+
+        <style>
+        .active-link {
+            color: #ff0000; 
+          
+        }
+    </style>
+    
+        <div class="container-xxl py-1">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <center>
+                    <div class="col-lg-9 col-md-6">
+                    <p class="mb-4">Filter by Category;</p>
+                    <a class="btn btn-link" href="/blog">All</a>
+                    <a class="btn btn-link" href="achievements-sport">Achievements - Sport Sector</a>
+                    <a class="btn btn-link" href="achievements-aesthetic">Achievements - Aesthetic Sector</a>
+                    <a class="btn btn-link" href="achievements-education">Achievements - Education Sector</a>
+                    <a class="btn btn-link" href="achievements-academic">Achievements - Academic Sector</a>
+                    <a class="btn btn-link" href="announcements">Announcements</a>
+                    <a class="btn btn-link" href="exclusives">Exclusives</a>
+                </center>
+
+                <script>
+                    var currentUrl = window.location.href;
+                    var links = document.querySelectorAll('.btn-link');
+                    links.forEach(function(link) {
+                        if (link.href === currentUrl) {
+                            link.classList.add('active-link');
+                        }
+                    });
+                </script>
+
+            </div>
+        </div>
+
+        <br><br>
 
 
         <div class="colorlib-blog colorlib-light-grey">
