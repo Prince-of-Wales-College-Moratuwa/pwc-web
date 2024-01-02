@@ -32,13 +32,14 @@ if (count($_POST) > 0) {
 
     $formdata['categoryslug'] = $categoryslug;
 
-    $sql = "UPDATE pwc_db_news SET title = :title, content = :editorContent, category = :category, slug = :slug, author = :author, categoryslug = :categoryslug";
+    $sql = "UPDATE pwc_db_news SET title = :title, content = :editorContent, category = :category, slug = :slug, author = :author, categoryslug = :categoryslug, schoolPride = :schoolPride";
     $params = array(
         ':title' => $_POST['title'],
         ':editorContent' => $_POST['editorContent'],
         ':category' => $_POST['category'],
         ':categoryslug' => $categoryslug,
         ':author' => $_POST['author'],
+        ':schoolPride' => $_POST['schoolPride'],
         ':slug' => $_POST['slug'],
         ':id' => $_GET['id']
     );
@@ -54,10 +55,11 @@ if (count($_POST) > 0) {
 
     try {
         $stmt->execute($params);
-        $message = "<script>alert('Article updated successfully'); window.location.href = document.referrer;</script>";
+        $message = "<script>alert('Article updated successfully'); window.open('/blog/" . $_POST['slug'] . "', '_blank');</script>";
     } catch (PDOException $e) {
         $message = "<script>alert('Error: " . $e->getMessage() . "');</script>";
     }
+    
 }
 
 $sql = "SELECT * FROM pwc_db_news WHERE id = :id";
@@ -155,6 +157,18 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                                     Teacher</option>
                                 <option value="Student" <?php echo ($row['author'] == 'Student') ? 'selected' : ''; ?>>
                                     Student</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">School Pride</label>
+                            <select name="schoolPride" id="schoolPride" class="form-control">
+                                <option value="ON" <?php echo ($row['schoolPride'] == 'ON') ? 'selected' : ''; ?>>
+                                    ON</option>
+                                <option value="OFF"
+                                    <?php echo ($row['schoolPride'] == 'OFF') ? 'selected' : ''; ?>>OFF</option>
                             </select>
                         </div>
                     </div>

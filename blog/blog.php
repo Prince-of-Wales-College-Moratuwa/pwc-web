@@ -61,17 +61,17 @@ foreach ($rows as $row) {
     </span>
 
     <?php
-$category = $row["category"];
 
-if (stripos($category, "Achievement") !== false) {
+$schoolPride = $row["schoolPride"];  
 
+if ($schoolPride == 'ON') {
     echo '<div class="confetti-container"></div>';
     
     echo '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>';
     
     echo '
     <script>
-      var end = Date.now() + (2 * 1000);
+      var end = Date.now() + (1 * 1000);
       var colors = [\'#800080\', \'#ffd700\', \'#800000\'];
     
       (function frame() {
@@ -96,7 +96,9 @@ if (stripos($category, "Achievement") !== false) {
       }());
     </script>';
 }
+
 ?>
+
 
 
 

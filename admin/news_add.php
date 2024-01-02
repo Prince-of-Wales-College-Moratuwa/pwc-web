@@ -108,6 +108,17 @@ include 'admin-header.php';
 						</div>
 					</div>
 
+
+					<div class="col-md-6">
+						<div class="mb-3">
+							<label class="form-label">School Pride Annimation</label>
+							<select name="schoolPride" id="schoolPride" class="form-control">
+								<option value="ON">ON</option>
+								<option value="OFF">OFF</option>
+							</select>
+						</div>
+					</div>
+
 					<div class="col-md-6">
 						<div class="mb-3">
 							<label class="form-label">Featured Image</label>
@@ -168,6 +179,7 @@ if (isset($_POST["add_news"])) {
     }
 
     $formdata['author'] = isset($_POST["author"]) ? trim($_POST["author"]) : '';
+    $formdata['schoolPride'] = isset($_POST["schoolPride"]) ? trim($_POST["schoolPride"]) : '';
     $formdata['slug'] = trim($_POST["slug"]);
 
     $data = array(
@@ -176,6 +188,7 @@ if (isset($_POST["add_news"])) {
         ':category' => $formdata['category'],
         ':slug' => $formdata['slug'],
         ':author' => $formdata['author'],
+        ':schoolPride' => $formdata['schoolPride'],
         ':categoryslug' => $categoryslug, 
     );
 
@@ -190,14 +203,18 @@ if (isset($_POST["add_news"])) {
         $image = $final_file;
         $query = "
         INSERT INTO pwc_db_news 
-        (title, content, category, slug, photo, date, excerpt, author, categoryslug) 
-        VALUES (:title, :content, :category, :slug, :photo, CURDATE(), :content, :author, :categoryslug)
+        (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride) 
+        VALUES (:title, :content, :category, :slug, :photo, CURDATE(), :content, :author, :categoryslug, :schoolPride)
         ";
 
         $data[':photo'] = $image; 
         $statement = $connect->prepare($query);
 
         $statement->execute($data);
+
+		echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
+        exit();
+
     }
 }
 
