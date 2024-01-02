@@ -99,8 +99,14 @@
                             <a class="nav-link <?php if ($page === 'index') echo 'active'; ?>" href="index.php"><img src="ion-icon/dashboard.png" width="20px">&nbsp Dashboard</a>
                             <a class="nav-link <?php if ($page === 'blog') echo 'active'; ?>" href="blog.php"><img src="ion-icon/news.png" width="20px">&nbsp Blog</a>
                             <a class="nav-link <?php if ($page === 'events') echo 'active'; ?>" href="events.php"><img src="ion-icon/events.png" width="20px">&nbsp Events</a>
+                            <br>
+                            <a class="nav-link <?php if ($page === 'principal-msg') echo 'active'; ?>" href="principal-msg.php?id=1"><img src="ion-icon/events.png" width="20px">&nbsp Principal's Msg</a>
+                            <a class="nav-link <?php if ($page === 'school-admins') echo 'active'; ?>" href="school-admins.php"><img src="ion-icon/events.png" width="20px">&nbsp School Admins</a>
+                            <a class="nav-link <?php if ($page === 'prefects-topboard') echo 'active'; ?>" href="prefects-topboard.php"><img src="ion-icon/events.png" width="20px">&nbsp Prefect Topboard</a>
+                            <a class="nav-link <?php if ($page === 'past-prefects') echo 'active'; ?>" href="past-prefects.php"><img src="ion-icon/events.png" width="20px">&nbsp Past Headprefects</a>
+                            <a class="nav-link <?php if ($page === 'bigmatch') echo 'active'; ?>" href="bigmatch.php"><img src="ion-icon/events.png" width="20px">&nbsp Big Match</a>
 
-                            <br><hr><br>
+                            <br><hr>
 
                             <a class="nav-link" href="logout.php"><img src="ion-icon/logout.png" width="20px">&nbsp Logout</a>
                         

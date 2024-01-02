@@ -32,7 +32,7 @@ if (count($_POST) > 0) {
 
     $formdata['categoryslug'] = $categoryslug;
 
-    $sql = "UPDATE pwc_db_news SET title = :title, content = :editorContent, category = :category, slug = :slug, author = :author, categoryslug = :categoryslug, schoolPride = :schoolPride";
+    $sql = "UPDATE pwc_db_news SET title = :title, content = :editorContent, category = :category, slug = :slug, author = :author, categoryslug = :categoryslug, schoolPride = :schoolPride, photo = :photo";
     $params = array(
         ':title' => $_POST['title'],
         ':editorContent' => $_POST['editorContent'],
@@ -44,10 +44,29 @@ if (count($_POST) > 0) {
         ':id' => $_GET['id']
     );
 
-    if (!empty($_FILES['image']['name'])) {
-        $sql .= ", photo = :photo";
-        $params[':photo'] = $_FILES['image']['name'];
+
+if (!empty($_FILES['image']['name'])) {
+    
+    if (!empty($row['photo'])) {
+        $currentImagePath = '../content/img/img-blog/' . $row['photo'];
+        unlink($currentImagePath);
     }
+
+   
+    $uploadDirectory = '../content/img/img-blog/';
+    $uploadedFileName = $_FILES['image']['name'];
+    $uploadFilePath = $uploadDirectory . $uploadedFileName;
+
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFilePath)) {
+        $params[':photo'] = $uploadedFileName;
+    } else {
+       
+        $message = "<script>alert('Error uploading the image');</script>";
+    }
+}
+
+
+
 
     $sql .= " WHERE id = :id";
 

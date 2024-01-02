@@ -6,7 +6,21 @@
 
     <title>Principal's Message</title>
 
-    <?php include 'header.php'; ?>
+    <?php include 'header.php';
+
+    
+$query = "SELECT * FROM principal_msg";
+$statement = $connect->prepare($query);
+$statement->execute();
+$rows = $statement->fetchAll();
+
+if (count($rows) === 0) {
+    header("Location: https://princeofwales.edu.lk/404.php");
+}
+
+foreach ($rows as $row) {
+}
+?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Principal's Message | Prince of Wales' College" />
@@ -34,7 +48,7 @@
 <body>
 
     <header>
-        <br><br><br>
+        <br>
 
 
         <div class="container">
@@ -42,41 +56,13 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
                     <h2 class="mb-4">Message from the Principal</h2>
-                    <h6 class="bg-white text-start text-primary ">Hasitha Kesara Weththimuni</h6>
-                    <p class="mb-4">It is with great pleasure and deep sense of pride that I address you today as the
-                        Principal of Prince of Wales’ College.
-                        In the year 1886, our college started with the generous donation of Sir Charles Henry De Soyza
-                        and till today stands tall and strong as a testimony of our commitment to academic,
-                        co-curricular and extra-curricular activities.<br><br>
-
-                        It is with great pleasure and pride that we welcome you to our newly designed website on the
-                        occasion of the 147th anniversary of the College.
-                        As the Principal of Prince of Wales’ College, Moratuwa, I am happy to introduce this digital
-                        platform where you can know more about our prestigious college.<br><br>
-
-                        We have a great history of academic, co-curricular and extra-curricular activities spanning
-                        decades.
-                        We have nurtured and empowered generations of students who have excelled in various fields
-                        making us proud at every turn.
-                        This website is a testament to our commitment to embrace the digital age while preserving the
-                        timeless values and traditions that make us who we are.<br><br>
-
-                        Through this website, you will find a wealth of information about our academic programs,
-                        extracurricular activities, sporting talents and the vibrant community that defines our
-                        school.
-                        It is our hope that this platform will serve not only as a source of information but also as a
-                        bridge between the school and our stakeholders.
-                        We aim to create stronger connections, better communication and deeper understanding.<br><br>
-
-                        I invite all students, parents, alumni and well-wishers to join us on this journey of
-                        reflection, celebration and anticipation for the future.
-                        Together, we will ensure that Prince of Wales’ College remains a beacon of knowledge and a
-                        symbol of pride for generations to come.
+                    <h6 class="bg-white text-start text-primary "><?php echo $row["name"]; ?></h6>
+                    <p class="mb-4"><?php echo $row["msg"]; ?>
                     </p>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="position-relative ">
-                        <img class="img-fluid w-100 h-100" src="content/img/img-home/principal-pwc.webp"
+                        <img class="img-fluid w-100 h-100" src="content/img/img-home/<?php echo $row["img"]; ?>"
                             alt="principal-pwc" style="object-fit: cover; border-radius: 8px;">
                     </div>
                 </div>

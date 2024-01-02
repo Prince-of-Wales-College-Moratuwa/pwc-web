@@ -1,5 +1,5 @@
 <?php
-$page = 'blog';
+$page = 'events';
 include '../database_connection.php';
 include '../functions.php';
 
@@ -11,45 +11,66 @@ if (!is_admin_login()) {
 include 'admin-header.php';
 
 if (count($_POST) > 0) {
-  
+    // Fetch the row data here
+    $sql = "SELECT * FROM pwc_db_events WHERE id = :id";
+    $stmt = $connect->prepare($sql);
+    $stmt->execute(array(':id' => $_GET['id']));
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $params = array();
+
+    if (!empty($row) && isset($row['img'])) {
+        $params[':img'] = $row['img'];
+    }
+
+    $params += array(
+        ':title' => $_POST['title'],
+        ':date' => $_POST['date'],
+        ':time' => $_POST['time'],
+        ':location' => $_POST['location'],
+        ':organizer_name' => $_POST['organizer_name'],
+        ':organizer_phone' => $_POST['organizer_phone'],
+        ':about' => $_POST['about'],
+        ':other_details' => $_POST['other_details'],
+        ':slug' => $_POST['slug'],
+        ':id' => $_GET['id']
+    );
+
+    if (!empty($_FILES['img']['name'])) {
+        if (!empty($row['img']) && file_exists('../content/img/img-events/' . $row['img'])) {
+            $currentImagePath = '../content/img/img-events/' . $row['img'];
+            unlink($currentImagePath);
+        }
+
+        $uploadDirectory = '../content/img/img-events/';
+        $uploadedFileName = $_FILES['img']['name'];
+        $uploadFilePath = $uploadDirectory . $uploadedFileName;
+
+        if (move_uploaded_file($_FILES['img']['tmp_name'], $uploadFilePath)) {
+            $params[':img'] = $uploadedFileName;
+        } else {
+            $message = "<script>alert('Error uploading the image');</script>";
+        }
+    }
+
     $sql = "UPDATE pwc_db_events 
-        SET title = :title, 
-            date = :date, 
-            time = :time, 
-            location = :location, 
-            organizer_name = :organizer_name, 
-            organizer_phone = :organizer_phone, 
-            about = :about, 
-            other_details = :other_details, 
-            slug = :slug";
+            SET title = :title, 
+                date = :date, 
+                time = :time, 
+                location = :location, 
+                organizer_name = :organizer_name, 
+                organizer_phone = :organizer_phone, 
+                about = :about, 
+                other_details = :other_details, 
+                slug = :slug,
+                img = :img
+            WHERE id = :id";
 
-$params = array(
-    ':title' => $_POST['title'],
-    ':date' => $_POST['date'],
-    ':time' => $_POST['time'],
-    ':location' => $_POST['location'],
-    ':organizer_name' => $_POST['organizer_name'],
-    ':organizer_phone' => $_POST['organizer_phone'],
-    ':about' => $_POST['about'],
-    ':other_details' => $_POST['other_details'],
-    ':slug' => $_POST['slug'],
-    ':id' => $_GET['id']
-);
-
-if (!empty($_POST['img'])) {
-    $sql .= ", img = :img";
-    $params[':img'] = $_POST['img'];
-}
-
-$sql .= " WHERE id = :id";
-
-$stmt = $connect->prepare($sql);
-$stmt->execute($params);
-
+    $stmt = $connect->prepare($sql);
 
     try {
         $stmt->execute($params);
-        $message = "<script>alert('Event updated successfully'); window.location.href = document.referrer;</script>";
+        $message = "<script>alert('Event updated successfully'); window.open('/events/" . $_POST['slug'] . "', '_blank';</script>";
     } catch (PDOException $e) {
         $message = "<script>alert('Error: " . $e->getMessage() . "');</script>";
     }
@@ -60,7 +81,6 @@ $stmt = $connect->prepare($sql);
 $stmt->execute(array(':id' => $_GET['id']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-
 
 <div class="container-fluid py-4" style="min-height: 700px;">
 	<h1>Edit Event</h1>
@@ -153,7 +173,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 					<div class="mb-3">
 						<label class="form-label">Featured Image</label>
-						<input type="file" name="image" id="featured_img" class="form-control" accept=".webp"
+						<input type="file" name="img" id="featured_img" class="form-control" accept=".webp"
 							onchange="checkFileType()">
 						<p id="fileMessage"></p>
 						<?php if (!empty($row['img'])): ?>
@@ -169,10 +189,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 							const allowedExtensions = /(\.webp)$/i;
 
 							if (!allowedExtensions.test(fileInput.value)) {
-								fileInput.value = ''; 
+								fileInput.value = '';
 								fileMessage.innerHTML = 'Please upload a valid .webp file.';
 							} else {
-								fileMessage.innerHTML = ''; 
+								fileMessage.innerHTML = '';
 							}
 						}
 					</script>
