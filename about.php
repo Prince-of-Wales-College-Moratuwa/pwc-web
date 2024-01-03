@@ -444,9 +444,9 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                         Prince of Wales College Moratuwa.
                     </p>
                     <audio controls>
-                        <source src="content/audio/Sinhala-Anthem-PWC.mp3" type="audio/mpeg"> </audio>
+                        <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg"> </audio>
                     <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.mp3"
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.webm"
                         download target="_blank" data-wow-delay="0.7s">Download MP3</a>
 
                 </div>
@@ -489,9 +489,9 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                     </p>
                     <br>
                     <audio controls>
-                        <source src="content/audio/English-Anthem-PWC.mp3" type="audio/mpeg"> </audio>
+                        <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg"> </audio>
                     <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.mp3"
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.webm"
                         download target="_blank" data-wow-delay="0.7s">Download MP3</a>
                 </div>
             </div>
