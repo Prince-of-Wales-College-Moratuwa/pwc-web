@@ -83,7 +83,7 @@
         }
 
         .h6-header {
-            font-size: 13px; 
+            font-size: 14px; 
         }
     }
 
