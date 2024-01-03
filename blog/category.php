@@ -39,23 +39,23 @@ foreach ($rows as $row) {
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://princeofwales.edu.lk/blog/category/<?php echo $row["category"]; ?>" />
+    <meta property="og:url" content="https://princeofwales.edu.lk/blog/category/<?php echo strtolower($row["category"]); ?>" />
     <meta property="og:title" content="<?php echo $row["category"]; ?>" />
     <meta property="og:description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
-    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars($row["category"]); ?>-header-pwc.webp" />
+    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars(strtolower($row["category"])); ?>-header-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["category"]; ?>" />
+    <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/category/<?php echo strtolower($row["category"]); ?>" />
     <meta property="twitter:title" content="<?php echo $row["category"]; ?>" />
     <meta property="twitter:description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
-    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars($row["category"]); ?>-header-pwc.webp" />
+    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars(strtolower($row["category"])); ?>-header-pwc.webp" />
 
     <style>
         .category-page-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url('/content/img/img-blog/blog-<?php echo htmlspecialchars($row["category"]); ?>-header-pwc.webp');
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url('/content/img/img-blog/blog-<?php echo htmlspecialchars(strtolower($row["category"])); ?>-header-pwc.webp');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
