@@ -68,12 +68,15 @@ if (count($_POST) > 0) {
 
     $stmt = $connect->prepare($sql);
 
-    try {
-        $stmt->execute($params);
-        $message = "<script>alert('Event updated successfully'); window.open('/events/" . $_POST['slug'] . "', '_blank';</script>";
-    } catch (PDOException $e) {
-        $message = "<script>alert('Error: " . $e->getMessage() . "');</script>";
-    }
+	try {
+		$stmt->execute($params);
+		$message = "<script>alert('Event updated successfully'); window.open('/events/" . $_POST['slug'] . "', '_blank');</script>";
+		echo $message; 
+	} catch (PDOException $e) {
+		$message = "<script>alert('Error: " . $e->getMessage() . "');</script>";
+		echo $message; 
+	}
+	
 }
 
 $sql = "SELECT * FROM pwc_db_events WHERE id = :id";

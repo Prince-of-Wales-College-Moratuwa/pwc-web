@@ -31,7 +31,7 @@ foreach ($rows as $row) {
     <!-- seo -->
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Blog" />
+    <meta name="title" content="<?php echo $row["category"]; ?>" />
     <meta name="description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
     <meta name="keywords"
@@ -40,28 +40,28 @@ foreach ($rows as $row) {
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://princeofwales.edu.lk/blog/category/<?php echo $row["category"]; ?>" />
-    <meta property="og:title" content="blog" />
+    <meta property="og:title" content="<?php echo $row["category"]; ?>" />
     <meta property="og:description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
-    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-header-pwc.webp" />
+    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars($row["category"]); ?>-header-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["category"]; ?>" />
-    <meta property="twitter:title" content="blog" />
+    <meta property="twitter:title" content="<?php echo $row["category"]; ?>" />
     <meta property="twitter:description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
-    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-header-pwc.webp" />
+    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars($row["category"]); ?>-header-pwc.webp" />
 
     <style>
-        .blog-page-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(/content/img/img-blog/blog-header-pwc.webp);
+        .category-page-header {
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url('/content/img/img-blog/blog-<?php echo htmlspecialchars($row["category"]); ?>-header-pwc.webp');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
-        .blog-page-header-inner {
+        .category-page-header-inner {
             background: rgba(15, 23, 43, .7);
         }
     </style>
@@ -70,10 +70,11 @@ foreach ($rows as $row) {
 
     <body>
         <!-- Header Start -->
-        <div class="container-fluid bg-primary py-5 mb-5 blog-page-header">
+        <div class="container-fluid bg-primary py-5 mb-5 category-page-header">
             <div class="container py-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-10 text-center">
+                        <h5 class="display-12 text-white text-uppercase animated slideInDown">category</h5>
                         <h1 class="display-3 text-white text-uppercase animated slideInDown"><?php echo $row["category"]; ?></h1>
                     </div>
                 </div>

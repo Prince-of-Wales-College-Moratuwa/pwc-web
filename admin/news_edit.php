@@ -32,20 +32,30 @@ if (count($_POST) > 0) {
 
     $formdata['categoryslug'] = $categoryslug;
 
-    $sql = "UPDATE pwc_db_news SET title = :title, content = :editorContent, category = :category, slug = :slug, author = :author, categoryslug = :categoryslug, schoolPride = :schoolPride, photo = :photo";
-    $params = array(
+    $sql = "UPDATE pwc_db_news 
+            SET title = :title, 
+                content = :editorContent, 
+                category = :category, 
+                slug = :slug, 
+                author = :author, 
+                categoryslug = :categoryslug, 
+                schoolPride = :schoolPride, 
+                photo = :photo 
+            WHERE id = :id";
+
+    $params = [
         ':title' => $_POST['title'],
         ':editorContent' => $_POST['editorContent'],
         ':category' => $_POST['category'],
-        ':categoryslug' => $categoryslug,
-        ':author' => $_POST['author'],
-        ':schoolPride' => $_POST['schoolPride'],
         ':slug' => $_POST['slug'],
+        ':author' => $_POST['author'],
+        ':categoryslug' => $categoryslug,
+        ':schoolPride' => $_POST['schoolPride'],
+        ':photo' => null,  
         ':id' => $_GET['id']
-    );
+    ];
 
-
-if (!empty($_FILES['image']['name'])) {
+    if (!empty($_FILES['image']['name'])) {
     
     if (!empty($row['photo'])) {
         $currentImagePath = '../content/img/img-blog/' . $row['photo'];
@@ -60,30 +70,23 @@ if (!empty($_FILES['image']['name'])) {
     if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFilePath)) {
         $params[':photo'] = $uploadedFileName;
     } else {
-       
-        $message = "<script>alert('Error uploading the image');</script>";
+        $message = "<script>alert('Error uploading the image. Please check the file type and try again.');</script>";
     }
 }
 
+$stmt = $connect->prepare($sql);
 
-
-
-    $sql .= " WHERE id = :id";
-
-    $stmt = $connect->prepare($sql);
-
-    try {
-        $stmt->execute($params);
-        $message = "<script>alert('Article updated successfully'); window.open('/blog/" . $_POST['slug'] . "', '_blank');</script>";
-    } catch (PDOException $e) {
-        $message = "<script>alert('Error: " . $e->getMessage() . "');</script>";
-    }
-    
+try {
+    $stmt->execute($params);
+    $message = "<script>alert('Article updated successfully'); window.open('/blog/" . $_POST['slug'] . "', '_blank');</script>";
+} catch (PDOException $e) {
+    $message = "<script>alert('Error: " . $e->getMessage() . "');</script>";
+}
 }
 
 $sql = "SELECT * FROM pwc_db_news WHERE id = :id";
 $stmt = $connect->prepare($sql);
-$stmt->execute(array(':id' => $_GET['id']));
+$stmt->execute([':id' => $_GET['id']]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>

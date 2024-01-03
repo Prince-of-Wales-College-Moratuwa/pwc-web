@@ -184,6 +184,12 @@ if(isset($_POST["add_event"]))
 	$statement = $connect->prepare($query);
 
 	$statement->execute($data);
+	
+	echo '<script>
+	alert("Event created successfully!");
+	window.open("../events/' . $formdata['slug'] . '", "_blank");
+  </script>';
+
 }
 
 ?>
