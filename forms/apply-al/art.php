@@ -23,14 +23,14 @@ and open the template in the editor.
     <meta property="og:url" content="https://princeofwales.edu.lk/apply-al/art.php" />
     <meta property="og:title" content="Art Stream - Application for Advanced Level Admission Registration" />
     <meta property="og:description" content="" />
-    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al/art.php" />
     <meta property="twitter:title" content="Art Stream - Application for Advanced Level Admission Registration" />
     <meta property="twitter:description" content="" />
-    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
 
 

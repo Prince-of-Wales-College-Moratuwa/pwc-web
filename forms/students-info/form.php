@@ -20,7 +20,7 @@
     <meta property="og:title" content="Student Information Form - Prince of Wales' College, Moratuwa" />
     <meta property="og:description"
         content="Student Information Form: Collect and manage student data effectively with this comprehensive form." />
-    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -28,7 +28,7 @@
     <meta property="twitter:title" content="Student Information Form - Prince of Wales' College, Moratuwa" />
     <meta property="twitter:description"
         content="Student Information Form: Collect and manage student data effectively with this comprehensive form." />
-    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
 
 

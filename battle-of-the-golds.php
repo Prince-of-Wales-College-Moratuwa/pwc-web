@@ -9,24 +9,30 @@
     $page = 'sports';
 ?>
 
-<!-- Primary Meta Tags -->
-<meta name="title" content="Battle of The Golds | Prince of Wales' College" />
-<meta name="description" content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
-<meta name="keywords" content="prince of wales college big match, prince of wales college vs st. Sebastian college, battle of the golds" />
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="Battle of The Golds | Prince of Wales' College" />
+        <meta name="description"
+            content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
+        <meta name="keywords"
+            content="prince of wales college big match, prince of wales college vs st. Sebastian college, battle of the golds" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://princeofwales.edu.lk/battle-of-the-golds" />
-<meta property="og:title" content="Battle of The Golds | Prince of Wales' College" />
-<meta property="og:description" content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
-<meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-sports/battle-of-the-golds-header-pwc.webp" />
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://princeofwales.edu.lk/battle-of-the-golds" />
+        <meta property="og:title" content="Battle of The Golds | Prince of Wales' College" />
+        <meta property="og:description"
+            content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
+        <meta property="og:image"
+            content="https://princeofwales.edu.lk/content/img/img-sports/battle-of-the-golds-header-pwc.webp" />
 
-<!-- Twitter / WA / TG -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://princeofwales.edu.lk/battle-of-the-golds" />
-<meta property="twitter:title" content="Battle of The Golds | Prince of Wales' College" />
-<meta property="twitter:description" content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
-<meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-sports/battle-of-the-golds-header-pwc.webp" />
+        <!-- Twitter / WA / TG -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://princeofwales.edu.lk/battle-of-the-golds" />
+        <meta property="twitter:title" content="Battle of The Golds | Prince of Wales' College" />
+        <meta property="twitter:description"
+            content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
+        <meta property="twitter:image"
+            content="https://princeofwales.edu.lk/content/img/img-sports/battle-of-the-golds-header-pwc.webp" />
 
 
         <?php include 'header.php'; ?>
@@ -81,35 +87,67 @@
         </div>
 
         <div class="row g-4">
+
+            <?php
+                $query = "SELECT * FROM bigmatch_2day_results WHERE result NOT LIKE '%not played%'";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $twodayplayed = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">73</h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodayplayed ?></h1>
                         <h5 class="mb-3">Matches Played</h5>
                     </div>
                 </div>
             </div>
+
+
+            <?php
+                $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) LIKE LOWER('%Won by PWC%')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $twodaypwcWonCount = $statement->rowCount();
+            ?>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">63</h1>
-                        <h5 class="mb-3">Matches Drawn</h5>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaypwcWonCount ?></h1>
+                        <h5 class="mb-3">Matches Won By PWC</h5>
                     </div>
                 </div>
             </div>
+
+
+            <?php
+                $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) LIKE LOWER('%Won by SSC%')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $twodaysscWonCount = $statement->rowCount();
+            ?>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">06</h1>
-                        <h5 class="mb-3">Matches Won by PWC</h5>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaysscWonCount ?></h1>
+                        <h5 class="mb-3">Matches Won by SSC</h5>
                     </div>
                 </div>
             </div>
+
+
+            <?php
+                $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) NOT LIKE LOWER('%Won By PWC%') AND LOWER(result) NOT LIKE LOWER('%Won by SSC%') AND LOWER(result) NOT LIKE LOWER('%not played')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $twodaynoResultCount = $statement->rowCount();
+            ?>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">01</h1>
-                        <h5 class="mb-3">No Results</h5>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaynoResultCount ?></h1>
+                        <h5 class="mb-3">NR / Drawn</h5>
                     </div>
                 </div>
             </div>
@@ -142,7 +180,7 @@
 
             <?php
 
-$query = "SELECT * FROM bigmatch_2day_results ORDER BY id DESC";
+$query = "SELECT * FROM bigmatch_2day_results ORDER BY year DESC";
 
 $statement = $connect->prepare($query);
 
@@ -188,35 +226,67 @@ if($statement->rowCount() > 0)
         </div>
 
         <div class="row g-4">
+
+            <?php
+                $query = "SELECT * FROM bigmatch_1day_results WHERE result NOT LIKE '%not played%'";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $onedayplayed = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">36</h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $onedayplayed ?></h1>
                         <h5 class="mb-3">Matches Played</h5>
                     </div>
                 </div>
             </div>
+
+            <?php
+                $query = "SELECT * FROM bigmatch_1day_results WHERE LOWER(result) LIKE LOWER('%PWC Won%')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $onedaypwcWonCount = $statement->rowCount();
+            ?>
+            
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">15</h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $onedaypwcWonCount ?></h1>
                         <h5 class="mb-3">Matches Won by PWC</h5>
                     </div>
                 </div>
             </div>
+
+            <?php
+                $query = "SELECT * FROM bigmatch_1day_results WHERE LOWER(result) LIKE LOWER('%SSC Won%')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $onedaysscWonCount = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">01</h1>
-                        <h5 class="mb-3">Matches Drawn</h5>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $onedaysscWonCount ?></h1>
+                        <h5 class="mb-3">Matches Won by SSC</h5>
                     </div>
                 </div>
             </div>
+
+            <?php
+                $query = "SELECT * FROM bigmatch_1day_results WHERE LOWER(result) NOT LIKE LOWER('%PWC Won%') AND LOWER(result) NOT LIKE LOWER('%SSC Won%') AND LOWER(result) NOT LIKE LOWER('%not played')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $onedaynoResultCount = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">03</h1>
-                        <h5 class="mb-3">No Results</h5>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $onedaynoResultCount ?></h1>
+                        <h5 class="mb-3">NR / Drawn</h5>
                     </div>
                 </div>
             </div>
@@ -240,7 +310,7 @@ if($statement->rowCount() > 0)
 
             <?php
 
-$query = "SELECT * FROM bigmatch_1day_results ORDER BY id DESC";
+$query = "SELECT * FROM bigmatch_1day_results ORDER BY year DESC";
 
 $statement = $connect->prepare($query);
 
@@ -271,6 +341,9 @@ if($statement->rowCount() > 0)
     </div>
 
 
+
+
+    
     <br><br>
 
     <div class="container">
@@ -280,35 +353,68 @@ if($statement->rowCount() > 0)
             <h1 class="mb-5">T20 Matches</h1>
         </div>
 
+
         <div class="row g-4">
+
+            <?php
+                $query = "SELECT * FROM bigmatch_t20_results";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $t20played = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">01</h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $t20played ?></h1>
                         <h5 class="mb-3">Matches Played</h5>
                     </div>
                 </div>
             </div>
+
+            <?php
+                $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) LIKE LOWER('%PWC Won%')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $pwcWonCount = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">00</h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $pwcWonCount ?></h1>
                         <h5 class="mb-3">Matches Won by PWC</h5>
                     </div>
                 </div>
             </div>
+
+            <?php
+                $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) LIKE LOWER('%SSC Won%')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $sscWonCount = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">01</h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $sscWonCount ?></h1>
                         <h5 class="mb-3">Matches Won by SSC</h5>
                     </div>
                 </div>
             </div>
+
+            <?php
+                $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) NOT LIKE LOWER('%PWC Won%') AND LOWER(result) NOT LIKE LOWER('%SSC Won%')";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $noResultCount = $statement->rowCount();
+            ?>
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;">00</h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $noResultCount ?></h1>
                         <h5 class="mb-3">No Results</h5>
                     </div>
                 </div>
@@ -335,7 +441,7 @@ if($statement->rowCount() > 0)
 
             <?php
 
-$query = "SELECT * FROM bigmatch_t20_results ORDER BY id DESC";
+$query = "SELECT * FROM bigmatch_t20_results ORDER BY year DESC";
 
 $statement = $connect->prepare($query);
 

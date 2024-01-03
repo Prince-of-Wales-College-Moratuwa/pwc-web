@@ -27,7 +27,7 @@ and open the template in the editor.
         content="Commerce Stream - Application for Advanced Level Admission Registration" />
     <meta property="og:description"
         content="Apply for a Commerce Stream education like never before! Our cutting-edge online application process makes it easy to join our Al Commerce section. - Prince of Wales' College, Moratuwa" />
-    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@ and open the template in the editor.
         content="Commerce Stream - Application for Advanced Level Admission Registration" />
     <meta property="twitter:description"
         content="Apply for a Commerce Stream education like never before! Our cutting-edge online application process makes it easy to join our Al Commerce section. - Prince of Wales' College, Moratuwa" />
-    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
 
 

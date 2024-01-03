@@ -91,7 +91,6 @@ if (isset($_POST["add_past-principal"])) {
         VALUES (:name, :year)
         ";
 
-        $data[':img'] = $image; 
         $statement = $connect->prepare($query);
 
         $statement->execute($data);

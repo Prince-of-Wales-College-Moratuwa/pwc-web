@@ -22,7 +22,7 @@
         content="Science Stream - Application for Advanced Level Admission Registration" />
     <meta property="og:description"
         content="Unlock your potential in the world of science! Join our science section to delve into the fascinating realms of biology, chemistry, physics, and more. Explore limitless opportunities for discovery and innovation. Apply now to shape your future in the sciences! - Prince of Wales' College, Moratuwa" />
-    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -31,7 +31,7 @@
         content="Science Stream - Application for Advanced Level Admission Registration" />
     <meta property="twitter:description"
         content="Unlock your potential in the world of science! Join our science section to delve into the fascinating realms of biology, chemistry, physics, and more. Explore limitless opportunities for discovery and innovation. Apply now to shape your future in the sciences! - Prince of Wales' College, Moratuwa" />
-    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.jpg" />
+    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
 
 
