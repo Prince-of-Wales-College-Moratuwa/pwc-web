@@ -106,12 +106,12 @@
                             <a class="nav-link <?php if ($page === 'blog') echo 'active'; ?>" href="/admin/blog.php"><img src="/admin/ion-icon/news.png" width="20px">&nbsp Blog</a>
                             <a class="nav-link <?php if ($page === 'events') echo 'active'; ?>" href="/admin/events.php"><img src="/admin/ion-icon/events.png" width="20px">&nbsp Events</a>
                             <br>
-                            <a class="nav-link <?php if ($page === 'principal-msg') echo 'active'; ?>" href="/admin/principal-msg.php?id=1"><img src="/admin/ion-icon/events.png" width="20px">&nbsp Principal's Msg</a>
-                            <a class="nav-link <?php if ($page === 'past-principals') echo 'active'; ?>" href="/admin/past-principals.php"><img src="/admin/ion-icon/events.png" width="20px">&nbsp Past Principals</a>
-                            <a class="nav-link <?php if ($page === 'school-admins') echo 'active'; ?>" href="/admin/school-admins.php"><img src="/admin/ion-icon/events.png" width="20px">&nbsp School Admins</a>
-                            <a class="nav-link <?php if ($page === 'prefects-topboard') echo 'active'; ?>" href="/admin/prefects-topboard.php"><img src="/admin/ion-icon/events.png" width="20px">&nbsp Prefect Topboard</a>
-                            <a class="nav-link <?php if ($page === 'past-prefects') echo 'active'; ?>" href="/admin/past-prefects.php"><img src="/admin/ion-icon/events.png" width="20px">&nbsp Past Headprefects</a>
-                            <a class="nav-link <?php if ($page === 'bigmatch') echo 'active'; ?>" href="/admin/bigmatch/bigmtach.php"><img src="/admin/ion-icon/events.png" width="20px">&nbsp Big Match</a>
+                            <a class="nav-link <?php if ($page === 'principal-msg') echo 'active'; ?>" href="/admin/principal-msg.php?id=1"><img src="/admin/ion-icon/comment.png" width="20px">&nbsp Principal's Msg</a>
+                            <a class="nav-link <?php if ($page === 'past-principals') echo 'active'; ?>" href="/admin/past-principals.php"><img src="/admin/ion-icon/owner.png" width="20px">&nbsp Past Principals</a>
+                            <a class="nav-link <?php if ($page === 'school-admins') echo 'active'; ?>" href="/admin/school-admins.php"><img src="/admin/ion-icon/profile.png" width="20px">&nbsp School Admins</a>
+                            <a class="nav-link <?php if ($page === 'prefects-topboard') echo 'active'; ?>" href="/admin/prefects-topboard.php"><img src="/admin/ion-icon/badge.png" width="20px">&nbsp Prefect Topboard</a>
+                            <a class="nav-link <?php if ($page === 'past-prefects') echo 'active'; ?>" href="/admin/past-prefects.php"><img src="/admin/ion-icon/badge (1).png" width="20px">&nbsp Past Headprefects</a>
+                            <a class="nav-link <?php if ($page === 'bigmatch') echo 'active'; ?>" href="/admin/bigmatch/bigmtach.php"><img src="/admin/ion-icon/cricket.png" width="20px">&nbsp Big Match</a>
 
                             <hr>
 
