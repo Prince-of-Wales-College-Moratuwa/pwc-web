@@ -132,9 +132,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link nav-link pulse">Home</a>
-                <a href="/blog/" class="nav-item nav-link nav-link pulse">Blog</a>
+                <a href="/blog" class="nav-item nav-link nav-link pulse">Blog</a>
                 <a href="/events" class="nav-item nav-link nav-link pulse">Events</a>
                 <a href="/golden-book" class="nav-item nav-link nav-link pulse">The Golden Book</a>
+                <a href="/golden-book" class="nav-item nav-link nav-link pulse">Golden Book</a>
 
                 <div class="nav-item dropdown">
                     <a href="/sports"
