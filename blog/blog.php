@@ -110,7 +110,9 @@ if ($schoolPride == 'ON') {
         <div class="container">
           <div class="row g-5">
             <div class="col-12 wow fadeInUp">
+              <a href="/blog/category/<?php echo strtolower($row["category"]); ?>">
               <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
+              </a>
               <h3 class="mb-4"><?php echo $row["title"]; ?></h3>
               <h6 class="bg-white text-start text-primary" style="font-size: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                   height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
@@ -134,7 +136,9 @@ if ($schoolPride == 'ON') {
         <div class="container">
           <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+              <a href="/blog/category/<?php echo strtolower($row["category"]); ?>">
               <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
+              </a>
               <h3 class="mb-4"><?php echo $row["title"]; ?></h3>
               <h6 class="bg-white text-start text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                   height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
