@@ -446,14 +446,14 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                     <audio controls>
                         <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg"> </audio>
                     <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.webm"
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.mp3"
                         download target="_blank" data-wow-delay="0.7s">Download MP3</a>
 
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="content/img/img-about/sinhala-anthem-pwc.mp3" alt="Sinhala Anthem PWC"
+                            src="content/img/img-about/sinhala-anthem-pwc.webp" alt="Sinhala Anthem PWC"
                             style="object-fit: cover;">
                     </div>
                 </div>
@@ -473,7 +473,7 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="content/img/img-about/english-anthem-pwc.mp3" alt="English Anthem PWC"
+                            src="content/img/img-about/english-anthem-pwc.webp" alt="English Anthem PWC"
                             style="object-fit: cover;">
                     </div>
                 </div>
@@ -491,7 +491,7 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                     <audio controls>
                         <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg"> </audio>
                     <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.webm"
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.mp3"
                         download target="_blank" data-wow-delay="0.7s">Download MP3</a>
                 </div>
             </div>
