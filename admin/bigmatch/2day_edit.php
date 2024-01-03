@@ -33,7 +33,7 @@ if (count($_POST) > 0) {
     try {
         $stmt = $connect->prepare($sql);
         $stmt->execute($params);
-        $message .= "<script>alert('Record updated successfully'); window.open('2day.php');</script>";
+        $message .= "<script>alert('Record updated successfully'); window.location.href = '2day.php';</script>";
     } catch (PDOException $e) {
         $message .= "<script>alert('Error: " . $e->getMessage() . "');</script>";
     }

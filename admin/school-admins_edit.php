@@ -41,7 +41,7 @@ if (count($_POST) > 0) {
     try {
         $stmt = $connect->prepare($sql);
         $stmt->execute($params);
-        $message .= "<script>alert('Article updated successfully'); window.open('../about/school-administration', '_blank');</script>";
+        $message .= "<script>alert('Record updated successfully'); window.open('../about/school-administration', '_blank');</script>";
     } catch (PDOException $e) {
         $message .= "<script>alert('Error: " . $e->getMessage() . "');</script>";
     }
