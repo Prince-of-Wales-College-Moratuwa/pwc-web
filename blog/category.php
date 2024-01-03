@@ -26,12 +26,12 @@ foreach ($rows as $row) {
 }
 ?>
 
-<title><?php echo $row["category"]; ?></title>
+<title><?php echo $row["category"]; ?> Archives</title>
 
     <!-- seo -->
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="<?php echo $row["category"]; ?>" />
+    <meta name="title" content="<?php echo $row["category"]; ?> Archives | Prince of Wales' College" />
     <meta name="description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
     <meta name="keywords"
@@ -40,7 +40,7 @@ foreach ($rows as $row) {
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://princeofwales.edu.lk/blog/category/<?php echo strtolower($row["category"]); ?>" />
-    <meta property="og:title" content="<?php echo $row["category"]; ?>" />
+    <meta property="og:title" content="<?php echo $row["category"]; ?> | Prince of Wales' College" />
     <meta property="og:description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars(strtolower($row["category"])); ?>-header-pwc.webp" />
@@ -48,7 +48,7 @@ foreach ($rows as $row) {
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/category/<?php echo strtolower($row["category"]); ?>" />
-    <meta property="twitter:title" content="<?php echo $row["category"]; ?>" />
+    <meta property="twitter:title" content="<?php echo $row["category"]; ?> | Prince of Wales' College" />
     <meta property="twitter:description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars(strtolower($row["category"])); ?>-header-pwc.webp" />

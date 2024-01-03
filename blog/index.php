@@ -11,21 +11,21 @@
     <!-- seo -->
 
 <!-- Primary Meta Tags -->
-<meta name="title" content="Blog" />
+<meta name="title" content="Blog | Prince of Wales' College" />
 <meta name="description" content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
 <meta name="keywords" content="prince of wales college blog, prince of wales college achievements, prince of wales college blog" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://princeofwales.edu.lk/blog/" />
-<meta property="og:title" content="blog" />
+<meta property="og:title" content="Blog | Prince of Wales' College" />
 <meta property="og:description" content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
 <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-header-pwc.webp" />
 
 <!-- Twitter / WA / TG -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/" />
-<meta property="twitter:title" content="blog" />
+<meta property="twitter:title" content="Blog | Prince of Wales' College" />
 <meta property="twitter:description" content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
 <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-header-pwc.webp" />
 
