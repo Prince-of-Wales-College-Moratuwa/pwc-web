@@ -426,35 +426,6 @@ foreach ($rows as $row) {
 
 
 
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/golden-book-pwc.webp"
-                        alt="golden book" style="object-fit: cover;">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
-                <h1 class="mb-4">THE GOLDEN BOOK</h1>
-                <p class="mb-4">
-                    Prince of Wales College is particularly favored by Cambrians due to its outstanding achievements in
-                    the fields of education and sports, which are proudly recognized in the Golden Book of Excellent
-                    Cambrians. This school has had a lasting effect by preparing many Cambrians for a better future and
-                    motivating future generations to follow in their footsteps in education and sports. The college has
-                    a great tradition of developing bright minds and growing talent in sports.
-                </p>
-
-                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="golden-book"
-                    data-wow-delay="0.1s">Explore</a>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 
 <!-- Sports Start -->
@@ -608,6 +579,34 @@ foreach ($rows as $row) {
 </div>
 <!-- Clubs Enf -->
 
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/golden-book-pwc.webp"
+                        alt="golden book" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
+                <h1 class="mb-4">THE GOLDEN BOOK</h1>
+                <p class="mb-4">
+                    Prince of Wales College is particularly favored by Cambrians due to its outstanding achievements in
+                    the fields of education and sports, which are proudly recognized in the Golden Book of Excellent
+                    Cambrians. This school has had a lasting effect by preparing many Cambrians for a better future and
+                    motivating future generations to follow in their footsteps in education and sports. The college has
+                    a great tradition of developing bright minds and growing talent in sports.
+                </p>
+
+                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="golden-book"
+                    data-wow-delay="0.1s">Explore</a>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
     .explore-history-page-header {
