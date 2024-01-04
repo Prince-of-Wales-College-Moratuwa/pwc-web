@@ -42,18 +42,6 @@
       ]
     },
     {
-      "name": "Golden Book",
-      "short_name": "Golden Book",
-      "url": "golden-book",
-      "icons": [
-        {
-          "src": "content/icons/pwa-shortcuts/golden-book.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
       "name": "About",
       "short_name": "About",
       "url": "/about",

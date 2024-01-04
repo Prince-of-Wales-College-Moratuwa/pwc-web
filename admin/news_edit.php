@@ -10,6 +10,7 @@ if (!is_admin_login()) {
 
 include 'admin-header.php';
 
+$row = [];
 
 if (count($_POST) > 0) {
     $formdata['category'] = trim($_POST["category"]);
@@ -51,9 +52,10 @@ if (count($_POST) > 0) {
         ':author' => $_POST['author'],
         ':categoryslug' => $categoryslug,
         ':schoolPride' => $_POST['schoolPride'],
-        ':photo' => null,  
         ':id' => $_GET['id']
     ];
+
+    $row['photo'] = isset($row['photo']) ? $row['photo'] : '';
 
     if (!empty($_FILES['image']['name'])) {
     
@@ -72,6 +74,12 @@ if (count($_POST) > 0) {
     } else {
         $message = "<script>alert('Error uploading the image. Please check the file type and try again.');</script>";
     }
+} else {
+    if (isset($row['photo'])) {
+        $params[':photo'] = $row['photo'];
+    } else {
+        $params[':photo'] = ''; 
+    }
 }
 
 $stmt = $connect->prepare($sql);
@@ -88,6 +96,8 @@ $sql = "SELECT * FROM pwc_db_news WHERE id = :id";
 $stmt = $connect->prepare($sql);
 $stmt->execute([':id' => $_GET['id']]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$row['photo'] = isset($row['photo']) ? $row['photo'] : '';
 
 ?>
 

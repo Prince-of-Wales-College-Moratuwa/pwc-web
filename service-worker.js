@@ -1,6 +1,5 @@
 // service-worker.js
 
-// Define a unique cache name
 const cacheName = 'pwa-cache-v1.5';
 
 // List of assets to cache
@@ -8,7 +7,7 @@ const assetsToCache = [
   '/resources/css/style.css',
   '/resources/js/main.js',
   '/content/icons/logo-70x70-pwc.png',
-  '/content/icons/logo-android-chrome-icon-pwc.png', // Fix the path
+  '/content/icons/logo-android-chrome-icon-pwc.png',
   '/offline.php' // An offline fallback page
 ];
 
@@ -20,14 +19,12 @@ self.addEventListener('install', event => {
   );
 });
 
-// Fetch event: Serve cached assets or fetch from network
 self.addEventListener('fetch', event => {
   if (!navigator.onLine) {
     event.respondWith(caches.match('/offline.php'));
     return;
   }
 
-  // Continue with normal fetch logic for online users
   event.respondWith(
     caches.match(event.request)
       .then(cachedResponse => {
