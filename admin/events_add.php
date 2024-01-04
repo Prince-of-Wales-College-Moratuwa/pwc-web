@@ -162,11 +162,16 @@ if(isset($_POST["add_event"]))
 
 		);
 
+		$title = $_POST['title'];
+
 		$file = $_FILES['photo']['name'];
 		$file_loc = $_FILES['photo']['tmp_name'];
 		$folder = "../content/img/img-events/";
 		$new_file_name = strtolower($file);
 		$final_file = str_replace(' ', '-', $new_file_name);
+		$title = strtolower(str_replace(' ', '-', $title));
+		$final_file = $title . '-events-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
+		
 		
 	if(move_uploaded_file($file_loc, $folder . $final_file)) {
 		$image = $final_file;
