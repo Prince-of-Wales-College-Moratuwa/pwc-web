@@ -10,7 +10,10 @@ if (!is_admin_login()) {
 
 include 'admin-header.php';
 
-$row = [];
+$sql = "SELECT * FROM pwc_db_news WHERE id = :id";
+$stmt = $connect->prepare($sql);
+$stmt->execute([':id' => $_GET['id']]);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (count($_POST) > 0) {
     $formdata['category'] = trim($_POST["category"]);
@@ -33,6 +36,41 @@ if (count($_POST) > 0) {
 
     $formdata['categoryslug'] = $categoryslug;
 
+    $params = [
+        ':title' => $_POST['title'],
+        ':editorContent' => $_POST['editorContent'],
+        ':category' => $_POST['category'],
+        ':slug' => $_POST['slug'],
+        ':author' => $_POST['author'],
+        ':categoryslug' => $categoryslug,
+        ':schoolPride' => $_POST['schoolPride'],
+        ':id' => $_GET['id'],
+    ];
+    
+    if (!empty($_FILES['image']['name'])) {
+        if (!empty($row['photo']) && file_exists('../content/img/img-blog/' . $row['photo'])) {
+            $currentImagePath = '../content/img/img-blog/' . $row['photo'];
+            unlink($currentImagePath);
+        }
+    
+        $uploadDirectory = '../content/img/img-blog/';
+        $uploadedFileName = $_FILES['image']['name'];
+        $uploadFilePath = $uploadDirectory . $uploadedFileName;
+    
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFilePath)) {
+            $params[':photo'] = $uploadedFileName;
+        } else {
+            $message = "<script>alert('Error uploading the image');</script>";
+        }
+    } else {
+        // No new image uploaded, use the existing image
+        if (!empty($row['photo'])) {
+            $params[':photo'] = $row['photo'];
+        } else {
+            $params[':photo'] = ''; 
+        }
+    }
+    
     $sql = "UPDATE pwc_db_news 
             SET title = :title, 
                 content = :editorContent, 
@@ -43,44 +81,7 @@ if (count($_POST) > 0) {
                 schoolPride = :schoolPride, 
                 photo = :photo 
             WHERE id = :id";
-
-    $params = [
-        ':title' => $_POST['title'],
-        ':editorContent' => $_POST['editorContent'],
-        ':category' => $_POST['category'],
-        ':slug' => $_POST['slug'],
-        ':author' => $_POST['author'],
-        ':categoryslug' => $categoryslug,
-        ':schoolPride' => $_POST['schoolPride'],
-        ':id' => $_GET['id']
-    ];
-
-    $row['photo'] = isset($row['photo']) ? $row['photo'] : '';
-
-    if (!empty($_FILES['image']['name'])) {
     
-    if (!empty($row['photo'])) {
-        $currentImagePath = '../content/img/img-blog/' . $row['photo'];
-        unlink($currentImagePath);
-    }
-
-   
-    $uploadDirectory = '../content/img/img-blog/';
-    $uploadedFileName = $_FILES['image']['name'];
-    $uploadFilePath = $uploadDirectory . $uploadedFileName;
-
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFilePath)) {
-        $params[':photo'] = $uploadedFileName;
-    } else {
-        $message = "<script>alert('Error uploading the image. Please check the file type and try again.');</script>";
-    }
-} else {
-    if (isset($row['photo'])) {
-        $params[':photo'] = $row['photo'];
-    } else {
-        $params[':photo'] = ''; 
-    }
-}
 
 $stmt = $connect->prepare($sql);
 
