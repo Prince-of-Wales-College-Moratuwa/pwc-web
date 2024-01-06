@@ -414,7 +414,7 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="content/img/img-about/vission-&-mission-pwc.webp" alt="vision and mission"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -454,7 +454,7 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="content/img/img-about/sinhala-anthem-pwc.webp" alt="Sinhala Anthem PWC"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -474,7 +474,7 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="content/img/img-about/english-anthem-pwc.webp" alt="English Anthem PWC"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -511,7 +511,7 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-about/flag-pwc.webp"
-                            alt="flag-pwc" style="object-fit: cover;">
+                            alt="flag-pwc" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -545,7 +545,7 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="content/img/img-about/house-system-pwc.webp" alt="house flags"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -744,7 +744,7 @@ if($statement->rowCount() > 0)
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100"
-                        src="content/img/img-about/location-new-pwc.webp" alt="Locations" style="object-fit: cover;">
+                        src="content/img/img-about/location-new-pwc.webp" alt="Locations" style="object-fit: cover;" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">

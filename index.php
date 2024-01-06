@@ -308,7 +308,7 @@ if($statement->rowCount() > 0)
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/about-pwc.webp"
-                        alt="Learning Begins With Us" style="object-fit: cover;">
+                        alt="Learning Begins With Us" style="object-fit: cover;" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -404,7 +404,7 @@ foreach ($rows as $row) {
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/principal-pwc.webp"
-                        alt="pwc principal" style="object-fit: cover;">
+                        alt="pwc principal" style="object-fit: cover;" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -474,7 +474,7 @@ foreach ($rows as $row) {
                 <a class="position-relative d-block h-100 overflow-hidden" href="sports#combat-sports">
                     <img class="img-fluid position-absolute w-100 h-100"
                         src="content/img/img-home/combat-sports-home-pwc.webp" alt="combat sports"
-                        style="object-fit: cover;">
+                        style="object-fit: cover;" loading="lazy">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                         <h5 class="m-0">Combat Sports</h5>
                     </div>
@@ -497,7 +497,7 @@ foreach ($rows as $row) {
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/big-match-pwc.webp"
-                        alt="big match" style="object-fit: cover;">
+                        alt="big match" style="object-fit: cover;" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -564,7 +564,7 @@ foreach ($rows as $row) {
                 <a class="position-relative d-block h-100 overflow-hidden" href="clubs#service-clubs">
                     <img class="img-fluid position-absolute w-100 h-100"
                         src="content/img/img-home/community-service-clubs-home-pwc.webp" alt="commiunity service clubs"
-                        style="object-fit: cover;">
+                        style="object-fit: cover;" loading="lazy">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                         <h5 class="m-0">Commiunity Service Clubs</h5>
                     </div>
@@ -586,7 +586,7 @@ foreach ($rows as $row) {
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/golden-book-pwc.webp"
-                        alt="golden book" style="object-fit: cover;">
+                        alt="golden book" style="object-fit: cover;" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">

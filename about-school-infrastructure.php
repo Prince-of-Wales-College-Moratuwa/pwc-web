@@ -102,7 +102,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/main-building-pwc.webp" alt="Main Building"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -126,7 +126,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="/content/img/img-history/founder-pwc.webp" alt="Mian Office" style="object-fit: cover;">
+                            src="/content/img/img-history/founder-pwc.webp" alt="Mian Office" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -158,7 +158,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="/content/img/img-about/locations/shrine.jpg" alt="Budu Madura"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -192,7 +192,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/College-Office-pwc.webp" alt="Mian Office"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -218,7 +218,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/sports-section-pwc.webp" alt="Sports Section"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -244,7 +244,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/oba-office.jpg" alt="OBA office"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -268,7 +268,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="/content/img/img-about/locations/primary-office-location-pwc.webp"
-                            alt="Primary office" style="object-fit: cover;">
+                            alt="Primary office" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -294,7 +294,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/mainhall-pwc.webp" alt="main hall"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -318,7 +318,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="/content/img/img-about/locations/old-auditorium-location-pwc.webp" alt="auditorium 1"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -342,7 +342,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="/content/img/img-about/locations/new-auditorium-location-pwc.webp" alt="auditorium 2"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -366,7 +366,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/hostel-location-pwc.webp" alt="hostel"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -391,7 +391,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/main-ground-pwc.webp" alt="main grounds"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -416,7 +416,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/sports-pavilion-pwc.webp" alt="pavillion"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -441,7 +441,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/volleyball-pwc.webp" alt="volleyball court"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -466,7 +466,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/basketball-court-pwc.webp" alt="basketball court"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -492,7 +492,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/swimming-pool-pwc.webp" alt="swiming pool"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -516,7 +516,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/children's-park-pwc.webp" alt="CHILDRENS' PARK"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -541,7 +541,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/primary-section-locations-pwc.webp"
-                            alt="PRIMARY SECTION" style="object-fit: cover;">
+                            alt="PRIMARY SECTION" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -565,7 +565,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="/content/img/img-about/locations/grade-6-to-11-classrooms-pwc.webp"
-                            alt="GRADE 6-11 CLASSROOMS" style="object-fit: cover;">
+                            alt="GRADE 6-11 CLASSROOMS" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -590,7 +590,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/science-section-academic-pwc.webp"
-                            alt="AL SCIENCE SECTION" style="object-fit: cover;">
+                            alt="AL SCIENCE SECTION" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -616,7 +616,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/commerce-&-art-section.webp"
-                            alt="AL ARTS & COMMERCE SECTION" style="object-fit: cover;">
+                            alt="AL ARTS & COMMERCE SECTION" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -642,7 +642,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/Text-Book-Store-pwc.jpg" alt="TEXT BOOK STORE"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -663,7 +663,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/media-pwc.webp" alt="MEDIA UNIT"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -688,7 +688,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/first-aid-pwc.webp" alt="FIRST AID ROOM"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -713,7 +713,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/Helping-room-pwc.webp" alt="HELPING ROOM"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -738,7 +738,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/computer-lab-pwc.webp" alt="COMPUTER LABS"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -763,7 +763,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/library-locations-pwc.webp" alt="LIBRARY"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -788,7 +788,7 @@
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-about/locations/Prefect-Room-pwc.webp" alt="PREFECTS' ROOM"
-                            style="object-fit: cover;">
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
