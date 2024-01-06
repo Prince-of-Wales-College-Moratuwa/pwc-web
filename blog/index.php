@@ -109,7 +109,7 @@ if($statement->rowCount() > 0)
                         <article class="article-entry">
                             <a href="<?php echo $row["slug"]; ?>" class="blog-img">
                                 <img src="../content/img/img-blog/<?php echo $row["photo"]; ?>"
-                                    alt="<?php echo $row["photo"]; ?>"><br><br>
+                                    alt="<?php echo $row["photo"]; ?>" loading="lazy"><br><br>
                                 <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                                     <span><?php echo $row["category"]; ?></span></p>
                             </a>

@@ -109,7 +109,7 @@ if (empty($upcomingEvents)) {
         echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
         echo '<div class="course-item bg-light">';
         echo '<div class="position-relative overflow-hidden">';
-        echo '<img class="img-fluid" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
+        echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
         echo '</div>';
         echo '<div class="text-center p-4 pb-0">';
         echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
@@ -136,7 +136,7 @@ foreach ($pastEvents as $row) {
     echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
     echo '<div class="course-item bg-light">';
     echo '<div class="position-relative overflow-hidden">';
-    echo '<img class="img-fluid" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
+    echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
     echo '</div>';
     echo '<div class="text-center p-4 pb-0">';
     echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
