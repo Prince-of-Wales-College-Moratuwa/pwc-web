@@ -105,7 +105,7 @@ if($statement->rowCount() > 0)
 
 
 
-                    <div class="col-md-4 animate-box">
+                    <div class="col-md-4 animate-box wow fadeInUp ">
                         <article class="article-entry">
                             <a href="<?php echo $row["slug"]; ?>" class="blog-img">
                                 <img src="../content/img/img-blog/<?php echo $row["photo"]; ?>"
