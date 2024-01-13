@@ -105,7 +105,6 @@
                             <a class="nav-link <?php if ($page === 'index') echo 'active'; ?>" href="/admin/index.php"><img src="/admin/ion-icon/dashboard.png" width="20px">&nbsp Dashboard</a>
                             <a class="nav-link <?php if ($page === 'blog') echo 'active'; ?>" href="/admin/blog.php"><img src="/admin/ion-icon/news.png" width="20px">&nbsp Blog</a>
                             <a class="nav-link <?php if ($page === 'events') echo 'active'; ?>" href="/admin/events.php"><img src="/admin/ion-icon/events.png" width="20px">&nbsp Events</a>
-                            <br>
                             <a class="nav-link <?php if ($page === 'principal-msg') echo 'active'; ?>" href="/admin/principal-msg.php?id=1"><img src="/admin/ion-icon/comment.png" width="20px">&nbsp Principal's Msg</a>
                             <a class="nav-link <?php if ($page === 'past-principals') echo 'active'; ?>" href="/admin/past-principals.php"><img src="/admin/ion-icon/owner.png" width="20px">&nbsp Past Principals</a>
                             <a class="nav-link <?php if ($page === 'school-admins') echo 'active'; ?>" href="/admin/school-admins.php"><img src="/admin/ion-icon/profile.png" width="20px">&nbsp School Admins</a>
