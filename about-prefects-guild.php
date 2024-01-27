@@ -67,9 +67,9 @@
     <!-- Header End -->
 
     <div class="container-xxl py-5">
-        <div class="container">
+
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">2023</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3"></h6>
                 <h1 class="mb-5">TOP BOARD</h1>
             </div>
             <?php
@@ -101,7 +101,7 @@ if($statement->rowCount() > 0)
                             </div>
                         </div>
                     </div>
-            </div>
+       
             </center>
             <?php 
 					}
