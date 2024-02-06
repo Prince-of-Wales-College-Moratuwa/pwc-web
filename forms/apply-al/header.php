@@ -103,6 +103,15 @@
         gtag('config', 'G-K1KCZVJTWP');
     </script>
 
+<script>
+        document.addEventListener('keydown', function (e) {
+    
+        if (e.key === 'F12' || e.keyCode === 123) {
+            e.preventDefault();
+        }
+        });
+  </script>
+
 </head>
 
 <body>
