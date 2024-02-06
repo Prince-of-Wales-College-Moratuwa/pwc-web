@@ -49,7 +49,9 @@ RewriteRule ^forms/apply-al/tech-closed$ forms/apply-al/tech.php [NC,L]
 RewriteRule ^forms/apply-al/art-closed$ forms/apply-al/art.php [NC,L]
 
 
-ErrorDocument 404 http://princeofwales.edu.lk/404
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+
 
 Options -Indexes
 

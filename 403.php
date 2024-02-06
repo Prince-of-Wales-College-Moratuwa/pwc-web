@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>404 Page Not Found</title>
+    <title>403 Forbidden</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -49,9 +49,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in this website.</p>
+                    <h1 class="display-1">403</h1>
+                    <h1 class="mb-4">Forbidden</h1>
+                    <p class="mb-4">You don't have permission to access this resource.</p>
                     <a class="btn btn-primary rounded-pill py-3 px-5" href="/">Go Back To Home</a>
                 </div>
             </div>
