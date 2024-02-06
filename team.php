@@ -55,9 +55,10 @@
                            <i class="fa fa-arrow-right text-primary me-2"></i><b>Nimsara Sankalpa: </b>Graphics Designer:</p>
                            <i class="fa fa-arrow-right text-primary me-2"></i><b>Kavinu Pasandul: </b>Photographer</p>
                            <i class="fa fa-arrow-right text-primary me-2"></i><b>Dasindu Nimnal: </b>Photographer</p>
+                           <i class="fa fa-arrow-right text-primary me-2"></i><b>Naviru Mendis: </b>Creative Writer</p>
+                           <br>
                            <i class="fa fa-arrow-right text-primary me-2"></i><b>Movindu Dimath: </b>Photographer</p>
                            <i class="fa fa-arrow-right text-primary me-2"></i><b>Nethum Devapriya: </b>Photographer</p>
-                           <i class="fa fa-arrow-right text-primary me-2"></i><b>Naviru Mendis: </b>Creative Writer</p>
                            <br>
                            <i class="fa fa-arrow-right text-primary me-2"></i>Media Partner: <b>Cambrians' Media & Broadcasting Unit</b></p>
                            <i class="fa fa-arrow-right text-primary me-2"></i>Special Thanks: <b>Mr. Chamara Jeewantha, Mrs. Sharangika Perera</b></p>

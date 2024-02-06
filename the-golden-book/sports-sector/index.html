@@ -493,6 +493,51 @@
 		});
 	</script>
 
+<script>
+	function isMobileDevice() {
+		// Check if the user agent indicates a mobile device
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	}
+
+	function checkScreenOrientation() {
+		// Check if the device is mobile
+		if (isMobileDevice()) {
+			// Check if the screen is in portrait orientation
+			if (window.innerHeight > window.innerWidth) {
+				// Prompt the user to rotate their screen
+				var confirmRotate = confirm("For the best experience, please rotate your device to landscape orientation.");
+				if (confirmRotate) {
+					// If the user selects OK, attempt to rotate the screen
+					rotateScreen();
+				}
+			}
+		}
+	}
+
+	function rotateScreen() {
+		// Check if the browser supports screen orientation API
+		if (screen.orientation) {
+			// Attempt to rotate the screen to landscape orientation
+			screen.orientation.lock('landscape').then(function success() {
+				// Screen successfully rotated
+				console.log('Screen rotated to landscape orientation.');
+			}).catch(function error(err) {
+				// Unable to rotate the screen
+				console.error('Error rotating screen:', err);
+			});
+		} else {
+			// Screen orientation API not supported, display an alert
+			alert("Sorry, screen rotation is not supported in your browser.");
+		}
+	}
+
+	// Check screen orientation when the page loads
+	window.addEventListener('load', checkScreenOrientation);
+
+	// Check screen orientation when the window is resized
+	window.addEventListener('resize', checkScreenOrientation);
+</script>
+
 </body>
 
 </html>
