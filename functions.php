@@ -74,6 +74,25 @@ function Count_total_form_submission($connect)
 	return $total;
 }
 
+
+function Count_total_form_submission_stud_info($connect)
+{
+	$total = 0;
+
+	$query = "
+	SELECT COUNT(id) AS Total FROM student_information
+	";
+
+	$result = $connect->query($query);
+
+	foreach($result as $row)
+	{
+		$total = $row["Total"];
+	}
+
+	return $total;
+}
+
 function Count_total_events($connect)
 {
 	$total = 0;

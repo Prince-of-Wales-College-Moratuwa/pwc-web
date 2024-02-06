@@ -72,6 +72,14 @@ include 'admin-header.php';
 				</div>
 			</div>
 		</div>
+		<div class="col-xl-3 col-md-6">
+			<div class="card bg-danger text-white mb-4">
+				<div class="card-body">
+					<h1 class="text-center"><?php echo Count_total_form_submission_stud_info($connect); ?></h1>
+					<h5 class="text-center">Form Submissions (Students Info)</h5>
+				</div>
+			</div>
+		</div>
 
 
 	</div>
