@@ -84,7 +84,7 @@
         </div>
         <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12F6QPJOGMzvcL7avHgG08PbG0jXOX-Y&ehbc=2E312F&noprof=1" frameborder="0"></iframe>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19_1YceDXOyKTelGf1p8SDV8e9YO3YPs&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
         </div>
         
     </div>
