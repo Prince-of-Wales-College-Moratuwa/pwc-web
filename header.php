@@ -19,8 +19,6 @@
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
         rel="stylesheet">
 
-<script async data-id="3312476668" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -38,6 +36,35 @@
 
     <!-- PWA -->
     <link rel="manifest" href="https://princeofwales.edu.lk/manifest.json">
+
+
+        <?php
+
+
+$currentDate = date('d');
+
+if ($currentDate >= 1 && $currentDate <= 5) {
+    // Display content for the first date range (1-5) nelithavindinu7@gmail.com
+    echo '<script async data-id="3312476668" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 6 && $currentDate <= 10) {
+    // Display content for the second date range (6-10) nelithaonline2006@gmail.com
+    echo '<script async data-id="5892538728" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 11 && $currentDate <= 15) {
+    // Display content for the third date range (11-15) frontlinedeveloperslk@gmail.com
+    echo '<script async data-id="1854349425" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 16 && $currentDate <= 20) {
+    // Display content for the fourth date range (16-20) nelitha@androidwedaarayo.com
+    echo '<script async data-id="9967512625" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 21 && $currentDate <= 25) {
+    // Display content for the fifth date range (21-25)  towotix116@tupanda.com
+    echo '<script async data-id="2447734571" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 26 && $currentDate <= 31) {
+    // Display content for the sixth date range (26-31) sane as 1-5
+    echo '<script async data-id="3312476668" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} else {
+    echo '';
+}
+?>
 
 
     <script>
@@ -152,8 +179,7 @@
                 <a href="/" class="nav-item nav-link <?php if ($page === 'home') echo 'active'; ?> nav-link pulse">Home</a>
                 <a href="/blog/" class="nav-item nav-link nav-link pulse">Blog</a>
                 <a href="/events/" class="nav-item nav-link nav-link pulse">Events</a>
-                <a href="/golden-book" class="nav-item nav-link <?php if ($page === 'golden-book') echo 'active'; ?> nav-link pulse">Golden Book</a>
-
+                <a href="/publications" class="nav-item nav-link <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse">Publications</a>
 
                 <div class="nav-item dropdown">
                     <a href="/sports"

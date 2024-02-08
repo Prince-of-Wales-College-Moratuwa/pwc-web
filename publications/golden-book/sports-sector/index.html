@@ -1,0 +1,544 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+	<title>Sports Sector - The Golden Book</title>
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="Sports Sector - The Golden Book | Prince of Wales' College" />
+<meta name="description" content="Discover the Sporting Legacy of Prince of Wales College: Golden Book Spotlight" />
+<meta name="keywords" content="prince of wales college sports golden book, prince of wales college golden book sports sector" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://princeofwales.edu.lk/the-golden-book/sports-sector/" />
+<meta property="og:title" content="Sports Sector - The Golden Book | Prince of Wales' College" />
+<meta property="og:description" content="Discover the Sporting Legacy of Prince of Wales College: Golden Book Spotlight" />
+<meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-goldenbook/golden-book-sports-pwc.png" />
+
+<!-- Twitter / WA / TG -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://princeofwales.edu.lk/the-golden-book/sports-sector/" />
+<meta property="twitter:title" content="Sports Sector - The Golden Book | Prince of Wales' College" />
+<meta property="twitter:description" content="Discover the Sporting Legacy of Prince of Wales College: Golden Book Spotlight" />
+<meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-goldenbook/golden-book-sports-pwc.png" />
+
+
+
+	<!-- Favicon -->
+	<link href="/content/icons/logo-70x70-pwc.png" rel="icon">
+	<link rel="icon" href="/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="/content/icons/logo-apple-touch-icon-pwc.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/content/icons/logo-android-chrome-icon-pwc.png">
+	<meta name="msapplication-TileImage" content="/content/icons/logo-70x70-pwc.png">
+	<meta name="msapplication-TileColor" content="#800000">
+
+	<!-- Libraries Stylesheet -->
+	<link href="/resources/lib/animate/animate.min.css" rel="stylesheet">
+	<link href="/resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+	<!-- Customized Bootstrap Stylesheet -->
+	<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Template Stylesheet -->
+	<link href="/resources/css/style.css" rel="stylesheet">
+
+
+	<meta name="viewport" content="width = 1050, user-scalable = no" />
+	<script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript" src="../lib/hash.js"></script>
+
+</head>
+
+<body>
+
+	<div id="canvas">
+
+		<div>
+			<a style="	position:absolute;
+	z-index:1000;
+	width:22px;
+	height:22px;
+	top:10px;
+	right:10px;
+	background-size:88px 22px;" href="/publications"><img src="/publications/golden-book/pics/close.png"></a>
+		</div>
+
+		<div class="magazine-viewport">
+			<div class="container">
+				<div class="magazine">
+					<!-- Next button -->
+					<div ignore="1" class="next-button"></div>
+					<!-- Previous button -->
+					<div ignore="1" class="previous-button"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="thumbnails">
+			<div>
+				<ul>
+					<li class="i">
+						<a class="btn btn-primary py-3 px-5 mt-2" href="/publications"
+							style="border-radius: 25px">CLOSE</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+</div>
+
+			<script type="text/javascript">
+				function loadApp() {
+
+					$('#canvas').fadeIn(1000);
+
+					var flipbook = $('.magazine');
+
+					// Check if the CSS was already loaded
+
+					if (flipbook.width() == 0 || flipbook.height() == 0) {
+						setTimeout(loadApp, 10);
+						return;
+					}
+
+					// Create the flipbook
+
+					flipbook.turn({
+
+						// Magazine width
+
+						width: 922,
+
+						// Magazine height
+
+						height: 600,
+
+						// Duration in millisecond
+
+						duration: 1000,
+
+						// Hardware acceleration
+
+						acceleration: !isChrome(),
+
+						// Enables gradients
+
+						gradients: true,
+
+						// Auto center this flipbook
+
+						autoCenter: true,
+
+						// Elevation from the edge of the flipbook when turning a page
+
+						elevation: 50,
+
+						// The number of pages
+
+						pages: 20,
+
+						// Events
+
+						when: {
+							turning: function (event, page, view) {
+
+								var book = $(this),
+									currentPage = book.turn('page'),
+									pages = book.turn('pages');
+
+								// Update the current URI
+
+								Hash.go('page/' + page).update();
+
+								// Show and hide navigation buttons
+
+								disableControls(page);
+
+
+								$('.thumbnails .page-' + currentPage).
+								parent().
+								removeClass('current');
+
+								$('.thumbnails .page-' + page).
+								parent().
+								addClass('current');
+
+
+
+							},
+
+							turned: function (event, page, view) {
+
+								disableControls(page);
+
+								$(this).turn('center');
+
+								if (page == 1) {
+									$(this).turn('peel', 'br');
+								}
+
+							},
+
+							missing: function (event, pages) {
+
+								// Add pages that aren't in the magazine
+
+								for (var i = 0; i < pages.length; i++)
+									addPage(pages[i], $(this));
+
+							}
+						}
+
+					});
+
+					// Zoom.js
+
+					$('.magazine-viewport').zoom({
+						flipbook: $('.magazine'),
+
+						max: function () {
+
+							return largeMagazineWidth() / $('.magazine').width();
+
+						},
+
+						when: {
+
+							swipeLeft: function () {
+
+								$(this).zoom('flipbook').turn('next');
+
+							},
+
+							swipeRight: function () {
+
+								$(this).zoom('flipbook').turn('previous');
+
+							},
+
+							resize: function (event, scale, page, pageElement) {
+
+								if (scale == 1)
+									loadSmallPage(page, pageElement);
+								else
+									loadLargePage(page, pageElement);
+
+							},
+
+							zoomIn: function () {
+
+								$('.thumbnails').hide();
+								$('.made').hide();
+								$('.magazine').removeClass('animated').addClass('zoom-in');
+								$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+
+								if (!window.escTip && !$.isTouch) {
+									escTip = true;
+
+									$('<div />', {
+										'class': 'exit-message'
+									}).
+									html('<div>Press ESC to exit</div>').
+									appendTo($('body')).
+									delay(2000).
+									animate({
+										opacity: 0
+									}, 500, function () {
+										$(this).remove();
+									});
+								}
+							},
+
+							zoomOut: function () {
+
+								$('.exit-message').hide();
+								$('.thumbnails').fadeIn();
+								$('.made').fadeIn();
+								$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+
+								setTimeout(function () {
+									$('.magazine').addClass('animated').removeClass('zoom-in');
+									resizeViewport();
+								}, 0);
+
+							}
+						}
+					});
+
+					// Zoom event
+
+					if ($.isTouch)
+						$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+					else
+						$('.magazine-viewport').bind('zoom.tap', zoomTo);
+
+
+					// Using arrow keys to turn the page
+
+					$(document).keydown(function (e) {
+
+						var previous = 37,
+							next = 39,
+							esc = 27;
+
+						switch (e.keyCode) {
+							case previous:
+
+								// left arrow
+								$('.magazine').turn('previous');
+								e.preventDefault();
+
+								break;
+							case next:
+
+								//right arrow
+								$('.magazine').turn('next');
+								e.preventDefault();
+
+								break;
+							case esc:
+
+								$('.magazine-viewport').zoom('zoomOut');
+								e.preventDefault();
+
+								break;
+						}
+					});
+
+					// URIs - Format #/page/1 
+
+					Hash.on('^page\/([0-9]*)$', {
+						yep: function (path, parts) {
+							var page = parts[1];
+
+							if (page !== undefined) {
+								if ($('.magazine').turn('is'))
+									$('.magazine').turn('page', page);
+							}
+
+						},
+						nop: function (path) {
+
+							if ($('.magazine').turn('is'))
+								$('.magazine').turn('page', 1);
+						}
+					});
+
+
+					$(window).resize(function () {
+						resizeViewport();
+					}).bind('orientationchange', function () {
+						resizeViewport();
+					});
+
+					// Events for thumbnails
+
+					$('.thumbnails').click(function (event) {
+
+						var page;
+
+						if (event.target && (page = /page-([0-9]+)/.exec($(event.target).attr('class')))) {
+
+							$('.magazine').turn('page', page[1]);
+						}
+					});
+
+					$('.thumbnails li').
+					bind($.mouseEvents.over, function () {
+
+						$(this).addClass('thumb-hover');
+
+					}).bind($.mouseEvents.out, function () {
+
+						$(this).removeClass('thumb-hover');
+
+					});
+
+					if ($.isTouch) {
+
+						$('.thumbnails').
+						addClass('thumbanils-touch').
+						bind($.mouseEvents.move, function (event) {
+							event.preventDefault();
+						});
+
+					} else {
+
+						$('.thumbnails ul').mouseover(function () {
+
+							$('.thumbnails').addClass('thumbnails-hover');
+
+						}).mousedown(function () {
+
+							return false;
+
+						}).mouseout(function () {
+
+							$('.thumbnails').removeClass('thumbnails-hover');
+
+						});
+
+					}
+
+
+					// Regions
+
+					if ($.isTouch) {
+						$('.magazine').bind('touchstart', regionClick);
+					} else {
+						$('.magazine').click(regionClick);
+					}
+
+					// Events for the next button
+
+					$('.next-button').bind($.mouseEvents.over, function () {
+
+						$(this).addClass('next-button-hover');
+
+					}).bind($.mouseEvents.out, function () {
+
+						$(this).removeClass('next-button-hover');
+
+					}).bind($.mouseEvents.down, function () {
+
+						$(this).addClass('next-button-down');
+
+					}).bind($.mouseEvents.up, function () {
+
+						$(this).removeClass('next-button-down');
+
+					}).click(function () {
+
+						$('.magazine').turn('next');
+
+					});
+
+					// Events for the next button
+
+					$('.previous-button').bind($.mouseEvents.over, function () {
+
+						$(this).addClass('previous-button-hover');
+
+					}).bind($.mouseEvents.out, function () {
+
+						$(this).removeClass('previous-button-hover');
+
+					}).bind($.mouseEvents.down, function () {
+
+						$(this).addClass('previous-button-down');
+
+					}).bind($.mouseEvents.up, function () {
+
+						$(this).removeClass('previous-button-down');
+
+					}).click(function () {
+
+						$('.magazine').turn('previous');
+
+					});
+
+
+					resizeViewport();
+
+					$('.magazine').addClass('animated');
+
+				}
+
+				// Zoom icon
+
+				$('.zoom-icon').bind('mouseover', function () {
+
+					if ($(this).hasClass('zoom-icon-in'))
+						$(this).addClass('zoom-icon-in-hover');
+
+					if ($(this).hasClass('zoom-icon-out'))
+						$(this).addClass('zoom-icon-out-hover');
+
+				}).bind('mouseout', function () {
+
+					if ($(this).hasClass('zoom-icon-in'))
+						$(this).removeClass('zoom-icon-in-hover');
+
+					if ($(this).hasClass('zoom-icon-out'))
+						$(this).removeClass('zoom-icon-out-hover');
+
+				}).bind('click', function () {
+
+					if ($(this).hasClass('zoom-icon-in'))
+						$('.magazine-viewport').zoom('zoomIn');
+					else if ($(this).hasClass('zoom-icon-out'))
+						$('.magazine-viewport').zoom('zoomOut');
+
+				});
+
+				$('#canvas').hide();
+
+
+				// Load the HTML4 version if there's not CSS transform
+
+				yepnope({
+					test: Modernizr.csstransforms,
+					yep: ['/publications-pwc/golden-book/lib/turn.js'],
+					nope: ['/publications-pwc/golden-book/lib/turn.html4.min.js'],
+					both: ['/publications-pwc/golden-book/lib/zoom.min.js', '/publications-pwc/golden-book/js/magazine.js', '/publications-pwc/golden-book/css/magazine.css'],
+					complete: loadApp
+				});
+			</script>
+
+
+<script>
+	function isMobileDevice() {
+		// Check if the user agent indicates a mobile device
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	}
+
+	function checkScreenOrientation() {
+		// Check if the device is mobile
+		if (isMobileDevice()) {
+			// Check if the screen is in portrait orientation
+			if (window.innerHeight > window.innerWidth) {
+				// Prompt the user to rotate their screen
+				var confirmRotate = confirm("For the best experience, please rotate your device to landscape orientation.");
+				if (confirmRotate) {
+					// If the user selects OK, attempt to rotate the screen
+					rotateScreen();
+				}
+			}
+		}
+	}
+
+	function rotateScreen() {
+		// Check if the browser supports screen orientation API
+		if (screen.orientation) {
+			// Attempt to rotate the screen to landscape orientation
+			screen.orientation.lock('landscape').then(function success() {
+				// Screen successfully rotated
+				console.log('Screen rotated to landscape orientation.');
+			}).catch(function error(err) {
+				// Unable to rotate the screen
+				console.error('Error rotating screen:', err);
+			});
+		} else {
+			// Screen orientation API not supported, display an alert
+			alert("Sorry, screen rotation is not supported in your browser.");
+		}
+	}
+
+	// Check screen orientation when the page loads
+	window.addEventListener('load', checkScreenOrientation);
+
+	// Check screen orientation when the window is resized
+	window.addEventListener('resize', checkScreenOrientation);
+</script>
+
+</body>
+
+
+</html>

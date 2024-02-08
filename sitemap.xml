@@ -19,8 +19,32 @@
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://princeofwales.edu.lk/golden-book</loc>
-        <lastmod>2023-08-11</lastmod>
+        <loc>https://princeofwales.edu.lk/publications/</loc>
+        <lastmod>2024-02-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+        <url>
+        <loc>https://princeofwales.edu.lk/publications/school-magazine</loc>
+        <lastmod>2024-02-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+        <url>
+        <loc>https://princeofwales.edu.lk/publications#golden-book</loc>
+        <lastmod>2024-02-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://princeofwales.edu.lk/publications/golden-book/education-sector/</loc>
+        <lastmod>2024-02-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+        <url>
+        <loc>https://princeofwales.edu.lk/publications/golden-book/sports-sector/</loc>
+        <lastmod>2024-02-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>

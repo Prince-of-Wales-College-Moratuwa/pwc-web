@@ -4,7 +4,7 @@
 
 <head>
     <?php
-    $page = 'golden-book';
+    $page = 'publications';
 ?>
 
     <?php include 'header.php'; ?>
@@ -16,14 +16,14 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://princeofwales.edu.lk/golden-book" />
+<meta property="og:url" content="https://princeofwales.edu.lk/publications/golden-book" />
 <meta property="og:title" content="The Golden Book | Prince of Wales' College" />
 <meta property="og:description" content="The Golden Book of Prince of Wales College: Honoring the remarkable legacy of Cambrian excellence in education and sports, inspiring generations to pursue greatness." />
 <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-goldenbook/the-golden-book-cover-pwc.webp" />
 
 <!-- Twitter / WA / TG -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://princeofwales.edu.lk/golden-book" />
+<meta property="twitter:url" content="https://princeofwales.edu.lk/publications/golden-book" />
 <meta property="twitter:title" content="The Golden Book | Prince of Wales' College" />
 <meta property="twitter:description" content="The Golden Book of Prince of Wales College: Honoring the remarkable legacy of Cambrian excellence in education and sports, inspiring generations to pursue greatness." />
 <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-goldenbook/the-golden-book-cover-pwc.webp" />
@@ -32,7 +32,7 @@
 
     <style>
         .golden-book-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-goldenbook/the-golden-book-cover-pwc.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(/content/img/img-goldenbook/the-golden-book-cover-pwc.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -67,7 +67,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-goldenbook/golden-book-edu-pwc.png"
+                        <img class="img-fluid position-absolute w-100 h-100" src="/content/img/img-goldenbook/golden-book-edu-pwc.png"
                             alt="golden book education-sector" style="object-fit: cover;">
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         society. Its inclusion in the Golden Book is a testament to its enduring impact and the
                         countless Cambrians it has equipped for a brighter future.
                     </p>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="the-golden-book/education-sector/"
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="golden-book/education-sector"
                          data-wow-delay="0.7s">View Book</a>
 
                 </div>
@@ -114,14 +114,14 @@
                         Golden Book proudly features these outstanding Cambrians, highlighting their contributions and
                         reminding us of the enduring spirit of sportsmanship fostered at Prince of Wales College.
                     </p>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="the-golden-book/sports-sector/"
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="golden-book/sports-sector"
                          data-wow-delay="0.7s">View Book</a>
                 </div>
 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="content/img/img-goldenbook/golden-book-sports-pwc.png" alt="golden book sports-sector" style="object-fit: cover;">
+                            src="/content/img/img-goldenbook/golden-book-sports-pwc.png" alt="golden book sports-sector" style="object-fit: cover;">
                     </div>
                 </div>
 
