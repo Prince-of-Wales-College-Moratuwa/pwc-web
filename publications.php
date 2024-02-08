@@ -108,7 +108,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="/content/img/img-home/golden-book-pwc.webp" alt="golden book"
+                            src="/content/img/img-publications/golden-book.webp" alt="golden book"
                             style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
