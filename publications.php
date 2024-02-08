@@ -22,7 +22,7 @@
     <meta property="og:description"
         content="Explore the rich tapestry of publications from Prince of Wales' College, including the annual magazine, golden book, and more. Dive into a world of academic achievements, creative expressions, and cherished memories that define our vibrant college community." />
     <meta property="og:image"
-        content="https://princeofwales.edu.lk/content/img/img-goldenbook/publications-cover-pwc.webp" />
+        content="https://princeofwales.edu.lk/content/img/img-publications/publication-cover.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -31,13 +31,13 @@
     <meta property="twitter:description"
         content="Explore the rich tapestry of publications from Prince of Wales' College, including the annual magazine, golden book, and more. Dive into a world of academic achievements, creative expressions, and cherished memories that define our vibrant college community."/>
     <meta property="twitter:image"
-        content="https://princeofwales.edu.lk/content/img/img-goldenbook/publications-cover-pwc.webp" />
+        content="https://princeofwales.edu.lk/content/img/img-publications/publication-cover.webp" />
 
 
 
     <style>
         .publications-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-goldenbook/publications-cover-pwc.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(/content/img/img-publications/publication-cover.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -73,7 +73,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="/content/img/magazine-placeholder.webp" alt="school-magazine"
+                            src="/content/img/img-publications/magazine-placeholder.webp" alt="school-magazine"
                             style="object-fit: cover;">
                     </div>
                 </div>
