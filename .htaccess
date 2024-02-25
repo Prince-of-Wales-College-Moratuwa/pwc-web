@@ -32,7 +32,7 @@ RewriteRule ^about/school-infrastructure$ about-school-infrastructure.php [NC,L]
 RewriteRule ^about/school-infrastructure/founders-statue$ location-founders-statue.php [NC,L]
 RewriteRule ^about/school-infrastructure/the-shrine$ location-the-shrine.php [NC,L]
 
-RewriteRule ^study-period-log$ study-period-log.php [NC,L]
+RewriteRule ^daily-period-log$ daily-period-log.php [NC,L]
 
 
 RewriteRule ^contact$ contact.php [NC,L]

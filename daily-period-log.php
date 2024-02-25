@@ -66,24 +66,28 @@
                     </table>
                     <p><i>Last Updated:
                     <?php
-$sql = "SELECT MAX(update_time) AS last_update_time
-        FROM update_history
-        WHERE table_name = 'period_log'";
+                        $sql = "SELECT MAX(update_time) AS last_update_time
+                                FROM update_history
+                                WHERE table_name = 'period_log'";
 
-$statement = $connect->prepare($sql);
-$statement->execute();
-$row = $statement->fetch(PDO::FETCH_ASSOC);
-if ($row['last_update_time']) {
-    $lastUpdateTime = $row['last_update_time'];
-    echo $lastUpdateTime;
-} else {
-    echo "No records found.";
-}
-?>
-
+                        $statement = $connect->prepare($sql);
+                        $statement->execute();
+                        $row = $statement->fetch(PDO::FETCH_ASSOC);
+                        if ($row['last_update_time']) {
+                            $lastUpdateTime = $row['last_update_time'];
+                            echo $lastUpdateTime;
+                        } else {
+                            echo "No Time Information";
+                        }
+                        ?>
                         </i></p>
                 </div>
             </div>
+
+
+
+                <!-- 9,10,11 -->
+
 
 
 
@@ -136,23 +140,21 @@ if ($row['last_update_time']) {
                         </tbody>
                     </table>
                     <p><i>Last Updated:
-                    <?php
-$sql = "SELECT MAX(update_time) AS last_update_time
-        FROM update_history
-        WHERE table_name = 'period_log'";
+                         <?php
+                            $sql = "SELECT MAX(update_time) AS last_update_time
+                                    FROM update_history
+                                    WHERE table_name = 'period_log'";
 
-$statement = $connect->prepare($sql);
-$statement->execute();
-$row = $statement->fetch(PDO::FETCH_ASSOC);
-if ($row['last_update_time']) {
-    $lastUpdateTime = $row['last_update_time'];
-    echo $lastUpdateTime;
-} else {
-    echo "No records found.";
-}
-?>
-
-
+                            $statement = $connect->prepare($sql);
+                            $statement->execute();
+                            $row = $statement->fetch(PDO::FETCH_ASSOC);
+                            if ($row['last_update_time']) {
+                                $lastUpdateTime = $row['last_update_time'];
+                                echo $lastUpdateTime;
+                            } else {
+                                echo "No Time Information";
+                            }
+                         ?>
                         </i></p>
                 </div>
             </div>
