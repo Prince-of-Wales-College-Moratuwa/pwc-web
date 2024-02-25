@@ -96,7 +96,7 @@ include 'header.php';
 
 		<div class="card">
 
-			<div class="card-header">Admin Login</div>
+			<div class="card-header">Teacher's Login</div>
 
 			<div class="card-body">
 
