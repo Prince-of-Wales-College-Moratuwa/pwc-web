@@ -28,7 +28,7 @@ include 'admin-header.php';
 			<div class="card bg-primary text-white mb-4">
 				<a href="periodcount.php">
 					<div class="card-body text-white">
-						<h5 class="text-center">Period Count</h5>
+						<h5 class="text-center">Project "8න් කීයද?"</h5>
 					</div>
 				</a>
 			</div>

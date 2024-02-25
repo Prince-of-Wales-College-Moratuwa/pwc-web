@@ -19,7 +19,7 @@ include 'admin-header.php';
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Period Count</h1>
+	<h1>Project "8න් කීයද?"</h1>
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
