@@ -65,19 +65,22 @@
                         </tbody>
                     </table>
                     <p><i>Last Updated:
-                            <?php
-                            $sql = "SHOW TABLE STATUS LIKE 'period_log'";
+                    <?php
+$sql = "SELECT MAX(update_time) AS last_update_time
+        FROM update_history
+        WHERE table_name = 'period_log'";
 
-                            $statement = $connect->prepare($sql);
-                            $statement->execute();
-                            $row = $statement->fetch(PDO::FETCH_ASSOC);
-                            if ($row) {
-                                $lastUpdateTime = $row['Update_time'];
-                                echo $lastUpdateTime;
-                            } else {
-                                echo "No records found.";
-                            }
-                            ?>
+$statement = $connect->prepare($sql);
+$statement->execute();
+$row = $statement->fetch(PDO::FETCH_ASSOC);
+if ($row['last_update_time']) {
+    $lastUpdateTime = $row['last_update_time'];
+    echo $lastUpdateTime;
+} else {
+    echo "No records found.";
+}
+?>
+
                         </i></p>
                 </div>
             </div>
@@ -133,19 +136,22 @@
                         </tbody>
                     </table>
                     <p><i>Last Updated:
-                            <?php
-                            $sql = "SHOW TABLE STATUS LIKE 'period_log'";
+                    <?php
+$sql = "SELECT MAX(update_time) AS last_update_time
+        FROM update_history
+        WHERE table_name = 'period_log'";
 
-                            $statement = $connect->prepare($sql);
-                            $statement->execute();
-                            $row = $statement->fetch(PDO::FETCH_ASSOC);
-                            if ($row) {
-                                $lastUpdateTime = $row['Update_time'];
-                                echo $lastUpdateTime;
-                            } else {
-                                echo "No records found.";
-                            }
-                            ?>
+$statement = $connect->prepare($sql);
+$statement->execute();
+$row = $statement->fetch(PDO::FETCH_ASSOC);
+if ($row['last_update_time']) {
+    $lastUpdateTime = $row['last_update_time'];
+    echo $lastUpdateTime;
+} else {
+    echo "No records found.";
+}
+?>
+
 
                         </i></p>
                 </div>
