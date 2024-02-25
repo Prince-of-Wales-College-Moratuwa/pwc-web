@@ -48,8 +48,10 @@ if(isset($_POST["login_button"]))
 
 		$query = "
 		SELECT * FROM pwc_db_admin 
-        WHERE admin_email = :admin_email
+		WHERE admin_id IN (1, 2) 
+		AND admin_email = :admin_email
 		";
+		
 
 		$statement = $connect->prepare($query);
 
