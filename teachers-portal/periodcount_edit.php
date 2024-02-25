@@ -1,5 +1,5 @@
 <?php
-$page = 'past-prefects';
+$page = 'periodcount';
 include '../database_connection.php';
 include '../functions.php';
 
