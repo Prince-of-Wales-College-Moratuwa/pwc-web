@@ -105,7 +105,7 @@ if ($currentDate < $birthday) {
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <h1 class="mb-3">300+</h1>
+                        <h1 class="mb-3">200+</h1>
                         <h5 class="mb-3">Qualified Staff</h5>
                     </div>
                 </div>
