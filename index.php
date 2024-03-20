@@ -509,7 +509,7 @@ foreach ($rows as $row) {
                     flags i.e. Purple, Gold and Maroon of Prince of Wales' College and Green, White & Gold of St.
                     Sebastian's College.</p>
 
-                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="battle-of-the-golds"
+                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match"
                     data-wow-delay="0.1s">Explore</a>
 
             </div>

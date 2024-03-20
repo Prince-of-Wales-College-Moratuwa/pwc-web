@@ -17,6 +17,8 @@
 <div class="container mt-5">
         <h1 class="mb-4">Privacy Policy</h1>
 
+        <p><i>Last Updated: March 20, 2024</i></p>
+
         <h2>1. Introduction</h2>
         <p>Welcome to Prince of Wales College Moratuwa. This privacy policy is here to inform you that we do not collect any user data and we do not sell any data.</p>
 

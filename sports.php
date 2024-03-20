@@ -125,7 +125,7 @@
                             For All These Achievements in Charge of Cricket Mr. Udaya Giganage, Mr. Kasun Devapriya,
                             Worked Tirelessly and Dedicatedly.</p>
 
-                        <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="battle-of-the-golds.php"
+                        <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match"
                              data-wow-delay="0.7s">Know More About College Big Match</a>
 
                     </div>
