@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
-  <?php include '../database_connection.php'; ?>
+  <?php include '../database_connection.php'; 
+    $page = 'events';
+  
+  ?>
+  
 
 <?php
 
