@@ -4,8 +4,10 @@
 <head>
 
     <?php
+    $page = 'events';
+
 include '../database_connection.php';
-include 'header.php';
+include '../header.php';
 
 ?>
 
@@ -163,7 +165,7 @@ foreach ($pastEvents as $row) {
 
 
 
-    <?php include 'footer.php'; ?>
+    <?php include '../footer.php'; ?>
 </body>
 
 </html>

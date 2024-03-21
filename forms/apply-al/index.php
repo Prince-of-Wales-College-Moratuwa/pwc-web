@@ -5,8 +5,9 @@
 
     <?php 
     include '../../database_connection.php';
-    include 'header.php';
+    include '../../header.php';
     ?>
+    <title>Admission Registration for Advanced Level 2025</title>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Admission Registration for Advanced Level 2025" />
@@ -91,5 +92,5 @@ if ($currentDate < $deadlineDate) {
 
 
 <?php 
-    include 'footer.php';
+    include '../../footer.php';
     ?>

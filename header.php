@@ -25,14 +25,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="https://princeofwales.edu.lk/resources/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="https://princeofwales.edu.lk/resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/resources/lib/animate/animate.min.css" rel="stylesheet">
+    <link rel="preload" href="/resources/lib/animate/animate.min.css" as="style" />
+
+    <link href="/resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="preload" href="/resources/lib/owlcarousel/assets/owl.carousel.min.css" as="style" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="https://princeofwales.edu.lk/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="/resources/css/bootstrap.min.css" as="style" />
 
     <!-- Template Stylesheet -->
-    <link href="https://princeofwales.edu.lk/resources/css/style.css" rel="stylesheet">
+    <link href="/resources/css/style.css" rel="stylesheet">
+    <link rel="preload" href="/resources/css/style.css" as="style" />
 
 
     <!-- PWA -->
@@ -178,8 +183,8 @@ if ($currentDate >= 1 && $currentDate <= 5) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link <?php if ($page === 'home') echo 'active'; ?> nav-link pulse">Home</a>
-                <a href="/blog/" class="nav-item nav-link nav-link pulse">Blog</a>
-                <a href="/events/" class="nav-item nav-link nav-link pulse">Events</a>
+                <a href="/blog/" class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
+                <a href="/events/" class="nav-item nav-link nav-link pulse <?php if ($page === 'events') echo 'active'; ?>">Events</a>
                 <a href="/publications" class="nav-item nav-link <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse">Publications</a>
 
                 <div class="nav-item dropdown">

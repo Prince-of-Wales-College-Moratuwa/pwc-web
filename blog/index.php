@@ -3,8 +3,10 @@
 
 <head>
     <?php
+    $page = 'blog';
+
     include '../database_connection.php';
-    include 'header.php';
+    include '../header.php';
     include '../functions.php';
     ?>
   <title>Blog</title>
@@ -133,7 +135,7 @@ if($statement->rowCount() > 0)
 
 
 
-        <?php include 'footer.php'; ?>
+        <?php include '../footer.php'; ?>
     </body>
 
 </html>

@@ -34,7 +34,6 @@
 
 
 
-    <title>Student Information Form</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -43,8 +42,10 @@
     <script type="text/javascript" src="/forms/resources/js/bootstrap.js"></script>
     <?php 
     include '../../database_connection.php';
-    include 'header.php';
+    include '../../header.php';
     ?>
+
+<title>Student Information Form</title>
 
 
 <style>
@@ -776,7 +777,7 @@ input[type="radio"]:checked {
 
 
     <?php 
-    include 'footer.php';
+    include '../../footer.php';
 ?>
 
 </body>
