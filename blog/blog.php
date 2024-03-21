@@ -24,7 +24,7 @@ foreach ($rows as $row) {
 
   <title><?php echo $row["title"]; ?></title>
 
-  <?php include 'header.php'; ?>
+  <?php include '../header.php'; ?>
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="<?php echo $row["title"]; ?>" />
@@ -195,7 +195,7 @@ if ($schoolPride == 'ON') {
 
 
     </div>
-    <?php include 'footer.php'; ?>
+    <?php include '../footer.php'; ?>
 </body>
 
 </html>
