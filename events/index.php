@@ -11,6 +11,8 @@ include '../header.php';
 
 ?>
 
+<title>Events</title>
+
     <!-- seo -->
 
 <!-- Primary Meta Tags -->
