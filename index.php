@@ -71,7 +71,7 @@ if ($currentDate < $birthday) {
 <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
         <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="content/img/img-home/header-main-pwc.webp"
+            <img class="img-fluid" src="content/img/img-home/header-main-pwc_50.webp"
                 alt="Front View of Prince of Wales College">
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                 style="background: rgba(0, 0, 0, 0.356);">
@@ -505,10 +505,10 @@ foreach ($rows as $row) {
                 <h1 class="mb-4">BATTLE OF THE GOLDS</h1>
                 <p class="mb-4">The Prince of Wales'–St. Sebastian's Cricket Encounter (The Battle of the Golds) is
                     an annual cricket match played between Prince of Wales' College and St. Sebastian's College
-                    since 1933. It is known as The Battle of the Golds due to the colours of the two school's
+                    since 1933. <br><br>It is known as The Battle of the Golds due to the colours of the two school's
                     flags i.e. Purple, Gold and Maroon of Prince of Wales' College and Green, White & Gold of St.
                     Sebastian's College.</p>
-
+<br>
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match"
                     data-wow-delay="0.1s">Explore</a>
 

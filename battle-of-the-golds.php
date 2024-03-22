@@ -18,7 +18,7 @@
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://princeofwales.edu.lk/battle-of-the-golds" />
+        <meta property="og:url" content="https://princeofwales.edu.lk/big-match" />
         <meta property="og:title" content="Battle of The Golds | Prince of Wales' College" />
         <meta property="og:description"
             content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
@@ -27,7 +27,7 @@
 
         <!-- Twitter / WA / TG -->
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://princeofwales.edu.lk/battle-of-the-golds" />
+        <meta property="twitter:url" content="https://princeofwales.edu.lk/big-match" />
         <meta property="twitter:title" content="Battle of The Golds | Prince of Wales' College" />
         <meta property="twitter:description"
             content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
