@@ -6,11 +6,11 @@
     <?php  date_default_timezone_set('Asia/Colombo'); ?>
 
     <!-- Favicon -->
-    <link href="https://princeofwales.edu.lk/content/icons/logo-70x70-pwc.png" rel="icon">
-    <link rel="icon" href="https://princeofwales.edu.lk/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://princeofwales.edu.lk/content/icons/logo-apple-touch-icon-pwc.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://princeofwales.edu.lk/content/icons/logo-android-chrome-icon-pwc.png">
-    <meta name="msapplication-TileImage" content="https://princeofwales.edu.lk/content/icons/logo-70x70-pwc.png">
+    <link href="/content/icons/logo-70x70-pwc.png" rel="icon">
+    <link rel="icon" href="/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/content/icons/logo-apple-touch-icon-pwc.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/content/icons/logo-android-chrome-icon-pwc.png">
+    <meta name="msapplication-TileImage" content="/content/icons/logo-70x70-pwc.png">
     <meta name="msapplication-TileColor" content="#800000">
 
     <!-- Google Fonts -->
@@ -21,8 +21,8 @@
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/resources/css/all.min.css" rel="stylesheet">
+    <link href="/resources/css/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="/resources/lib/animate/animate.min.css" rel="stylesheet">
