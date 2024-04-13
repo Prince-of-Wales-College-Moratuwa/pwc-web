@@ -177,7 +177,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                 COLLEGE<br>&nbsp; &nbsp; MORATUWA
             </h6>
         </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="mobile-menu"></button>
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
