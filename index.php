@@ -84,7 +84,7 @@ if ($currentDate < $birthday) {
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-9 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To</h5>
+                            <h1 style="font-size: 24px;" class="text-white text-uppercase mb-3 animated slideInDown">Welcome To</h1>
                             <h1 class="display-3 text-white text-uppercase animated slideInDown">Prince of Wales'
                                 College, <br> Moratuwa</h1>
                         </div>
@@ -122,7 +122,7 @@ if ($currentDate < $birthday) {
 <div class="colorlib-blog colorlib-light-grey">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Latest</h6>
+            <h1 style="font-size: 16px;"class="section-title bg-white text-center text-primary px-3">Latest</h1>
             <h1 class="mb-5">ARTICLES</h1>
         </div>
 
@@ -156,7 +156,7 @@ if($statement->rowCount() > 0)
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
                     <div class="desc">
-                        <h4><a href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h4>
+                        <h1 style="font-size: 24px;"><a href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h1>
                         <p><?php echo htmlspecialchars(strip_tags($row["excerpt"])); echo "......"; ?></p>
                     </div>
                 </article>
@@ -184,7 +184,7 @@ if($statement->rowCount() > 0)
 <div class="container">
     <div class="row">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Featured</h6>
+            <h1 style="font-size: 16px;" class="section-title bg-white text-center text-primary px-3">Featured</h1>
             <h1 class="mb-5">UPDATES</h1>
 
             <?php
@@ -238,7 +238,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">UPCOMING & PAST</h6>
+            <h1 style="font-size: 16px;" class="section-title bg-white text-center text-primary px-3">UPCOMING & PAST</h1>
             <h1 class="mb-5">EVENTS</h1>
         </div>
 
@@ -317,7 +317,7 @@ if($statement->rowCount() > 0)
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                <h1 style="font-size: 16px;" class="section-title bg-white text-start text-primary pe-3">About Us</h1>
                 <h1 class="mb-4">Learning Begins With Us</h1>
                 <p class="mb-4">Since the inception of the school in 1876, Prince of Wales’ College has been
                     considered as a major school in Moratuwa area and over the years, established its name as a
@@ -629,14 +629,16 @@ foreach ($rows as $row) {
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <h1 class="display-3 text-white animated slideInDown"><?php echo $age ?> Years and Counting</h1>
-                <h5 class=" text-white animated slideInDown"><br> Explore college history and discover <?php echo $age ?> years of rich
-                    heritage and academic excellence. <br><br> </h5>
-                <center><a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history"
-                        data-wow-delay="0.1s">Explore College History</a></center>
+                <h1 style="font-size: 20px;" class=" text-white animated slideInDown"><br> Explore college history and discover <?php echo $age ?> years of rich
+                    heritage and academic excellence. <br> </h1>
+                <center>
+                    <a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history" data-wow-delay="0.1s">Explore College History</a>
+                </center>
             </div>
         </div>
     </div>
 </div>
+
 <!-- history End -->
 
 
