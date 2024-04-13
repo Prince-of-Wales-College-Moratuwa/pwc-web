@@ -41,13 +41,10 @@ include 'admin-header.php';
 			<table id="datatablesSimple">
 				<thead>
 					<tr>
-						<th>ID</th>
 						<th>Name</th>
 						<th>Date</th>
-						<th>Time</th>
-						<th>Location</th>
 						<th>Organizer</th>
-						<th>Status</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 
@@ -67,11 +64,8 @@ include 'admin-header.php';
 			{ 
 				?>
 					<tr>
-						<td><?php echo($row["id"]) ?></td>
 						<td><?php echo($row["title"]) ?></td>
 						<td><?php echo($row["date"]) ?></td>
-						<td><?php echo($row["time"]) ?></td>
-						<td><?php echo($row["location"]) ?></td>
 						<td><?php echo($row["organizer_name"]) ?></td>
 
 						<td>

@@ -1,43 +1,42 @@
 <?php
 
-$page = 'blog';
+$page = 'bigmatch';
 
 
 
-include '../database_connection.php';
+include '../../database_connection.php';
 
-include './admin-functions.php';
-include '../functions.php';
+include '../../functions.php';
 
 
 if(!is_admin_login())
 {
-	header('location:../admin_login.php');
+	header('location:../../admin_login.php');
 	exit();
 }
 
-include 'admin-header.php';
+include '../admin-header.php';
 
 
 
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Blog</h1>
+	<h1>Past Cricket Captains</h1>
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-		<li class="breadcrumb-item active">Blog</li>
+		<li class="breadcrumb-item active">Past Cricket Captains</li>
 	</ol>
 
 	<div class="card mb-4">
 		<div class="card-header">
 			<div class="row">
 				<div class="col col-md-6">
-					<i class="fas fa-table me-1"></i> Blog
+					<i class="fas fa-table me-1"></i> Past Cricket Captains
 				</div>
 				<div class="col col-md-6" align="right">
-					<a href="news_add.php" class="btn btn-success btn-sm">Add</a>
+					<a href="past-captains_add.php" class="btn btn-success btn-sm">Add</a>
 				</div>
 			</div>
 		</div>
@@ -45,8 +44,8 @@ include 'admin-header.php';
 			<table id="datatablesSimple">
 				<thead>
 					<tr>
-						<th>Date</th>
-						<th>Title</th>
+						<th>year</th>
+						<th>Name</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -55,7 +54,7 @@ include 'admin-header.php';
 
 					<?php 
 
-$query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
+$query = "SELECT * FROM past_cricket_captains ORDER BY year DESC";
 
 		$statement = $connect->prepare($query);
 
@@ -67,13 +66,12 @@ $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
 			{ 
 				?>
 					<tr>
-						<td><?php echo($row["date"]) ?></td>
-						<td><?php echo($row["title"]) ?></td>
+						<td><?php echo($row["year"]) ?></td>
+						<td><?php echo($row["name"]) ?></td>
 
 						<td>
-							<a href="../blog/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
-							<a href="news_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
-							<a href="news_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
+							<a href="past-captains_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
+							<a href="past-captains_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
 						</td>
 					</tr>
 
@@ -97,5 +95,5 @@ $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
 
 
 <?php
-include 'admin-footer.php';
+include '../admin-footer.php';
 ?>

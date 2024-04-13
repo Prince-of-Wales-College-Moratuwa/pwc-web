@@ -249,7 +249,7 @@ if($statement->rowCount() > 0)
                 $statement->execute();
                 $onedaypwcWonCount = $statement->rowCount();
             ?>
-            
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
@@ -343,7 +343,7 @@ if($statement->rowCount() > 0)
 
 
 
-    
+
     <br><br>
 
     <div class="container">
@@ -538,6 +538,53 @@ if($statement->rowCount() > 0)
 
         </div>
     </div>
+
+    <div class="container-xxl py-5" id="past-captains">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">past</h6>
+                <h1 class="mb-5">CAPTAINS</h1>
+            </div>
+
+            <div class="row g-4">
+
+                <?php
+
+                    $query = "SELECT * FROM past_cricket_captains ORDER BY id DESC";
+
+                    $statement = $connect->prepare($query);
+
+                    $statement->execute();
+
+                    if($statement->rowCount() > 0)
+                    {
+                        foreach($statement->fetchAll() as $row)
+                        { 
+                            
+                ?>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+
+                        <div class="text-center p-4">
+                            <h5 class="mb-0"><?php echo $row["name"]; ?></h5>
+                            <small><?php echo $row["year"]; ?></small>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <?php 
+                        }
+                    }	
+                ?>
+
+
+            </div>
+
+        </div>
+    </div>
+
 
     <br><br>
 
