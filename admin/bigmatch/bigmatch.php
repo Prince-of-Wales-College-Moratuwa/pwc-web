@@ -53,7 +53,7 @@ include '../admin-header.php';
 <div class="col-xl-3 col-md-6">
 	<a href="past-captains.php" class="card bg-primary text-white mb-4">
 		<div class="card-body">
-			<h2 class="text-center">Past Captians</h1>
+			<h2 class="text-center">Past Captains</h1>
 		</div>
 	</a>
 </div>
