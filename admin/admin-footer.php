@@ -24,10 +24,10 @@
        
 
 
-    	<script src="https://princeofwales.edu.lk/admin/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="https://princeofwales.edu.lk/admin/js/scripts.js"></script>
-        <script src="https://princeofwales.edu.lk/admin/js/simple-datatables@latest.js" crossorigin="anonymous"></script>
-        <script src="https://princeofwales.edu.lk/admin/js/datatables-simple-demo.js"></script>
+    	<script src="/admin/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/admin/js/scripts.js"></script>
+        <script src="/admin/js/simple-datatables@latest.js" crossorigin="anonymous"></script>
+        <script src="/admin/js/datatables-simple-demo.js"></script>
 
     </body>
 
