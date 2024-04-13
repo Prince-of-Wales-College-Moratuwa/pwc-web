@@ -222,7 +222,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                 <a href="/about" class="nav-item nav-link <?php if ($page === 'about') echo 'active'; ?> nav-link pulse">About</a>
                 <a href="/contact" class="nav-item nav-link <?php if ($page === 'contact') echo 'active'; ?> nav-link pulse">Contact</a>
                 
-                <a href="/search"><i class="bi bi-search nav-item nav-link <?php if ($page === 'search') echo 'active'; ?> nav-link pulse" id="search-icon"></i></a>
+                <a href="/search" title="search"><i class="bi bi-search nav-item nav-link <?php if ($page === 'search') echo 'active'; ?> nav-link pulse" id="search-icon"></i></a>
 
 
 
