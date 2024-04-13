@@ -91,9 +91,6 @@
         "type": "image/png"
       }
     ],
-    "permissions": [
-      "notifications" 
-    ],
     "scope": "/",
     "orientation": "any",
     "prefer_related_applications": true
