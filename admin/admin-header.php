@@ -15,10 +15,11 @@
     <title>Admin</title>
     <link rel="canonical" href="">
     <!-- Bootstrap core CSS -->
-    <style><?php include 'css/styles.css'; ?></style>
-    <style><?php include 'css/simple-datatables-style.css'; ?></style>
-    <style><?php include 'css/select2.min.css'; ?></style>
-    <style><?php include 'css/vanillaSelectBox.css'; ?></style>
+    <link rel="stylesheet" href="https://princeofwales.edu.lk/admin/css/styles.css">
+<link rel="stylesheet" href="https://princeofwales.edu.lk/admin/css/simple-datatables-style.css">
+<link rel="stylesheet" href="https://princeofwales.edu.lk/admin/css/select2.min.css">
+<link rel="stylesheet" href="https://princeofwales.edu.lk/admin/css/vanillaSelectBox.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- icons -->
