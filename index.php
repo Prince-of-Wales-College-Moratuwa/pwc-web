@@ -9,18 +9,22 @@
 ?>
     <?php 
     include 'database_connection.php';
-    include 'header.php';
+    
     ?>
 
     <title>Prince of Wales' College, Moratuwa</title>
 
     <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Prince of Wales' College, Moratuwa" />
     <meta name="description"
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta name="keywords"
         content="prince of wales college, prince of wales college moratuwa, prince of wales college moratuwa website, prince of wales college moratuwa contact number, prince of wales college moratuwa logo, prince of wales college moratuwa address, prince of wales college moratuwa big match, prince of wales college moratuwa sri lanka, prince of wales college moratuwa principal" />
     <meta name="author" content="Cambrians' ICT Society" />
+
+    <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -38,7 +42,10 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
-
+    <?php
+    include 'header.php';
+    ?>
+    
     <style>
         .al-page-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-clubs/club-header.webp);
@@ -51,7 +58,6 @@
             background: rgba(15, 23, 43, .7);
         }
     </style>
-
 </head>
 
 <?php 
@@ -145,8 +151,7 @@ if($statement->rowCount() > 0)
             <div class="col-md-4 animate-box">
                 <article class="article-entry">
                     <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
-                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>"
-                            alt="<?php echo $row["photo"]; ?>"><br><br>
+                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>"><br><br>
                         <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
