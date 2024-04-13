@@ -25,6 +25,7 @@ RewriteRule ^history$ history.php [NC,L]
 RewriteRule ^history/former-principals$ history-former-principals.php [NC,L]
 
 RewriteRule ^about$ about.php [NC,L]
+RewriteRule ^about/lassana-wales$ lassana-wales.php [NC,L]
 RewriteRule ^about/prefects-guild$ about-prefects-guild.php [NC,L]
 RewriteRule ^about/school-administration$ about-school-administration.php [NC,L]
 
