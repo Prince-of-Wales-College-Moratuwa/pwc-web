@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    
+    <meta name="robots" content="index, follow">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <?php  date_default_timezone_set('Asia/Colombo'); ?>
