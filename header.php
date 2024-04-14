@@ -4,8 +4,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <?php  date_default_timezone_set('Asia/Colombo'); 
-            session_set_cookie_params(0, "/", "", true, true);
-            session_start();
+            setcookie("PHPSESSID", "hrdl5ujs6985l6g72jtrften00", time() + 3600, "/", "", true, true);
+
     ?>
 
     <!-- Favicon -->
