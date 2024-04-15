@@ -45,14 +45,14 @@
     ?>
     
     <style>
-        .al-page-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-clubs/club-header.webp);
+        .notice-header {
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-home/notice/bestweblk.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
-        .al-page-header-inner {
+        .notice-header-inner {
             background: rgba(15, 23, 43, .7);
         }
     </style>
@@ -82,7 +82,7 @@ if ($currentDate < $birthday) {
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-9 col-lg-8">
-                            <h1 style="font-size: 24px;" class="text-white text-uppercase mb-3 animated slideInDown">Welcome To</h1>
+                            <p class="h1 text-white text-uppercase mb-3 animated slideInDown" style="font-size: 24px;">Welcome To</p>
                             <h1 class="display-3 text-white text-uppercase animated slideInDown">Prince of Wales'
                                 College, <br> Moratuwa</h1>
                         </div>
@@ -93,35 +93,34 @@ if ($currentDate < $birthday) {
     </div>
 </div>
 
-<!-- Carousel End -->
 
 
 
-<!--
-<div class="container-fluid bg-primary py-5 mb-5 al-page-header">
+
+<!-- <div class="container-fluid bg-primary py-5 mb-5 notice-header">
     <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
-            <h1 class=" text-white animated slideInDown">Online Registration - Advanced Level 2025</h1>
-		<p class=" text-white animated slideInDown">With a proud history spanning 150 years, we invite you to become a part of the Cambrian community</p>
-            <h6 class="text-white animated slideInDown">Deadline for submission is 12th December </h6>
+            <h1 class=" text-white animated slideInDown">Vote Now!</h1>
+		<p class=" text-white animated slideInDown">To become the most popular school website, vote for us in the BestWeb.LK 2024 contest.</p>
+            <h6 class="text-white animated slideInDown">Deadline for voting is 12th December </h6>
             <center>
-                <a href="forms/apply-al"
+                <a href="https://vote.bestweb.lk" target="_blank"
                     style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Apply Now!</a>
+                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Vote Now!</a>
             </center>
 
         </div>
     </div>
 </div>
-    -->
+  -->
 
 
 
 <div class="colorlib-blog colorlib-light-grey">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h1 style="font-size: 16px;"class="section-title bg-white text-center text-primary px-3">Latest</h1>
-            <h1 class="mb-5">ARTICLES</h1>
+            <p style="font-size: 16px;"class="h1 section-title bg-white text-center text-primary px-3">Latest</p>
+            <p class="h1 mb-5">ARTICLES</p>
         </div>
 
         <div class="row">
@@ -154,7 +153,7 @@ if($statement->rowCount() > 0)
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
                     <div class="desc">
-                        <h1 style="font-size: 24px;"><a href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h1>
+                        <h2 class="h1" style="font-size: 24px;"><a href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h2>
                         <p><?php echo htmlspecialchars(strip_tags($row["excerpt"])); echo "......"; ?></p>
                     </div>
                 </article>
@@ -182,8 +181,8 @@ if($statement->rowCount() > 0)
 <div class="container">
     <div class="row">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h1 style="font-size: 16px;" class="section-title bg-white text-center text-primary px-3">Featured</h1>
-            <h1 class="mb-5">UPDATES</h1>
+            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">Featured</p>
+            <p class="h1 mb-5">UPDATES</p>
 
             <?php
 
@@ -236,8 +235,8 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h1 style="font-size: 16px;" class="section-title bg-white text-center text-primary px-3">UPCOMING & PAST</h1>
-            <h1 class="mb-5">EVENTS</h1>
+            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">UPCOMING & PAST</p>
+            <h2 class="h1 mb-5">EVENTS</h2>
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -266,7 +265,7 @@ if($statement->rowCount() > 0)
                     </div>
                     <div class="w-100 d-flex justify-content-center bottom-0 start-0 mb-4">
                         <a href="events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                            style="border-radius: 30px 30 30 30px;">Read More</a>
+                            style="border-radius: 30px 30 30 30px;">View Event</a>
                     </div>
                     <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-2"><i
@@ -315,8 +314,8 @@ if($statement->rowCount() > 0)
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h1 style="font-size: 16px;" class="section-title bg-white text-start text-primary pe-3">About Us</h1>
-                <h1 class="mb-4">Learning Begins With Us</h1>
+                <p style="font-size: 16px;" class="h1 section-title bg-white text-start text-primary pe-3">About Us</p>
+                <h2 class="mb-4">Learning Begins With Us</h2>
                 <p class="mb-4">Since the inception of the school in 1876, Prince of Wales’ College has been
                     considered as a major school in Moratuwa area and over the years, established its name as a
                     leading school in Sri Lanka. Over the years, Prince of Wales’ College has provided the society
@@ -345,9 +344,9 @@ if($statement->rowCount() > 0)
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-award text-primary mb-4"></i>
-                        <h1 class="mb-3">
+                        <p class="h1 mb-3">
                             <?php echo $age ?>
-                        </h1>
+</p>
                         <h5 class="mb-3">Years of Excellence</h5>
                     </div>
                 </div>
@@ -356,7 +355,7 @@ if($statement->rowCount() > 0)
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <h1 class="mb-3">200+</h1>
+                        <p class="h1 mb-3">200+</p>
                         <h5 class="mb-3">Qualified Staff</h5>
                     </div>
                 </div>
@@ -365,7 +364,7 @@ if($statement->rowCount() > 0)
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                        <h1 class="mb-3">50+</h1>
+                        <p class="h1 mb-3">50+</p>
                         <h5 class="mb-3">Clubs & Societies</h5>
                     </div>
                 </div>
@@ -374,7 +373,7 @@ if($statement->rowCount() > 0)
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                        <h1 class="mb-3">25+</h1>
+                        <p class="h1 mb-3">25+</p>
                         <h5 class="mb-3">Sports</h5>
                     </div>
                 </div>
@@ -411,8 +410,8 @@ foreach ($rows as $row) {
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
-                <h1 class="mb-4">Principal's Message</h1>
+                <p class="h6 section-title bg-white text-start text-primary pe-3"></p>
+                <h2 class="h1 mb-4">Principal's Message</h2>
                 <p class="mb-4">- <?php echo $row["name"]; ?></p>
                 <p class="mb-4"><?php echo substr($row["msg"], 0, 500); ?>
     <a href="principal-message">Read More...</a>
@@ -435,8 +434,8 @@ foreach ($rows as $row) {
 <div class="container-xxl py-5 category">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3"></h6>
-            <h1 class="mb-5">SPORTS</h1>
+            <p class="h6 section-title bg-white text-center text-primary px-3"></p>
+            <p class="h1 mb-5">SPORTS</p>
         </div>
         <div class="row g-3">
             <div class="col-lg-7 col-md-6">
@@ -485,7 +484,7 @@ foreach ($rows as $row) {
             </div>
             <br><br><br><br>
             <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="sports" data-wow-delay="0.1s">Explore
-                    More</a></center>
+                    Sports</a></center>
 
         </div>
 
@@ -505,7 +504,7 @@ foreach ($rows as $row) {
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">big match</h6>
-                <h1 class="mb-4">BATTLE OF THE GOLDS</h1>
+                <p class="h1 mb-4">BATTLE OF THE GOLDS</p>
                 <p class="mb-4">The Prince of Wales'–St. Sebastian's Cricket Encounter (The Battle of the Golds) is
                     an annual cricket match played between Prince of Wales' College and St. Sebastian's College
                     since 1933. <br><br>It is known as The Battle of the Golds due to the colours of the two school's
@@ -513,7 +512,7 @@ foreach ($rows as $row) {
                     Sebastian's College.</p>
 <br>
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match"
-                    data-wow-delay="0.1s">Explore</a>
+                    data-wow-delay="0.1s">Explore Bigmatch</a>
 
             </div>
         </div>
@@ -526,7 +525,7 @@ foreach ($rows as $row) {
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3"></h6>
-            <h1 class="mb-5">CLUBS & SOCIETIES</h1>
+            <p class="h1 mb-5">CLUBS & SOCIETIES</p>
         </div>
         <div class="row g-3">
             <div class="col-lg-7 col-md-6">
@@ -575,7 +574,7 @@ foreach ($rows as $row) {
             </div>
             <br>
             <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="clubs" data-wow-delay="0.1s">Explore
-                    More</a></center>
+                    Clubs</a></center>
 
         </div>
     </div>
@@ -594,14 +593,14 @@ foreach ($rows as $row) {
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
-                <h1 class="mb-4">PUBLICATIONS</h1>
+                <p class="h1 mb-4">PUBLICATIONS</p>
                 <p class="mb-4">
 
                 College publications, like the annual magazine and the golden book, are cherished treasures that capture the essence of our academic journey. <br><br>The annual magazine is like a time capsule, preserving memories of events, achievements, and personal reflections throughout the year. It's a colorful collage of photographs, articles, and creative pieces that showcase the diversity and talents of our college community. 
                 </p>
 
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="publications"
-                    data-wow-delay="0.1s">Explore</a>
+                    data-wow-delay="0.1s">View</a>
 
             </div>
         </div>
@@ -626,9 +625,9 @@ foreach ($rows as $row) {
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="display-3 text-white animated slideInDown"><?php echo $age ?> Years and Counting</h1>
-                <h1 style="font-size: 20px;" class=" text-white animated slideInDown"><br> Explore college history and discover <?php echo $age ?> years of rich
-                    heritage and academic excellence. <br> </h1>
+                <p class="h1 display-3 text-white animated slideInDown"><?php echo $age ?> Years and Counting</p>
+                <p style="font-size: 20px;" class="h2 text-white animated slideInDown"><br> Explore college history and discover <?php echo $age ?> years of rich
+                    heritage and academic excellence. <br> </p>
                 <center>
                     <a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history" data-wow-delay="0.1s">Explore College History</a>
                 </center>
