@@ -97,6 +97,21 @@
         "sizes": "1920x1080",
         "type": "image/png",
         "form_factor": "wide"
+      },
+      {
+        "src": "content/icons/pwa-shortcuts/screenshot3.png",
+        "sizes": "480x800",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "content/icons/pwa-shortcuts/screenshot4.png",
+        "sizes": "480x800",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "content/icons/pwa-shortcuts/screenshot5.png",
+        "sizes": "480x800",
+        "form_factor": "narrow"
       }
     ],
     "scope": "/",

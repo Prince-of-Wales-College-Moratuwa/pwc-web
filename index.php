@@ -192,34 +192,13 @@ if ($currentDate < $birthday) {
                     evergreen Cambrian spirit high amongst us all!</p>
                 <a class="btn btn-primary py-3 px-5 mt-2" href="about">Know More
                     About Us</a>
-                <button id="installButton" class="btn btn-primary py-3 px-5 mt-2">Install App</button>
-
             </div>
         </div>
     </div>
 </div>
 <!-- About End -->
 
-<script>
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (event) => {
-        event.preventDefault();
-        deferredPrompt = event;
-        document.getElementById('installButton').style.display = 'block';
-    });
-    document.getElementById('installButton').addEventListener('click', () => {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the installation prompt');
-                document.getElementById('installButton').style.display = 'none';
-            } else {
-                console.log('User dismissed the installation prompt');
-            }
-            deferredPrompt = null;
-        });
-    });
-</script>
+
 
 <br>
 
