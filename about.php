@@ -46,7 +46,7 @@
         }
     </style>
 
-<?php 
+    <?php 
 $birthYear = 1876;
 $currentDate = date("m-d");
 $birthday = "09-14";
@@ -95,7 +95,7 @@ if ($currentDate < $birthday) {
                     <div class="p-4">
                         <i class="fa fa-3x fa-award text-primary mb-4"></i>
                         <h1 class="mb-3">
-                        <?php echo $age; ?>
+                            <?php echo $age; ?>
                         </h1>
                         <h5 class="mb-3">Years of Excellence</h5>
                     </div>
@@ -133,128 +133,6 @@ if ($currentDate < $birthday) {
 
     <!-- Counter End -->
 
-
-
-
-    <br><br>
-
-    <div class="container-lg my-3" id="developed-places">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3"></h6>
-                <h1 class="mb-5">Enhancing and Beautifying School for a Bright Future</h1>
-            </div>
-
-            <ol class="carousel-indicators">
-                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-            </ol>
-
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="content/img/img-about/dev-places/0.webp" class="d-block w-100"
-                        alt="Slide 1">
-                </div>
-
-                
-            </div>
-
-            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-        <br>
-        <p>The concept of the "Beautiful Wales" by the present Principal, in order to develop the infrastructure, and resources of the college in the year 2023, with the generous support and contribution from the Old Boys' Association in the journey of becoming the best college in year 2025.
-Our tribute to the present Principal and all the committed teachers and staff, the School Development Society, and the Old Boys' Association for this great work.
-It's time to gather around our Alma mater to make her beautiful and glamorous.</p>
-
-<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="/about/lassana-wales" data-wow-delay="0.7s">Explore</a></center>
-
-<script>
-  var myCarousel = document.getElementById('myCarousel');
-
-  var interval = 7000; 
-
-  function startCarousel() {
-    var carousel = new bootstrap.Carousel(myCarousel, {
-      interval: interval
-    });
-  }
-  startCarousel();
-</script>
-
-
-
-
-    <br>
-
-    <!-- stars Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3"></h6>
-                <h1 class="mb-5">NOTABLE ALUMNI</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3"
-                        src="content/img/img-about/alumni/Kusal-mendis-alumni-pwc.webp"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Kusal Mendis</h5>
-                    <p>International Cricket Player (2015–present)</p>
-
-                </div>
-
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3"
-                        src="content/img/img-about/alumni/about-Lahiru-Thirimanne-pwc.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Lahiru Thirimanne</h5>
-                    <p>International Cricket Player (2010–2023)</p>
-                </div>
-
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3"
-                        src="content/img/img-about/alumni/about-Shehan-Jayasooriya-pwc.jpeg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Shehan Jayasooriya</h5>
-                    <p> International Cricket Player (2015–present)</p>
-                </div>
-
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3"
-                        src="content/img/img-about/alumni/about-Jagath-Chamila-pwc.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Jagath Chamila</h5>
-                    <p>Actor</p>
-                </div>
-
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3"
-                        src="content/img/img-about/alumni/about-Kumara-Thirimadura-pwc.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Kumara Thirimadura</h5>
-                    <p>Actor</p>
-                </div>
-
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3"
-                        src="content/img/img-about/alumni/kishu-gomes-alumini-pwc.webp"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Kishu Gomes</h5>
-                    <p>Businessmen</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- stars End -->
-
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
@@ -283,79 +161,209 @@ It's time to gather around our Alma mater to make her beautiful and glamorous.</
 
 
 
-    <!-- Identity Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
-                <h1 class="mb-5">SINHALA ANTHEM</h1>
+    <br><br>
+
+    <div class="container-lg my-3" id="developed-places">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3"></h6>
+                <h1 class="mb-5">Enhancing and Beautifying School for a Bright Future</h1>
             </div>
 
 
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <p class="mb-4">The Sinhala Anthem of Prince of Wales College Moratuwa is a special song that
-                        represents the school in Sri Lanka. It's sung in the Sinhala language and holds a lot of pride
-                        and significance for the students and teachers. <br><br> This anthem talks about the school's
-                        history,
-                        values, and the strong sense of belonging that the school community shares. When sung, it
-                        creates unity and a feeling of loyalty among the students, serving as a symbol of their love for
-                        Prince of Wales College Moratuwa.
-                    </p>
-                    <audio controls>
-                        <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg"> </audio>
-                    <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.mp3"
-                        download target="_blank" data-wow-delay="0.7s">Download MP3</a>
+
+
+            <img src="content/img/img-about/dev-places/0.webp" class="d-block w-100" alt="Slide 1">
+
+            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        <br>
+        <p>The concept of the "Beautiful Wales" by the present Principal, in order to develop the infrastructure, and
+            resources of the college in the year 2023, with the generous support and contribution from the Old Boys'
+            Association in the journey of becoming the best college in year 2025.
+            Our tribute to the present Principal and all the committed teachers and staff, the School Development
+            Society, and the Old Boys' Association for this great work.
+            It's time to gather around our Alma mater to make her beautiful and glamorous.</p>
+
+        <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="/about/lassana-wales"
+                data-wow-delay="0.7s">Explore</a></center>
+
+        <script>
+            var myCarousel = document.getElementById('myCarousel');
+
+            var interval = 7000;
+
+            function startCarousel() {
+                var carousel = new bootstrap.Carousel(myCarousel, {
+                    interval: interval
+                });
+            }
+            startCarousel();
+        </script>
+
+
+
+
+        <br>
+
+        <!-- stars Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h6 class="section-title bg-white text-center text-primary px-3"></h6>
+                    <h1 class="mb-5">NOTABLE ALUMNI</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel position-relative">
+
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3 center-image"
+                            src="content/img/img-about/alumni/Kusal-mendis-alumni-pwc.webp"
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Kusal Mendis</h5>
+                        <p>International Cricket Player (2015–present)</p>
+                    </div>
+
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3 center-image"
+                            src="content/img/img-about/alumni/about-Lahiru-Thirimanne-pwc.jpg"
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Lahiru Thirimanne</h5>
+                        <p>International Cricket Player (2010–2023)</p>
+                    </div>
+
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3 center-image"
+                            src="content/img/img-about/alumni/about-Shehan-Jayasooriya-pwc.jpeg"
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Shehan Jayasooriya</h5>
+                        <p>International Cricket Player (2015–present)</p>
+                    </div>
+
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3 center-image"
+                            src="content/img/img-about/alumni/about-Jagath-Chamila-pwc.jpg"
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Jagath Chamila</h5>
+                        <p>Actor</p>
+                    </div>
+
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3 center-image"
+                            src="content/img/img-about/alumni/about-Kumara-Thirimadura-pwc.jpg"
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Kumara Thirimadura</h5>
+                        <p>Actor</p>
+                    </div>
+
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3 center-image"
+                            src="content/img/img-about/alumni/kishu-gomes-alumini-pwc.webp"
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Kishu Gomes</h5>
+                        <p>Businessman</p>
+                    </div>
 
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100"
-                            src="content/img/img-about/sinhala-anthem-pwc.webp" alt="Sinhala Anthem PWC"
-                            style="object-fit: cover;" loading="lazy">
+
+
+            </div>
+        </div>
+
+        <style>
+        .center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}</style>
+
+        <!-- stars End -->
+
+
+
+        <!-- Identity Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
+                    <h1 class="mb-5">SINHALA ANTHEM</h1>
+                </div>
+
+
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <p class="mb-4">The Sinhala Anthem of Prince of Wales College Moratuwa is a special song that
+                            represents the school in Sri Lanka. It's sung in the Sinhala language and holds a lot of
+                            pride
+                            and significance for the students and teachers. <br><br> This anthem talks about the
+                            school's
+                            history,
+                            values, and the strong sense of belonging that the school community shares. When sung, it
+                            creates unity and a feeling of loyalty among the students, serving as a symbol of their love
+                            for
+                            Prince of Wales College Moratuwa.
+                        </p>
+                        <audio controls>
+                            <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg"> </audio>
+                        <br><br>
+                        <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.mp3"
+                            download target="_blank" data-wow-delay="0.7s">Download MP3</a>
+
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="img-fluid position-absolute w-100 h-100"
+                                src="content/img/img-about/sinhala-anthem-pwc.webp" alt="Sinhala Anthem PWC"
+                                style="object-fit: cover;" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
-                <h1 class="mb-5">ENGLISH ANTHEM</h1>
-            </div>
-
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100"
-                            src="content/img/img-about/english-anthem-pwc.webp" alt="English Anthem PWC"
-                            style="object-fit: cover;" loading="lazy">
-                    </div>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
+                    <h1 class="mb-5">ENGLISH ANTHEM</h1>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <br>
-                    <p class="mb-4">The English anthem of Prince of Wales College Moratuwa is a special song that
-                        represents our school's identity and values. It's a symbol of our pride and unity, sung during
-                        important school events. <br><br> The anthem's lyrics emphasize our commitment to education,
-                        character
-                        development, and excellence, instilling a sense of school spirit and loyalty among students.
-                        Whether at sports events or graduation ceremonies, the English anthem is a cherished part of our
-                        school experience, bringing us together and reminding us of our school's history and traditions.
-                    </p>
-                    <br>
-                    <audio controls>
-                        <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg"> </audio>
-                    <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.mp3"
-                        download target="_blank" data-wow-delay="0.7s">Download MP3</a>
+
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="img-fluid position-absolute w-100 h-100"
+                                src="content/img/img-about/english-anthem-pwc.webp" alt="English Anthem PWC"
+                                style="object-fit: cover;" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <br>
+                        <p class="mb-4">The English anthem of Prince of Wales College Moratuwa is a special song that
+                            represents our school's identity and values. It's a symbol of our pride and unity, sung
+                            during
+                            important school events. <br><br> The anthem's lyrics emphasize our commitment to education,
+                            character
+                            development, and excellence, instilling a sense of school spirit and loyalty among students.
+                            Whether at sports events or graduation ceremonies, the English anthem is a cherished part of
+                            our
+                            school experience, bringing us together and reminding us of our school's history and
+                            traditions.
+                        </p>
+                        <br>
+                        <audio controls>
+                            <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg"> </audio>
+                        <br><br>
+                        <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.mp3"
+                            download target="_blank" data-wow-delay="0.7s">Download MP3</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -480,8 +488,9 @@ if($statement->rowCount() > 0)
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="/content/img/img-about/administration/<?php echo $row["img"]; ?>" alt="<?php echo $row["name"]; ?>"
-                                style="width: auto;">
+                            <img class="img-fluid"
+                                src="/content/img/img-about/administration/<?php echo $row["img"]; ?>"
+                                alt="<?php echo $row["name"]; ?>" style="width: auto;">
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0"><?php echo $row["name"]; ?></h5>
@@ -549,8 +558,8 @@ if($statement->rowCount() > 0)
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>" alt="Deputy Head Prefect"
-                                style="width: auto;">
+                            <img class="img-fluid" src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>"
+                                alt="Deputy Head Prefect" style="width: auto;">
                         </div>
 
                         <div class="text-center p-4">
@@ -595,15 +604,16 @@ if($statement->rowCount() > 0)
             <h6 class="section-title bg-white text-center text-primary px-3">Locations and</h6>
             <h1 class="mb-5">INFRASTRUCTURE</h1>
         </div>
-        
+
     </div>
-<br>
+    <br>
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100"
-                        src="content/img/img-about/location-new-pwc.webp" alt="Locations" style="object-fit: cover;" loading="lazy">
+                        src="content/img/img-about/location-new-pwc.webp" alt="Locations" style="object-fit: cover;"
+                        loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">

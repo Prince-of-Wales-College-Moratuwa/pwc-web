@@ -230,7 +230,7 @@ if($statement->rowCount() > 0)
             <div class="col-md-4 animate-box">
                 <article class="article-entry">
                     <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
-                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>" width="600" height="400"><br><br>
+                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>" width="600" height="400" loading="lazy"><br><br>
                         <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
@@ -340,7 +340,7 @@ if($statement->rowCount() > 0)
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" style="width: auto;"
-                            src="content/img/img-events/<?php echo($row["img"]) ?>" alt="<?php echo($row["title"]) ?>">
+                            src="content/img/img-events/<?php echo($row["img"]) ?>" alt="<?php echo($row["title"]) ?>" loading="lazy">
                     </div>
                     <div class="text-center p-4 pb-0">
                         <h4 class="mb-4"><?php echo($row["title"]) ?></h4>
