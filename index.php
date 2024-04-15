@@ -117,13 +117,92 @@ if ($currentDate < $birthday) {
 </div>
   -->
 
+  
+<!-- Counter Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-award text-primary mb-4"></i>
+                        <p class="h1 mb-3">
+                            <?php echo $age ?>
+</p>
+                        <p class="h5 mb-3">Years of Excellence</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                        <p class="h1 mb-3">200+</p>
+                        <p class="h5 mb-3">Qualified Staff</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-child text-primary mb-4"></i>
+                        <p class="h1 mb-3">50+</p>
+                        <p class="h5 mb-3">Clubs & Societies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
+                        <p class="h1 mb-3">25+</p>
+                        <p class="h5 mb-3">Sports</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Counter End -->
+  
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/about-pwc.webp"
+                        alt="Learning Begins With Us" style="object-fit: cover;" loading="lazy">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <p style="font-size: 16px;" class="h1 section-title bg-white text-start text-primary pe-3">About Us</p>
+                <h2 class="mb-4">Learning Begins With Us</h2>
+                <p class="mb-4">Since the inception of the school in 1876, Prince of Wales’ College has been
+                    considered as a major school in Moratuwa area and over the years, established its name as a
+                    leading school in Sri Lanka. Over the years, Prince of Wales’ College has provided the society
+                    with countless men of great caliber whom we are happy to say have served both, their school and
+                    the country alike….</p>
+                <p class="mb-4">And now, keeping up with the fast paced world, we have launched our new, official
+                    website. With the internet being a truly powerful means of reaching out to the community, we
+                    believe this would aid us to bridge the gap between the school and the parents, past pupils,
+                    past teachers etc. We warmly welcome all of you to be a part of this and there-by keep the
+                    evergreen Cambrian spirit high amongst us all!</p>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="about">Know More
+                    About Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
 
+<br>
 
 <div class="colorlib-blog colorlib-light-grey">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <p style="font-size: 16px;"class="h1 section-title bg-white text-center text-primary px-3">Latest</p>
-            <p class="h1 mb-5">ARTICLES</p>
+            <p class="h1 mb-5">NEWS</p>
         </div>
 
         <div class="row">
@@ -179,9 +258,9 @@ if($statement->rowCount() > 0)
 </div>
 
 
-<br> <br> <br>
+
 <!-- Updates -->
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">Featured</p>
@@ -191,43 +270,43 @@ if($statement->rowCount() > 0)
 
 //https://dash.elfsight.com/
 
-$currentDate = date('d');
-//$currentDate = 13;
+// $currentDate = date('d');
+// //$currentDate = 13;
 
-if ($currentDate >= 1 && $currentDate <= 5) {
-    // Display content for the first date range (1-5) nelithaonline2006@gmail.com
-    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
-    echo '<div class="elfsight-app-d0b62cf4-1222-480f-b498-054bc508d296" data-elfsight-app-lazy></div>';
-} elseif ($currentDate >= 6 && $currentDate <= 10) {
-    // Display content for the second date range (6-10) admin@princeofwales.edu.lk
-    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
-    echo '<div class="elfsight-app-4c62906a-b318-4f4d-88ae-cccbc4f8bb91" data-elfsight-app-lazy></div>';
-} elseif ($currentDate >= 11 && $currentDate <= 15) {
-    // Display content for the third date range (11-15) nelithavindinu7@gmail.com
-    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
-    echo '<div class="elfsight-app-db653e73-f1b6-4c75-a9ee-cc848e46627f" data-elfsight-app-lazy></div>';
-} elseif ($currentDate >= 16 && $currentDate <= 20) {
-    // Display content for the fourth date range (16-20) nsewwandi134@gmail.com
-    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
-    echo '<div class="elfsight-app-b4644e03-2113-482b-82e6-26fa12d39cda" data-elfsight-app-lazy></div>';
-} elseif ($currentDate >= 21 && $currentDate <= 25) {
-    // Display content for the fifth date range (21-25) indrakapriyawansha53@gmail.com
-    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
-    echo '<div class="elfsight-app-081f2913-286d-405f-8930-23a70c658c4f" data-elfsight-app-lazy></div>';
-} elseif ($currentDate >= 26 && $currentDate <= 31) {
-    // Display content for the sixth date range (26-31)
-    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
-    echo '<div class="elfsight-app-45369dc9-a96e-4972-9127-34d94184cbdd" data-elfsight-app-lazy></div>';
-} else {
-    echo 'Not Available';
-}
-?>
+// if ($currentDate >= 1 && $currentDate <= 5) {
+//     // Display content for the first date range (1-5) nelithaonline2006@gmail.com
+//     echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+//     echo '<div class="elfsight-app-d0b62cf4-1222-480f-b498-054bc508d296" data-elfsight-app-lazy></div>';
+// } elseif ($currentDate >= 6 && $currentDate <= 10) {
+//     // Display content for the second date range (6-10) admin@princeofwales.edu.lk
+//     echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+//     echo '<div class="elfsight-app-4c62906a-b318-4f4d-88ae-cccbc4f8bb91" data-elfsight-app-lazy></div>';
+// } elseif ($currentDate >= 11 && $currentDate <= 15) {
+//     // Display content for the third date range (11-15) nelithavindinu7@gmail.com
+//     echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+//     echo '<div class="elfsight-app-db653e73-f1b6-4c75-a9ee-cc848e46627f" data-elfsight-app-lazy></div>';
+// } elseif ($currentDate >= 16 && $currentDate <= 20) {
+//     // Display content for the fourth date range (16-20) nsewwandi134@gmail.com
+//     echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+//     echo '<div class="elfsight-app-b4644e03-2113-482b-82e6-26fa12d39cda" data-elfsight-app-lazy></div>';
+// } elseif ($currentDate >= 21 && $currentDate <= 25) {
+//     // Display content for the fifth date range (21-25) indrakapriyawansha53@gmail.com
+//     echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+//     echo '<div class="elfsight-app-081f2913-286d-405f-8930-23a70c658c4f" data-elfsight-app-lazy></div>';
+// } elseif ($currentDate >= 26 && $currentDate <= 31) {
+//     // Display content for the sixth date range (26-31)
+//     echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+//     echo '<div class="elfsight-app-45369dc9-a96e-4972-9127-34d94184cbdd" data-elfsight-app-lazy></div>';
+// } else {
+//     echo 'Not Available';
+// }
+// ?>
 
 
 
         </div>
     </div>
-</div>
+</div> -->
 <!-- Updates -->
 
 
@@ -306,85 +385,6 @@ if($statement->rowCount() > 0)
 <!-- Events End -->
 
 
-<!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/about-pwc.webp"
-                        alt="Learning Begins With Us" style="object-fit: cover;" loading="lazy">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <p style="font-size: 16px;" class="h1 section-title bg-white text-start text-primary pe-3">About Us</p>
-                <h2 class="mb-4">Learning Begins With Us</h2>
-                <p class="mb-4">Since the inception of the school in 1876, Prince of Wales’ College has been
-                    considered as a major school in Moratuwa area and over the years, established its name as a
-                    leading school in Sri Lanka. Over the years, Prince of Wales’ College has provided the society
-                    with countless men of great caliber whom we are happy to say have served both, their school and
-                    the country alike….</p>
-                <p class="mb-4">And now, keeping up with the fast paced world, we have launched our new, official
-                    website. With the internet being a truly powerful means of reaching out to the community, we
-                    believe this would aid us to bridge the gap between the school and the parents, past pupils,
-                    past teachers etc. We warmly welcome all of you to be a part of this and there-by keep the
-                    evergreen Cambrian spirit high amongst us all!</p>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="about">Know More
-                    About Us</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
-
-
-
-<!-- Counter Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-award text-primary mb-4"></i>
-                        <p class="h1 mb-3">
-                            <?php echo $age ?>
-</p>
-                        <h5 class="mb-3">Years of Excellence</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <p class="h1 mb-3">200+</p>
-                        <h5 class="mb-3">Qualified Staff</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                        <p class="h1 mb-3">50+</p>
-                        <h5 class="mb-3">Clubs & Societies</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                        <p class="h1 mb-3">25+</p>
-                        <h5 class="mb-3">Sports</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Counter End -->
 
 
 <?php
@@ -446,7 +446,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                         <a class="position-relative d-block overflow-hidden" href="sports#team-sports">
                             <img class="img-fluid" src="content/img/img-home/team-sports-home-pwc.webp"
-                                alt="team sports" style="width: auto;" loading="lazy">
+                                alt="team sports" style="width: auto;" width="500px" height="500px" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Team Sports</h5>

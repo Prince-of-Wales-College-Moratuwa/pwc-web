@@ -6,8 +6,6 @@
     <?php  date_default_timezone_set('Asia/Colombo'); 
             setcookie("PHPSESSID", "hrdl5ujs6985l6g72jtrften00", time() + 3600, "/", "", true, true);
 
-            // Set cache control headers
-            header("Cache-Control: max-age=3600"); // Cache for 1 hour
     ?>            
 
     <!-- Favicon -->
