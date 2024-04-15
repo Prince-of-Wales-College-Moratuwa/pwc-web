@@ -446,7 +446,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                         <a class="position-relative d-block overflow-hidden" href="sports#team-sports">
                             <img class="img-fluid" src="content/img/img-home/team-sports-home-pwc.webp"
-                                alt="team sports" style="width: auto;">
+                                alt="team sports" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Team Sports</h5>
@@ -456,7 +456,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                         <a class="position-relative d-block overflow-hidden" href="sports#individual-sports">
                             <img class="img-fluid" src="content/img/img-home/individual-sports-home-pwc.webp"
-                                alt="Individual Sports" style="width: auto;">
+                                alt="Individual Sports" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Individual Sports</h5>
@@ -466,7 +466,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                         <a class="position-relative d-block overflow-hidden" href="sports#aquatic-sports">
                             <img class="img-fluid" src="content/img/img-home/water-sports-home-pwc.webp"
-                                alt="Aquatic sports" style="width: auto;">
+                                alt="Aquatic sports" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Aquatic Sports</h5>
@@ -536,7 +536,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                         <a class="position-relative d-block overflow-hidden" href="clubs#media-clubs">
                             <img class="img-fluid" src="content/img/img-home/media-clubs-home-pwc.webp"
-                                alt="media clubs" style="width: auto;">
+                                alt="media clubs" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Media Unit</h5>
@@ -546,7 +546,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                         <a class="position-relative d-block overflow-hidden" href="clubs#edu-clubs">
                             <img class="img-fluid" src="content/img/img-home/educational-clubs-home-pwc.webp"
-                                alt="edu clubs" style="width: auto;">
+                                alt="edu clubs" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Educational Clubs</h5>
@@ -556,7 +556,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                         <a class="position-relative d-block overflow-hidden" href="clubs#tech-clubs">
                             <img class="img-fluid" src="content/img/img-home/tech-clubs-home-pwc.webp" alt="tech clubs"
-                                style="width: auto;">
+                                style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin: 1px;">
                                 <h5 class="m-0">Technological Clubs</h5>
