@@ -227,7 +227,7 @@ if($statement->rowCount() > 0)
         ?>
 
 
-            <div class="col-md-4 animate-box">
+            <div class="col-md-4 animate-box wow fadeInUp" data-wow-delay="0.1s" >
                 <article class="article-entry">
                     <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
                         <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>" width="600" height="400" loading="lazy"><br><br>
@@ -254,7 +254,7 @@ if($statement->rowCount() > 0)
     </div>
 
 </div>
-<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="blog/" data-wow-delay="0.1s">Read More</a></center>
+<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="blog/" data-wow-delay="0.1s" title="Read Blog">Read More</a></center>
 </div>
 
 
