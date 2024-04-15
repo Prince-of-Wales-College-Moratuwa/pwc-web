@@ -75,7 +75,7 @@ if ($currentDate < $birthday) {
 <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
         <div class="owl-carousel-item position-relative">
-        <img class="img-fluid" src="content/img/img-home/header-main-pwc_mini.webp" alt="Front View of Prince of Wales College" width="600" height="400">
+        <img class="img-fluid" src="content/img/img-home/header-main-pwc.webp" alt="Front View of Prince of Wales College" width="600" height="400">
 
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                 style="background: rgba(0, 0, 0, 0.356);">
@@ -148,7 +148,7 @@ if($statement->rowCount() > 0)
             <div class="col-md-4 animate-box">
                 <article class="article-entry">
                     <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
-                    <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>" width="600" height="400"><br><br>
+                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>" width="600" height="400"><br><br>
                         <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
