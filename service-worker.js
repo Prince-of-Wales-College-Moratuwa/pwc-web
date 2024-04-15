@@ -1,7 +1,5 @@
 const CACHE_NAME = 'my-pwa-cache-v2';
 const urlsToCache = [
-  '/',
-  '/index.php',
   '/resources/css/style.css',
   '/resources/js/main.js',
   '/content/icons/logo-70x70-pwc.png',
