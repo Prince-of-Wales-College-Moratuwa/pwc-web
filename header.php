@@ -30,23 +30,23 @@
     <link defer href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="/resources/lib/animate/animate.min.css" rel="stylesheet">
-    <link rel="preload" href="/resources/lib/animate/animate.min.css" as="style" />
+    <link defer href="/resources/lib/animate/animate.min.css" rel="stylesheet">
+    <link defer rel="preload" href="/resources/lib/animate/animate.min.css" as="style" />
 
-    <link href="/resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link rel="preload" href="/resources/lib/owlcarousel/assets/owl.carousel.min.css" as="style" />
+    <link defer href="/resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link defer rel="preload" href="/resources/lib/owlcarousel/assets/owl.carousel.min.css" as="style" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preload" href="/resources/css/bootstrap.min.css" as="style" />
+    <link defer href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link defer rel="preload" href="/resources/css/bootstrap.min.css" as="style" />
 
     <!-- Template Stylesheet -->
-    <link href="/resources/css/style.css" rel="stylesheet">
-    <link rel="preload" href="/resources/css/style.css" as="style" />
+    <link defer href="/resources/css/style.css" rel="stylesheet">
+    <link defer rel="preload" href="/resources/css/style.css" as="style" />
 
 
     <!-- PWA -->
-    <link rel="manifest" href="https://princeofwales.edu.lk/manifest.json">
+    <link rel="manifest" href="/manifest.json">
 
 
     <script>
@@ -119,17 +119,14 @@
 
     </style>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1KCZVJTWP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-K1KCZVJTWP');
-
-
 </script>
+
 
 
 </head>
