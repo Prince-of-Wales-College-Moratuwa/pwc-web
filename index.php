@@ -43,7 +43,7 @@
     <?php
     include 'header.php';
     ?>
-    
+
     <style>
         .notice-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-home/notice/bestweblk.webp);
@@ -75,14 +75,19 @@ if ($currentDate < $birthday) {
 <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
         <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="content/img/img-home/header-main-pwc_50.webp"
+            <img class="img-fluid" src="content/img/img-home/header-main-pwc_50.webp" srcset="content/img/img-home/header-main-pwc_50.webp 50w,
+             content/img/img-home/header-main-pwc_100.webp 100w,
+             content/img/img-home/header-main-pwc_200.webp 200w,
+             content/img/img-home/header-main-pwc_400.webp 400w,
+             content/img/img-home/header-main-pwc_800.webp 800w" sizes="(max-width: 600px) 50vw, 100vw"
                 alt="Front View of Prince of Wales College">
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                 style="background: rgba(0, 0, 0, 0.356);">
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-9 col-lg-8">
-                            <p class="h1 text-white text-uppercase mb-3 animated slideInDown" style="font-size: 24px;">Welcome To</p>
+                            <p class="h1 text-white text-uppercase mb-3 animated slideInDown" style="font-size: 24px;">
+                                Welcome To</p>
                             <h1 class="display-3 text-white text-uppercase animated slideInDown">Prince of Wales'
                                 College, <br> Moratuwa</h1>
                         </div>
@@ -119,7 +124,7 @@ if ($currentDate < $birthday) {
 <div class="colorlib-blog colorlib-light-grey">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <p style="font-size: 16px;"class="h1 section-title bg-white text-center text-primary px-3">Latest</p>
+            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">Latest</p>
             <p class="h1 mb-5">ARTICLES</p>
         </div>
 
@@ -148,12 +153,14 @@ if($statement->rowCount() > 0)
             <div class="col-md-4 animate-box">
                 <article class="article-entry">
                     <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
-                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>"><br><br>
+                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>"
+                            alt="<?php echo $row["photo"]; ?>"><br><br>
                         <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
                     <div class="desc">
-                        <h2 class="h1" style="font-size: 24px;"><a href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h2>
+                        <h2 class="h1" style="font-size: 24px;"><a
+                                href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h2>
                         <p><?php echo htmlspecialchars(strip_tags($row["excerpt"])); echo "......"; ?></p>
                     </div>
                 </article>
@@ -235,7 +242,8 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">UPCOMING & PAST</p>
+            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">UPCOMING & PAST
+            </p>
             <h2 class="h1 mb-5">EVENTS</h2>
         </div>
 
@@ -346,7 +354,7 @@ if($statement->rowCount() > 0)
                         <i class="fa fa-3x fa-award text-primary mb-4"></i>
                         <p class="h1 mb-3">
                             <?php echo $age ?>
-</p>
+                        </p>
                         <h5 class="mb-3">Years of Excellence</h5>
                     </div>
                 </div>
@@ -414,8 +422,8 @@ foreach ($rows as $row) {
                 <h2 class="h1 mb-4">Principal's Message</h2>
                 <p class="mb-4">- <?php echo $row["name"]; ?></p>
                 <p class="mb-4"><?php echo substr($row["msg"], 0, 500); ?>
-    <a href="principal-message">Read More...</a>
-</p>
+                    <a href="principal-message">Read More...</a>
+                </p>
 
 
                 <a class="btn btn-primary py-3 px-5 mt-2" href="about/school-administration">View School
@@ -510,9 +518,9 @@ foreach ($rows as $row) {
                     since 1933. <br><br>It is known as The Battle of the Golds due to the colours of the two school's
                     flags i.e. Purple, Gold and Maroon of Prince of Wales' College and Green, White & Gold of St.
                     Sebastian's College.</p>
-<br>
-                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match"
-                    data-wow-delay="0.1s">Explore Bigmatch</a>
+                <br>
+                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match" data-wow-delay="0.1s">Explore
+                    Bigmatch</a>
 
             </div>
         </div>
@@ -587,8 +595,9 @@ foreach ($rows as $row) {
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="/content/img/img-publications/publication-standerd.webp"
-                        alt="publications" style="object-fit: cover;" loading="lazy">
+                    <img class="img-fluid position-absolute w-100 h-100"
+                        src="/content/img/img-publications/publication-standerd.webp" alt="publications"
+                        style="object-fit: cover;" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -596,11 +605,14 @@ foreach ($rows as $row) {
                 <p class="h1 mb-4">PUBLICATIONS</p>
                 <p class="mb-4">
 
-                College publications, like the annual magazine and the golden book, are cherished treasures that capture the essence of our academic journey. <br><br>The annual magazine is like a time capsule, preserving memories of events, achievements, and personal reflections throughout the year. It's a colorful collage of photographs, articles, and creative pieces that showcase the diversity and talents of our college community. 
+                    College publications, like the annual magazine and the golden book, are cherished treasures that
+                    capture the essence of our academic journey. <br><br>The annual magazine is like a time capsule,
+                    preserving memories of events, achievements, and personal reflections throughout the year. It's a
+                    colorful collage of photographs, articles, and creative pieces that showcase the diversity and
+                    talents of our college community.
                 </p>
 
-                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="publications"
-                    data-wow-delay="0.1s">View</a>
+                <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="publications" data-wow-delay="0.1s">View</a>
 
             </div>
         </div>
@@ -626,10 +638,12 @@ foreach ($rows as $row) {
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <p class="h1 display-3 text-white animated slideInDown"><?php echo $age ?> Years and Counting</p>
-                <p style="font-size: 20px;" class="h2 text-white animated slideInDown"><br> Explore college history and discover <?php echo $age ?> years of rich
+                <p style="font-size: 20px;" class="h2 text-white animated slideInDown"><br> Explore college history and
+                    discover <?php echo $age ?> years of rich
                     heritage and academic excellence. <br> </p>
                 <center>
-                    <a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history" data-wow-delay="0.1s">Explore College History</a>
+                    <a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history" data-wow-delay="0.1s">Explore
+                        College History</a>
                 </center>
             </div>
         </div>
