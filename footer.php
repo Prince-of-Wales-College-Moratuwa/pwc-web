@@ -33,7 +33,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">Prince of Wales' College</a>, &nbsp; All Right Reserved. │ Developed By <a class="border-bottom" href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom" href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcating Unit</a>
+                        &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">Prince of Wales' College</a>, &nbsp; All Right Reserved. │ Developed By <a class="border-bottom" href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom" href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and broadcasting Unit</a>
                     </div>
                     
                 </div>
