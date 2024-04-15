@@ -6,7 +6,9 @@
     <?php  date_default_timezone_set('Asia/Colombo'); 
             setcookie("PHPSESSID", "hrdl5ujs6985l6g72jtrften00", time() + 3600, "/", "", true, true);
 
-    ?>
+            // Set cache control headers
+            header("Cache-Control: max-age=3600"); // Cache for 1 hour
+    ?>            
 
     <!-- Favicon -->
     <link href="/content/icons/logo-70x70-pwc.png" rel="icon">
@@ -83,7 +85,8 @@ if ($currentDate >= 1 && $currentDate <= 5) {
             e.preventDefault();
         }
         });
-  </script>
+
+</script>
 
 
 
@@ -175,7 +178,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-1 px-lg-4">
-            <img src="/content/img/logo-pwc.png" alt="pwc logo" class="img-header">
+            <img src="/content/img/logo-pwc.webp" alt="pwc logo" class="img-header">
             <h6 class="m-0 text-primary h6-header" style="font-family: 'Arimo', sans-serif;">&nbsp; &nbsp; PRINCE OF WALES'
                 COLLEGE<br>&nbsp; &nbsp; MORATUWA
             </h6>
