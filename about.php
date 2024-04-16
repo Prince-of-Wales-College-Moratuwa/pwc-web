@@ -158,7 +158,55 @@ if ($currentDate < $birthday) {
         </div>
     </div>
 
+<!-- Updates -->
+<div class="container">
+    <div class="row">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">Featured</p>
+            <p class="h1 mb-5">UPDATES</p>
 
+            <?php
+
+https://dash.elfsight.com/
+
+$currentDate = date('d');
+//$currentDate = 13;
+
+if ($currentDate >= 1 && $currentDate <= 5) {
+    // Display content for the first date range (1-5) nelithaonline2006@gmail.com
+    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+    echo '<div class="elfsight-app-d0b62cf4-1222-480f-b498-054bc508d296" data-elfsight-app-lazy></div>';
+} elseif ($currentDate >= 6 && $currentDate <= 10) {
+    // Display content for the second date range (6-10) admin@princeofwales.edu.lk
+    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+    echo '<div class="elfsight-app-4c62906a-b318-4f4d-88ae-cccbc4f8bb91" data-elfsight-app-lazy></div>';
+} elseif ($currentDate >= 11 && $currentDate <= 15) {
+    // Display content for the third date range (11-15) nelithavindinu7@gmail.com
+    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+    echo '<div class="elfsight-app-db653e73-f1b6-4c75-a9ee-cc848e46627f" data-elfsight-app-lazy></div>';
+} elseif ($currentDate >= 16 && $currentDate <= 20) {
+    // Display content for the fourth date range (16-20) nsewwandi134@gmail.com
+    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+    echo '<div class="elfsight-app-b4644e03-2113-482b-82e6-26fa12d39cda" data-elfsight-app-lazy></div>';
+} elseif ($currentDate >= 21 && $currentDate <= 25) {
+    // Display content for the fifth date range (21-25) indrakapriyawansha53@gmail.com
+    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+    echo '<div class="elfsight-app-081f2913-286d-405f-8930-23a70c658c4f" data-elfsight-app-lazy></div>';
+} elseif ($currentDate >= 26 && $currentDate <= 31) {
+    // Display content for the sixth date range (26-31)
+    echo '<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>';
+    echo '<div class="elfsight-app-45369dc9-a96e-4972-9127-34d94184cbdd" data-elfsight-app-lazy></div>';
+} else {
+    echo 'Not Available';
+}
+?>
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Updates -->
 
 
     <br><br>
