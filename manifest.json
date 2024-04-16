@@ -4,6 +4,10 @@
     "version": "1.5",
     "description": "The official Website of Prince of Wales' College, Moratuwa",
     "start_url": "/",
+    "lang": "en",
+    "categories": [
+      "school"
+    ],
     "shortcuts": [
     {
       "name": "Search",
@@ -66,7 +70,8 @@
       {
         "src": "content/icons/logo-apple-touch-icon-pwc.png",
         "sizes": "144x144",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "maskable"
       },
       {
         "src": "content/icons/logo-android-chrome-icon-pwc.png",
@@ -116,6 +121,21 @@
     ],
     "scope": "/",
     "orientation": "any",
-    "prefer_related_applications": true
+    "prefer_related_applications": true,
+    "share_target": {
+      "action": "/?utm_medium=PWA&utm_source=share-target&share-target",
+      "method": "POST",
+      "enctype": "multipart/form-data",
+      "params": {
+        "files": [
+          {
+            "name": "file",
+            "accept": [
+              "image/*"
+            ]
+          }
+        ]
+      }
+    }
   }
   
