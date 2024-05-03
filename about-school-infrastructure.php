@@ -7,7 +7,6 @@
     $page = 'about';
 ?>
 
-    <?php include 'header.php'; ?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Locations and Infrastructure | Prince of Wales' College" />
@@ -33,6 +32,9 @@
         content="Discover Prince of Wales College location with our precise school map. Navigate easily to this renowned educational institution." />
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-about/locations/locations-header-pwc.webp" />
+
+
+        <?php include 'header.php'; ?>
 
 
     <style>
@@ -79,7 +81,7 @@
                 So, the Prince of Wales College has a history that goes back a very long time, and its infrastructure
                 was carefully designed to support the education of its students.
                 <br><br>
-                <a class="btn btn-link" href="/content/exiting-plan-pwc.pdf" target="_blank">View School Plan</a>
+                <a class="btn btn-link" href="/content/docs/exiting-plan-pwc.pdf" target="_blank">View School Plan</a>
             </p>
         </div>
         <div class="container">

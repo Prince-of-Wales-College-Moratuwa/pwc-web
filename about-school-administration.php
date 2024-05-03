@@ -7,7 +7,6 @@
     $page = 'about';
 ?>
 
-    <?php include 'header.php'; ?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="School Administration | Prince of Wales' College" />
@@ -30,6 +29,9 @@
     <meta property="twitter:description"
         content="Discover the efficient and dedicated administration team at Prince of Wales College. Your partner in academic excellence and student support." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-about/header-img.webp" />
+
+
+    <?php include 'header.php'; ?>
 
 
 </head>

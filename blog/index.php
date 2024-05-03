@@ -6,7 +6,7 @@
     $page = 'blog';
 
     include '../database_connection.php';
-    include '../header.php';
+
     include '../functions.php';
     ?>
   <title>Blog</title>
@@ -31,7 +31,10 @@
 <meta property="twitter:description" content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
 <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-header-pwc.webp" />
 
-    <style>
+  <?php include '../header.php'; ?>
+   
+   
+   <style>
         .blog-page-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(../content/img/img-blog/blog-header-pwc.webp);
             background-position: center center;

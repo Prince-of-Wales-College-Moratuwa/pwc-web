@@ -7,7 +7,6 @@
     $page = 'events';
 
 include '../database_connection.php';
-include '../header.php';
 
 ?>
 
@@ -34,7 +33,8 @@ include '../header.php';
 <meta property="twitter:description" content="Explore Prince of Wales College's vibrant event calendar, packed with exciting educational and cultural experiences for students and the community." />
 <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-events/event-header-pwc.webp" />
 
-
+<?php  
+include '../header.php'; ?>
 
     <style>
         .event-page-header {

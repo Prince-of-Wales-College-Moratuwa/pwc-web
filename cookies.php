@@ -5,7 +5,6 @@
     <meta name="google-site-verification" content="jYZeftnqpxLLjE_8cKEhxIWBAB0ZD5EGWEF2z-3maLU" />
 
     <?php 
-    include 'database_connection.php';
     include 'header.php';
     ?>
 

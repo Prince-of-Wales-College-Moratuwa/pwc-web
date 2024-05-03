@@ -40,11 +40,27 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function (registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration
+                            .scope);
+                    })
+                    .catch(function (err) {
+                        console.error('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+
+    </script>
+
+
     <?php
     include 'header.php';
     ?>
-
-    <style>
+ <style>
         .notice-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-home/notice/bestweblk.webp);
             background-position: center center;
@@ -55,6 +71,7 @@
         .notice-header-inner {
             background: rgba(15, 23, 43, .7);
         }
+
     </style>
 </head>
 
@@ -73,51 +90,54 @@ if ($currentDate < $birthday) {
 
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5">
-    <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-            <picture>
-                <source media="(max-width: 600px)" srcset="content/img/img-home/header-main-pwc_mobile.webp">
-                <source media="(max-width: 800px)" srcset="content/img/img-home/header-main-pwc_tab.webp">
-                <img class="img-fluid" src="content/img/img-home/header-main-pwc_desktop.webp"
-                    alt="Front View of Prince of Wales College">
-            </picture>
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                style="background: rgba(0, 0, 0, 0.356);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-sm-9 col-lg-8">
-                            <p class="h1 text-white text-uppercase mb-3 animated slideInDown" style="font-size: 24px;">
-                                Welcome To</p>
-                            <h1 class="display-3 text-white text-uppercase animated slideInDown">Prince of Wales'
-                                College, <br> Moratuwa</h1>
-                        </div>
-                    </div>
-                </div>
+
+    <div class="header-carousel-wrapper position-relative d-flex justify-content-center align-items-center">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="content/img/img-home/header-main-pwc_mobile.webp">
+                    <source media="(max-width: 800px)" srcset="content/img/img-home/header-main-pwc_tab.webp">
+                    <img class="img-fluid" src="content/img/img-home/header-main-pwc_desktop.webp"
+                        alt="Front View of Prince of Wales College">
+                </picture>
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+     style="background: rgba(0, 0, 0, 0.375);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-9 col-lg-8 text-center">
+                <p class="h1 text-white text-uppercase mb-3" style="font-size: 24px;">
+                    Welcome To</p>
+                <h1 class="display-3 text-white text-uppercase animated slideInDown text-header">Prince of Wales'
+                    College</h1>
+                <!-- <p class="h1 text-white text-uppercase mb-3" style="font-size: 30px;">
+                    Moratuwa</p> -->
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-<!-- <div class="container-fluid bg-primary py-5 mb-5 notice-header">
-    <div class="row justify-content-center">
-        <div class="col-lg-10 text-center">
-            <h1 class=" text-white animated slideInDown">Vote Now!</h1>
-		<p class=" text-white animated slideInDown">To become the most popular school website, vote for us in the BestWeb.LK 2024 contest.</p>
-            <h6 class="text-white animated slideInDown">Deadline for voting is 12th December </h6>
-            <center>
-                <a href="https://vote.bestweb.lk" target="_blank"
-                    style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Vote Now!</a>
-            </center>
-
+            </div>
         </div>
     </div>
-</div>
-  -->
+
+    <!--     
+    <br>
+    <div class="container-fluid bg-primary py-5 mb-5 notice-header">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="h1 text-white animated slideInDown">Vote Now!</h1>
+                <p class=" mb-3 text-white animated slideInDown">To become the most popular school website, vote for us
+                    in the BestWeb.LK 2024 contest.</p>
+                <h6 class="text-white animated slideInDown">Deadline for voting is 12th December </h6>
+                <center>
+                    <a href="https://vote.bestweb.lk" target="_blank"
+                        style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
+                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Vote Now!</a>
+                </center>
+
+            </div>
+        </div>
+    </div> -->
+
 
 
 <!-- Counter Start -->

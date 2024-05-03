@@ -7,7 +7,6 @@
     $page = 'about';
 ?>
 
-    <?php include 'header.php'; ?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="The Shrine | Prince of Wales' College" />
@@ -34,6 +33,9 @@
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-about/shrine.webp" />
 
+
+
+    <?php include 'header.php'; ?>
 
     <style>
         .shrine-page-header {

@@ -7,7 +7,6 @@
     $page = 'clubs';
 ?>
 
-    <?php include 'header.php'; ?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Prefects' Guild | Prince of Wales' College" />
@@ -32,6 +31,9 @@
         content="Elevating Leadership: Join the Prince of Wales College Prefects' Guild. Empowerment, Excellence, and Unity in Action. Discover your leadership potential today!" />
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-about/prefects/prefects-guild-header.webp" />
+.
+
+<?php include 'header.php'; ?>
 
 
 

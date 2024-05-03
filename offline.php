@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>You are offline</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="content/icons/logo-70x70-pwc.png" rel="icon">
-    <link rel="icon" href="content/icons/logo-70x70-pwc.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="content/icons/logo-apple-touch-icon-pwc.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="content/icons/logo-android-chrome-icon-pwc.png">
-    <meta name="msapplication-TileImage" content="content/icons/logo-70x70-pwc.png">
+<!-- Favicon -->
+<link href="/content/icons/logo-70x70-pwc.webp" rel="icon">
+    <link rel="icon" href="/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/content/icons/logo-apple-touch-icon-pwc.webp">
+    <link rel="icon" type="image/webp" sizes="192x192" href="/content/icons/logo-android-chrome-icon-pwc.webp">
+    <meta name="msapplication-TileImage" content="/content/icons/logo-70x70-pwc.webp">
     <meta name="msapplication-TileColor" content="#800000">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-
-<script async data-id="3312476668" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+    <link defer rel="preconnect" href="https://fonts.googleapis.com">
+    <link defer rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link defer href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link defer href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link defer href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="https://princeofwales.edu.lk/resources/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="https://princeofwales.edu.lk/resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link defer href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link defer rel="preload" href="/lib/animate/animate.min.css" as="style" />
+
+    <link defer href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link defer rel="preload" href="/lib/owlcarousel/assets/owl.carousel.min.css" as="style" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="https://princeofwales.edu.lk/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link defer href="/css/bootstrap.min.css" rel="stylesheet">
+    <link defer rel="preload" href="/css/bootstrap.min.css" as="style" />
 
     <!-- Template Stylesheet -->
-    <link href="https://princeofwales.edu.lk/resources/css/style.css" rel="stylesheet">
+    <link defer href="/css/style.css" rel="stylesheet">
+    <link defer rel="preload" href="/css/style.css" as="style" />
+
 
 
     <style>
@@ -63,15 +63,19 @@
     </div>
     <!-- offline End -->
         
-    <!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://princeofwales.edu.lk/resources/lib/wow/wow.min.js"></script>
-    <script src="https://princeofwales.edu.lk/resources/lib/easing/easing.min.js"></script>
-    <script src="https://princeofwales.edu.lk/resources/lib/waypoints/waypoints.min.js"></script>
-    <script src="https://princeofwales.edu.lk/resources/lib/owlcarousel/owl.carousel.min.js"></script>
+<!-- JavaScript Libraries -->
+<script defer src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="/lib/wow/wow.min.js"></script>
+<script defer src="/lib/easing/easing.min.js"></script>
+<script defer src="/lib/waypoints/waypoints.min.js"></script>
+<script defer src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="https://princeofwales.edu.lk/resources/js/main.js"></script>
+<!-- Main JavaScript -->
+<!-- Defer the loading of your main JavaScript file -->
+<script defer src="/js/main.js"></script>
+
 
 </body>
 

@@ -7,8 +7,10 @@
 
     include '../database_connection.php';
 
-    include '../header.php';
     include '../functions.php';
+
+    $page = 'blog';
+
     ?>
 
 <?php
@@ -52,6 +54,9 @@ foreach ($rows as $row) {
     <meta property="twitter:description"
         content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-<?php echo htmlspecialchars(strtolower($row["category"])); ?>-header-pwc.webp" />
+
+    <?php include '../header.php'; ?>
+
 
     <style>
         .category-page-header {

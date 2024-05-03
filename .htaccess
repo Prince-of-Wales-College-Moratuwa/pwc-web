@@ -11,7 +11,7 @@ RewriteRule ^blog/category/([a-zA-Z0-9_-]+)$ blog/category.php?categoryslug=$1 [
 
 RewriteRule ^events/([a-zA-Z0-9_-]+)$ events/event.php?slug=$1 [L]
 
-RewriteRule ^publications/$ publications.php [NC,L]
+RewriteRule ^publications/$ /publications/index.php [NC,L]
 
 RewriteRule ^publications/golden-book/education-sector/$ publications/golden-book/education-sector/index.html [NC,L]
 RewriteRule ^publications/golden-book/sports-sector$ publications/the-golden-book/sports-sector/index.html [NC,L]

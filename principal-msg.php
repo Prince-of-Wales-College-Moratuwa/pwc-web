@@ -6,7 +6,7 @@
 
     <title>Principal's Message</title>
 
-    <?php include 'header.php';
+    <?php 
 
     
 $query = "SELECT * FROM principal_msg";
@@ -42,6 +42,8 @@ foreach ($rows as $row) {
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-home/principal-pwc.webp" />
 
+
+        <?php include 'header.php'; ?>
 
 </head>
 

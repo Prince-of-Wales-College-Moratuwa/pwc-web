@@ -35,7 +35,7 @@
 
     <style>
         .about-page-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(/content/img/img-about/header-img.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(/content/img/img-about/dev-places/0.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;

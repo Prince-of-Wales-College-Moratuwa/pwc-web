@@ -9,11 +9,11 @@
     ?>            
 
     <!-- Favicon -->
-    <link href="/content/icons/logo-70x70-pwc.png" rel="icon">
+    <link href="/content/icons/logo-70x70-pwc.webp" rel="icon">
     <link rel="icon" href="/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/content/icons/logo-apple-touch-icon-pwc.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/content/icons/logo-android-chrome-icon-pwc.png">
-    <meta name="msapplication-TileImage" content="/content/icons/logo-70x70-pwc.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/content/icons/logo-apple-touch-icon-pwc.webp">
+    <link rel="icon" type="image/webp" sizes="192x192" href="/content/icons/logo-android-chrome-icon-pwc.webp">
+    <meta name="msapplication-TileImage" content="/content/icons/logo-70x70-pwc.webp">
     <meta name="msapplication-TileColor" content="#800000">
 
     <!-- Google Fonts -->
@@ -143,25 +143,29 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-1 px-lg-4">
-            <img src="/content/img/logo-pwc.webp" alt="pwc logo" class="img-header">
-            <h6 class="m-0 text-primary h6-header" style="font-family: 'Arimo', sans-serif;">&nbsp; &nbsp; PRINCE OF WALES'
-                COLLEGE<br>&nbsp; &nbsp; MORATUWA
+            <img src="/content/img/logo-pwc.webp" alt="pwc logo" class="img-header" >
+            <h6 class="m-0 text-primary h6-header">&nbsp; &nbsp; PRINCE OF WALES' COLLEGE<br>&nbsp; &nbsp;
+                MORATUWA
             </h6>
         </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="mobile-nav">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-label="mobile-nav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link <?php if ($page === 'home') echo 'active'; ?> nav-link pulse">Home</a>
-                <a href="/blog/" class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
-                <a href="/events/" class="nav-item nav-link nav-link pulse <?php if ($page === 'events') echo 'active'; ?>">Events</a>
-                <a href="/publications" class="nav-item nav-link <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse">Publications</a>
+                <a href="/blog/"
+                    class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
+                <a href="/events/"
+                    class="nav-item nav-link nav-link pulse <?php if ($page === 'events') echo 'active'; ?>">Events</a>
+                <a href="/publications"
+                    class="nav-item nav-link <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse">Publications</a>
 
                 <div class="nav-item dropdown">
                     <a href="/sports"
                         class="nav-link dropdown-toggle <?php if ($page === 'sports') echo 'active'; ?> nav-link pulse">Sports</a>
-                    <div class="dropdown-menu fade-down m-0">
+                    <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
                         <a class="dropdown-item" href="/sports#team-sports"><b>TEAM SPORTS</b></a>
                         <a class="dropdown-item" href="/sports#individual-sports"><b>INDIVIDUAL SPORTS</b></a>
                         <a class="dropdown-item" href="/sports#aquatic-sports"><b>AQUATIC SPORTS</b></a>
@@ -175,7 +179,7 @@
                 <div class="nav-item dropdown">
                     <a href="/clubs"
                         class="nav-link dropdown-toggle <?php if ($page === 'clubs') echo 'active'; ?> nav-link pulse">Clubs</a>
-                    <div class="dropdown-menu fade-down m-0">
+                    <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
                         <a class="dropdown-item" href="/clubs#media-clubs"><b>MEDIA CLUBS</b></a>
                         <a class="dropdown-item" href="/clubs#tech-clubs"><b>TECHNOLOGICAL CLUBS</b></a>
                         <a class="dropdown-item" href="/clubs#resprentative-clubs"><b>REPRESENTATIVE CLUBS</b></a>
@@ -189,13 +193,31 @@
                     </div>
                 </div>
 
-                <a href="/history" class="nav-item nav-link <?php if ($page === 'history') echo 'active'; ?> nav-link pulse">History</a>
-                <a href="/about" class="nav-item nav-link <?php if ($page === 'about') echo 'active'; ?> nav-link pulse">About</a>
-                <a href="/contact" class="nav-item nav-link <?php if ($page === 'contact') echo 'active'; ?> nav-link pulse">Contact</a>
-                
-                <a href="/search" title="search"><i class="bi bi-search nav-item nav-link <?php if ($page === 'search') echo 'active'; ?> nav-link pulse" id="search-icon"></i></a>
+                <a href="/history"
+                    class="nav-item nav-link <?php if ($page === 'history') echo 'active'; ?> nav-link pulse">History</a>
+              
+                    <div class="nav-item dropdown">
+                    <a href="/about"
+                    class="nav-link dropdown-toggle nav-item nav-link <?php if ($page === 'about') echo 'active'; ?> nav-link pulse">About</a>
+                    <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
+                        <a class="dropdown-item" href="/about#vission-mission"><b>VISION & MISSION</b></a>
+                        <a class="dropdown-item" href="/about#lassana-wales"><b>LASSANA WALES</b></a>
+                        <a class="dropdown-item" href="/about#alumini"><b>ALUMINI</b></a>
+                        <a class="dropdown-item" href="/about#anthems"><b>ANTHEMS</b></a>
+                        <a class="dropdown-item" href="/about#flag"><b>FLAG</b></a>
+                        <a class="dropdown-item" href="/about#houses"><b>HOUSES</b></a>
+                        <a class="dropdown-item" href="/about#administration"><b>ADMINISTRATION</b></a>
+                        <a class="dropdown-item" href="/about#locations"><b>LOCATIONS</b></a>
+                    </div>
+                </div>
 
+                <a href="/contact"
+                    class="nav-item nav-link <?php if ($page === 'contact') echo 'active'; ?> nav-link pulse">Contact</a>
 
-
+                <a href="/search" title="search"><i
+                        class="bi bi-search nav-item nav-link <?php if ($page === 'search') echo 'active'; ?> nav-link pulse"
+                        id="search-icon"></i></a>
+            </div>
+        </div>
     </nav>
     <!-- Navbar End -->

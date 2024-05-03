@@ -1,141 +1,153 @@
 {
-    "name": "Prince of Wales' College, Moratuwa",
-    "short_name": "Prince of Wales College",
-    "version": "1.5",
-    "description": "The official Website of Prince of Wales' College, Moratuwa",
-    "start_url": "/",
-    "lang": "en",
-    "categories": [
+  "name": "Prince of Wales' College, Moratuwa",
+  "short_name": "Prince of Wales College",
+  "version": "2.0",
+  "description": "The official Website of Prince of Wales' College, Moratuwa",
+  "start_url": "/",
+  "lang": "en",
+  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9",
+  "id": "pwa-8x4t2z1q",
+  "dir": "ltr",
+  "categories": [
       "school"
-    ],
-    "shortcuts": [
-    {
-      "name": "Search",
-      "short_name": "Search",
-      "url": "/search",
-      "icons": [
-        {
-          "src": "content/icons/pwa-shortcuts/search.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "short_name": "Contact",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "content/icons/pwa-shortcuts/contact.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Blog",
-      "short_name": "Blog",
-      "url": "/blog/",
-      "icons": [
-        {
-          "src": "content/icons/pwa-shortcuts/news.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "About",
-      "short_name": "About",
-      "url": "/about",
-      "icons": [
-        {
-          "src": "content/icons/pwa-shortcuts/about.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    }
   ],
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#800000",
-    "icons": [
-      {
-        "src": "content/icons/logo-72x72-pwc.png",
-        "sizes": "72x72",
-        "type": "image/png"
+  "scope_extensions": [
+      {"origin": "*.princeofwales.edu.lk"},
+      {"origin": "princeofwales.edu.lk"}
+    ],    
+  "display_override": ["window-controls-overlay"],
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#800000",
+  "protocol_handlers": [{
+      "protocol": "web+coffee",
+      "url": "/play?track=%s"
+  }],
+  "shortcuts": [{
+          "name": "Search",
+          "short_name": "Search",
+          "url": "/search",
+          "icons": [{
+              "src": "/content/icons/pwa/search.png",
+              "sizes": "192x192",
+              "type": "image/png"
+          }]
       },
       {
-        "src": "content/icons/logo-apple-touch-icon-pwc.png",
-        "sizes": "144x144",
-        "type": "image/png",
-        "purpose": "maskable"
+          "name": "Contact",
+          "short_name": "Contact",
+          "url": "/contact",
+          "icons": [{
+              "src": "content/icons/pwa/contact.png",
+              "sizes": "192x192",
+              "type": "image/png"
+          }]
       },
       {
-        "src": "content/icons/logo-android-chrome-icon-pwc.png",
-        "sizes": "192x192",
-        "type": "image/png"
+          "name": "Blog",
+          "short_name": "Blog",
+          "url": "/blog/",
+          "icons": [{
+              "src": "content/icons/pwa/news.png",
+              "sizes": "192x192",
+              "type": "image/png"
+          }]
       },
       {
-        "src": "content/icons/logo-pwc.png",
-        "sizes": "512x512",
-        "type": "image/png"
+          "name": "About",
+          "short_name": "About",
+          "url": "/about",
+          "icons": [{
+              "src": "content/icons/pwa/about.png",
+              "sizes": "192x192",
+              "type": "image/png"
+          }]
       }
-    ],
-    "screenshots": [
-      {
-        "src": "content/icons/pwa-shortcuts//screenshot-desktop.png",
-        "sizes": "1920x1080",
-        "type": "image/png",
-        "form_factor": "wide"
+  ],
+  "icons": [{
+          "src": "content/icons/main.webp",
+          "sizes": "905x900",
+          "type": "image/webp"
       },
       {
-        "src": "content/icons/pwa-shortcuts/screenshot1.png",
-        "sizes": "1920x1080",
-        "type": "image/png",
-        "form_factor": "wide"
+          "src": "content/icons/logo-monochrome.webp",
+          "sizes": "230x264",
+          "type": "image/webp",
+          "purpose": "monochrome"
       },
       {
-        "src": "content/icons/pwa-shortcuts/screenshot2.png",
-        "sizes": "1920x1080",
-        "type": "image/png",
-        "form_factor": "wide"
+          "src": "content/icons/maskable_icon.webp",
+          "sizes": "406x406",
+          "type": "image/webp",
+          "purpose": "maskable"
       },
       {
-        "src": "content/icons/pwa-shortcuts/screenshot3.png",
-        "sizes": "480x800",
-        "form_factor": "narrow"
+          "src": "content/icons/logo-apple-touch-icon-pwc.webp",
+          "sizes": "144x144",
+          "type": "image/webp",
+          "purpose": "any"
       },
       {
-        "src": "content/icons/pwa-shortcuts/screenshot4.png",
-        "sizes": "480x800",
-        "form_factor": "narrow"
-      },
-      {
-        "src": "content/icons/pwa-shortcuts/screenshot5.png",
-        "sizes": "480x800",
-        "form_factor": "narrow"
+          "src": "content/icons/512x512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any"
       }
-    ],
-    "scope": "/",
-    "orientation": "any",
-    "prefer_related_applications": true,
-    "share_target": {
-      "action": "/?utm_medium=PWA&utm_source=share-target&share-target",
-      "method": "POST",
-      "enctype": "multipart/form-data",
+  ],
+  "screenshots": [{
+          "src": "content/icons/pwa/screenshot-desktop.webp",
+          "sizes": "1920x1080",
+          "type": "image/webp",
+          "form_factor": "wide"
+      },
+      {
+          "src": "content/icons/pwa/screenshot1.webp",
+          "sizes": "1920x1080",
+          "type": "image/webp",
+          "form_factor": "wide"
+      },
+      {
+          "src": "content/icons/pwa/screenshot2.webp",
+          "sizes": "1920x1080",
+          "type": "image/webp",
+          "form_factor": "wide"
+      },
+      {
+          "src": "content/icons/pwa/screenshot3.webp",
+          "sizes": "480x800",
+          "form_factor": "narrow"
+      },
+      {
+          "src": "content/icons/pwa/screenshot4.webp",
+          "sizes": "480x800",
+          "form_factor": "narrow"
+      },
+      {
+          "src": "content/icons/pwa/screenshot5.webp",
+          "sizes": "480x800",
+          "form_factor": "narrow"
+      }
+  ],
+  "share_target": {
+      "action": "/share-action/",
+      "method": "GET",
+      "enctype": "application/x-www-form-urlencoded",
       "params": {
-        "files": [
-          {
-            "name": "file",
-            "accept": [
-              "image/*"
-            ]
-          }
-        ]
+        "title": "title",
+        "text": "text"
       }
-    }
+  },    
+  "handle_links": "preferred",
+  "edge_side_panel": {
+      "preferred_width": 400
+  },
+  "scope": "/",
+  "orientation": "any",
+  "prefer_related_applications": true,
+  "web_apps": [{
+      "web_app_identity": "https://princeofwales.edu.lk"
+  }],
+  "launch_handler": {
+      "client_mode": ["navigate-existing", "auto"]
   }
-  
+}

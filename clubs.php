@@ -7,7 +7,6 @@
     $page = 'clubs';
 ?>
 
-    <?php include 'header.php'; ?>
 
 
     <!-- Primary Meta Tags -->
@@ -31,6 +30,9 @@
     <meta property="twitter:description"
         content="Prince of Wales College offers diverse clubs and societies fostering student engagement, from arts to sports, creating a vibrant school community for personal growth and shared interests." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-clubs/club-header.webp" />
+
+
+    <?php include 'header.php'; ?>
 
 
     <style>

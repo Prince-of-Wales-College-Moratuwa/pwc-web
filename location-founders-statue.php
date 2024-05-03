@@ -7,7 +7,6 @@
     $page = 'about';
 ?>
 
-    <?php include 'header.php'; ?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="The Founder's Statue | Prince of Wales' College" />
@@ -33,6 +32,9 @@
         content="Discover the Founder's Statue at Prince of Wales College in Moratuwa - a tribute to our institution's legacy. Delve into its history and significance in a tranquil environment." />
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-history/founder-pwc.webp" />
+
+
+    <?php include 'header.php'; ?>
 
 
     <style>

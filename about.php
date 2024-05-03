@@ -7,7 +7,6 @@
     $page = 'about';
 ?>
 
-    <?php include 'header.php'; ?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="About Us | Prince of Wales' College" />
@@ -22,7 +21,7 @@
     <meta property="og:title" content="About Us | Prince of Wales' College" />
     <meta property="og:description"
         content="Discover Prince of Wales College: A historic institution of higher learning fostering academic excellence and personal growth. Join us in shaping the future!" />
-    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-about/header-img.webp" />
+    <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-about/About-us-header.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -30,12 +29,15 @@
     <meta property="twitter:title" content="About Us | Prince of Wales' College" />
     <meta property="twitter:description"
         content="Discover Prince of Wales College: A historic institution of higher learning fostering academic excellence and personal growth. Join us in shaping the future!" />
-    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-about/header-img.webp" />
+    <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-about/About-us-header.webp" />
+
+
+    <?php include 'header.php'; ?>
 
 
     <style>
         .about-page-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-about/header-img.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-about/About-us-header.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -75,7 +77,7 @@ if ($currentDate < $birthday) {
     </div>
     <!-- Header End -->
 
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="vission-mission">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">KINGS OF</h6>
             <h1 class="mb-5">MORATUWA</h1>
@@ -85,53 +87,6 @@ if ($currentDate < $birthday) {
                 of the community.</p>
         </div>
     </div>
-
-    <!-- Counter Start -->
-
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-award text-primary mb-4"></i>
-                        <h1 class="mb-3">
-                            <?php echo $age; ?>
-                        </h1>
-                        <h5 class="mb-3">Years of Excellence</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <h1 class="mb-3">200+</h1>
-                        <h5 class="mb-3">Qualified Staff</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                        <h1 class="mb-3">50+</h1>
-                        <h5 class="mb-3">Clubs & Societies</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                        <h1 class="mb-3">25+</h1>
-                        <h5 class="mb-3">Sports</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Counter End -->
 
     <div class="container-xxl py-5">
         <div class="container">
@@ -158,14 +113,65 @@ if ($currentDate < $birthday) {
         </div>
     </div>
 
-<!-- Updates -->
-<div class="container">
-    <div class="row">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">Featured</p>
-            <p class="h1 mb-5">UPDATES</p>
+    <!-- Counter Start -->
 
-            <?php
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- First row for mobile -->
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="yearsOfExcellence"><?php echo $age ?></p>
+                            <p class="h5 mb-3">Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-child text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="numberOfStudents">4,000+</p>
+                            <p class="h5 mb-3">Students</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second row for mobile -->
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="qualifiedStaff">200+</p>
+                            <p class="h5 mb-3">Qualified Staff</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-running text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="clubsAndSports">50+</p>
+                            <p class="h5 mb-3">Clubs & Sports</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Counter End -->
+
+    <br><br>
+
+    <!-- Updates -->
+    <div class="container">
+        <div class="row">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">Featured</p>
+                <p class="h1 mb-5">UPDATES</p>
+
+                <?php
 
 https://dash.elfsight.com/
 
@@ -203,22 +209,20 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 
 
 
+            </div>
         </div>
     </div>
-</div>
-<!-- Updates -->
+    <!-- Updates -->
 
 
     <br><br>
 
-    <div class="container-lg my-3" id="developed-places">
+    <div class="container-lg my-3">
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3"></h6>
-                <h1 class="mb-5">Enhancing and Beautifying School for a Bright Future</h1>
+                <h1 class="mb-5" id="lassana-wales">Enhancing and Beautifying School for a Bright Future</h1>
             </div>
-
-
 
 
             <img src="content/img/img-about/dev-places/0.webp" class="d-block w-100" alt="Slide 1">
@@ -241,26 +245,11 @@ if ($currentDate >= 1 && $currentDate <= 5) {
         <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="/about/lassana-wales"
                 data-wow-delay="0.7s">Explore</a></center>
 
-        <script>
-            var myCarousel = document.getElementById('myCarousel');
-
-            var interval = 7000;
-
-            function startCarousel() {
-                var carousel = new bootstrap.Carousel(myCarousel, {
-                    interval: interval
-                });
-            }
-            startCarousel();
-        </script>
-
-
-
 
         <br>
 
         <!-- stars Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="alumini">
             <div class="container">
                 <div class="text-center">
                     <h6 class="section-title bg-white text-center text-primary px-3"></h6>
@@ -323,18 +312,20 @@ if ($currentDate >= 1 && $currentDate <= 5) {
         </div>
 
         <style>
-        .center-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}</style>
+            .center-image {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
 
         <!-- stars End -->
 
 
 
         <!-- Identity Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5" id="anthems">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
@@ -415,7 +406,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 
     </div>
 
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="flag">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
@@ -443,12 +434,14 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                         school's long history. The flag is like a treasure that tells the story of our school. When we
                         see this flag flying, it shows that the school is very serious about teaching and doing well.
                     </p>
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/img/logo-pwc.png" target="_blank"
+                        data-wow-delay="0.1s">View School Logo</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="houses">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
@@ -647,8 +640,8 @@ if($statement->rowCount() > 0)
     </style>
 
     <!-- location -->
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container" id="locations">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s" >
             <h6 class="section-title bg-white text-center text-primary px-3">Locations and</h6>
             <h1 class="mb-5">INFRASTRUCTURE</h1>
         </div>

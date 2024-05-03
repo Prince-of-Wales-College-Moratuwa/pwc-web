@@ -27,7 +27,6 @@ foreach ($rows as $row) {
 
   <title><?php echo $row["title"]; ?></title>
 
-  <?php include '../header.php'; ?>
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="<?php echo $row["title"]; ?>" />
@@ -49,6 +48,9 @@ foreach ($rows as $row) {
   <meta property="twitter:description" content="<?php echo $row["excerpt"]; ?>" />
   <meta property="twitter:image"
     content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+
+
+    <?php include '../header.php'; ?>
 
 
 </head>

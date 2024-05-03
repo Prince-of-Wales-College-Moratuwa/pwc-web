@@ -1,9 +1,22 @@
-const CACHE_NAME = 'my-pwa-cache-v2';
+const CACHE_NAME = 'my-pwa-cache-v4';
 const urlsToCache = [
-  '/resources/css/style.css',
-  '/resources/js/main.js',
-  '/content/icons/logo-70x70-pwc.png',
-  '/content/icons/logo-android-chrome-icon-pwc.png'
+  '/offline.php',
+  '/content/icons/logo-70x70-pwc.ico',
+  '/content/icons/logo-apple-touch-icon-pwc.webp',
+  '/content/icons/logo-android-chrome-icon-pwc.webp',
+  '/content/icons/logo-70x70-pwc.webp',
+  '/lib/animate/animate.min.css',
+  '/lib/owlcarousel/assets/owl.carousel.min.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css',
+  'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css',
+  '/css/bootstrap.min.css',
+  '/css/style.css',
+  'https://code.jquery.com/jquery-3.7.1.min.js',
+  'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js',
+  '/lib/wow/wow.min.js',
+  '/lib/easing/easing.min.js',
+  '/lib/waypoints/waypoints.min.js',
+  '/js/main.js'
 ];
 
 self.addEventListener('install', event => {
@@ -11,6 +24,9 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         return cache.addAll(urlsToCache);
+      })
+      .catch(error => {
+        console.error('Failed to open cache:', error);
       })
   );
 });
@@ -20,9 +36,24 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         if (response) {
-          return response;
+          return response; // Serve cached resource if available
         }
-        return fetch(event.request);
+        // If request is not cached, fetch from network
+        return fetch(event.request)
+          .then(response => {
+            // Check if we received a valid response
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            // Clone the response because it's a stream and can be consumed only once
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then(cache => {
+                cache.put(event.request, responseToCache);
+              });
+            return response;
+          })
+          .catch(() => caches.match('/offline.php')); // Serve offline page if network request fails
       })
   );
 });

@@ -6,7 +6,6 @@
     <?php
     $page = 'history';
 ?>
-    <?php include 'header.php'; ?>
 
 <!-- Primary Meta Tags -->
 <meta name="title" content="History | Prince of Wales' College" />
@@ -25,6 +24,10 @@
 <meta property="twitter:title" content="History | Prince of Wales' College" />
 <meta property="twitter:description" content="Explore the rich history of Prince of Wales College, a prestigious educational institution with a legacy of excellence. Discover its origins, notable alumni, and contributions to education." />
 <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-history/history-img-header.webp" />
+
+
+
+<?php include 'header.php'; ?>
 
 
     <style>

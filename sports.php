@@ -6,7 +6,6 @@
     <?php
     $page = 'sports';
 ?>
-    <?php include 'header.php'; ?>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Sports | Prince of Wales' College" />
@@ -31,6 +30,9 @@
         content="Inheriting An Illustrious and Proud History, Prince of Wales' College Has Earned Name and Immortality at The National and International Level Due to Tireless Service in The Field of Sports." />
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-sports/header-image-sports-pwc.webp" />
+
+        <?php include 'header.php'; ?>
+
 
     <style>
         .sports-page-header {
