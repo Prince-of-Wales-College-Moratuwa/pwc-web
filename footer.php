@@ -45,7 +45,7 @@
                     &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">Prince
                         of Wales' College</a>, &nbsp; All Right Reserved. │ Developed By <a class="border-bottom"
                         href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom"
-                        href="/cmbu" target="_blank">Cambrians' Media and broadcasting
+                        href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and broadcasting
                         Unit</a>
                 </div>
 
