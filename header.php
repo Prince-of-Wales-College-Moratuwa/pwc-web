@@ -7,11 +7,22 @@
     <?php 
     
     date_default_timezone_set('Asia/Colombo'); 
-    setcookie("PHPSESSID", "hrdl5ujs6985l6g72jtrften00", time() + 3600, "/", "", true, true);
+    setcookie("PHPSESSID", "hrdl5ujs6985l6g72jtrften00", [
+        'expires' => time() + 3600,
+        'path' => '/',
+        'domain' => '',
+        'secure' => true,
+        'httponly' => true,
+        'samesite' => 'Lax' 
+    ]);
+
     header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
 
+    header("X-Frame-Options: DENY");
+
+    header("X-Content-Type-Options: nosniff");
     
-    ?>            
+    ?>
 
     <!-- Favicon -->
     <link href="/content/icons/logo-70x70-pwc.webp" rel="icon">
@@ -54,13 +65,12 @@
 
     <script>
         document.addEventListener('keydown', function (e) {
-    
-        if (e.key === 'F12' || e.keyCode === 123) {
-            e.preventDefault();
-        }
-        });
 
-</script>
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+            }
+        });
+    </script>
 
 
 
@@ -80,8 +90,8 @@
         }
 
         .dropdown-item:hover {
-        color: maroon;
-    }
+            color: maroon;
+        }
 
         @keyframes pulse-animation {
             0% {
@@ -100,35 +110,34 @@
 
 
         .img-header {
-        width: 35px;
-    }
-
-    .h6-header {
-        font-size: 17.5px;
-    }
-
-    @media (max-width: 375px) {
-        .img-header {
-            width: 30px; 
+            width: 35px;
         }
 
         .h6-header {
-            font-size: 14px; 
+            font-size: 17.5px;
         }
-    }
 
+        @media (max-width: 375px) {
+            .img-header {
+                width: 30px;
+            }
 
-
-
+            .h6-header {
+                font-size: 14px;
+            }
+        }
     </style>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K1KCZVJTWP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-K1KCZVJTWP');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1KCZVJTWP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-K1KCZVJTWP');
+    </script>
 
 
 
@@ -148,7 +157,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-1 px-lg-4">
-            <img src="/content/img/logo-pwc.webp" alt="pwc logo" class="img-header" >
+            <img src="/content/img/logo-pwc.webp" alt="pwc logo" class="img-header">
             <h6 class="m-0 text-primary h6-header">&nbsp; &nbsp; PRINCE OF WALES' COLLEGE<br>&nbsp; &nbsp;
                 MORATUWA
             </h6>
@@ -159,7 +168,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="/" class="nav-item nav-link <?php if ($page === 'home') echo 'active'; ?> nav-link pulse">Home</a>
+                <a href="/"
+                    class="nav-item nav-link <?php if ($page === 'home') echo 'active'; ?> nav-link pulse">Home</a>
                 <a href="/blog/"
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
                 <a href="/events/"
@@ -200,10 +210,10 @@
 
                 <a href="/history"
                     class="nav-item nav-link <?php if ($page === 'history') echo 'active'; ?> nav-link pulse">History</a>
-              
-                    <div class="nav-item dropdown">
+
+                <div class="nav-item dropdown">
                     <a href="/about"
-                    class="nav-link dropdown-toggle nav-item nav-link <?php if ($page === 'about') echo 'active'; ?> nav-link pulse">About</a>
+                        class="nav-link dropdown-toggle nav-item nav-link <?php if ($page === 'about') echo 'active'; ?> nav-link pulse">About</a>
                     <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
                         <a class="dropdown-item" href="/about#vission-mission"><b>VISION & MISSION</b></a>
                         <a class="dropdown-item" href="/about#lassana-wales"><b>LASSANA WALES</b></a>
