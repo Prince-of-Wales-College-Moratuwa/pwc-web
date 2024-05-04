@@ -251,7 +251,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
         <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="alumini">
             <div class="container">
                 <div class="text-center">
-                    <h6 class="section-title bg-white text-center text-primary px-3"></h6>
+                    <h6 class="section-title bg-white text-center text-primary px-3">#PROUDCAMBRIANS</h6>
                     <h1 class="mb-5">NOTABLE ALUMNI</h1>
                 </div>
                 <div class="owl-carousel testimonial-carousel position-relative">

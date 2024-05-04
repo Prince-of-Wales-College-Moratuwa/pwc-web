@@ -3,9 +3,14 @@
     <meta name="robots" content="index, follow">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="theme-color" content="#800000">
-    <?php  date_default_timezone_set('Asia/Colombo'); 
-            setcookie("PHPSESSID", "hrdl5ujs6985l6g72jtrften00", time() + 3600, "/", "", true, true);
 
+    <?php 
+    
+    date_default_timezone_set('Asia/Colombo'); 
+    setcookie("PHPSESSID", "hrdl5ujs6985l6g72jtrften00", time() + 3600, "/", "", true, true);
+    header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
+
+    
     ?>            
 
     <!-- Favicon -->
