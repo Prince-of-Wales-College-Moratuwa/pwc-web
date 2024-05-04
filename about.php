@@ -113,9 +113,9 @@ if ($currentDate < $birthday) {
         </div>
     </div>
 
-    <!-- Counter Start -->
+   <!-- Counter Start -->
 
-    <div class="container-xxl py-5">
+   <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4">
                 <!-- First row for mobile -->
@@ -159,8 +159,7 @@ if ($currentDate < $birthday) {
             </div>
         </div>
     </div>
-
-    <!-- Counter End -->
+<!-- Counter End -->
 
     <br><br>
 

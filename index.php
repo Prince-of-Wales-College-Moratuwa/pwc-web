@@ -137,54 +137,55 @@ if ($currentDate < $birthday) {
             </div>
         </div>
     </div> -->
-
+</div>
 
 
 <!-- Counter Start -->
+
 <div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-award text-primary mb-4"></i>
-                        <p class="h1 mb-3">
-                            <?php echo $age ?>
-                        </p>
-                        <p class="h5 mb-3">Years of Excellence</p>
+        <div class="container">
+            <div class="row g-4">
+                <!-- First row for mobile -->
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="yearsOfExcellence"><?php echo $age ?></p>
+                            <p class="h5 mb-3">Years of Excellence</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <p class="h1 mb-3">200+</p>
-                        <p class="h5 mb-3">Qualified Staff</p>
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-child text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="numberOfStudents">4,000+</p>
+                            <p class="h5 mb-3">Students</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                        <p class="h1 mb-3">50+</p>
-                        <p class="h5 mb-3">Clubs & Societies</p>
+                <!-- Second row for mobile -->
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="qualifiedStaff">200+</p>
+                            <p class="h5 mb-3">Qualified Staff</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                        <p class="h1 mb-3">25+</p>
-                        <p class="h5 mb-3">Sports</p>
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-running text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="clubsAndSports">50+</p>
+                            <p class="h5 mb-3">Clubs & Sports</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 <!-- Counter End -->
 
 <!-- About Start -->

@@ -85,7 +85,7 @@
                     if ($row_count > 0) {
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                             // Generate the HTML output for each record
-                            echo '<div class="col-md-4 animate-box">
+                            echo '<br><br><div class="col-md-4 animate-box">
                                     <article class="article-entry">
                                         <a href="blog/' . $row["slug"] . '" class="blog-img">
                                             <img src="content/img/img-blog/' . $row["photo"] . '" alt="' . $row["photo"] . '"><br><br>
@@ -144,7 +144,7 @@
                     if ($row_count > 0) {
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                             // Generate the HTML output for each record
-                            echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
+                            echo '<br><br><div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
                             echo '<div class="course-item bg-light">';
                             echo '<div class="position-relative overflow-hidden">';
                             echo '<img class="img-fluid" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
