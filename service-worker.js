@@ -1,6 +1,5 @@
 const CACHE_NAME = 'my-pwa-cache-v4';
 const urlsToCache = [
-  '/offline.php',
   '/content/icons/logo-70x70-pwc.ico',
   '/content/icons/logo-apple-touch-icon-pwc.webp',
   '/content/icons/logo-android-chrome-icon-pwc.webp',
@@ -27,33 +26,6 @@ self.addEventListener('install', event => {
       })
       .catch(error => {
         console.error('Failed to open cache:', error);
-      })
-  );
-});
-
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        if (response) {
-          return response; // Serve cached resource if available
-        }
-        // If request is not cached, fetch from network
-        return fetch(event.request)
-          .then(response => {
-            // Check if we received a valid response
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-            // Clone the response because it's a stream and can be consumed only once
-            const responseToCache = response.clone();
-            caches.open(CACHE_NAME)
-              .then(cache => {
-                cache.put(event.request, responseToCache);
-              });
-            return response;
-          })
-          .catch(() => caches.match('/offline.php')); // Serve offline page if network request fails
       })
   );
 });
