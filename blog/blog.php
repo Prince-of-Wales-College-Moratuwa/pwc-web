@@ -76,7 +76,7 @@ if ($schoolPride == 'ON') {
     
     echo '
     <script>
-      var end = Date.now() + (1 * 1000);
+      var end = Date.now() + (2 * 1000);
       var colors = [\'#800080\', \'#ffd700\', \'#800000\'];
     
       (function frame() {
