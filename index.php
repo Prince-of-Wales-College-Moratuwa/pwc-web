@@ -281,8 +281,12 @@ if($statement->rowCount() > 0)
     </div>
 
 </div>
-<center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="blog/" data-wow-delay="0.1s" title="Read Blog">Read
-        More</a></center>
+<center>
+  <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="blog/" data-wow-delay="0.1s" title="Read Blog">
+    Read More Latest Blog Posts
+  </a>
+</center>
+
 </div>
 
 
@@ -352,7 +356,7 @@ if($statement->rowCount() > 0)
 
     </div>
     <br><br>
-    <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="events/" data-wow-delay="0.1s">View More</a>
+    <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="events/" data-wow-delay="0.1s">View More Events</a>
     </center>
 </div>
 
@@ -424,7 +428,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="sports#team-sports">
                             <img class="img-fluid" src="content/img/img-home/team-sports-home-pwc.webp"
-                                alt="team sports" style="width: auto;" width="500px" height="500px" loading="lazy">
+                                alt="Image depicting various team sports" style="width: auto;" width="500px" height="500px" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Team Sports</h5>
                             </div>
@@ -433,7 +437,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="sports#individual-sports">
                             <img class="img-fluid" src="content/img/img-home/individual-sports-home-pwc.webp"
-                                alt="Individual Sports" style="width: auto;" loading="lazy">
+                                alt="Image depicting various individual sports" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Individual Sports</h5>
                             </div>
@@ -442,7 +446,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="sports#aquatic-sports">
                             <img class="img-fluid" src="content/img/img-home/water-sports-home-pwc.webp"
-                                alt="Aquatic sports" style="width: auto;" loading="lazy">
+                                alt="Image depicting various aquatic sports" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Aquatic Sports</h5>
                             </div>
@@ -453,7 +457,7 @@ foreach ($rows as $row) {
             <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                 <a class="position-relative d-block h-100 overflow-hidden futuristic-effect" href="sports#combat-sports">
                     <img class="img-fluid position-absolute w-100 h-100"
-                        src="content/img/img-home/combat-sports-home-pwc.webp" alt="combat sports"
+                        src="content/img/img-home/combat-sports-home-pwc.webp" alt="Image depicting various combat sports"
                         style="object-fit: cover;" loading="lazy">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                         <h5 class="m-0">Combat Sports</h5>
@@ -468,6 +472,7 @@ foreach ($rows as $row) {
 
     </div>
 </div>
+
 
 <!-- Sports Enf -->
 
@@ -512,7 +517,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="clubs#media-clubs">
                             <img class="img-fluid" src="content/img/img-home/media-clubs-home-pwc.webp"
-                                alt="media clubs" style="width: auto;" loading="lazy">
+                                alt="Image depicting media clubs" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Media Clubs</h5>
                             </div>
@@ -521,7 +526,7 @@ foreach ($rows as $row) {
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="clubs#edu-clubs">
                             <img class="img-fluid" src="content/img/img-home/educational-clubs-home-pwc.webp"
-                                alt="edu clubs" style="width: auto;" loading="lazy">
+                                alt="Image depicting educational clubs" style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Educational Clubs</h5>
                             </div>
@@ -529,7 +534,7 @@ foreach ($rows as $row) {
                     </div>
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="clubs#tech-clubs">
-                            <img class="img-fluid" src="content/img/img-home/tech-clubs-home-pwc.webp" alt="tech clubs"
+                            <img class="img-fluid" src="content/img/img-home/tech-clubs-home-pwc.webp" alt="Image depicting technological clubs"
                                 style="width: auto;" loading="lazy">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Technological Clubs</h5>
@@ -541,7 +546,7 @@ foreach ($rows as $row) {
             <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                 <a class="position-relative d-block h-100 overflow-hidden futuristic-effect" href="clubs#service-clubs">
                     <img class="img-fluid position-absolute w-100 h-100"
-                        src="content/img/img-home/community-service-clubs-home-pwc.webp" alt="community service clubs"
+                        src="content/img/img-home/community-service-clubs-home-pwc.webp" alt="Image depicting community service clubs"
                         style="object-fit: cover;" loading="lazy">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                         <h5 class="m-0">Community Service Clubs</h5>
@@ -555,6 +560,7 @@ foreach ($rows as $row) {
         </div>
     </div>
 </div>
+
 
 <!-- Clubs Enf -->
 

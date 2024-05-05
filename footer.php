@@ -23,11 +23,12 @@
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@princeofwales.edu.lk</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/pwcmoratuwaSriLanka"
-                        target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        target="_blank" title="Visit our Facebook page"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/cmbulive/"
-                        target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CMBUlive"
-                        target="_blank"><i class="fab fa-youtube"></i></a>
+                        target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CMBUlive" target="_blank"
+                        title="Subscribe to our YouTube channel"><i class="fab fa-youtube"></i></a>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
