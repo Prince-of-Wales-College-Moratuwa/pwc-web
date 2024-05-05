@@ -80,7 +80,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">CONTACT</h1>
+                    <h1 class="display-3 text-white animated slideInDown">CONTACT US</h1>
                 </div>
             </div>
         </div>

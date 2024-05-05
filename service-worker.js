@@ -1,6 +1,6 @@
 const CACHE_NAME = 'my-pwa-cache-v4';
 const urlsToCache = [
-  '/content/icons/logo-70x70-pwc.ico',
+  '/content/icons/logo-70x70-pwc.webp',
   '/content/icons/logo-apple-touch-icon-pwc.webp',
   '/content/icons/logo-android-chrome-icon-pwc.webp',
   '/content/icons/logo-70x70-pwc.webp',

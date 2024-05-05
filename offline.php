@@ -5,7 +5,7 @@
 
 <!-- Favicon -->
 <link href="/content/icons/logo-70x70-pwc.webp" rel="icon">
-    <link rel="icon" href="/content/icons/logo-70x70-pwc.ico" type="image/x-icon">
+    <link rel="icon" href="/content/icons/logo-70x70-pwc.webp" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/content/icons/logo-apple-touch-icon-pwc.webp">
     <link rel="icon" type="image/webp" sizes="192x192" href="/content/icons/logo-android-chrome-icon-pwc.webp">
     <meta name="msapplication-TileImage" content="/content/icons/logo-70x70-pwc.webp">

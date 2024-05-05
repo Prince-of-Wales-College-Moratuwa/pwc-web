@@ -10,8 +10,8 @@
 
        <!-- Favicon -->
     <link href="logo-pwc.png" rel="icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
     <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
     <link rel="icon" href="favicon.png" type="image/png" sizes="96x96">
