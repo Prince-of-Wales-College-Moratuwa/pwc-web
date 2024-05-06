@@ -585,6 +585,13 @@ foreach ($rows as $row) {
                     preserving memories of events, achievements, and personal reflections throughout the year. It's a
                     colorful collage of photographs, articles, and creative pieces that showcase the diversity and
                     talents of our college community.
+
+                    <ul>
+                        <li>Magazine</li>
+                        <li>Golden Book</li>
+                        <li>Golden Captures</li>
+                        <li>Music on Demand</li>
+                    </ul>
                 </p>
 
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="publications" data-wow-delay="0.1s">View</a>
