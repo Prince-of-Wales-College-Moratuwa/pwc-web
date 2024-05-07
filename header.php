@@ -21,9 +21,6 @@
     header("X-Frame-Options: DENY");
 
     header("X-Content-Type-Options: nosniff");
-
-    header("Content-Security-Policy: script-src 'self'; object-src 'self'; base-uri 'self'; frame-src 'self'");
-    
     ?>
 
     <!-- Favicon -->
