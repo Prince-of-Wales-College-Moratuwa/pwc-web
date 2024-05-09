@@ -49,7 +49,7 @@ and open the template in the editor.
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <?php 
     include '../../database_connection.php';
-    include 'header.php';
+    include '../../header.php';
     ?>
 
 
@@ -586,7 +586,7 @@ and open the template in the editor.
     </script>
 
     <?php 
-    include 'footer.php';
+    include '../../footer.php';
 ?>
 </body>
 

@@ -2,7 +2,7 @@
 
 <head>
 <?php
-include 'header.php';
+include '../../header.php';
 ?>
 
 
@@ -230,7 +230,7 @@ else{
 
 
 <?php
-include 'footer.php';
+include '../../footer.php';
 ?>
 
 </body>

@@ -46,6 +46,8 @@ RewriteRule ^cookies$ cookies.php [NC,L]
 RewriteRule ^404$ 404.php [NC,L]
 
 RewriteRule ^big-match$ battle-of-the-golds.php [NC,L]
+RewriteRule ^battle-of-the-golds$ battle-of-the-golds.php [NC,L]
+
 RewriteRule ^principal-message$ principal-msg.php [NC,L]
 
 RewriteRule ^admin-access$ admin_login.php [NC,L]

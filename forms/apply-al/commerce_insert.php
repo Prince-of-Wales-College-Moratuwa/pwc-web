@@ -2,7 +2,7 @@
 
 <head>
 <?php
-include 'header.php';
+include '../../header.php';
 ?>
 
 
@@ -224,7 +224,7 @@ if(mysqli_query($db, $sql)){
 } ?>
 
 <?php
-include 'footer.php';
+include '../../footer.php';
 ?>
 
 </body>

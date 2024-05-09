@@ -294,7 +294,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                         puts it very well “the past is not a comfortable bed to sleep on but a spring board for future
                         actions”. <br> <br> Get enrolled now, be a part of the legion, which is the backbone of our Alma
                         Mater </p>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="http://pwcoba.lk/member-registration/"
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" target="_blank" href="http://pwcoba.lk/member-registration/"
                          data-wow-delay="0.7s">Enroll Now</a>
                 </div>
             </div>
