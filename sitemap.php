@@ -121,7 +121,7 @@ echo '</ul>';
         <h2>Legal</h2>
         <ul class="list-group">
             <li class="list-group-item"><a href="/privacy">Privacy Policy</a></li>
-            <li class="list-group-item"><a href="/cookie">Cookies Policy</a></li>
+            <li class="list-group-item"><a href="/cookies">Cookies Policy</a></li>
             <li class="list-group-item"><a href="/terms">Terms & Conditions</a></li>
             <li class="list-group-item"><a href="/disclaimer">Disclaimer</a></li>
             <li class="list-group-item"><a href="/imprint">Imprint</a></li>
