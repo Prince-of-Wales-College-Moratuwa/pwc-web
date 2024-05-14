@@ -43,7 +43,13 @@ RewriteRule ^team$ team.php [NC,L]
 
 RewriteRule ^privacy$ privacy.php [NC,L]
 RewriteRule ^cookies$ cookies.php [NC,L]
+RewriteRule ^faq$ faq.php [NC,L]
+RewriteRule ^terms$ terms.php [NC,L]
+RewriteRule ^disclaimer$ disclaimer.php [NC,L]
+RewriteRule ^imprint$ imprint.php [NC,L]
+
 RewriteRule ^404$ 404.php [NC,L]
+
 
 RewriteRule ^big-match$ battle-of-the-golds.php [NC,L]
 RewriteRule ^battle-of-the-golds$ battle-of-the-golds.php [NC,L]
@@ -51,7 +57,6 @@ RewriteRule ^battle-of-the-golds$ battle-of-the-golds.php [NC,L]
 RewriteRule ^principal-message$ principal-msg.php [NC,L]
 
 RewriteRule ^admin-access$ admin_login.php [NC,L]
-RewriteRule ^teachers-portal$ teacher_login.php [NC,L]
 
 
 RewriteRule ^forms/students-information$ forms/students-info/form.php [NC,L]
@@ -61,6 +66,8 @@ RewriteRule ^forms/apply-al/commerce-closed$ forms/apply-al/commerce.php [NC,L]
 RewriteRule ^forms/apply-al/tech-closed$ forms/apply-al/tech.php [NC,L]
 RewriteRule ^forms/apply-al/art-closed$ forms/apply-al/art.php [NC,L]
 
+
+RewriteRule ^sitemap$ sitemap.php [NC,L]
 
 ErrorDocument 404 /404.php
 ErrorDocument 403 /403.php

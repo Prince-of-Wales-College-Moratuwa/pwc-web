@@ -15,14 +15,18 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-3">Quick Links</h4>
                 <a class="btn btn-link" id="install-button">Install App</a>
-                <a class="btn btn-link" href="/publications">Publications</a>
                 <a class="btn btn-link" href="/about">About Us</a>
                 <a class="btn btn-link" href="/contact">Contact Us</a>
+                <a class="btn btn-link" href="/faq">Help / FAQ</a>
+                <a class="btn btn-link" href="/sitemap">Site Map</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-3">Legal</h4>
                 <a class="btn btn-link" href="/privacy">Privacy Policy</a>
                 <a class="btn btn-link" href="/cookies">Cookies Policy</a>
+                <a class="btn btn-link" href="/terms">Terms & Conditions</a>
+                <a class="btn btn-link" href="/disclaimer">Disclaimer</a>
+                <a class="btn btn-link" href="/imprint">Imprint</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <left>
