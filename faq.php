@@ -8,6 +8,33 @@
     include 'header.php';
     ?>
 
+<?php
+
+
+$currentDate = date('d');
+
+if ($currentDate >= 1 && $currentDate <= 5) {
+    // Display content for the first date range (1-5) nelithavindinu7@gmail.com
+    echo '<script async data-id="3312476668" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 6 && $currentDate <= 10) {
+    // Display content for the second date range (6-10) nelithaonline2006@gmail.com
+    echo '<script async data-id="5892538728" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 11 && $currentDate <= 15) {
+    // Display content for the third date range (11-15) frontlinedeveloperslk@gmail.com
+    echo '<script async data-id="1854349425" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 16 && $currentDate <= 20) {
+    // Display content for the fourth date range (16-20) nelitha@androidwedaarayo.com
+    echo '<script async data-id="9967512625" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 21 && $currentDate <= 25) {
+    // Display content for the fifth date range (21-25)  towotix116@tupanda.com
+    echo '<script async data-id="2447734571" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} elseif ($currentDate >= 26 && $currentDate <= 31) {
+    // Display content for the sixth date range (26-31) sane as 1-5
+    echo '<script async data-id="3312476668" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>';
+} else {
+    echo '';
+}
+?>
     <title>Frequently Asked Questions - Prince of Wales' College, Moratuwa</title>
 
     <style>
@@ -134,7 +161,7 @@
         </div>
         <br>
         <div class="alert alert-danger" role="danger">
-    If you have any further questions, please feel free to email us at <a href="mailto:info@princeofwales.edu.lk"><b>info@princeofwales.edu.lk</b></a> or <a href="mailto:officepwm@gmail.com"><b>officepwm@gmail.com</b></a>, or use our chatbot on the <a href="/contact"><b>Contact Us</b></a> page.
+    If you have any further questions, please feel free to email us at <a href="mailto:info@princeofwales.edu.lk"><b>info@princeofwales.edu.lk</b></a> or <a href="mailto:officepwm@gmail.com"><b>officepwm@gmail.com</b></a>, or use our chatbot on left corner of this page.
 </div>
 
     </div>
