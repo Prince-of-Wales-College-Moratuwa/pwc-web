@@ -97,8 +97,12 @@ echo '</ul>';
         <ul class="list-group">
             <li class="list-group-item"><a href="/principal-message">Principal's Message</a>
             </li>
-            <li class="list-group-item"><a href="/about/school-administration">School
-                    Administration</a></li>
+            <li class="list-group-item"><a href="/about/school-administration">School Administration</a></li>
+            <li class="list-group-item"><a href="/about/school-infrastructure">Locations & Infrastructure</a></li>
+            <li class="list-group-item"><a href="/about/school-infrastructure/founders-statue">The Founders' Statue</a></li>
+            <li class="list-group-item"><a href="/about/school-infrastructure/the-shrine">The Shrine</a></li>
+            <li class="list-group-item"><a href="/about/lassana-wales">ලස්සන Wales</a></li>
+            <li class="list-group-item"><a href="/about/prefects-guild">Prefects' Guild</a></li>
             <li class="list-group-item"><a href="/big-match">Big Match</a></li>
             <li class="list-group-item"><a href="/faq">Help / FAQ</a></li>
         </ul>

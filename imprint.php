@@ -16,8 +16,6 @@
     <div class="container mt-5">
         <h1 class="mb-4">Imprint</h1>
 
-        <p><i>Last Updated: May 14, 2024</i></p>
-
         <h2>1. Introduction</h2>
         <p>This page contains the imprint information for the Prince of Wales' College, Moratuwa website.</p>
         

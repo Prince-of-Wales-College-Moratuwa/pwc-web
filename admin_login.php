@@ -82,6 +82,7 @@ if(isset($_POST["login_button"]))
 }
 
 include 'header.php';
+include 'sitemap-gen.php';
 
 ?>
 
