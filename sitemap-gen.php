@@ -88,5 +88,4 @@ $xml->endElement();
 // End XML document
 $xml->endDocument();
 
-echo "Sitemap generated successfully!";
 ?>

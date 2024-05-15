@@ -18,7 +18,7 @@ $statement->execute();
 $rows = $statement->fetchAll();
 
 if (count($rows) === 0) {
-    header("Location: https://princeofwales.edu.lk/404.php");
+    header("Location: https://princeofwales.edu.lk/404");
 }
 
 foreach ($rows as $row) {

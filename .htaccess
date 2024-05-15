@@ -69,10 +69,18 @@ RewriteRule ^forms/apply-al/art-closed$ forms/apply-al/art.php [NC,L]
 
 RewriteRule ^sitemap$ sitemap.php [NC,L]
 
+ErrorDocument 400 /400.php
+ErrorDocument 401 /401.php
 ErrorDocument 404 /404.php
 ErrorDocument 403 /403.php
+ErrorDocument 500 /500.php
 
 <FilesMatch "web\.config">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|inc|bak)$">
     Order Allow,Deny
     Deny from all
 </FilesMatch>
