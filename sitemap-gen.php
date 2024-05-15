@@ -52,7 +52,7 @@ $result_events = $connect->query($sql_events);
 // Add slugs from pwc_db_news to $urls array
 if ($result_news->rowCount() > 0) {
     while ($row = $result_news->fetch(PDO::FETCH_ASSOC)) {
-        $urls[] = "https://princeofwales.edu.lk/news/" . $row['slug'];
+        $urls[] = "https://princeofwales.edu.lk/blog/" . $row['slug'];
     }
 }
 
