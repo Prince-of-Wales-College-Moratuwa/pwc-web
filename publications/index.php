@@ -30,7 +30,7 @@
         content="Explore the rich tapestry of publications from Prince of Wales' College, including the annual magazine, golden book, and more. Dive into a world of academic achievements, creative expressions, and cherished memories that define our vibrant college community." />
     <meta property="twitter:image" content="/content/img/img-publications/publication-cover.webp" />
 
-    <?php include '../header.php' ?>
+    <?php include '../views/includes/header.php' ?>
 
     <style>
         .publications-header {
@@ -192,7 +192,7 @@
         </div>
     </div>
 
-    <?php include '../footer.php' ?>
+    <?php include '../views/includes/footer.php' ?>
 
 </body>
 

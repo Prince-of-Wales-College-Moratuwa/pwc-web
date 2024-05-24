@@ -1,64 +1,92 @@
 RewriteEngine On
 
+# root
+RewriteRule ^$ views/index.php [NC,L]
+
+
+# Blog
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^news/(.*)$ /blog/$1 [R=301,L]
 </IfModule>
 
+RewriteRule ^blog/$ views/blog/index.php [NC,L]
+RewriteRule ^blog/([a-zA-Z0-9_-]+)$ views/blog/blog.php?slug=$1 [L]
+RewriteRule ^blog/category/([a-zA-Z0-9_-]+)$ views/blog/category.php?categoryslug=$1 [L]
 
-RewriteRule ^blog/([a-zA-Z0-9_-]+)$ blog/blog.php?slug=$1 [L]
-RewriteRule ^blog/category/([a-zA-Z0-9_-]+)$ blog/category.php?categoryslug=$1 [L]
 
-RewriteRule ^events/([a-zA-Z0-9_-]+)$ events/event.php?slug=$1 [L]
+#Events
+RewriteRule ^events/$ views/events/index.php [NC,L]
+RewriteRule ^events/([a-zA-Z0-9_-]+)$ views/events/event.php?slug=$1 [L]
 
-RewriteRule ^publications/$ /publications/index.php [NC,L]
 
-RewriteRule ^publications/golden-book/education-sector/$ publications/golden-book/education-sector/index.html [NC,L]
-RewriteRule ^publications/golden-book/sports-sector$ publications/the-golden-book/sports-sector/index.html [NC,L]
+#Publications
+RewriteRule ^publications$ publications/index.php [NC,L]
+RewriteRule ^publications/golden-captures$ publications/golden-captures/index.php [NC,L]
+RewriteRule ^publications/music$ publications/music/index.php [NC,L]
 
+RewriteRule ^publications/golden-book/education-sector$ publications/golden-book/education-sector/index.html [NC,L]
+RewriteRule ^publications/golden-book/sports-sector/$ publications/golden-book/sports-sector/index.html [NC,L]
 RewriteRule ^publications/school-magazine$ publications-pwc/school-magazine/index.html [NC,L]
 
-RewriteRule ^sports$ sports.php [NC,L]
-RewriteRule ^clubs$ clubs.php [NC,L]
 
-RewriteRule ^history$ history.php [NC,L]
-RewriteRule ^history/former-principals$ history-former-principals.php [NC,L]
+#Sports
+RewriteRule ^sports$ views/sports/sports.php [NC,L]
 
-RewriteRule ^about$ about.php [NC,L]
-RewriteRule ^about/lassana-wales$ lassana-wales.php [NC,L]
-RewriteRule ^about/prefects-guild$ about-prefects-guild.php [NC,L]
-RewriteRule ^about/school-administration$ about-school-administration.php [NC,L]
+RewriteRule ^big-match$ views/sports/battle-of-the-golds.php [NC,L]
+RewriteRule ^battle-of-the-golds$ views/sports/battle-of-the-golds.php [NC,L]
 
-RewriteRule ^about/school-infrastructure$ about-school-infrastructure.php [NC,L]
-RewriteRule ^about/school-infrastructure/founders-statue$ location-founders-statue.php [NC,L]
-RewriteRule ^about/school-infrastructure/the-shrine$ location-the-shrine.php [NC,L]
+#Clubs
+RewriteRule ^clubs$ views/clubs/clubs.php [NC,L]
+RewriteRule ^clubs/prefects-guild$ views/clubs/prefects-guild.php [NC,L]
 
-RewriteRule ^daily-period-log$ daily-period-log.php [NC,L]
+#History
+RewriteRule ^history$ views/history/history.php [NC,L]
+RewriteRule ^history/former-principals$ views/history/former-principals.php [NC,L]
+
+#About
+RewriteRule ^about$ views/about/about.php [NC,L]
+RewriteRule ^about/school-administration$ views/about/school-administration.php [NC,L]
+
+RewriteRule ^about/lassana-wales$ views/about/locations/lassana-wales.php [NC,L]
+RewriteRule ^about/school-infrastructure$ views/about/locations/school-infrastructure.php [NC,L]
+RewriteRule ^about/school-infrastructure/founders-statue$ views/about/locations/location-founders-statue.php [NC,L]
+RewriteRule ^about/school-infrastructure/the-shrine$ views/about/locations/location-the-shrine.php [NC,L]
+
+#Contect
+RewriteRule ^contact$ views/contact.php [NC,L]
+
+#Search
+RewriteRule ^search$ views/search.php [NC,L]
+
+#Other
+RewriteRule ^team$ views/team.php [NC,L]
+RewriteRule ^principal-message$ views/principal-msg.php [NC,L]
+RewriteRule ^sitemap$ views/sitemap.php [NC,L]
+RewriteRule ^faq$ views/faq.php [NC,L]
+
+#Legal
+RewriteRule ^privacy$ views/legal/privacy.php [NC,L]
+RewriteRule ^cookies$ views/legal/cookies.php [NC,L]
+RewriteRule ^terms$ views/legal/terms.php [NC,L]
+RewriteRule ^disclaimer$ views/legal/disclaimer.php [NC,L]
+RewriteRule ^imprint$ views/legal/imprint.php [NC,L]
 
 
-RewriteRule ^contact$ contact.php [NC,L]
-RewriteRule ^search$ search.php [NC,L]
-
-RewriteRule ^team$ team.php [NC,L]
-
-RewriteRule ^privacy$ privacy.php [NC,L]
-RewriteRule ^cookies$ cookies.php [NC,L]
-RewriteRule ^faq$ faq.php [NC,L]
-RewriteRule ^terms$ terms.php [NC,L]
-RewriteRule ^disclaimer$ disclaimer.php [NC,L]
-RewriteRule ^imprint$ imprint.php [NC,L]
-
-RewriteRule ^404$ 404.php [NC,L]
+#Errors
+RewriteRule ^404$ views/errors/404.php [NC,L]
+ErrorDocument 400 /views/errors/400.php
+ErrorDocument 401 /views/errors/401.php
+ErrorDocument 404 /views/errors/404.php
+ErrorDocument 403 /views/errors/403.php
+ErrorDocument 500 /views/errors/500.php
 
 
-RewriteRule ^big-match$ battle-of-the-golds.php [NC,L]
-RewriteRule ^battle-of-the-golds$ battle-of-the-golds.php [NC,L]
-
-RewriteRule ^principal-message$ principal-msg.php [NC,L]
-
+#Admin
 RewriteRule ^admin-access$ admin_login.php [NC,L]
 
 
+#Forms
 RewriteRule ^forms/students-information$ forms/students-info/form.php [NC,L]
 
 RewriteRule ^forms/apply-al/science-closed$ forms/apply-al/science.php [NC,L]
@@ -67,14 +95,7 @@ RewriteRule ^forms/apply-al/tech-closed$ forms/apply-al/tech.php [NC,L]
 RewriteRule ^forms/apply-al/art-closed$ forms/apply-al/art.php [NC,L]
 
 
-RewriteRule ^sitemap$ sitemap.php [NC,L]
-
-ErrorDocument 400 /400.php
-ErrorDocument 401 /401.php
-ErrorDocument 404 /404.php
-ErrorDocument 403 /403.php
-ErrorDocument 500 /500.php
-
+#Rules Blocked
 <FilesMatch "web\.config">
     Order Allow,Deny
     Deny from all

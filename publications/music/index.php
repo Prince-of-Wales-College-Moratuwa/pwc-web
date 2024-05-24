@@ -32,7 +32,8 @@
     <meta property="twitter:image"
         content="/content/img/img-publications/music-cover.webp" />
 
-    <?php include '../../header.php' ?>
+        <?php include '../../views/includes/header.php' ?>
+
 
     <style>
         .publications-header {
@@ -67,7 +68,8 @@
 
 
 
-    <?php include '../../footer.php' ?>
+    <?php include '../../views/includes/footer.php' ?>
+
 
 
     </body>

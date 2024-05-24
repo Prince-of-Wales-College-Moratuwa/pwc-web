@@ -81,7 +81,7 @@ if(isset($_POST["login_button"]))
 
 }
 
-include 'header.php';
+include 'views/includes/header.php';
 include 'sitemap-gen.php';
 
 ?>
@@ -137,6 +137,6 @@ include 'sitemap-gen.php';
 
 <?php
 
-include 'footer.php';
+include 'views/includes/footer.php';
 
 ?>

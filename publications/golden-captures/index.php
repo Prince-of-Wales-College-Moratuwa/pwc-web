@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<?php include '../../database_connection.php' ?>
 
     <?php $page = 'publications'; ?>
 
@@ -29,7 +30,7 @@
         content="Discover unparalleled beauty through Golden Captures. Our webpage is your gateway to breathtaking photography, capturing moments that shimmer with timeless elegance and unforgettable allure. Explore our gallery and embark on a journey through stunning visuals that evoke emotions and inspire wanderlust." />
     <meta property="twitter:image" content="/content/img/golden-captures/golden-cap-cvr.webp" />
 
-    <?php include '../../header.php' ?>
+    <?php include '../../views/includes/header.php' ?>
 
 
     <style>
@@ -119,7 +120,7 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)) {
     </div>
 
 
-    <?php include '../../footer.php' ?>
+    <?php include '../../views/includes/footer.php' ?>
 
 
 </body>

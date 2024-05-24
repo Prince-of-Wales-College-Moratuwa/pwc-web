@@ -180,7 +180,7 @@
                     <span class="color">Prince of Wales' College</span>
                      Moratuwa </span>
                      <br>
-               <span class="about-second-line">The Cambrians' Media & Broadcasting Unit (CMBU) at Prince of Wales College, rebranded in 2012, is an exemplary institution renowned for its diverse expertise in the fields of Announcing, Technical Operations, Graphics Designing, Dubbing, News Reporting, Photography, and Documentary Production. CMBU's commitment to excellence in media and broadcasting education is highlighted by its role as the organizer of the prestigious Sadhbhashana Media Competitions, the largest and most influential media competition in Sri Lanka.</span>
+               <span class="about-second-line">The Cambrians' Media & Broadcasting Unit (CMBU) at Prince of Wales College, rebranded in 2012, is an exemplary institution renowned for its diverse expertise in the fields of Announcing, Technical Operations, Graphics Designing, Dubbing, News Reporting, Photography, and Documentary Production. CMBU's commitment to excellence in media and Broadcasting education is highlighted by its role as the organizer of the prestigious Sadhbhashana Media Competitions, the largest and most influential media competition in Sri Lanka.</span>
             </div>
             <!--about picture-->
             <div class="about-img">
@@ -204,7 +204,7 @@
                                </div>
                                <div class="service-description">
                                 <h2>Announcing</h2>
-                                <p>CMBU's announcers are the charismatic voices that bring information to life, shaping confident and engaging communicators for the dynamic world of media and broadcasting.</p>
+                                <p>CMBU's announcers are the charismatic voices that bring information to life, shaping confident and engaging communicators for the dynamic world of media and Broadcasting.</p>
                                </div>
                            </div>
                            <div class="service-one service wow">
@@ -213,7 +213,7 @@
                                </div>
                                <div class="service-description">
                                 <h2>Technical</h2>
-                                <p>CMBU's technicians are the backbone of seamless media operations, equipped with the technical expertise to ensure flawless broadcasts and productions in the world of media and broadcasting.</p>
+                                <p>CMBU's technicians are the backbone of seamless media operations, equipped with the technical expertise to ensure flawless broadcasts and productions in the world of media and Broadcasting.</p>
                                </div>
                            </div>
                            <div class="service-one service wow">
@@ -222,7 +222,7 @@
                                </div>
                                <div class="service-description">
                                 <h2>Graphics Designing</h2>
-                                <p>At CMBU, aspiring graphics designers are nurtured to unleash their creativity, crafting visually captivating content for the dynamic realm of media and broadcasting.</p>
+                                <p>At CMBU, aspiring graphics designers are nurtured to unleash their creativity, crafting visually captivating content for the dynamic realm of media and Broadcasting.</p>
                                </div>
                            </div>
                            <div class="service-one service wow">
@@ -231,7 +231,7 @@
                                </div>
                                <div class="service-description">
                                 <h2>Dubbing</h2>
-                                <p>CMBU's dubbing crew training program hones the art of voice synchronization and performance, preparing students for a career in delivering seamless audiovisual experiences in media and broadcasting.</p>
+                                <p>CMBU's dubbing crew training program hones the art of voice synchronization and performance, preparing students for a career in delivering seamless audiovisual experiences in media and Broadcasting.</p>
                                </div>
                            </div>
                            <div class="service-one service wow">
@@ -249,7 +249,7 @@
                                </div>
                                <div class="service-description">
                                 <h2>Photography</h2>
-                                <p>CMBU's photography program empowers students to capture moments and convey stories through the lens, shaping skilled visual storytellers for the world of media and broadcasting.</p>
+                                <p>CMBU's photography program empowers students to capture moments and convey stories through the lens, shaping skilled visual storytellers for the world of media and Broadcasting.</p>
                                </div>
                            </div>
                            <div class="service-three service wow">
@@ -258,7 +258,7 @@
                             </div>
                             <div class="service-description">
                                 <h2>Videography</h2>
-                                <p>At CMBU, videographers are trained to master the art of capturing and crafting compelling visual narratives, preparing them for success in the dynamic field of media and broadcasting.</p>
+                                <p>At CMBU, videographers are trained to master the art of capturing and crafting compelling visual narratives, preparing them for success in the dynamic field of media and Broadcasting.</p>
                             </div>
                         </div>
                     </div>
@@ -282,7 +282,7 @@
                     </div>
                     <div class="portfolio-text">
                         <h2>Sadhbhashana'21 - Competition (Online)</h2>
-                        <p>Sadhbhashana'21, conducted online like its predecessor in 2020 due to the ongoing COVID-19 situation, maintained its commitment to promoting and recognizing excellence in media and broadcasting despite the challenging circumstances.</p>
+                        <p>Sadhbhashana'21, conducted online like its predecessor in 2020 due to the ongoing COVID-19 situation, maintained its commitment to promoting and recognizing excellence in media and Broadcasting despite the challenging circumstances.</p>
                     </div>
                 </div>
              
@@ -292,7 +292,7 @@
                     </div>
                     <div class="portfolio-text">
                         <h2>Sadhbhashana'20 - Competition (Online)</h2>
-                        <p>Sadhbhashana'20, held as an online competition due to COVID-19, continued to be a platform for showcasing media and broadcasting talents, adapting to the changing circumstances and fostering excellence despite the challenges posed by the pandemic.</p>
+                        <p>Sadhbhashana'20, held as an online competition due to COVID-19, continued to be a platform for showcasing media and Broadcasting talents, adapting to the changing circumstances and fostering excellence despite the challenges posed by the pandemic.</p>
                    </div>
                 </div>
                 <div class="portfolio portfolio-fourth">
@@ -301,7 +301,7 @@
                     </div>
                     <div class="portfolio-text">
                         <h2>Sadhbhashana'19 - Day</h2>
-                        <p>Sadhbhashana'19 was a dynamic school media competition organized by CMBU in 2019, where students from various schools displayed their media and broadcasting talents, fostering excellence in multiple creative disciplines.</p>
+                        <p>Sadhbhashana'19 was a dynamic school media competition organized by CMBU in 2019, where students from various schools displayed their media and Broadcasting talents, fostering excellence in multiple creative disciplines.</p>
                     </div>
                 </div>
                 <div class="portfolio portfolio-fourth">
