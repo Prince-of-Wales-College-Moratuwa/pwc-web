@@ -1,21 +1,21 @@
-const CACHE_NAME = 'my-pwa-cache-v4';
+const CACHE_NAME = 'my-pwa-cache-v5';
 const urlsToCache = [
+  '/offline',
   '/content/icons/logo-70x70-pwc.webp',
   '/content/icons/logo-apple-touch-icon-pwc.webp',
   '/content/icons/logo-android-chrome-icon-pwc.webp',
-  '/content/icons/logo-70x70-pwc.webp',
-  '/lib/animate/animate.min.css',
-  '/lib/owlcarousel/assets/owl.carousel.min.css',
+  '/resources/lib/animate/animate.min.css',
+  '/resources/lib/owlcarousel/assets/owl.carousel.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css',
   'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css',
-  '/css/bootstrap.min.css',
-  '/css/style.css',
+  '/resources/css/bootstrap.min.css',
+  '/resources/css/style.css',
   'https://code.jquery.com/jquery-3.7.1.min.js',
-  'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
-  '/lib/wow/wow.min.js',
-  '/lib/easing/easing.min.js',
-  '/lib/waypoints/waypoints.min.js',
-  '/js/main.js'
+  'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js',
+  '/resources/lib/wow/wow.min.js',
+  '/resources/lib/easing/easing.min.js',
+  '/resources/lib/waypoints/waypoints.min.js',
+  '/resources/js/main.js'
 ];
 
 self.addEventListener('install', event => {
@@ -24,8 +24,18 @@ self.addEventListener('install', event => {
       .then(cache => {
         return cache.addAll(urlsToCache);
       })
-      .catch(error => {
-        console.error('Failed to open cache:', error);
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+        if (response) {
+          return response; 
+        }
+        return fetch(event.request)
+          .catch(() => caches.match('/offline'));
       })
   );
 });

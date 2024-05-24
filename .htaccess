@@ -75,6 +75,7 @@ RewriteRule ^imprint$ views/legal/imprint.php [NC,L]
 
 #Errors
 RewriteRule ^404$ views/errors/404.php [NC,L]
+RewriteRule ^offline$ views/errors/offline.php [NC,L]
 ErrorDocument 400 /views/errors/400.php
 ErrorDocument 401 /views/errors/401.php
 ErrorDocument 404 /views/errors/404.php

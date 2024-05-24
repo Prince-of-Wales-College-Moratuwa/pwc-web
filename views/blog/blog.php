@@ -52,24 +52,6 @@ foreach ($rows as $row) {
 
     <?php include '../includes/header.php'; ?>
 
-
-    <script>
-    // Get all anchor elements on the page
-    const links = document.querySelectorAll('a');
-
-    // Iterate over each link
-    links.forEach(link => {
-      // Get the hostname of the link
-      const linkDomain = new URL(link.href).hostname;
-
-      // Check if the link points to facebook.com
-      if (linkDomain === 'facebook.com' || linkDomain.endsWith('.facebook.com')) {
-        // Open the link in a new tab
-        window.open(link.href, '_blank');
-      }
-    });
-    </script>
-
 </head>
 
 <body>
