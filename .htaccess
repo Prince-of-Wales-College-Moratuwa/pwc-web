@@ -9,8 +9,8 @@ RewriteRule ^$ views/index.php [NC,L]
   RewriteEngine On
   RewriteRule ^news/(.*)$ /blog/$1 [R=301,L]
 </IfModule>
-
 RewriteRule ^blog/$ views/blog/index.php [NC,L]
+RewriteRule ^blog$ views/blog/index.php [NC,L]
 RewriteRule ^blog/([a-zA-Z0-9_-]+)$ views/blog/blog.php?slug=$1 [L]
 RewriteRule ^blog/category/([a-zA-Z0-9_-]+)$ views/blog/category.php?categoryslug=$1 [L]
 
