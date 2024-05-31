@@ -62,7 +62,7 @@
     ?>
  <style>
         .notice-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-home/notice/bestweblk.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-sports/battle-of-the-golds-header-pwc.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -137,6 +137,25 @@ if ($currentDate < $birthday) {
             </div>
         </div>
     </div> -->
+
+
+    <br>
+    <div class="container-fluid bg-primary py-5 mb-5 notice-header">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="h1 text-white animated slideInDown">Cricket Coaching Vacancies Available</h1>
+                <p class=" mb-3 text-white animated slideInDown">We are looking for Energetic, Experienced, Knowledgeable persons for our coaching staff.</p>
+                <h6 class="text-white animated slideInDown">Deadline: 10th June 2024</h6>
+                <center>
+                    <a href="https://princeofwales.edu.lk/blog/vacancies-for-cricket-coaches-2024"
+                        style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
+                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Read More</a>
+                </center>
+
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
