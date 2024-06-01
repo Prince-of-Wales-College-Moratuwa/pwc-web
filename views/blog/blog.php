@@ -37,7 +37,7 @@ foreach ($rows as $row) {
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="og:title" content="<?php echo $row["title"]; ?>" />
-  <meta property="og:description" content="<?php echo htmlspecialchars($row["excerpt"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="og:description" content="<?php echo $row["excerpt"] ?>" />
   <meta property="og:image"
     content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
 
@@ -45,7 +45,7 @@ foreach ($rows as $row) {
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="twitter:title" content="<?php echo $row["title"]; ?>" />
-  <meta property="twitter:description" content="<?php echo htmlspecialchars($row["excerpt"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="twitter:description" content="<?php echo $row["excerpt"] ?>" />
   <meta property="twitter:image"
     content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
 
