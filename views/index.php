@@ -53,14 +53,13 @@
                     });
             });
         }
-
     </script>
 
 
     <?php
     include 'includes/header.php';
     ?>
- <style>
+    <style>
         .notice-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-sports/battle-of-the-golds-header-pwc.webp);
             background-position: center center;
@@ -71,7 +70,6 @@
         .notice-header-inner {
             background: rgba(15, 23, 43, .7);
         }
-
     </style>
 </head>
 
@@ -101,20 +99,21 @@ if ($currentDate < $birthday) {
                         alt="Front View of Prince of Wales College">
                 </picture>
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-     style="background: rgba(0, 0, 0, 0.375);">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-9 col-lg-8 text-center">
-                <p class="h1 text-white text-uppercase mb-3" style="font-size: 24px;">
-                    Welcome To</p>
-                <h1 class="display-3 text-white text-uppercase animated slideInDown text-header">Prince of Wales'
-                    College</h1>
-                <!-- <p class="h1 text-white text-uppercase mb-3" style="font-size: 30px;">
+                    style="background: rgba(0, 0, 0, 0.375);">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-9 col-lg-8 text-center">
+                                <p class="h1 text-white text-uppercase mb-3" style="font-size: 24px;">
+                                    Welcome To</p>
+                                <h1 class="display-3 text-white text-uppercase animated slideInDown text-header">Prince
+                                    of Wales'
+                                    College</h1>
+                                <!-- <p class="h1 text-white text-uppercase mb-3" style="font-size: 30px;">
                     Moratuwa</p> -->
-            </div>
-        </div>
-    </div>
-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -127,7 +126,7 @@ if ($currentDate < $birthday) {
                 <h1 class="h1 text-white animated slideInDown">Vote Now!</h1>
                 <p class=" mb-3 text-white animated slideInDown">To become the most popular school website, vote for us
                     in the BestWeb.LK 2024 contest.</p>
-                <h6 class="text-white animated slideInDown">Deadline for voting is 12th December </h6>
+                <p class="h6 text-white animated slideInDown">Deadline for voting is 12th December </p><br>
                 <center>
                     <a href="https://vote.bestweb.lk" target="_blank"
                         style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
@@ -144,17 +143,19 @@ if ($currentDate < $birthday) {
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <h1 class="h1 text-white animated slideInDown">Cricket Coaching Vacancies Available</h1>
-                <p class=" mb-3 text-white animated slideInDown">We are looking for Energetic, Experienced, Knowledgeable persons for our coaching staff.</p>
-                <h6 class="text-white animated slideInDown">Deadline: 10th June 2024</h6>
+                <p class="mb-3 text-white animated slideInDown">We are looking for Energetic, Experienced, Knowledgeable
+                    persons for our coaching staff.</p>
+                <p class="h6 text-white animated slideInDown">Deadline: 10th June 2024</p><br>
                 <center>
                     <a href="https://princeofwales.edu.lk/blog/vacancies-for-cricket-coaches-2024"
                         style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Read More</a>
+                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">
+                        Details About Cricket Coaching Vacancies</a>
                 </center>
-
             </div>
         </div>
     </div>
+
 
 </div>
 
@@ -162,49 +163,49 @@ if ($currentDate < $birthday) {
 <!-- Counter Start -->
 
 <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <!-- First row for mobile -->
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="yearsOfExcellence"><?php echo $age ?></p>
-                            <p class="h5 mb-3">Years of Excellence</p>
-                        </div>
+    <div class="container">
+        <div class="row g-4">
+            <!-- First row for mobile -->
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="yearsOfExcellence"><?php echo $age ?></p>
+                        <p class="h5 mb-3">Years of Excellence</p>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="numberOfStudents">4,000+</p>
-                            <p class="h5 mb-3">Students</p>
-                        </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-child text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="numberOfStudents">4,000+</p>
+                        <p class="h5 mb-3">Students</p>
                     </div>
                 </div>
-                <!-- Second row for mobile -->
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="qualifiedStaff">200+</p>
-                            <p class="h5 mb-3">Qualified Staff</p>
-                        </div>
+            </div>
+            <!-- Second row for mobile -->
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="qualifiedStaff">200+</p>
+                        <p class="h5 mb-3">Qualified Staff</p>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="clubsAndSports">50+</p>
-                            <p class="h5 mb-3">Clubs & Sports</p>
-                        </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="clubsAndSports">50+</p>
+                        <p class="h5 mb-3">Clubs & Sports</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <!-- Counter End -->
 
 <!-- About Start -->
@@ -301,9 +302,9 @@ if($statement->rowCount() > 0)
 
 </div>
 <center>
-  <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="blog/" data-wow-delay="0.1s" title="Read Blog">
-    Read More Latest Blog Posts
-  </a>
+    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="blog/" data-wow-delay="0.1s" title="Read Blog">
+        Read More Latest Blog Posts
+    </a>
 </center>
 
 </div>
@@ -375,7 +376,8 @@ if($statement->rowCount() > 0)
 
     </div>
     <br><br>
-    <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="events/" data-wow-delay="0.1s">View More Events</a>
+    <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="events/" data-wow-delay="0.1s">View More
+            Events</a>
     </center>
 </div>
 
@@ -445,28 +447,35 @@ foreach ($rows as $row) {
             <div class="col-lg-7 col-md-6">
                 <div class="row g-3">
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                        <a class="position-relative d-block overflow-hidden futuristic-effect" href="sports#team-sports">
+                        <a class="position-relative d-block overflow-hidden futuristic-effect"
+                            href="sports#team-sports">
                             <img class="img-fluid" src="content/img/img-home/team-sports-home-pwc.webp"
-                                alt="Image depicting various team sports" style="width: auto;" width="500px" height="500px" loading="lazy">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
+                                alt="Image depicting various team sports" style="width: auto;" width="500px"
+                                height="500px" loading="lazy">
+                            <div
+                                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Team Sports</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden futuristic-effect" href="sports#individual-sports">
+                        <a class="position-relative d-block overflow-hidden futuristic-effect"
+                            href="sports#individual-sports">
                             <img class="img-fluid" src="content/img/img-home/individual-sports-home-pwc.webp"
                                 alt="Image depicting various individual sports" style="width: auto;" loading="lazy">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
+                            <div
+                                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Individual Sports</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                        <a class="position-relative d-block overflow-hidden futuristic-effect" href="sports#aquatic-sports">
+                        <a class="position-relative d-block overflow-hidden futuristic-effect"
+                            href="sports#aquatic-sports">
                             <img class="img-fluid" src="content/img/img-home/water-sports-home-pwc.webp"
                                 alt="Image depicting various aquatic sports" style="width: auto;" loading="lazy">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
+                            <div
+                                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Aquatic Sports</h5>
                             </div>
                         </a>
@@ -474,17 +483,19 @@ foreach ($rows as $row) {
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                <a class="position-relative d-block h-100 overflow-hidden futuristic-effect" href="sports#combat-sports">
+                <a class="position-relative d-block h-100 overflow-hidden futuristic-effect"
+                    href="sports#combat-sports">
                     <img class="img-fluid position-absolute w-100 h-100"
-                        src="content/img/img-home/combat-sports-home-pwc.webp" alt="Image depicting various combat sports"
-                        style="object-fit: cover;" loading="lazy">
+                        src="content/img/img-home/combat-sports-home-pwc.webp"
+                        alt="Image depicting various combat sports" style="object-fit: cover;" loading="lazy">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                         <h5 class="m-0">Combat Sports</h5>
                     </div>
                 </a>
             </div>
             <br><br><br><br>
-            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn futuristic-button" href="sports" data-wow-delay="0.1s">Explore
+            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn futuristic-button" href="sports"
+                    data-wow-delay="0.1s">Explore
                     Sports</a></center>
 
         </div>
@@ -537,7 +548,8 @@ foreach ($rows as $row) {
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="clubs#media-clubs">
                             <img class="img-fluid" src="/content/img/img-home/media-clubs-home-pwc.webp"
                                 alt="Image depicting media clubs" style="width: auto;" loading="lazy">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
+                            <div
+                                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Media Clubs</h5>
                             </div>
                         </a>
@@ -546,16 +558,18 @@ foreach ($rows as $row) {
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="clubs#edu-clubs">
                             <img class="img-fluid" src="content/img/img-home/educational-clubs-home-pwc.webp"
                                 alt="Image depicting educational clubs" style="width: auto;" loading="lazy">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
+                            <div
+                                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Educational Clubs</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                         <a class="position-relative d-block overflow-hidden futuristic-effect" href="clubs#tech-clubs">
-                            <img class="img-fluid" src="content/img/img-home/tech-clubs-home-pwc.webp" alt="Image depicting technological clubs"
-                                style="width: auto;" loading="lazy">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
+                            <img class="img-fluid" src="content/img/img-home/tech-clubs-home-pwc.webp"
+                                alt="Image depicting technological clubs" style="width: auto;" loading="lazy">
+                            <div
+                                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                                 <h5 class="m-0">Technological Clubs</h5>
                             </div>
                         </a>
@@ -565,15 +579,16 @@ foreach ($rows as $row) {
             <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                 <a class="position-relative d-block h-100 overflow-hidden futuristic-effect" href="clubs#service-clubs">
                     <img class="img-fluid position-absolute w-100 h-100"
-                        src="content/img/img-home/community-service-clubs-home-pwc.webp" alt="Image depicting community service clubs"
-                        style="object-fit: cover;" loading="lazy">
+                        src="content/img/img-home/community-service-clubs-home-pwc.webp"
+                        alt="Image depicting community service clubs" style="object-fit: cover;" loading="lazy">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3 futuristic-overlay">
                         <h5 class="m-0">Community Service Clubs</h5>
                     </div>
                 </a>
             </div>
             <br>
-            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn futuristic-button" href="clubs" data-wow-delay="0.1s">Explore
+            <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn futuristic-button" href="clubs"
+                    data-wow-delay="0.1s">Explore
                     Clubs</a></center>
 
         </div>
