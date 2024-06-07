@@ -1,5 +1,15 @@
 RewriteEngine On
 
+# Redirect requests for .php files to the same URL without the .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# Remove .php extension from URLs
+RewriteCond %{THE_REQUEST} "^[^ ]* .*\.php[? ]" [NC]
+RewriteRule ^(.*)\.php$ /$1 [R=301,L]
+
+
 # root
 RewriteRule ^$ views/index.php [NC,L]
 
