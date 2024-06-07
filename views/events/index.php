@@ -67,102 +67,91 @@ include '../includes/header.php'; ?>
     <!-- Header End -->
 
 
+<!-- Up Events Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
 
-    <!-- up Events Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
+            <?php
+            $currentDate = date("Y-m-d"); 
 
+            $query = "SELECT * FROM pwc_db_events ORDER BY date DESC"; 
+            $statement = $connect->prepare($query);
+            $statement->execute();
 
+            $upcomingEvents = array();
+            $pastEvents = array();
 
+            if ($statement->rowCount() > 0) {
+                foreach ($statement->fetchAll() as $row) {
+                    $eventDate = $row["date"];
 
-            <div class="row g-4 justify-content-center">
+                    if ($eventDate > $currentDate) {
+                        $upcomingEvents[] = $row;
+                    } else {
+                        $pastEvents[] = $row;
+                    }
+                }
+            }
 
-                <?php
-$currentDate = date("Y-m-d"); 
+            echo '<div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Upcoming Events</h6>
+            </div>';
+            if (empty($upcomingEvents)) {
+                echo '<div class="text-center mb-5">';
+                echo '<i class="fas fa-exclamation-circle text-primary mb-4"></i>';
+                echo '&nbsp; No Upcoming Events to Show';
+                echo '</div>';
+            } else {
+                foreach ($upcomingEvents as $row) {
+                    echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
+                    echo '<div class="course-item bg-light">';
+                    echo '<div class="position-relative overflow-hidden">';
+                    echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
+                    echo '</div>';
+                    echo '<div class="text-center p-4 pb-0">';
+                    echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
+                    echo '</div>';
+                    echo '<div class="w-100 d-flex justify-content-center mb-4">';
+                    echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;">Read More</a>';
+                    echo '</div>';
+                    echo '<div class="d-flex border-top">';
+                    echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
+                    echo '<small class="flex-fill text-center py-2"><i class="fa fa-map-marker text-primary me-2"></i>' . $row["location"] . '</small>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            }
 
-$query = "SELECT * FROM pwc_db_events ORDER BY date DESC"; 
-$statement = $connect->prepare($query);
-$statement->execute();
-
-$upcomingEvents = array();
-$pastEvents = array();
-
-if ($statement->rowCount() > 0) {
-    foreach ($statement->fetchAll() as $row) {
-        $eventDate = $row["date"];
-
-        if ($eventDate > $currentDate) {
-            $upcomingEvents[] = $row;
-        } else {
-            $pastEvents[] = $row;
-        }
-    }
-}
-
-echo '<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-<h6 class="section-title bg-white text-center text-primary px-3">Upcoming events</h6>
-<br><br>
-</div>';
-if (empty($upcomingEvents)) {
-    echo '<div class="text-center">';
-    echo '<i class="fas fa-exclamation-circle text-primary mb-4"></i>';
-    echo '&nbsp; No Upcoming Events to Show';
-    echo '</div>';
-} else {
-    foreach ($upcomingEvents as $row) {
-        echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-        echo '<div class="course-item bg-light">';
-        echo '<div class="position-relative overflow-hidden">';
-        echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
-        echo '</div>';
-        echo '<div class="text-center p-4 pb-0">';
-        echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
-        echo '</div>';
-        echo '<div class="w-100 d-flex justify-content-center bottom-0 start-0 mb-4">';
-        echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;">Read More</a>';
-        echo '</div>';
-        echo '<div class="d-flex border-top">';
-        echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
-        echo '<small class="flex-fill text-center py-2"><i class="fa fa-map-marker text-primary me-2"></i>' . $row["location"] . '</small>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-    }
-}
-
-
-// past events
-echo '            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-<h6 class="section-title bg-white text-center text-primary px-3">past events</h6>
-<br><br>
-</div>';
-foreach ($pastEvents as $row) {
-    echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-    echo '<div class="course-item bg-light">';
-    echo '<div class="position-relative overflow-hidden">';
-    echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
-    echo '</div>';
-    echo '<div class="text-center p-4 pb-0">';
-    echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
-    echo '</div>';
-    echo '<div class="w-100 d-flex justify-content-center bottom-0 start-0 mb-4">';
-    echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;">Read More</a>';
-    echo '</div>';
-    echo '<div class="d-flex border-top">';
-    echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
-    echo '<small class="flex-fill text-center py-2"><i class="fa fa-map-marker text-primary me-2"></i>' . $row["location"] . '</small>';
-    echo '</div>';
-    echo '</div>';
-    echo '</div>';
-}
-?>
-
-            </div>
-
+            // past events
+            echo '<div class="text-center wow fadeInUp mb-5 mt-5" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Past Events</h6>
+            </div>';
+            foreach ($pastEvents as $row) {
+                echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
+                echo '<div class="course-item bg-light">';
+                echo '<div class="position-relative overflow-hidden">';
+                echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["img"] . '" style="width: auto;">';
+                echo '</div>';
+                echo '<div class="text-center p-4 pb-0">';
+                echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
+                echo '</div>';
+                echo '<div class="w-100 d-flex justify-content-center mb-4">';
+                echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;">Read More</a>';
+                echo '</div>';
+                echo '<div class="d-flex border-top">';
+                echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
+                echo '<small class="flex-fill text-center py-2"><i class="fa fa-map-marker text-primary me-2"></i>' . $row["location"] . '</small>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+            ?>
 
         </div>
     </div>
-
+</div>
 
 
 
