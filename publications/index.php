@@ -43,7 +43,6 @@
         .publications-header-inner {
             background: rgba(15, 23, 43, .7);
         }
-
     </style>
 </head>
 
@@ -139,8 +138,8 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="/content/img/golden-captures/golden-cap.webp" alt="golden-captures" style="object-fit: cover;"
-                            loading="lazy">
+                            src="/content/img/golden-captures/golden-cap.webp" alt="golden-captures"
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -169,8 +168,8 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
-                            src="/content/img/img-publications/music.webp" alt="music-on-demand" style="object-fit: cover;"
-                            loading="lazy">
+                            src="/content/img/img-publications/music.webp" alt="music-on-demand"
+                            style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -186,6 +185,38 @@
 
                     <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="/publications/music"
                         data-wow-delay="0.1s">Listen Now</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-xxl py-5" id="music">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100"
+                            src="/content/img/img-publications/video.webp" alt="video-on-demand"
+                            style="object-fit: cover;" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3"></h6>
+                    <h1 class="mb-4">VIDEO ON DEMAND</h1>
+                    <p class="mb-4">
+                        Welcome to our 'Video on Demand' page, where you can explore a diverse array of video content
+                        produced by Cambrians Media & Broadcasting Unit (CMBU). Just like Prince of Wales College is
+                        renowned for its excellence in education and sports, our curated selection of videos aims to
+                        showcase the dynamic spirit and legacy of our school. Dive into a visual journey that reflects
+                        the creativity and dedication of our school community, inspiring present and future generations
+                        alike. Enjoy watching all video productions done by <b>Cambrians Media & Broadcasting Unit
+                        (CMBU)</b>.
+                    </p>
+
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="/publications/videos"
+                        data-wow-delay="0.1s">Watch Now</a>
 
                 </div>
             </div>

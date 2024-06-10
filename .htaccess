@@ -9,6 +9,17 @@ RewriteRule ^(.*)$ $1.php [NC,L]
 RewriteCond %{THE_REQUEST} "^[^ ]* .*\.php[? ]" [NC]
 RewriteRule ^(.*)\.php$ /$1 [R=301,L]
 
+<Files "README.md">
+    <If "%{HTTP_REFERER} == ''">
+        Require all denied
+    </If>
+</Files>
+
+<Files ".gitignore">
+    <If "%{HTTP_REFERER} == ''">
+        Require all denied
+    </If>
+</Files>
 
 # root
 RewriteRule ^$ views/index.php [NC,L]

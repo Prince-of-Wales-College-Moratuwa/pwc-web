@@ -8,7 +8,7 @@
 ?>
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Publications | Prince of Wales' College" />
+    <meta name="title" content="Music on Demand | Prince of Wales' College" />
     <meta name="description"
         content="Explore the rich tapestry of publications from Prince of Wales' College, including the annual magazine, golden book, and more. Dive into a world of academic achievements, creative expressions, and cherished memories that define our vibrant college community." />
     <meta name="keywords"
