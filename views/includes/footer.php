@@ -1,11 +1,43 @@
+<!-- Container for Floating Icons -->
+<div class="floating-icons">
+    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us">
+        <img src="https://www.bw2024.lk/vote4us.png" alt="logo" width="125" height="125" class="floating-logo">
+    </a>
+    <a href="#" title="go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+</div>
+
 <style>
     .footer {
-    background-image: url('/content/img/patterntp.webp');
-    background-size: cover;
-    background-position: center;
-    padding-top: 100px;
-}
+        background-image: url('/content/img/patterntp.webp');
+        background-size: cover;
+        background-position: center;
+        padding-top: 100px;
+    }
 
+    .floating-icons {
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 1000;
+    }
+
+    .floating-logo {
+        transition: transform 0.3s;
+    }
+
+    .floating-logo:hover {
+        transform: scale(1.1);
+    }
+
+    .back-to-top {
+        margin: 0;
+    }
 </style>
 
 <!-- Footer Start -->
@@ -42,15 +74,13 @@
                         target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CMBUlive" target="_blank"
                         title="Subscribe to our YouTube channel"><i class="fab fa-youtube"></i></a>
-
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <!-- 
                     <img src="https://www.bestweb.lk/wp-content/uploads/2024/02/bestweb-2024-web.png" width="100px">
-                    -->
+                -->
             </div>
-
         </div>
     </div>
     <div class="container">
@@ -63,13 +93,11 @@
                         href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcasting
                         Unit</a>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
 <!-- Footer End -->
-
 
 <script>
     const installButton = document.getElementById('install-button');
@@ -84,11 +112,6 @@
         deferredPrompt.prompt();
     });
 </script>
-
-<!-- Back to Top -->
-<a href="#" title="go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
-        class="bi bi-arrow-up"></i></a>
-
 
 <!-- JavaScript Libraries -->
 <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"

@@ -138,7 +138,7 @@ if ($currentDate < $birthday) {
     </div> -->
 
 
-    <br>
+    <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
@@ -154,7 +154,7 @@ if ($currentDate < $birthday) {
                 </center>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 </div>
