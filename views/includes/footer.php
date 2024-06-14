@@ -1,7 +1,7 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
-    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us">
-        <img src="https://www.bw2024.lk/vote4us.png" alt="logo" width="125" height="125" class="floating-logo">
+    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us" target="_blank">
+        <img src="https://www.bw2024.lk/vote4us.png" alt="logo" width="150" height="150" class="floating-logo">
     </a>
     <a href="#" title="go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
@@ -80,6 +80,10 @@
                 <!-- 
                     <img src="https://www.bestweb.lk/wp-content/uploads/2024/02/bestweb-2024-web.png" width="100px">
                 -->
+                    
+                <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank">
+                    <img src="content/img/bestweb/TopWebMay-150x150.jpg" width="75px" alt="TopWebLK May 2024">
+                </a>
             </div>
         </div>
     </div>
