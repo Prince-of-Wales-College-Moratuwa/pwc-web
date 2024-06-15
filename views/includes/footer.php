@@ -76,7 +76,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank">
-                    <img src="content/img/bestweb/TopWebMay-150x150.jpg" width="90px" alt="TopWebLK May 2024">
+                    <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="90px" alt="TopWebLK May 2024">
                 </a>
             </div>
         </div>
