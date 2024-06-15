@@ -1,6 +1,6 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
-    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us" target="_blank" class="floating-logo-container">
+    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us" target="_blank" class="floating-logo-container" id="bestweb-logo">
         <img src="https://www.bw2024.lk/vote4us.png" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
     <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
@@ -98,6 +98,17 @@
 <!-- Footer End -->
 
 <script>
+
+    const bestwebLogo = document.getElementById('bestweb-logo');
+
+window.addEventListener('scroll', () => {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        bestwebLogo.style.display = 'none';
+    } else {
+        bestwebLogo.style.display = 'block';
+    }
+});
+
     const installButton = document.getElementById('install-button');
 
     window.addEventListener('beforeinstallprompt', (event) => {
