@@ -61,7 +61,7 @@
     ?>
     <style>
         .notice-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-sports/battle-of-the-golds-header-pwc.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-home/notice/bestweblk.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -118,15 +118,15 @@ if ($currentDate < $birthday) {
         </div>
     </div>
 
-    <!--     
-    <br>
+       
+    <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="h1 text-white animated slideInDown">Vote Now!</h1>
+                <h1 class="h1 text-white animated slideInDown">Vote Us!</h1>
                 <p class=" mb-3 text-white animated slideInDown">To become the most popular school website, vote for us
                     in the BestWeb.LK 2024 contest.</p>
-                <p class="h6 text-white animated slideInDown">Deadline for voting is 12th December </p><br>
+                <p class="h6 text-white animated slideInDown">Deadline for voting is 15th July </p><br>
                 <center>
                     <a href="https://vote.bestweb.lk" target="_blank"
                         style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
@@ -135,8 +135,7 @@ if ($currentDate < $birthday) {
 
             </div>
         </div>
-    </div> -->
-
+    </div>  -->
 
     <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">

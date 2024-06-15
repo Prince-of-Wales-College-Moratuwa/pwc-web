@@ -1,9 +1,9 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
-    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us" target="_blank">
-        <img src="https://www.bw2024.lk/vote4us.png" alt="logo" width="130" height="130" class="floating-logo">
+    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us" target="_blank" class="floating-logo-container">
+        <img src="https://www.bw2024.lk/vote4us.png" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
-    <a href="#" title="go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+    <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
     </a>
 </div>
@@ -19,19 +19,20 @@
     .floating-icons {
         position: fixed;
         bottom: 20px;
+        left: 20px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        padding: 0 20px;
         z-index: 1000;
     }
 
     .floating-logo {
+        width: 175px;
         transition: transform 0.3s;
     }
 
     .floating-logo:hover {
-        transform: scale(1.1);
+        transform: scale(1.25);
     }
 
     .back-to-top {
@@ -60,9 +61,7 @@
                 <a class="btn btn-link" href="/imprint">Imprint</a>
             </div>
             <div class="col-lg-3 col-md-6">
-                <left>
-                    <h4 class="text-white mb-3">Contact</h4>
-                </left>
+                <h4 class="text-white mb-3">Contact</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Galle Road, Moratuwa, CM7 2AA, 10456</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+94 112 645 628</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@princeofwales.edu.lk</p>
@@ -76,12 +75,8 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <!-- 
-                    <img src="https://www.bestweb.lk/wp-content/uploads/2024/02/bestweb-2024-web.png" width="100px">
-                -->
-                    
                 <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank">
-                    <img src="content/img/bestweb/TopWebMay-150x150.jpg" width="75px" alt="TopWebLK May 2024">
+                    <img src="content/img/bestweb/TopWebMay-150x150.jpg" width="90px" alt="TopWebLK May 2024">
                 </a>
             </div>
         </div>
