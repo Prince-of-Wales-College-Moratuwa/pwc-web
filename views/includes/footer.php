@@ -1,7 +1,7 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
     <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us" target="_blank">
-        <img src="https://www.bw2024.lk/vote4us.png" alt="logo" width="150" height="150" class="floating-logo">
+        <img src="https://www.bw2024.lk/vote4us.png" alt="logo" width="130" height="130" class="floating-logo">
     </a>
     <a href="#" title="go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
@@ -19,7 +19,6 @@
     .floating-icons {
         position: fixed;
         bottom: 20px;
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
