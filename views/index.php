@@ -40,6 +40,37 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "CollegeOrUniversity",
+            "name": "Prince of Wales College",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Galle Road",
+                "addressLocality": "Moratuwa",
+                "addressRegion": "Western Province",
+                "postalCode": "10456",
+                "addressCountry": "LK"
+            },
+            "url": "https://www.princeofwales.edu.lk",
+            "logo": "https://www.princeofwales.edu.lk/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+94 112 645 628",
+                "email": "info@princeofwales.edu.lk",
+                "contactType": "Hotline",
+                "areaServed": "LK",
+                "availableLanguage": ["English", "Sinhala"]
+            },
+            "sameAs": [
+                "https://www.facebook.com/pwcmoratuwaSriLanka",
+                "https://www.instagram.com/cmbulive/",
+                "https://www.youtube.com/@CMBUlive"
+            ]
+        }
+    </script>
+
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
@@ -118,7 +149,7 @@ if ($currentDate < $birthday) {
         </div>
     </div>
 
-       
+
     <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
         <div class="row justify-content-center">

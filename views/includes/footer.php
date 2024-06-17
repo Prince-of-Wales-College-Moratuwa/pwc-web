@@ -1,6 +1,6 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
-    <a href="https://www.vote.bestweb.lk/site/princeofwhales_edu_lk/" title="Vote for us" target="_blank" class="floating-logo-container" id="bestweb-logo">
+    <a href="https://www.vote.bestweb.lk/site/princeofwales_edu_lk/" title="Vote for us" target="_blank" class="floating-logo-container" id="bestweb-logo">
         <img src="https://www.bw2024.lk/vote4us.png" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
     <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
