@@ -66,7 +66,7 @@
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+94 112 645 628</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@princeofwales.edu.lk</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/pwcmoratuwaSriLanka"
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/cambrians.media"
                         target="_blank" title="Visit our Facebook page"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/cmbulive/"
                         target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>

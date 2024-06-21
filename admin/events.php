@@ -69,7 +69,6 @@ include 'admin-header.php';
 						<td><?php echo($row["organizer_name"]) ?></td>
 
 						<td>
-							<a href="../events/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
 							<a  href="events_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
 							<a href="event_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
 						</td>

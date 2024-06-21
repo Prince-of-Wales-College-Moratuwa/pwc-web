@@ -71,7 +71,6 @@ $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
 						<td><?php echo($row["title"]) ?></td>
 
 						<td>
-							<a href="../blog/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
 							<a href="news_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
 							<a href="news_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
 						</td>

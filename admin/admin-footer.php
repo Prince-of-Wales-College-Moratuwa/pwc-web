@@ -24,9 +24,9 @@
        
 
 
-    	<script src="/admin/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    	<script src="/admin/js/bootstrap.bundle.min.js"></script>
         <script src="/admin/js/scripts.js"></script>
-        <script src="/admin/js/simple-datatables@latest.js" crossorigin="anonymous"></script>
+        <script src="/admin/js/simple-datatables@latest.js"></script>
         <script src="/admin/js/datatables-simple-demo.js"></script>
 
     </body>

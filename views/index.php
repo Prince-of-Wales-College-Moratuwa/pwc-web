@@ -64,7 +64,7 @@
                 "availableLanguage": ["English", "Sinhala"]
             },
             "sameAs": [
-                "https://www.facebook.com/pwcmoratuwaSriLanka",
+                "https://www.facebook.com/cambrians.media",
                 "https://www.instagram.com/cmbulive/",
                 "https://www.youtube.com/@CMBUlive"
             ]
