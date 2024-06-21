@@ -42,6 +42,7 @@ if (count($_POST) > 0) {
         ':category' => $_POST['category'],
         ':slug' => $_POST['slug'],
         ':author' => $_POST['author'],
+        ':date' => $_POST['date'],
         ':categoryslug' => $categoryslug,
         ':schoolPride' => $_POST['schoolPride'],
         ':id' => $_GET['id'],
@@ -77,6 +78,7 @@ if (count($_POST) > 0) {
                 category = :category, 
                 slug = :slug, 
                 author = :author, 
+                date = :date, 
                 categoryslug = :categoryslug, 
                 schoolPride = :schoolPride, 
                 photo = :photo 
@@ -191,6 +193,15 @@ $row['photo'] = isset($row['photo']) ? $row['photo'] : '';
                                 <option value="Student" <?php echo ($row['author'] == 'Student') ? 'selected' : ''; ?>>
                                     Student</option>
                             </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Date</label>
+                            <input type="date" name="date" id="date" class="form-control"
+                                value="<?php echo $row['date']; ?>"
+                                oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase()" />
                         </div>
                     </div>
 
