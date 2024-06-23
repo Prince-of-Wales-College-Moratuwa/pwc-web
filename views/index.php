@@ -40,36 +40,7 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "CollegeOrUniversity",
-            "name": "Prince of Wales College",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Galle Road",
-                "addressLocality": "Moratuwa",
-                "addressRegion": "Western Province",
-                "postalCode": "10456",
-                "addressCountry": "LK"
-            },
-            "url": "https://www.princeofwales.edu.lk",
-            "logo": "https://www.princeofwales.edu.lk/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+94 112 645 628",
-                "email": "info@princeofwales.edu.lk",
-                "contactType": "Hotline",
-                "areaServed": "LK",
-                "availableLanguage": ["English", "Sinhala"]
-            },
-            "sameAs": [
-                "https://www.facebook.com/cambrians.media",
-                "https://www.instagram.com/cmbulive/",
-                "https://www.youtube.com/@CMBUlive"
-            ]
-        }
-    </script>
+    
 
     <script>
         if ('serviceWorker' in navigator) {
@@ -120,34 +91,39 @@ if ($currentDate < $birthday) {
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5">
 
-    <div class="header-carousel-wrapper position-relative d-flex justify-content-center align-items-center">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <picture>
-                    <source media="(max-width: 600px)" srcset="content/img/img-home/header-main-pwc_mobile.webp">
-                    <source media="(max-width: 800px)" srcset="content/img/img-home/header-main-pwc_tab.webp">
-                    <img class="img-fluid" src="content/img/img-home/header-main-pwc_desktop.webp"
-                        alt="Front View of Prince of Wales College">
-                </picture>
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(0, 0, 0, 0.375);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-sm-9 col-lg-8 text-center">
-                                <p class="h1 text-white text-uppercase mb-3" style="font-size: 24px;">
-                                    Welcome To</p>
-                                <h1 class="display-3 text-white text-uppercase animated slideInDown text-header">Prince
-                                    of Wales'
-                                    College</h1>
-                                <!-- <p class="h1 text-white text-uppercase mb-3" style="font-size: 30px;">
-                    Moratuwa</p> -->
-                            </div>
+<div class="header-carousel-wrapper position-relative d-flex justify-content-center align-items-center">
+    <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <?php
+                $currentHour = date('H');
+                $isNightTime = $currentHour >= 18;
+                $imageSrc = $isNightTime ? 'content/img/img-home/header-night.webp' : 'content/img/img-home/header-main-pwc_desktop.webp';
+            ?>
+            <picture>
+                <source media="(max-width: 600px)" srcset="<?php echo $imageSrc; ?>">
+                <source media="(max-width: 800px)" srcset="<?php echo $imageSrc; ?>">
+                <img class="img-fluid" src="<?php echo $imageSrc; ?>" alt="Front View of Prince of Wales College">
+            </picture>
+
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                style="background: rgba(0, 0, 0, 0.375);">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 col-lg-8 text-center">
+                            <p class="h1 text-white text-uppercase mb-3" style="font-size: 24px;">
+                                Welcome To</p>
+                            <h1 class="display-3 text-white text-uppercase animated slideInDown text-header">Prince
+                                of Wales' College</h1>
+                            <!-- <p class="h1 text-white text-uppercase mb-3" style="font-size: 30px;">
+                Moratuwa</p> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 
 
     <!-- <br>

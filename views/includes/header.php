@@ -3,7 +3,6 @@
     <meta name="robots" content="index, follow">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="theme-color" content="#800000">
-
     <?php 
     
     date_default_timezone_set('Asia/Colombo'); 
