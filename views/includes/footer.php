@@ -1,6 +1,7 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
-    <a href="https://www.vote.bestweb.lk/site/princeofwales_edu_lk/" title="Vote for us" target="_blank" class="floating-logo-container" id="bestweb-logo">
+    <a href="https://www.vote.bestweb.lk/site/princeofwales_edu_lk/" title="Vote for us" target="_blank"
+        class="floating-logo-container" id="bestweb-logo">
         <img src="https://www.bw2024.lk/vote4us.png" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
     <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
@@ -76,9 +77,15 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank">
-                    <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="90px" alt="TopWebLK May 2024">
+                    <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="80px" alt="TopWebLK May 2024">
                 </a>
+
+                <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprinceofwales.edu.lk%2F" title="This website runs on green hosting - verified by thegreenwebfoundation.org" target="_blank">
+                    <img src="https://app.greenweb.org/api/v3/greencheckimage/princeofwales.edu.lk?nocache=true"
+                        alt="This website runs on green hosting - verified by thegreenwebfoundation.org" width="145px"> 
+                </a> 
             </div>
+
         </div>
     </div>
     <div class="container">
@@ -98,16 +105,15 @@
 <!-- Footer End -->
 
 <script>
-
     const bestwebLogo = document.getElementById('bestweb-logo');
 
-window.addEventListener('scroll', () => {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        bestwebLogo.style.display = 'none';
-    } else {
-        bestwebLogo.style.display = 'block';
-    }
-});
+    window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            bestwebLogo.style.display = 'none';
+        } else {
+            bestwebLogo.style.display = 'block';
+        }
+    });
 
     const installButton = document.getElementById('install-button');
 
