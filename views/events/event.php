@@ -49,19 +49,6 @@ foreach ($rows as $row) {
 
 </head>
 
-<style>
-  @media (min-width: 768px) {
-    img {
-      max-width: 50%;
-    }
-  }
-
-  @media (min-width: 992px) {
-    img {
-      max-width: 30%;
-    }
-  }
-</style>
 
 </head>
 
