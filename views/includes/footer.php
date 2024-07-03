@@ -28,7 +28,7 @@
     }
 
     .floating-logo {
-        width: 175px;
+        width: 250px;
         transition: transform 0.3s;
     }
 

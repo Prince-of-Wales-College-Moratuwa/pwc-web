@@ -122,23 +122,23 @@ if ($currentDate < $birthday) {
 
 
 
-    <!-- <br>
+    <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="h1 text-white animated slideInDown">Vote Us!</h1>
-                <p class=" mb-3 text-white animated slideInDown">To become the most popular school website, vote for us
-                    in the BestWeb.LK 2024 contest.</p>
+                <h1 class="h1 text-white animated slideInDown">VOTE FOR US!</h1>
+                <p class=" mb-3 text-white animated slideInDown"><b>To Become the Most Popular School Website, Vote for Us
+                    in the BestWeb.LK 2024 Contest.</b></p>
                 <p class="h6 text-white animated slideInDown">Deadline for voting is 15th July </p><br>
                 <center>
-                    <a href="https://vote.bestweb.lk" target="_blank"
+                    <a href="https://www.vote.bestweb.lk/site/princeofwales_edu_lk/" target="_blank"
                         style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
                         class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Vote Now!</a>
                 </center>
 
             </div>
         </div>
-    </div>  -->
+    </div> 
 
     <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
