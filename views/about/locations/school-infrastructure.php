@@ -81,8 +81,7 @@
                 which means all the buildings and things the school needed to work properly. <br>
                 So, the Prince of Wales College has a history that goes back a very long time, and its infrastructure
                 was carefully designed to support the education of its students.
-                <br><br>
-                <a class="btn btn-link" href="/content/docs/exiting-plan-pwc.pdf" target="_blank">View School Plan</a>
+                <br><br><a class="btn btn-link" href="/content/docs/exiting-plan-pwc.pdf" target="_blank" rel="noopener noreferrer">View School Plan</a>
             </p>
         </div>
         <div class="container">
