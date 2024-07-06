@@ -104,6 +104,18 @@ if ($schoolPride == 'ON') {
 ?>
 
 
+<script>
+    function openFacebookLinksInNewTab() {
+        var links = document.querySelectorAll('a[href*="facebook.com"]');
+        links.forEach(function(link) {
+            link.setAttribute('target', '_blank'); 
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        openFacebookLinksInNewTab();
+    });
+</script>
 
 
     <header>
