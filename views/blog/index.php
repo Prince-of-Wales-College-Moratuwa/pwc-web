@@ -100,7 +100,7 @@
                 $total_pages = ceil($total_results / $limit);
 
                 // Fetch limited posts for current page
-                $query = "SELECT * FROM pwc_db_news ORDER BY date DESC LIMIT $start, $limit";
+                $query = "SELECT * FROM pwc_db_news ORDER BY date DESC, id DESC LIMIT $start, $limit";
                 $statement = $connect->prepare($query);
                 $statement->execute();
 

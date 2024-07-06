@@ -129,8 +129,8 @@ echo '</ul>';
                     Sector</a></li>
             <li class="list-group-item"><a href="/publications/music">Music On Demand</a>
             </li>
-            <li class="list-group-item"><a href="/publications/golden-captures">Golden
-                    Captures</a></li>
+            <li class="list-group-item"><a href="/publications/golden-captures">Golden Captures</a></li>
+            <li class="list-group-item"><a href="/publications/videos">Video On Demand</a></li>
         </ul>
 
 
