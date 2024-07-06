@@ -6,7 +6,7 @@
     $page = 'blog';
     include '../../database_connection.php';
     ?>
-    <title>Blog</title>
+    <title>Blog | Prince of Wales' College</title>
     <!-- seo -->
 
     <!-- Primary Meta Tags -->
@@ -110,7 +110,7 @@
                 <div class="col-md-4 animate-box wow fadeInUp ">
                     <article class="article-entry">
                         <a href="<?php echo $row["slug"]; ?>" class="blog-img">
-                            <img src="/content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>" loading="lazy"><br><br>
+                            <img src="/content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["title"]; ?>" loading="lazy"><br><br>
                             <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                                 <span><?php echo $row["category"]; ?></span></p>
                         </a>

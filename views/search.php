@@ -72,7 +72,7 @@
                             echo '<br><br><div class="col-md-4 animate-box">
                                     <article class="article-entry">
                                         <a href="blog/' . htmlspecialchars($row["slug"]) . '" class="blog-img">
-                                            <img src="/content/img/img-blog/' . htmlspecialchars($row["photo"]) . '" alt="' . htmlspecialchars($row["photo"]) . '"><br><br>
+                                            <img src="/content/img/img-blog/' . htmlspecialchars($row["photo"]) . '" alt="' . htmlspecialchars($row["title"]) . '"><br><br>
                                             <p class="meta"><span class="day">' . htmlspecialchars($row["date"]) . '</span> │ <span>' . htmlspecialchars($row["category"]) . '</span></p>
                                         </a>
                                         <div class="desc">
@@ -104,7 +104,7 @@
                             echo '<br><br><div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="course-item bg-light">
                                         <div class="position-relative overflow-hidden">
-                                            <img class="img-fluid" src="/content/img/img-events/' . htmlspecialchars($row["img"]) . '" alt="' . htmlspecialchars($row["img"]) . '" style="width: auto;">
+                                            <img class="img-fluid" src="/content/img/img-events/' . htmlspecialchars($row["img"]) . '" alt="' . htmlspecialchars($row["title"]) . '" style="width: auto;">
                                         </div>
                                         <div class="text-center p-4 pb-0">
                                             <h4 class="mb-4">' . htmlspecialchars($row["title"]) . '</h4>

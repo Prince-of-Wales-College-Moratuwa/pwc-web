@@ -277,7 +277,7 @@ if($statement->rowCount() > 0)
             <div class="col-md-4 animate-box wow fadeInUp" data-wow-delay="0.1s">
                 <article class="article-entry">
                     <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
-                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["photo"]; ?>"
+                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["title"]; ?>"
                             width="600" height="400" loading="lazy"><br><br>
                         <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                             <span><?php echo $row["category"]; ?></span></p>

@@ -66,7 +66,7 @@ foreach ($rows as $row) {
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="position-relative ">
                         <img class="img-fluid w-100 h-100" src="content/img/img-home/<?php echo $row["img"]; ?>"
-                            alt="principal-pwc" style="object-fit: cover; border-radius: 8px;">
+                            alt="<?php echo $row["name"]; ?>" style="object-fit: cover; border-radius: 8px;">
                     </div>
                 </div>
             </div>

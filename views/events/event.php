@@ -83,7 +83,7 @@ foreach ($rows as $row) {
       </div>
       <div class="col-md-4">
         <br><br>
-        <img src="../../content/img/img-events/<?php echo $row["img"]; ?>" alt="<?php echo $row["img"]; ?>" class="img-fluid"
+        <img src="../../content/img/img-events/<?php echo $row["img"]; ?>" alt="<?php echo $row["title"]; ?>" class="img-fluid"
           style="object-fit: cover; border-radius: 8px; max-width: 100%; height: auto; width: auto;">
 
       </div>
