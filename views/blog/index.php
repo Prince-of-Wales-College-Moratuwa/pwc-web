@@ -86,12 +86,26 @@
     <div class="colorlib-blog colorlib-light-grey">
         <div class="container">
             <div class="row">
-                <?php 
-                $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
+                <?php
+                // Pagination logic
+                $limit = 9; // Number of posts per page
+                $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                $start = ($page - 1) * $limit;
+
+                // Fetch total number of posts
+                $query = "SELECT COUNT(*) FROM pwc_db_news";
                 $statement = $connect->prepare($query);
                 $statement->execute();
-                if($statement->rowCount() > 0) {
-                    foreach($statement->fetchAll() as $row) { 
+                $total_results = $statement->fetchColumn();
+                $total_pages = ceil($total_results / $limit);
+
+                // Fetch limited posts for current page
+                $query = "SELECT * FROM pwc_db_news ORDER BY date DESC LIMIT $start, $limit";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+
+                if ($statement->rowCount() > 0) {
+                    foreach ($statement->fetchAll() as $row) {
                 ?>
                 <div class="col-md-4 animate-box wow fadeInUp ">
                     <article class="article-entry">
@@ -108,8 +122,38 @@
                 </div>
                 <?php 
                     }
-                }   
+                } 
                 ?>
+            </div>
+            <!-- Pagination Links -->
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <?php if($page > 1){ ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo $page - 1; ?>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <?php } ?>
+
+                            <?php for($i = 1; $i <= $total_pages; $i++){ ?>
+                            <li class="page-item <?php if($page == $i) echo 'active'; ?>">
+                                <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                            </li>
+                            <?php } ?>
+
+                            <?php if($page < $total_pages){ ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo $page + 1; ?>" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
