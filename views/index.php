@@ -256,7 +256,7 @@ if ($currentDate < $birthday) {
 
             <?php 
 
-$query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
+$query = "SELECT * FROM pwc_db_news ORDER BY date DESC, id DESC";
 
 $statement = $connect->prepare($query);
 
@@ -327,7 +327,7 @@ if($statement->rowCount() > 0)
         <div class="row g-4 justify-content-center">
 
             <?php 
-$query = "SELECT * FROM pwc_db_events ORDER BY date DESC";
+$query = "SELECT * FROM pwc_db_events ORDER BY date DESC, id DESC";
 $statement = $connect->prepare($query);
 $statement->execute();
 $limit = 3;
