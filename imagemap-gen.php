@@ -49,7 +49,7 @@ function generateImagesSitemap($directory, $baseUrl, $outputFile) {
     $sitemapContent = generateSitemap($images, $baseUrl);
 
     if (file_put_contents($outputFile, $sitemapContent)) {
-        echo "Sitemap has been generated successfully.";
+        echo "";
     } else {
         echo "There was an error writing the sitemap.";
     }
