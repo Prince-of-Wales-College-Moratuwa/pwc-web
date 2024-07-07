@@ -13,7 +13,7 @@ function scanDirectory($directory) {
 
     foreach ($iterator as $file) {
         // Exclude the 'icons' folder within 'content'
-        if ($file->isDir() && $file->getFilename() === 'icons' && $file->getPath() === $directory . DIRECTORY_SEPARATOR . 'icons') {
+        if ($file->isDir() && $file->getFilename() === 'icons' && strpos($file->getPathname(), $directory . DIRECTORY_SEPARATOR . 'icons') !== false) {
             $iterator->next();
         } elseif ($file->isFile()) {
             $extension = strtolower(pathinfo($file->getFilename(), PATHINFO_EXTENSION));
@@ -30,13 +30,12 @@ function scanDirectory($directory) {
 function generateSitemap($images, $baseUrl) {
     $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"></urlset>');
 
-    $url = $xml->addChild('url');
-    $url->addChild('loc', htmlspecialchars($baseUrl));
-    $url->addChild('lastmod', date('c'));
-    $url->addChild('priority', '0.6');
-
     foreach ($images as $image) {
         $relativePath = str_replace('\\', '/', str_replace(realpath(dirname(__FILE__)), '', realpath($image)));
+        $url = $xml->addChild('url');
+        $url->addChild('loc', htmlspecialchars($baseUrl));
+        $url->addChild('lastmod', date('c'));
+        $url->addChild('priority', '0.6');
         $img = $url->addChild('image:image', null, 'http://www.google.com/schemas/sitemap-image/1.1');
         $img->addChild('image:loc', htmlspecialchars($baseUrl . ltrim($relativePath, '/')), 'http://www.google.com/schemas/sitemap-image/1.1');
     }
@@ -50,9 +49,9 @@ function generateImagesSitemap($directory, $baseUrl, $outputFile) {
     $sitemapContent = generateSitemap($images, $baseUrl);
 
     if (file_put_contents($outputFile, $sitemapContent)) {
-        echo "";
+        echo "Sitemap has been generated successfully.";
     } else {
-        echo "";
+        echo "There was an error writing the sitemap.";
     }
 }
 
