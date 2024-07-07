@@ -83,6 +83,7 @@ if(isset($_POST["login_button"]))
 
 include 'views/includes/header.php';
 include 'sitemap-gen.php';
+include 'imagemap-gen.php';
 
 ?>
 
