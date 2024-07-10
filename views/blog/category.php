@@ -127,7 +127,7 @@ foreach ($rows as $row) {
                 <div class="row">
                     <?php 
 
-$query = "SELECT * FROM pwc_db_news WHERE categoryslug='$categoryslug' ORDER BY date DESC";
+$query = "SELECT * FROM pwc_db_news WHERE categoryslug='$categoryslug' ORDER BY date DESC, id DESC";
 
 $statement = $connect->prepare($query);
 
