@@ -77,6 +77,26 @@
 
 
     <style>
+                /* For Webkit browsers (Chrome, Safari) */
+                ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: white;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: maroon;
+            border: 3px solid white;
+        }
+
+        /* For Firefox */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: maroon white;
+        }
+        
         ::selection {
             background-color: #800000;
             color: white;
@@ -123,7 +143,6 @@
                 font-size: 14px;
             }
         }
-
     </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1KCZVJTWP"></script>
