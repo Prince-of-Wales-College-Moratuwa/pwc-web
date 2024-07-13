@@ -137,7 +137,7 @@ include 'includes/header.php';
         </div>
         <br>
         <div class="alert alert-danger" role="danger">
-    If you have any further questions, please feel free to email us at <a href="mailto:info@princeofwales.edu.lk"><b>info@princeofwales.edu.lk</b></a> or <a href="mailto:officepwm@gmail.com"><b>officepwm@gmail.com</b></a>, or use our chatbot on left corner of this page.
+    If you have any further questions, please feel free to email us at <a href="mailto:info@princeofwales.edu.lk"><b>info@princeofwales.edu.lk</b></a> or <a href="mailto:office@princeofwales.edu.lk"><b>office@princeofwales.edu.lk</b></a>, or use our chatbot on left corner of this page.
 </div>
 
     </div>
