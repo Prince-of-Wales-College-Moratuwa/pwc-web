@@ -40,7 +40,7 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
-    
+
 
     <script>
         if ('serviceWorker' in navigator) {
@@ -127,8 +127,9 @@ if ($currentDate < $birthday) {
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <h1 class="h1 text-white animated slideInDown">VOTE FOR US!</h1>
-                <p class=" mb-3 text-white animated slideInDown"><b>To Become the Most Popular School Website, Vote for Us
-                    in the BestWeb.LK 2024 Contest.</b></p>
+                <p class=" mb-3 text-white animated slideInDown"><b>To Become the Most Popular School Website, Vote for
+                        Us
+                        in the BestWeb.LK 2024 Contest.</b></p>
                 <p class="h6 text-white animated slideInDown">Deadline for voting is 15th July </p><br>
                 <center>
                     <a href="https://www.vote.bestweb.lk/site/princeofwales_edu_lk/" target="_blank"
@@ -138,7 +139,7 @@ if ($currentDate < $birthday) {
 
             </div>
         </div>
-    </div> 
+    </div>
 
     <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
@@ -521,11 +522,13 @@ foreach ($rows as $row) {
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">big match</h6>
                 <p class="h1 mb-4">BATTLE OF THE GOLDS</p>
-                <p class="mb-4">The Prince of Wales'–St. Sebastian's Cricket Encounter (The Battle of the Golds) is
-                    an annual cricket match played between Prince of Wales' College and St. Sebastian's College
-                    since 1933. <br><br>It is known as The Battle of the Golds due to the colours of the two school's
-                    flags i.e. Purple, Gold and Maroon of Prince of Wales' College and Green, White & Gold of St.
-                    Sebastian's College.</p>
+                <p class="mb-4">The Prince of Wales'–St. Sebastian's Cricket Encounter (The Battle of the Golds) is an
+                    annual cricket match played between Prince of Wales' College and St. Sebastian's College since 1933.
+                    <br><br>It is known as The Battle of the Golds due to the colours of the two school's flags i.e.
+                    Purple, Gold and Maroon of Prince of Wales' College and Green, White & Gold of St. Sebastian's
+                    College. <br><br>Over the years, The Battle of the Golds has become a cherished
+                    tradition, symbolizing the rich history and friendly rivalry between Prince of Wales' College and
+                    St. Sebastian's College.</p>
                 <br>
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match" data-wow-delay="0.1s">Explore
                     Bigmatch</a>
