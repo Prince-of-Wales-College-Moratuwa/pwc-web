@@ -61,18 +61,7 @@
     <?php
     include 'includes/header.php';
     ?>
-    <style>
-        .notice-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-home/notice/bestweblk.webp);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
 
-        .notice-header-inner {
-            background: rgba(15, 23, 43, .7);
-        }
-    </style>
 </head>
 
 <?php 
@@ -123,7 +112,21 @@ if ($currentDate < $birthday) {
 
 
     <br>
-    <div class="container-fluid bg-primary py-5 mb-5 notice-header">
+
+    <style>
+        .notice-header {
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-home/notice/bestweblk.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .notice-header-inner {
+            background: rgba(15, 23, 43, .7);
+        }
+    </style>
+
+    <!-- <div class="container-fluid bg-primary py-5 mb-5 notice-header">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <h1 class="h1 text-white animated slideInDown">VOTE FOR US!</h1>
@@ -139,7 +142,7 @@ if ($currentDate < $birthday) {
 
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
