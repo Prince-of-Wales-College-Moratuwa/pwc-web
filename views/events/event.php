@@ -54,6 +54,14 @@ foreach ($rows as $row) {
 
 <body>
 
+<span>
+    <link itemprop="thumbnailUrl"
+      href="https://princeofwales.edu.lk/content/img/img-events/<?php echo htmlspecialchars($row["img"], ENT_QUOTES, 'UTF-8'); ?>">
+    <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+      <link itemprop="url"
+        href="https://princeofwales.edu.lk/content/img/img-events/<?php echo htmlspecialchars($row["img"], ENT_QUOTES, 'UTF-8'); ?>">
+    </span>
+
 
   <!-- Event Detail Content -->
   <div class="container mt-5">
