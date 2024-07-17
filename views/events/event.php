@@ -7,26 +7,7 @@
   
   ?>
   
-      <!-- Primary Meta Tags -->
-<meta name="title" content="<?php echo $row["title"]; ?>" />
-<meta name="description" content="<?php echo $row["about"]; ?>" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://princeofwales.edu.lk/events/<?php echo $row["id"]; ?>" />
-<meta property="og:title" content="<?php echo $row["title"]; ?>" />
-<meta property="og:description" content="<?php echo $row["about"]; ?>" />
-<meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-events/<?php echo htmlspecialchars($row["img"], ENT_QUOTES, 'UTF-8'); ?>" />
-
-<!-- Twitter / WA / TG -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://princeofwales.edu.lk/events/<?php echo $row["id"]; ?>" />
-<meta property="twitter:title" content="<?php echo $row["title"]; ?>" />
-<meta property="twitter:description" content="<?php echo $row["about"]; ?>" />
-<meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-events/<?php echo htmlspecialchars($row["img"], ENT_QUOTES, 'UTF-8'); ?>" />
-
-<?php  
-include '../includes/header.php'; ?>
 
 <?php
 
@@ -45,7 +26,26 @@ foreach ($rows as $row) {
 
   <title><?php echo $row["title"]; ?></title>
 
+      <!-- Primary Meta Tags -->
+      <meta name="title" content="<?php echo $row["title"]; ?>" />
+<meta name="description" content="<?php echo $row["about"]; ?>" />
 
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://princeofwales.edu.lk/events/<?php echo $row["id"]; ?>" />
+<meta property="og:title" content="<?php echo $row["title"]; ?>" />
+<meta property="og:description" content="<?php echo $row["about"]; ?>" />
+<meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-events/<?php echo htmlspecialchars($row["img"], ENT_QUOTES, 'UTF-8'); ?>" />
+
+<!-- Twitter / WA / TG -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://princeofwales.edu.lk/events/<?php echo $row["id"]; ?>" />
+<meta property="twitter:title" content="<?php echo $row["title"]; ?>" />
+<meta property="twitter:description" content="<?php echo $row["about"]; ?>" />
+<meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-events/<?php echo htmlspecialchars($row["img"], ENT_QUOTES, 'UTF-8'); ?>" />
+
+<?php  
+include '../includes/header.php'; ?>
 
 </head>
 
