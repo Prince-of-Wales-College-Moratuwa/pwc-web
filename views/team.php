@@ -16,14 +16,14 @@
 <meta property="og:url" content="https://princeofwales.edu.lk/team" />
 <meta property="og:title" content="Website Dev Team | Prince of Wales' College" />
 <meta property="og:description" content="Discover the talented Website Development Team at Prince of Wales College. Elevate your online presence with our expert web solutions. Your digital success starts here!" />
-<meta property="og:image" content="https://princeofwales.edu.lk/content/img/" />
+<meta property="og:image" content="https://princeofwales.edu.lk/content/img/web-launch/web-launch.webp" />
 
 <!-- Twitter / WA / TG -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://princeofwales.edu.lk/team" />
 <meta property="twitter:title" content="Website Dev Team | Prince of Wales' College" />
 <meta property="twitter:description" content="Discover the talented Website Development Team at Prince of Wales College. Elevate your online presence with our expert web solutions. Your digital success starts here!" />
-<meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/" />
+<meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/web-launch/web-launch.webp" />
 
 
 <?php include 'includes/header.php'; ?>
