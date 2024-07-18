@@ -12,7 +12,8 @@ if(!is_admin_login())
 	exit();
 }
 
-
+include 'sitemap-gen.php';
+include 'imagemap-gen.php';
 include 'admin-header.php';
 
 ?>
