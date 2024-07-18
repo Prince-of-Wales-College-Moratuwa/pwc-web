@@ -116,9 +116,9 @@ if ($currentDate < $birthday) {
         </div>
     </div>
 
-   <!-- Counter Start -->
+    <!-- Counter Start -->
 
-   <div class="container-xxl py-5">
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4">
                 <!-- First row for mobile -->
@@ -162,7 +162,7 @@ if ($currentDate < $birthday) {
             </div>
         </div>
     </div>
-<!-- Counter End -->
+    <!-- Counter End -->
 
     <br><br>
 
@@ -319,7 +319,6 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                 margin-left: auto;
                 margin-right: auto;
             }
-
         </style>
 
         <!-- stars End -->
@@ -565,17 +564,13 @@ if($statement->rowCount() > 0)
 
 
 
-    <br>
-
-
     <!-- prefects Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
-                <h1 class="mb-5">PREFECTS GUILD</h1>
+                <h1 class="mb-5">HEAD PREFECT</h1>
             </div>
-
 
             <div class="row g-4">
 
@@ -597,20 +592,21 @@ if($statement->rowCount() > 0)
         $rowCount++;
     
         ?>
+                <center>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>"
+                                    alt="Deputy Head Prefect" style="width: auto;">
+                            </div>
 
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>"
-                                alt="Deputy Head Prefect" style="width: auto;">
-                        </div>
-
-                        <div class="text-center p-4">
-                            <h5 class="mb-0"><?php echo $row["name"]; ?></h5>
-                            <small><?php echo $row["post"]; ?></small>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0"><?php echo $row["name"]; ?></h5>
+                                <small><?php echo $row["post"]; ?></small>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </center>
 
                 <?php 
                 if ($rowCount >= $limit) {
@@ -622,9 +618,10 @@ if($statement->rowCount() > 0)
         ?>
 
                 <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="clubs/prefects-guild"
-                        data-wow-delay="0.1s">View All</a></center>
+                        data-wow-delay="0.1s">Explore Prefects Guild</a></center>
 
             </div>
+
 
         </div>
     </div>
@@ -643,7 +640,7 @@ if($statement->rowCount() > 0)
 
     <!-- location -->
     <div class="container" id="locations">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s" >
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Locations and</h6>
             <h1 class="mb-5">INFRASTRUCTURE</h1>
         </div>
