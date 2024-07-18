@@ -153,7 +153,7 @@ if($statement->rowCount() > 0)
                             <div class="desc">
                                 <h4><a href="/blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a>
                                 </h4>
-                                <p><?php echo htmlspecialchars(strip_tags($row["excerpt"])); echo "......"; ?></p>
+                                <p><?php echo htmlspecialchars(strip_tags($row["excerpt"]));  echo "......"; ?></p>
                             </div>
                         </article>
                     </div>
