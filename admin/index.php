@@ -13,7 +13,6 @@ if(!is_admin_login())
 }
 
 include '../sitemap-gen.php';
-include '../imagemap-gen.php';
 include 'admin-header.php';
 
 ?>
