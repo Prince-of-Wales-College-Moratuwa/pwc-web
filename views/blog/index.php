@@ -33,7 +33,7 @@
    
    <style>
         .blog-page-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(../content/img/img-blog/blog-header-pwc.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(/content/img/img-blog/blog-header-pwc.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -70,12 +70,12 @@
                 <div class="col-lg-9 col-md-6">
                     <p class="mb-4">Filter by Category;</p>
                     <a class="btn btn-link active-link" href="/blog">All</a>
-                    <a class="btn btn-link" href="category/sports">Sports</a>
-                    <a class="btn btn-link" href="category/aesthetic">Aesthetic</a>
-                    <a class="btn btn-link" href="category/education">Education</a>
-                    <a class="btn btn-link" href="category/academic">Academic</a>
-                    <a class="btn btn-link" href="category/announcements">Announcements</a>
-                    <a class="btn btn-link" href="category/exclusives">Exclusives</a>
+                    <a class="btn btn-link" href="/blog/category/sports">Sports</a>
+                    <a class="btn btn-link" href="/blog/category/aesthetic">Aesthetic</a>
+                    <a class="btn btn-link" href="/blog/category/education">Education</a>
+                    <a class="btn btn-link" href="/blog/category/academic">Academic</a>
+                    <a class="btn btn-link" href="/blog/category/announcements">Announcements</a>
+                    <a class="btn btn-link" href="/blog/category/exclusives">Exclusives</a>
                 </div>
             </center>
         </div>
@@ -115,7 +115,7 @@
                                 <span><?php echo $row["category"]; ?></span></p>
                         </a>
                         <div class="desc">
-                            <h4><a href="<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h4>
+                            <h4><a href="/blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h4>
                             <p><?php echo htmlspecialchars(strip_tags($row["excerpt"]));  echo "......"; ?></p>
                         </div>
                     </article>
@@ -132,7 +132,7 @@
                         <ul class="pagination justify-content-center">
                             <?php if($page > 1){ ?>
                             <li class="page-item">
-                                <a class="page-link" href="?page=<?php echo $page - 1; ?>" aria-label="Previous">
+                                <a class="page-link" href="page/<?php echo $page - 1; ?>" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
@@ -140,13 +140,13 @@
 
                             <?php for($i = 1; $i <= $total_pages; $i++){ ?>
                             <li class="page-item <?php if($page == $i) echo 'active'; ?>">
-                                <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                <a class="page-link" href="page/<?php echo $i; ?>"><?php echo $i; ?></a>
                             </li>
                             <?php } ?>
 
                             <?php if($page < $total_pages){ ?>
                             <li class="page-item">
-                                <a class="page-link" href="?page=<?php echo $page + 1; ?>" aria-label="Next">
+                                <a class="page-link" href="page/<?php echo $page + 1; ?>" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>

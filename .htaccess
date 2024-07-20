@@ -45,8 +45,21 @@ RewriteRule ^$ views/index.php [NC,L]
 </IfModule>
 RewriteRule ^blog/$ views/blog/index.php [NC,L]
 RewriteRule ^blog$ views/blog/index.php [NC,L]
+
 RewriteRule ^blog/([a-zA-Z0-9_-]+)$ views/blog/blog.php?slug=$1 [L]
-RewriteRule ^blog/category/([a-zA-Z0-9_-]+)$ views/blog/category.php?categoryslug=$1 [L]
+
+RewriteRule ^blog/page/([0-9]+)/?$ views/blog/index.php?page=$1 [L,QSA]
+
+# Redirect to clean URLs
+RewriteRule ^blog/category/([^/]+)/?$ views/blog/category.php?categoryslug=$1 [L,QSA]
+RewriteRule ^blog/category/([^/]+)/page/([0-9]+)/?$ views/blog/category.php?categoryslug=$1&page=$2 [L,QSA]
+
+# Redirect from old URLs to new ones
+RewriteCond %{QUERY_STRING} categoryslug=([^&]+)&page=([0-9]+)
+RewriteRule ^blog/category.php$ /blog/category/%1/page/%2? [R=301,L]
+RewriteCond %{QUERY_STRING} categoryslug=([^&]+)
+RewriteRule ^blog/category.php$ /blog/category/%1? [R=301,L]
+
 
 
 #Events
