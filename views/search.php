@@ -7,7 +7,9 @@
 <html lang="en">
 
 <head>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'includes/header.php'; 
+    include '../sitemap-gen.php';
+    ?>
 
     <title>Search</title>
 
