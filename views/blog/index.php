@@ -132,7 +132,7 @@
                         <ul class="pagination justify-content-center">
                             <?php if($page > 1){ ?>
                             <li class="page-item">
-                                <a class="page-link" href="page/<?php echo $page - 1; ?>" aria-label="Previous">
+                                <a class="page-link" href="/blog/page/<?php echo $page - 1; ?>" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
@@ -140,13 +140,13 @@
 
                             <?php for($i = 1; $i <= $total_pages; $i++){ ?>
                             <li class="page-item <?php if($page == $i) echo 'active'; ?>">
-                                <a class="page-link" href="page/<?php echo $i; ?>"><?php echo $i; ?></a>
+                                <a class="page-link" href="/blog/page/<?php echo $i; ?>"><?php echo $i; ?></a>
                             </li>
                             <?php } ?>
 
                             <?php if($page < $total_pages){ ?>
                             <li class="page-item">
-                                <a class="page-link" href="page/<?php echo $page + 1; ?>" aria-label="Next">
+                                <a class="page-link" href="/blog/page/<?php echo $page + 1; ?>" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>
