@@ -101,7 +101,8 @@ RewriteRule ^about/school-infrastructure/founders-statue$ views/about/locations/
 RewriteRule ^about/school-infrastructure/the-shrine$ views/about/locations/location-the-shrine.php [NC,L]
 
 #Contect
-RewriteRule ^contact$ views/contact.php [NC,L]
+RewriteRule ^contact$ views/contact/contact.php [NC,L]
+RewriteRule ^contact-success$ views/contact/success.php [NC,L]
 
 #Search
 RewriteRule ^search$ views/search.php [NC,L]

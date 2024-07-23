@@ -3,8 +3,8 @@
     <title>You are offline</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
- <!-- Favicon -->
- <link href="/content/icons/logo-70x70-pwc.webp" rel="icon">
+    <!-- Favicon -->
+    <link href="/content/icons/logo-70x70-pwc.webp" rel="icon">
     <link rel="icon" href="/content/icons/logo-70x70-pwc.webp" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/content/icons/logo-apple-touch-icon-pwc.webp">
     <link rel="icon" type="image/webp" sizes="192x192" href="/content/icons/logo-android-chrome-icon-pwc.webp">
@@ -46,24 +46,26 @@
         }
     </style>
 
-<head>
+</head>
 
+</body>
 
-    <!-- offline Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-cloud-slash display-1 text-primary"></i>
-                    <h1 class="display-1">Oops!</h1>
-                    <h1 class="mb-4">You're Offline</h1>
-                    <p class="mb-4">We're sorry, but it seems like you're currently offline. Please check your internet connection and try again later.</p>
-                </div>
+<!-- offline Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <i class="bi bi-cloud-slash display-1 text-primary"></i>
+                <h1 class="display-1">Oops!</h1>
+                <h1 class="mb-4">You're Offline</h1>
+                <p class="mb-4">We're sorry, but it seems like you're currently offline. Please check your internet
+                    connection and try again later.</p>
             </div>
         </div>
     </div>
-    <!-- offline End -->
-        
+</div>
+<!-- offline End -->
+
 <!-- JavaScript Libraries -->
 <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

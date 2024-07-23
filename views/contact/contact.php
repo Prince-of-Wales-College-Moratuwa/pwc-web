@@ -32,7 +32,7 @@
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-contact/contact-header-pwc.webp" />
 
-    <?php include 'includes/header.php'; ?>
+    <?php include '../includes/header.php'; ?>
 
 
     <script async data-id="3312476668" id="chatling-embed-script" type="text/javascript"
@@ -118,7 +118,7 @@
                     tabindex="0"></iframe>
             </div>
             <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <form action="https://formspree.io/f/mzzpdvbd" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/mzzpdvbd" method="POST">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
@@ -153,6 +153,34 @@
                         </div>
                     </div>
                 </form>
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function (event) {
+                        event.preventDefault(); 
+
+                        var form = event.target;
+                        var formData = new FormData(form);
+
+                        fetch(form.action, {
+                            method: form.method,
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        }).then(function (response) {
+                            if (response.ok) {
+                                var thankYouWindow = window.open('/contact-success', '_blank');
+                                setTimeout(function () {
+                                    thankYouWindow.close();
+                                }, 3000);
+                            } else {
+                                alert('There was a problem with the submission.');
+                            }
+                        }).catch(function (error) {
+                            console.error('Error:', error);
+                        });
+                    });
+                </script>
+
 
             </div>
         </div>
@@ -287,7 +315,7 @@
 </div>
 
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 
 
 </body>
