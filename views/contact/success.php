@@ -80,7 +80,7 @@
                 <div class="col-lg-6">
                     <i class="bi bi-check-circle display-1 text-primary"></i>
                     <h1 class="mb-4">Message Sent Successfully</h1>
-                    <p class="mb-4">Your message has been sent. This tab will close automatically in 3 seconds.</p>
+                    <p class="mb-4">Your message has been sent. This tab will close automatically in 5 seconds.</p>
                 </div>
             </div>
         </div>

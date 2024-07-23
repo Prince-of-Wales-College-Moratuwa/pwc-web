@@ -171,7 +171,7 @@
                                 var thankYouWindow = window.open('/contact-success', '_blank');
                                 setTimeout(function () {
                                     thankYouWindow.close();
-                                }, 3000);
+                                }, 5000);
                             } else {
                                 alert('There was a problem with the submission.');
                             }
