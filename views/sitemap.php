@@ -54,45 +54,6 @@ include 'includes/header.php';
             </li>
         </ul>
 
-        <h2>Blog Posts</h2>
-        <?php
-
-            $query = "SELECT slug, title FROM pwc_db_news";
-            $statement = $connect->prepare($query);
-            $statement->execute();
-            $result = $statement->fetchAll();
-
-            echo '<ul class="list-group">';
-            if ($statement->rowCount() > 0) {
-                foreach($result as $row) {
-                    echo '<li class="list-group-item"><a href="/blog/' . $row["slug"] . '">' . $row["title"] . '</a></li>';
-                }
-            } else {
-                echo '<li class="list-group-item">No results found</li>';
-            }
-            echo '</ul>';
-            ?>
-
-
-        <h2>Events</h2>
-        <?php
-
-$query = "SELECT slug, title FROM pwc_db_events";
-$statement = $connect->prepare($query);
-$statement->execute();
-$result = $statement->fetchAll();
-
-echo '<ul class="list-group">';
-if ($statement->rowCount() > 0) {
-    foreach($result as $row) {
-        echo '<li class="list-group-item"><a href="/events/' . $row["slug"] . '">' . $row["title"] . '</a></li>';
-    }
-} else {
-    echo '<li class="list-group-item">No results found</li>';
-}
-echo '</ul>';
-?>
-
         <h2>Clubs</h2>
         <ul class="list-group">
             <li class="list-group-item"><a href="/clubs">Clubs</a></li>
@@ -143,6 +104,45 @@ echo '</ul>';
             <li class="list-group-item"><a href="/imprint">Imprint</a></li>
 
         </ul>
+
+
+        <h2>Blog Posts</h2>
+        <?php
+
+            $query = "SELECT slug, title FROM pwc_db_news";
+            $statement = $connect->prepare($query);
+            $statement->execute();
+            $result = $statement->fetchAll();
+
+            echo '<ul class="list-group">';
+            if ($statement->rowCount() > 0) {
+                foreach($result as $row) {
+                    echo '<li class="list-group-item"><a href="/blog/' . $row["slug"] . '">' . $row["title"] . '</a></li>';
+                }
+            } else {
+                echo '<li class="list-group-item">No results found</li>';
+            }
+            echo '</ul>';
+            ?>
+
+        <h2>Events</h2>
+        <?php
+
+$query = "SELECT slug, title FROM pwc_db_events";
+$statement = $connect->prepare($query);
+$statement->execute();
+$result = $statement->fetchAll();
+
+echo '<ul class="list-group">';
+if ($statement->rowCount() > 0) {
+    foreach($result as $row) {
+        echo '<li class="list-group-item"><a href="/events/' . $row["slug"] . '">' . $row["title"] . '</a></li>';
+    }
+} else {
+    echo '<li class="list-group-item">No results found</li>';
+}
+echo '</ul>';
+?>
 
 </body>
 
