@@ -1,8 +1,8 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
-    <a href="https://www.vote.bestweb.lk/site/princeofwales_edu_lk/" title="Vote for us" target="_blank"
+    <a href="https://www.bestweb.lk/nominees-2024/best-school-website/" title="Nominated Bestweb 2024" target="_blank"
         class="floating-logo-container" id="bestweb-logo">
-        <img src="https://www.bw2024.lk/vote4us.png" alt="BestWeb 2024 Logo" class="floating-logo">
+        <img src="https://www.bestweb.lk/wp-content/uploads/2024/02/bestweb-2024-web.png" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
     <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
@@ -28,7 +28,7 @@
     }
 
     .floating-logo {
-        width: 250px;
+        width: 125px;
         transition: transform 0.3s;
     }
 
