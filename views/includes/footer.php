@@ -2,7 +2,7 @@
 <div class="floating-icons">
     <a href="https://www.bestweb.lk/2024-winners/" title="Nominated Bestweb 2024" target="_blank"
         class="floating-logo-container" id="bestweb-logo">
-        <img src="content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo"
+        <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo"
             class="floating-logo">
     </a>
     <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
