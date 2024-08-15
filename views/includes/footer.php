@@ -89,7 +89,7 @@
                 <div class="d-flex flex-wrap">
                 <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024"
             title="Best School Website - Silver Award at Bestweb.LK" target="_blank">
-            <img src="content/img/bestweb/Silver-Best School Website.webp" alt="Best School Website - Silver Award"
+            <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="Best School Website - Silver Award"
                 width="120px">
         </a>
 
