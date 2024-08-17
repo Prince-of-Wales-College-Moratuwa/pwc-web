@@ -115,7 +115,7 @@ if ($currentDate < $birthday) {
 
     <style>
         .notice-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-home/notice/bestweblk.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-home/notice/DSC06736.webp);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -126,23 +126,21 @@ if ($currentDate < $birthday) {
         }
     </style>
 
-    <!-- <div class="container-fluid bg-primary py-5 mb-5 notice-header">
+    <div class="container-fluid bg-primary py-5 mb-5 notice-header">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="h1 text-white animated slideInDown">VOTE FOR US!</h1>
-                <p class=" mb-3 text-white animated slideInDown"><b>To Become the Most Popular School Website, Vote for
-                        Us
-                        in the BestWeb.LK 2024 Contest.</b></p>
-                <p class="h6 text-white animated slideInDown">Deadline for voting is 15th July </p><br>
+                <h1 class="h1 text-white animated slideInDown">Silver Winner | Best School Website</h1>
+                <p class=" mb-3 text-white animated slideInDown"><b>princeofwales.edu.lk Wins Best School Website Silver Award at BestWeb.LK 2024 Contest.</b></p>
+                <br>
                 <center>
-                    <a href="https://www.vote.bestweb.lk/site/princeofwales_edu_lk/" target="_blank"
+                    <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024" target="_blank"
                         style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Vote Now!</a>
+                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Read More!</a>
                 </center>
 
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
