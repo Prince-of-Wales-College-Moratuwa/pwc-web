@@ -1,7 +1,7 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
-    <a href="https://www.bestweb.lk/2024-winners/" title="Nominated Bestweb 2024" target="_blank"
-        class="floating-logo-container" id="bestweb-logo">
+    <a href="https://www.bestweb.lk/2024-winners/" title="Best School Website - Silver Award at Bestweb.LK"
+        target="_blank" class="floating-logo-container" id="bestweb-logo">
         <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
     <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
@@ -96,7 +96,7 @@
 
         <!-- Awards Badges Row -->
         <div class="row mt-5">
-            <div class="col-12 d-flex justify-content-center align-items-center" style="min-height: 150px;">
+            <div class="col-12 d-flex justify-content-center align-items-center" style="min-height: 100px;">
                 <div class="d-flex flex-wrap justify-content-center align-items-center">
                     <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024"
                         title="Best School Website - Silver Award at Bestweb.LK" target="_blank" class="me-3 mb-2">
@@ -105,20 +105,18 @@
                     </a>
                     <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank"
                         class="me-3 mb-2">
-                        <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="90px" alt="TopWebLK May 2024">
+                        <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="80px" alt="TopWebLK May 2024">
                     </a>
                     <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprinceofwales.edu.lk%2F"
                         title="This website runs on green hosting - verified by thegreenwebfoundation.org"
                         target="_blank" class="mb-2">
                         <img src="content/img/princeofwales.edu.webp"
                             alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
-                            width="159px">
+                            width="140px">
                     </a>
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <!-- Footer Bottom -->

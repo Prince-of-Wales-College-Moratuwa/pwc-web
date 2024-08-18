@@ -183,20 +183,25 @@
                 <li data-bs-target="#carouselBestWeb" data-bs-slide-to="1"></li>
                 <li data-bs-target="#carouselBestWeb" data-bs-slide-to="2"></li>
                 <li data-bs-target="#carouselBestWeb" data-bs-slide-to="3"></li>
+                <li data-bs-target="#carouselBestWeb" data-bs-slide-to="4"></li>
+                <li data-bs-target="#carouselBestWeb" data-bs-slide-to="5"></li>
             </ol>
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="content/img/bestweb/2024/bestweb2024 (2).webp" class="d-block w-100" alt="Slide 3">
+                    <img src="content/img/bestweb/2024/bestweb2024 (1).webp" class="d-block w-100" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="content/img/bestweb/2024/bestweb2024 (3).webp" class="d-block w-100" alt="Slide 4">
+                    <img src="content/img/bestweb/2024/bestweb2024 (2).webp" class="d-block w-100" alt="Slide 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="content/img/bestweb/2024/bestweb2024.webp" class="d-block w-100" alt="Slide 1">
+                    <img src="content/img/bestweb/2024/bestweb2024 (3).webp" class="d-block w-100" alt="Slide 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="content/img/bestweb/2024/bestweb2024 (1).webp" class="d-block w-100" alt="Slide 2">
+                    <img src="content/img/bestweb/2024/bestweb2024 (4).webp" class="d-block w-100" alt="Slide 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="content/img/bestweb/2024/bestweb2024 (5).webp" class="d-block w-100" alt="Slide 5">
                 </div>
 
             </div>
