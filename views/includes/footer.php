@@ -2,8 +2,7 @@
 <div class="floating-icons">
     <a href="https://www.bestweb.lk/2024-winners/" title="Nominated Bestweb 2024" target="_blank"
         class="floating-logo-container" id="bestweb-logo">
-        <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo"
-            class="floating-logo">
+        <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
     <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
@@ -40,70 +39,86 @@
     .back-to-top {
         margin: 0;
     }
-</style>
-<!-- Footer Start -->
+</style><!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
+            <!-- About -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-4">Prince of Wales' College</h4>
+                <p class="small mb-4">Established in 1876, Prince of Wales’ College has grown into a prestigious
+                    institution, making its mark as a leading school in Sri Lanka.</p>
+            </div>
             <!-- Quick Links -->
             <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Quick Links</h4>
-                <div role="button" tabindex="0" class="btn btn-link" id="install-button">Install App</div>
-                <a class="btn btn-link" href="/about">About Us</a>
-                <a class="btn btn-link" href="/contact">Contact Us</a>
-                <a class="btn btn-link" href="/faq">Help / FAQ</a>
-                <a class="btn btn-link" href="/sitemap">Site Map</a>
+                <h4 class="text-white mb-4">Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><button class="btn btn-link p-0" id="install-button">Install App</button></li>
+                    <li><a class="btn btn-link p-0" href="/about">About Us</a></li>
+                    <li><a class="btn btn-link p-0" href="/contact">Contact Us</a></li>
+                    <li><a class="btn btn-link p-0" href="/faq">Help / FAQ</a></li>
+                    <li><a class="btn btn-link p-0" href="/sitemap">Site Map</a></li>
+                </ul>
             </div>
-
             <!-- Legal -->
             <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Legal</h4>
-                <a class="btn btn-link" href="/privacy">Privacy Policy</a>
-                <a class="btn btn-link" href="/cookies">Cookies Policy</a>
-                <a class="btn btn-link" href="/terms">Terms & Conditions</a>
-                <a class="btn btn-link" href="/disclaimer">Disclaimer</a>
-                <a class="btn btn-link" href="/imprint">Imprint</a>
+                <h4 class="text-white mb-4">Legal</h4>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link p-0" href="/privacy">Privacy Policy</a></li>
+                    <li><a class="btn btn-link p-0" href="/cookies">Cookies Policy</a></li>
+                    <li><a class="btn btn-link p-0" href="/terms">Terms & Conditions</a></li>
+                    <li><a class="btn btn-link p-0" href="/disclaimer">Disclaimer</a></li>
+                    <li><a class="btn btn-link p-0" href="/imprint">Imprint</a></li>
+                </ul>
             </div>
-
             <!-- Contact -->
             <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Contact</h4>
+                <h4 class="text-white mb-4">Contact</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Galle Road, Moratuwa, CM7 2AA, 10456</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+94 112 645 628</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@princeofwales.edu.lk</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/cambrians.media" target="_blank" title="Visit our Facebook page">
+                <div class="d-flex">
+                    <a class="btn btn-outline-light btn-social me-2" href="https://www.facebook.com/cambrians.media"
+                        target="_blank" title="Visit our Facebook page">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/cmbulive/" target="_blank" title="Follow us on Instagram">
+                    <a class="btn btn-outline-light btn-social me-2" href="https://www.instagram.com/cmbulive/"
+                        target="_blank" title="Follow us on Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CMBUlive" target="_blank" title="Subscribe to our YouTube channel">
+                    <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CMBUlive" target="_blank"
+                        title="Subscribe to our YouTube channel">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Awards</h4>
-                <div class="d-flex flex-wrap">
-                <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024"
-            title="Best School Website - Silver Award at Bestweb.LK" target="_blank">
-            <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="Best School Website - Silver Award"
-                width="120px">
-        </a>
-
-        <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank">
-            <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="90px" alt="TopWebLK May 2024">
-        </a>
-
-                    <!-- <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprinceofwales.edu.lk%2F"
-                        title="This website runs on green hosting - verified by thegreenwebfoundation.org" target="_blank" class="mb-2">
-                        <img src="https://app.greenweb.org/api/v3/greencheckimage/princeofwales.edu.lk?nocache=true" alt="This website runs on green hosting - verified by thegreenwebfoundation.org" width="159px">
-                    </a> -->
+        <!-- Awards Badges Row -->
+        <div class="row mt-5">
+            <div class="col-12 d-flex justify-content-center align-items-center" style="min-height: 150px;">
+                <div class="d-flex flex-wrap justify-content-center align-items-center">
+                    <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024"
+                        title="Best School Website - Silver Award at Bestweb.LK" target="_blank" class="me-3 mb-2">
+                        <img src="/content/img/bestweb/Silver-Best School Website.webp"
+                            alt="Best School Website - Silver Award" width="120px">
+                    </a>
+                    <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank"
+                        class="me-3 mb-2">
+                        <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="90px" alt="TopWebLK May 2024">
+                    </a>
+                    <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprinceofwales.edu.lk%2F"
+                        title="This website runs on green hosting - verified by thegreenwebfoundation.org"
+                        target="_blank" class="mb-2">
+                        <img src="content/img/princeofwales.edu.webp"
+                            alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
+                            width="159px">
+                    </a>
                 </div>
             </div>
         </div>
+
+
     </div>
 
     <!-- Footer Bottom -->
@@ -111,13 +126,18 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">Prince of Wales' College</a>, All Right Reserved. │ Developed By <a class="border-bottom" href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom" href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcasting Unit</a>
+                    &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">Prince
+                        of Wales' College</a>, All Right Reserved. │ Developed By <a class="border-bottom"
+                        href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom"
+                        href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcasting
+                        Unit</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Footer End -->
+
 
 <script>
     const bestwebLogo = document.getElementById('bestweb-logo');
