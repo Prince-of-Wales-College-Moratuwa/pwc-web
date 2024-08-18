@@ -11,27 +11,31 @@
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Blog | Prince of Wales' College" />
-    <meta name="description" content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
-    <meta name="keywords" content="prince of wales college blog, prince of wales college achievements, prince of wales college blog" />
+    <meta name="description"
+        content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
+    <meta name="keywords"
+        content="prince of wales college blog, prince of wales college achievements, prince of wales college blog" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://princeofwales.edu.lk/blog/" />
     <meta property="og:title" content="Blog | Prince of Wales' College" />
-    <meta property="og:description" content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
+    <meta property="og:description"
+        content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-header-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/" />
     <meta property="twitter:title" content="Blog | Prince of Wales' College" />
-    <meta property="twitter:description" content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
+    <meta property="twitter:description"
+        content="Stay informed with the latest updates and insights from Prince of Wales College on our blog. Your source for educational excellence and campus happenings." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/blog-header-pwc.webp" />
 
     <?php include '../includes/header.php'; ?>
-   
-   
-   <style>
+
+
+    <style>
         .blog-page-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(/content/img/img-blog/blog-header-pwc.webp);
             background-position: center center;
@@ -46,21 +50,42 @@
 </head>
 
 <body>
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 blog-page-header">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">BLOG</h1>
-                </div>
+
+<?php
+
+try {
+    // Fetch article count
+    $sql = "SELECT COUNT(*) AS article_count FROM pwc_db_news";
+    $stmt = $connect->prepare($sql);
+    $stmt->execute();
+
+    // Get the count
+    $article_count = $stmt->fetchColumn();
+
+} catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
+
+<!-- Header Start -->
+<div class="container-fluid bg-primary py-5 mb-5 blog-page-header">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown">BLOG</h1>
+                <p class="btn text-white animated slideInDown">
+                    <?php echo $article_count; ?> Articles
+                </p>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+</div>
+<!-- Header End -->
+
 
     <style>
         .active-link {
-            color: #ff0000; 
+            color: #ff0000;
         }
     </style>
 
@@ -110,7 +135,8 @@
                 <div class="col-md-4 animate-box wow fadeInUp ">
                     <article class="article-entry">
                         <a href="/blog/<?php echo $row["slug"]; ?>" class="blog-img">
-                            <img src="/content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["title"]; ?>" loading="lazy"><br><br>
+                            <img src="/content/img/img-blog/<?php echo $row["photo"]; ?>"
+                                alt="<?php echo $row["title"]; ?>" loading="lazy"><br><br>
                             <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
                                 <span><?php echo $row["category"]; ?></span></p>
                         </a>

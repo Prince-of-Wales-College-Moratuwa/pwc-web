@@ -26,7 +26,17 @@ if (count($rows) === 0) {
     exit();
 }
 
+
+// Get the category slug from the URL
+$categoryslug = isset($_GET['categoryslug']) ? $_GET['categoryslug'] : '';
+
+// Fetch article count for the specific category
+$query = "SELECT COUNT(*) AS article_count FROM pwc_db_news WHERE categoryslug=?";
+$statement = $connect->prepare($query);
+$statement->execute([$categoryslug]);
+$article_count = $statement->fetchColumn();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +88,7 @@ if (count($rows) === 0) {
                 <div class="col-lg-10 text-center">
                     <h5 class="display-12 text-white text-uppercase animated slideInDown">category</h5>
                     <h1 class="display-3 text-white text-uppercase animated slideInDown"><?php echo htmlspecialchars($rows[0]["category"]); ?></h1>
+                    <p class="btn text-white animated slideInDown"> <?php echo $article_count; ?> Articles</p>
                 </div>
             </div>
         </div>
