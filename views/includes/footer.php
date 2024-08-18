@@ -110,7 +110,7 @@
                     <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprinceofwales.edu.lk%2F"
                         title="This website runs on green hosting - verified by thegreenwebfoundation.org"
                         target="_blank" class="mb-2">
-                        <img src="content/img/princeofwales.edu.webp"
+                        <img src="/content/img/princeofwales.edu.webp"
                             alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
                             width="140px">
                     </a>
