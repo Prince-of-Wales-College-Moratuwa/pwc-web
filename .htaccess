@@ -34,6 +34,11 @@ RewriteRule ^(.*)\.php$ /$1 [R=301,L]
     </If>
 </Files>
 
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/index(\.(html|php))?$ [NC]
+RewriteRule ^index(\.(html|php))?$ / [R=301,L]
+
+
 # root
 RewriteRule ^$ views/index.php [NC,L]
 
