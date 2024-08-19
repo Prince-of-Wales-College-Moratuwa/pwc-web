@@ -77,8 +77,8 @@
 
 
     <style>
-                /* For Webkit browsers (Chrome, Safari) */
-                ::-webkit-scrollbar {
+        /* For Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
             width: 12px;
         }
 
@@ -96,7 +96,7 @@
             scrollbar-width: thin;
             scrollbar-color: maroon white;
         }
-        
+
         ::selection {
             background-color: #800000;
             color: white;
@@ -191,8 +191,18 @@
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
                 <a href="/events/"
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'events') echo 'active'; ?>">Events</a>
-                <a href="/publications"
-                    class="nav-item nav-link <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse">Publications</a>
+                <div class="nav-item dropdown">
+                    <a href="/publications"
+                        class="nav-link dropdown-toggle <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse"
+                        data-toggle="dropdown">Publications</a>
+                    <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
+                        <a class="dropdown-item" href="/publications#school-magazine"><b>MAGAZINES</b></a>
+                        <a class="dropdown-item" href="/publications#golden-book"><b>GOLDEN BOOK</b></a>
+                        <a class="dropdown-item" href="/publications#projects"><b>PROJECTS</b></a>
+                        <a class="dropdown-item" href="/publications#golden-capture"><b>GOLDEN CAPTURES</b></a>
+                        <a class="dropdown-item" href="/publications#vod-mod"><b>VOD & MOD</b></a>
+                    </div>
+                </div>
 
                 <div class="nav-item dropdown">
                     <a href="/sports"
@@ -233,7 +243,6 @@
                         class="nav-link dropdown-toggle nav-item nav-link <?php if ($page === 'about') echo 'active'; ?> nav-link pulse">About</a>
                     <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
                         <a class="dropdown-item" href="/about#vission-mission"><b>VISION & MISSION</b></a>
-                        <a class="dropdown-item" href="/about#lassana-wales"><b>LASSANA WALES</b></a>
                         <a class="dropdown-item" href="/about#alumini"><b>ALUMINI</b></a>
                         <a class="dropdown-item" href="/about#anthems"><b>ANTHEMS</b></a>
                         <a class="dropdown-item" href="/about#flag"><b>FLAG</b></a>

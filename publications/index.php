@@ -132,6 +132,36 @@
         </div>
     </div>
 
+    <div class="container-xxl py-5" id="projects">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" >
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100"
+                            src="/content/img/img-about/dev-places/0.webp" alt="lassana wales"
+                            style="object-fit: cover;" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">Projects</h6>
+                    <h1 class="mb-4">Lassana Wales</h1>
+                    <p class="mb-4">
+                    The concept of the "Beautiful Wales" by the present Principal, in order to develop the infrastructure, and
+            resources of the college in the year 2023, with the generous support and contribution from the Old Boys'
+            Association in the journey of becoming the best college in year 2025.
+            Our tribute to the present Principal and all the committed teachers and staff, the School Development
+            Society, and the Old Boys' Association for this great work.
+            It's time to gather around our Alma mater to make her beautiful and glamorous.
+                    </p>
+
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="/publications/projects/lassana-wales"
+                    data-wow-delay="0.7s">Explore</a>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-xxl py-5" id="golden-captures">
         <div class="container">
             <div class="row g-5">
@@ -162,7 +192,7 @@
         </div>
     </div>
 
-    <div class="container-xxl py-5" id="music">
+    <div class="container-xxl py-5" id="vod-mod">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -192,7 +222,7 @@
     </div>
 
 
-    <div class="container-xxl py-5" id="music">
+    <div class="container-xxl py-5" id="vod-mod">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">

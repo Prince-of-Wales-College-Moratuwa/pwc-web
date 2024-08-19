@@ -77,6 +77,8 @@ RewriteRule ^publications$ publications/index.php [NC,L]
 RewriteRule ^publications/golden-captures$ publications/golden-captures/index.php [NC,L]
 RewriteRule ^publications/music$ publications/music/index.php [NC,L]
 
+RewriteRule ^publications/projects/lassana-wales$ views/about/locations/lassana-wales.php [NC,L]
+
 RewriteRule ^publications/golden-book/education-sector$ publications/golden-book/education-sector/index.html [NC,L]
 RewriteRule ^publications/golden-book/sports-sector/$ publications/golden-book/sports-sector/index.html [NC,L]
 RewriteRule ^publications/school-magazine$ publications-pwc/school-magazine/index.html [NC,L]

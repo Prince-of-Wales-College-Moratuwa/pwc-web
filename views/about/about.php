@@ -220,36 +220,6 @@ if ($currentDate >= 1 && $currentDate <= 5) {
     <br><br>
 
     <div class="container-lg my-3">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3"></h6>
-                <h1 class="mb-5" id="lassana-wales">Enhancing and Beautifying School for a Bright Future</h1>
-            </div>
-
-
-            <img src="content/img/img-about/dev-places/0.webp" class="d-block w-100" alt="Slide 1">
-
-            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-        <br>
-        <p>The concept of the "Beautiful Wales" by the present Principal, in order to develop the infrastructure, and
-            resources of the college in the year 2023, with the generous support and contribution from the Old Boys'
-            Association in the journey of becoming the best college in year 2025.
-            Our tribute to the present Principal and all the committed teachers and staff, the School Development
-            Society, and the Old Boys' Association for this great work.
-            It's time to gather around our Alma mater to make her beautiful and glamorous.</p>
-
-        <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="/about/lassana-wales"
-                data-wow-delay="0.7s">Explore</a></center>
-
-
-        <br>
-
         <!-- stars Start -->
         <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="alumini">
             <div class="container">

@@ -78,7 +78,7 @@ include 'includes/header.php';
             <li class="list-group-item"><a href="/about/school-infrastructure/founders-statue">The Founders' Statue</a>
             </li>
             <li class="list-group-item"><a href="/about/school-infrastructure/the-shrine">The Shrine</a></li>
-            <li class="list-group-item"><a href="/about/lassana-wales">ලස්සන Wales</a></li>
+            <li class="list-group-item"><a href="/publications/projects/lassana-wales">ලස්සන Wales</a></li>
             <li class="list-group-item"><a href="/faq">Help / FAQ</a></li>
         </ul>
 

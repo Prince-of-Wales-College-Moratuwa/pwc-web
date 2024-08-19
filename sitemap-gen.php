@@ -33,7 +33,7 @@ $urls = array(
     "https://princeofwales.edu.lk/publications/videos/",
     "https://princeofwales.edu.lk/about/prefects-guild",
     "https://princeofwales.edu.lk/history/former-principals",
-    "https://princeofwales.edu.lk/about/lassana-wales",
+    "https://princeofwales.edu.lk/publications/projects/lassana-wales",
     "https://princeofwales.edu.lk/about/school-infrastructure",
     "https://princeofwales.edu.lk/forms/apply-al/",
     "https://princeofwales.edu.lk/content/docs/exiting-plan-pwc.pdf",
