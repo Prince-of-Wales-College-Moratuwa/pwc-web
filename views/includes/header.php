@@ -143,6 +143,38 @@
                 font-size: 14px;
             }
         }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        .navbar-brand {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        .navbar-collapse {
+            padding-right: 0;
+            margin-right: 0;
+        }
+
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
     </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1KCZVJTWP"></script>
@@ -175,9 +207,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-1 px-lg-4">
             <img src="/content/img/logo-pwc.webp" alt="pwc logo" class="img-header">
-            <h6 class="m-0 text-primary h6-header">&nbsp; &nbsp; PRINCE OF WALES' COLLEGE<br>&nbsp; &nbsp;
-                MORATUWA
-            </h6>
+            <h6 class="m-0 text-primary h6-header">&nbsp; &nbsp; PRINCE OF WALES' COLLEGE<br>&nbsp; &nbsp; MORATUWA</h6>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-label="mobile-nav">
@@ -191,10 +221,10 @@
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
                 <a href="/events/"
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'events') echo 'active'; ?>">Events</a>
+
                 <div class="nav-item dropdown">
                     <a href="/publications"
-                        class="nav-link dropdown-toggle <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse"
-                        data-toggle="dropdown">Publications</a>
+                        class="nav-link dropdown-toggle <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse">Publications</a>
                     <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
                         <a class="dropdown-item" href="/publications#school-magazine"><b>MAGAZINES</b></a>
                         <a class="dropdown-item" href="/publications#golden-book"><b>GOLDEN BOOK</b></a>
@@ -235,15 +265,19 @@
                     </div>
                 </div>
 
+                <!-- Mobile view History link -->
                 <a href="/history"
-                    class="nav-item nav-link <?php if ($page === 'history') echo 'active'; ?> nav-link pulse">History</a>
+                    class="nav-item nav-link d-lg-none <?php if ($page === 'history') echo 'active'; ?> nav-link pulse">History</a>
 
                 <div class="nav-item dropdown">
                     <a href="/about"
-                        class="nav-link dropdown-toggle nav-item nav-link <?php if ($page === 'about') echo 'active'; ?> nav-link pulse">About</a>
+                        class="nav-link dropdown-toggle <?php if ($page === 'about' || $page === 'history') echo 'active'; ?> nav-link pulse">About</a>
                     <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
+                        <!-- Desktop view History link -->
+                        <a class="dropdown-item <?php if ($page === 'history') echo 'active'; ?>"
+                            href="/history"><b>HISTORY</b></a>
                         <a class="dropdown-item" href="/about#vission-mission"><b>VISION & MISSION</b></a>
-                        <a class="dropdown-item" href="/about#alumini"><b>ALUMINI</b></a>
+                        <a class="dropdown-item" href="/about#alumini"><b>ALUMNI</b></a>
                         <a class="dropdown-item" href="/about#anthems"><b>ANTHEMS</b></a>
                         <a class="dropdown-item" href="/about#flag"><b>FLAG</b></a>
                         <a class="dropdown-item" href="/about#houses"><b>HOUSES</b></a>
@@ -261,4 +295,6 @@
             </div>
         </div>
     </nav>
+
+
     <!-- Navbar End -->
