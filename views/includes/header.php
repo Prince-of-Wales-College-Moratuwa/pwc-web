@@ -229,7 +229,7 @@
                         <a class="dropdown-item" href="/publications#school-magazine"><b>MAGAZINES</b></a>
                         <a class="dropdown-item" href="/publications#golden-book"><b>GOLDEN BOOK</b></a>
                         <a class="dropdown-item" href="/publications#projects"><b>PROJECTS</b></a>
-                        <a class="dropdown-item" href="/publications#golden-capture"><b>GOLDEN CAPTURES</b></a>
+                        <a class="dropdown-item" href="/publications#golden-captures"><b>GOLDEN CAPTURES</b></a>
                         <a class="dropdown-item" href="/publications#vod-mod"><b>VOD & MOD</b></a>
                     </div>
                 </div>
