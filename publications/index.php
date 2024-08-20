@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">Projects</h6>
-                    <h1 class="mb-4">Lassana Wales</h1>
+                    <h1 class="mb-4">"LASSANA WALES"</h1>
                     <p class="mb-4">
                     The concept of the "Beautiful Wales" by the present Principal, in order to develop the infrastructure, and
             resources of the college in the year 2023, with the generous support and contribution from the Old Boys'

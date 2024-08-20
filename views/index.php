@@ -629,8 +629,10 @@ foreach ($rows as $row) {
                     <ul>
                         <li>Magazine</li>
                         <li>Golden Book</li>
+                        <li>Projects</li>
                         <li>Golden Captures</li>
                         <li>Music on Demand</li>
+                        <li>Video on Demand</li>
                     </ul>
                 </p>
 
