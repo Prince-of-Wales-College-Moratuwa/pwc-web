@@ -4,7 +4,7 @@
 <head>
     <title>ලස්සන Wales</title>
     <?php
-    $page = 'about';
+    $page = 'publications';
     ?>
 
 
@@ -17,7 +17,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://princeofwales.edu.lk/lassana-wales" />
+    <meta property="og:url" content="https://princeofwales.edu.lk/publications/projects/lassana-wales" />
     <meta property="og:title" content="ලස්සන Wales | Prince of Wales' College" />
     <meta property="og:description"
         content="Discover Prince of Wales College: A historic institution of higher learning fostering academic excellence and personal growth. Join us in shaping the future!" />
@@ -25,13 +25,13 @@
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://princeofwales.edu.lk/lassana-wales" />
+    <meta property="twitter:url" content="https://princeofwales.edu.lk/publications/projects/lassana-wales" />
     <meta property="twitter:title" content="ලස්සන Wales | Prince of Wales' College" />
     <meta property="twitter:description"
         content="Discover Prince of Wales College: A historic institution of higher learning fostering academic excellence and personal growth. Join us in shaping the future!" />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-about/dev-places/0.webp" />
 
-    <?php include '../../includes/header.php'; ?>
+    <?php include '../../views/includes/header.php'; ?>
 
     <style>
         .about-page-header {
@@ -147,7 +147,7 @@
         </div>
     </div>
 
-    <?php include '../../includes/footer.php'; ?>
+    <?php include '../../views/includes/footer.php'; ?>
 
     <script>
         // Function to open overlay and display clicked image

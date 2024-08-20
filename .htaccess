@@ -77,7 +77,7 @@ RewriteRule ^publications$ publications/index.php [NC,L]
 RewriteRule ^publications/golden-captures$ publications/golden-captures/index.php [NC,L]
 RewriteRule ^publications/music$ publications/music/index.php [NC,L]
 
-RewriteRule ^publications/projects/lassana-wales$ views/about/locations/lassana-wales.php [NC,L]
+RewriteRule ^publications/projects/lassana-wales$ publications/projects/lassana-wales.php [NC,L]
 
 RewriteRule ^publications/golden-book/education-sector$ publications/golden-book/education-sector/index.html [NC,L]
 RewriteRule ^publications/golden-book/sports-sector/$ publications/golden-book/sports-sector/index.html [NC,L]
@@ -102,7 +102,7 @@ RewriteRule ^history/former-principals$ views/history/former-principals.php [NC,
 RewriteRule ^about$ views/about/about.php [NC,L]
 RewriteRule ^about/school-administration$ views/about/school-administration.php [NC,L]
 
-RewriteRule ^about/lassana-wales$ views/about/locations/lassana-wales.php [NC,L]
+RewriteRule ^about/lassana-wales$ publications/projects/lassana-wales.php [NC,L]
 RewriteRule ^about/school-infrastructure$ views/about/locations/school-infrastructure.php [NC,L]
 RewriteRule ^about/school-infrastructure/founders-statue$ views/about/locations/location-founders-statue.php [NC,L]
 RewriteRule ^about/school-infrastructure/the-shrine$ views/about/locations/location-the-shrine.php [NC,L]
