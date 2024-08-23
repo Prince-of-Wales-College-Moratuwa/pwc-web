@@ -130,10 +130,12 @@ if ($currentDate < $birthday) {
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <h1 class="h1 text-white animated slideInDown">Silver Winner | Best School Website</h1>
-                <p class=" mb-3 text-white animated slideInDown"><b>princeofwales.edu.lk Wins Best School Website Silver Award at BestWeb.LK 2024 Contest.</b></p>
+                <p class=" mb-3 text-white animated slideInDown"><b>princeofwales.edu.lk Wins Best School Website Silver
+                        Award at BestWeb.LK 2024 Contest.</b></p>
                 <br>
                 <center>
-                    <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024" target="_blank"
+                    <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024"
+                        target="_blank"
                         style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
                         class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Read More!</a>
                 </center>
@@ -250,8 +252,8 @@ if ($currentDate < $birthday) {
 <div class="colorlib-blog colorlib-light-grey">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">Latest</p>
-            <p class="h1 mb-5">NEWS</p>
+            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3"></p>
+            <p class="h1 mb-5">BLOG</p>
         </div>
 
         <div class="row">
@@ -321,7 +323,7 @@ if($statement->rowCount() > 0)
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">UPCOMING & PAST
+            <p style="font-size: 16px;" class="h1 section-title bg-white text-center text-primary px-3">
             </p>
             <h2 class="h1 mb-5">EVENTS</h2>
         </div>

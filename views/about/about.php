@@ -644,8 +644,58 @@ if($statement->rowCount() > 0)
     </div>
 
 
-
     <!-- location -->
+    <br><br> <br><br>
+
+
+    <!-- history Start -->
+
+    
+    <style>
+        .explore-history-page-header {
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-home/explore-history-pwc.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .explore-history-page-header-inner {
+            background: rgba(15, 23, 43, .7);
+        }
+    </style>
+
+    <?php 
+$birthYear = 1876;
+$currentDate = date("m-d");
+$birthday = "09-14";
+
+if ($currentDate < $birthday) {
+    $age = date("Y") - $birthYear - 1;
+} else {
+    $age = date("Y") - $birthYear;
+}
+
+?>
+
+    <div class="container-fluid bg-primary py-5 mb-5 explore-history-page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <p class="h1 display-3 text-white animated slideInDown"><?php echo $age ?> Years and Counting</p>
+                    <p style="font-size: 20px;" class="h2 text-white animated slideInDown"><br> Explore college history
+                        and
+                        discover <?php echo $age ?> years of rich
+                        heritage and academic excellence. <br> </p>
+                    <center>
+                        <a class="btn btn-primary py-3 px-4 mt-2 wow zoomIn" href="history"
+                            data-wow-delay="0.1s">Explore
+                            College History</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- history End -->
 
 
     <?php include '../includes/footer.php'; ?>

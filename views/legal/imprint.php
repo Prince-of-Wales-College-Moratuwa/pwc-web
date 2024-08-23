@@ -27,11 +27,11 @@ include '../includes/header.php';
 
         <h2>3. Media Partner</h2>
         <p><b>Cambrians Media and Broadcasting Unit</b><br>
-        Email: pwccmbu@gmail.com</p>
+        Email: cmbulive@princeofwales.edu.lk</p>
 
         <h2>4. Website Provider</h2>
         <p>The website for Prince of Wales' College, Moratuwa is provided by <b>Cambrians ICT Society</b><br>
-        Email: cits1223@gmail.com</p>
+        Email: cits@princeofwales.edu.lk</p>
 
         <h2>5. Copyright Information</h2>
         <p>All content on this website is protected by copyright laws. The content may not be reproduced, distributed, transmitted, cached, or otherwise used, except with the prior written permission of Prince of Wales' College, Moratuwa.</p>

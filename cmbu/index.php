@@ -145,7 +145,7 @@
             <span class="slash">|</span>
         </div>
                     <div class="contact">
-                <a href="Mailto:pwcmbu@gmail.com"><img src="images/mail.webp" alt="email-pic" class="contactpic" target="_blank"></a>
+                <a href="Mailto:cmbulive@princeofwales.edu.lk"><img src="images/mail.webp" alt="email-pic" class="contactpic" target="_blank"></a>
                 <a href="Tel:+94112645628"><img src="images/call.webp" alt="phone-pic" class="contactpic" target="_blank"></a>
                     </div>    
             </div>
@@ -400,7 +400,7 @@
                   <img src="./images/icon-email.webp" class="icon" alt="email-icon">
                   <div class="contact-info-icon-text">
                       <h6>Email</h6>
-                      <p>pwcmbu@gmail.com</p>
+                      <p>cmbulive@princeofwales.edu.lk</p>
                 </div>
               </div>
                 </div>
