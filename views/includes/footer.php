@@ -74,9 +74,14 @@
             <!-- Contact -->
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><a class="btn text-white p-0" style="text-align: left;" href="https://maps.app.goo.gl/JtYdz2kuYA2DPQcg8" target="_blank">2AD, Galle Road, Moratuwa</a></p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="btn text-white p-0" style="text-align: left;" href="tel:94112645628">+94 112 645 628</a></p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i><a class="btn text-white p-0" style="text-align: left;" href="mailto:info@princeofwales.edu.lk">info@princeofwales.edu.lk</a></p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><a class="btn text-white p-0"
+                        style="text-align: left;" href="https://maps.app.goo.gl/JtYdz2kuYA2DPQcg8" target="_blank">2AD,
+                        Galle Road, Moratuwa</a></p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="btn text-white p-0"
+                        style="text-align: left;" href="tel:94112645628">+94 112 645 628</a></p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i><a class="btn text-white p-0"
+                        style="text-align: left;" href="mailto:info@princeofwales.edu.lk">info@princeofwales.edu.lk</a>
+                </p>
                 <div class="d-flex">
                     <a class="btn btn-outline-light btn-social me-2" href="https://www.facebook.com/cambrians.media"
                         target="_blank" title="Visit our Facebook page">
@@ -85,6 +90,11 @@
                     <a class="btn btn-outline-light btn-social me-2" href="https://www.instagram.com/cmbulive/"
                         target="_blank" title="Follow us on Instagram">
                         <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social me-2"
+                        href="https://whatsapp.com/channel/0029VanJvjFCMY0GGu2F6g3M" target="_blank"
+                        title="Join our WhatsApp Channel">
+                        <i class="fab fa-whatsapp"></i>
                     </a>
                     <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CMBUlive" target="_blank"
                         title="Subscribe to our YouTube channel">
