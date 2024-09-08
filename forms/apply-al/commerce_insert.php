@@ -2,7 +2,7 @@
 
 <head>
 <?php
-include '../../header.php';
+    include '../../views/includes/header.php';
 ?>
 
 
@@ -24,7 +24,7 @@ include '../../header.php';
 
 if(isset($_POST['submit'])){
  
-    include '../resources/db_con.php';
+    include '../../database_connection.php';
  
 
 $scommerce = $_POST['scommerce'];
@@ -64,7 +64,7 @@ $op3 = $_POST['op3'];
 $optional3 = $_POST['optional3'];
 $referenceno= rand();
 
-$nicCheckQuery = "SELECT * FROM pwc_db_al25 WHERE NIC = '$nic'";
+$nicCheckQuery = "SELECT * FROM pwc_db_al WHERE NIC = '$nic'";
 $nicCheckResult = mysqli_query($db, $nicCheckQuery);
 
 if (mysqli_num_rows($nicCheckResult) > 0) {
@@ -73,7 +73,7 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
       $existingReferenceNo = $existingRecord['Reference_no'];
 
   
-      $sql = "UPDATE pwc_db_al25 
+      $sql = "UPDATE pwc_db_al 
       SET 
         Stream = 'Commerce',
         Subject = '$scommerce',
@@ -136,7 +136,7 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
   
 } else {
 
-$sql = "INSERT INTO pwc_db_al25
+$sql = "INSERT INTO pwc_db_al
 (Reference_no,Stream,Subject,almedium,pwc_Other,SchoolIndexNo,School_Private_Candidate,School,S_District,Name,Name_with_Initials,Birthday,NIC,Address1,Address2,City,Guardian_Name,ResidentialNo,Mobile1,Mobile2,E_mail,Distance,Transport,IndexNo,olMedium,Religion,Sinhala,English,Science,Mathematics,History,Optional1,Result1,Optional2,Result2,Optional3,Result3) 
 VALUES
 ('$referenceno','Commerce','$scommerce','$almedium','$school', '$SchoolIndexNo', '$school_private','$schoolname','$schooldistrict','$fname','$iname','$birthday','$nic','$address1','$address2','$city','$gname','$residential','$mobile1','$mobile2','$email','$distance','$transport','$indexno','$olmedium','$religion','$sinhala','$english','$science','$maths','$history','$op1','$optional1','$op2','$optional2','$op3','$optional3')";
@@ -224,7 +224,7 @@ if(mysqli_query($db, $sql)){
 } ?>
 
 <?php
-include '../../footer.php';
+    include '../../views/includes/footer.php';
 ?>
 
 </body>

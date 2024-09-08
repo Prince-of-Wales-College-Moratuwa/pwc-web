@@ -4,13 +4,14 @@
 <head>
 
     <?php 
+
     include '../../database_connection.php';
-    include '../../header.php';
+    include '../../views/includes/header.php';
     ?>
-    <title>Admission Registration for Advanced Level 2025</title>
+    <title>Admission Registration for Advanced Level <?php echo $alformyear ?></title>
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Admission Registration for Advanced Level 2025" />
+    <meta name="title" content="Admission Registration for Advanced Level <?php echo $alformyear ?>" />
     <meta name="description"
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta name="keywords"
@@ -20,7 +21,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://princeofwales.edu.lk/apply-al" />
-    <meta property="og:title" content="Admission Registration for Advanced Level 2025" />
+    <meta property="og:title" content="Admission Registration for Advanced Level <?php echo $alformyear ?>" />
     <meta property="og:description"
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.jpg" />
@@ -28,7 +29,7 @@
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al" />
-    <meta property="twitter:title" content="Admission Registration for Advanced Level 2025" />
+    <meta property="twitter:title" content="Admission Registration for Advanced Level <?php echo $alformyear ?>" />
     <meta property="twitter:description"
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.jpg" />
@@ -37,15 +38,15 @@
 
 <?php
 $currentDate = new DateTime();
-$deadlineDate = new DateTime("2023-12-11");
+$deadlineDate = new DateTime("2025-12-11");
 
 if ($currentDate < $deadlineDate) {
     echo '<div class="container-xxl py-5">';
     echo '    <div class="container">';
     echo '        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">';
     echo '            <h6 class="section-title bg-white text-center text-primary px-3"></h6>';
-    echo '            <h1 class="mb-5">Admission Registration - Advanced Level 2025</h1>';
-    echo '            <h1 class="mb-5"> උසස් පෙළ 2025 - ඇතුලත් වීමේ අයදුම්පත </h1>';
+    echo '            <h1 class="mb-5">Admission Registration - Advanced Level ' . $alformyear . '</h1>';
+    echo '            <h1 class="mb-5"> උසස් පෙළ ' . $alformyear . ' - ඇතුලත් වීමේ අයදුම්පත </h1>';
     echo '        </div>';
     
     echo '        <div class="form-group wow fadeInUp" data-wow-delay="0.1s">';
@@ -92,5 +93,5 @@ if ($currentDate < $deadlineDate) {
 
 
 <?php 
-    include '../../footer.php';
+    include '../../views/includes/footer.php';
     ?>

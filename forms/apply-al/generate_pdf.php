@@ -1,12 +1,12 @@
 <?php
 require('fpdf/fpdf.php');
 
-include('../resources/db_con.php');
+include('../../database_connection.php');
 
 $ref = isset($_GET['ref']) ? $_GET['ref'] : null;
 
 
-$sql = "SELECT * FROM pwc_db_al25 WHERE Reference_no = $ref";
+$sql = "SELECT * FROM pwc_db_al WHERE Reference_no = $ref";
 $result = mysqli_query($db, $sql);
 
 $pdf = new FPDF();
@@ -57,7 +57,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
 $pdf->SetFont('Arial', 'B', 16); 
-$pdf->Cell(0, 7, "Application for 2025 Advanced Level Admission Registration", 0, 1, 'C'); 
+$pdf->Cell(0, 7, "Application for $alformyear Advanced Level Admission Registration", 0, 1, 'C'); 
 $pdf->Cell(0, 7, "Prince of Wales' College, Moratuwa", 0, 1, 'C'); 
 $pdf->Cell(0, 8, "$stream Stream", 0, 1, 'C'); 
 $pdf->SetLineWidth(0.2); 

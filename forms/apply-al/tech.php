@@ -49,7 +49,7 @@ and open the template in the editor.
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <?php 
     include '../../database_connection.php';
-    include '../../header.php';
+    include '../../views/includes/header.php';
     ?>
 
 
@@ -86,7 +86,7 @@ and open the template in the editor.
     <div class="container">
         <form class="form-horizontal" method="POST" action="tech_insert.php">
             <h5 class="text-center"></h5>
-            <h4 class="text-center"> Application for 2025 Advanced Level Admission Registration </h4>
+            <h4 class="text-center"> Application for <?php echo $alformyear ?> Advanced Level Admission Registration </h4>
             <h4 class="text-center"> Technology Stream </h4>
             <div class="form-group"></div>
             <div class="form-group">
@@ -193,9 +193,10 @@ and open the template in the editor.
             </div>
             <!--NIC-->
             <div class="form-group">
-                <label for="nic" class="col-sm-2 col-form-label ">National Idenetity Card No. (if any)</label>
-                <div class="col-sm-2">
-                    <input type="tel" class="form-control" id="nic" name="nic" maxlength="12">
+                <label for="nic" class="col-sm-2 col-form-label">National Identity Card No. (if any)</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nic" name="nic" maxlength="15" pattern="\d{15}"
+                        title="Enter exactly 15 digits">
                 </div>
             </div>
             <!--Address-->
@@ -582,7 +583,7 @@ and open the template in the editor.
     </script>
 
     <?php 
-    include '../../footer.php';
+    include '../../views/includes/footer.php';
 ?>
 </body>
 

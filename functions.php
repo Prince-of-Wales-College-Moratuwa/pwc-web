@@ -61,7 +61,7 @@ function Count_total_form_submission($connect)
 	$total = 0;
 
 	$query = "
-	SELECT COUNT(Reference_no) AS Total FROM pwc_db_al25
+	SELECT COUNT(Reference_no) AS Total FROM pwc_db_al
 	";
 
 	$result = $connect->query($query);

@@ -42,7 +42,7 @@
     <script type="text/javascript" src="/forms/resources/js/bootstrap.js"></script>
     <?php 
     include '../../database_connection.php';
-    include '../../header.php';
+    include '../../views/includes/header.php';
     ?>
 
 <title>Student Information Form</title>
@@ -777,7 +777,7 @@ input[type="radio"]:checked {
 
 
     <?php 
-    include '../../footer.php';
+    include '../../views/includes/footer.php';
 ?>
 
 </body>

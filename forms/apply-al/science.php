@@ -10,16 +10,14 @@
     <meta name="author" content="">
 
     <!-- Primary Meta Tags -->
-    <meta name="title"
-        content="Science Stream - Application for Advanced Level Admission Registration" />
+    <meta name="title" content="Science Stream - Application for Advanced Level Admission Registration" />
     <meta name="description"
         content="Unlock your potential in the world of science! Join our science section to delve into the fascinating realms of biology, chemistry, physics, and more. Explore limitless opportunities for discovery and innovation. Apply now to shape your future in the sciences! - Prince of Wales' College, Moratuwa" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://princeofwales.edu.lk/apply-al/science" />
-    <meta property="og:title"
-        content="Science Stream - Application for Advanced Level Admission Registration" />
+    <meta property="og:title" content="Science Stream - Application for Advanced Level Admission Registration" />
     <meta property="og:description"
         content="Unlock your potential in the world of science! Join our science section to delve into the fascinating realms of biology, chemistry, physics, and more. Explore limitless opportunities for discovery and innovation. Apply now to shape your future in the sciences! - Prince of Wales' College, Moratuwa" />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
@@ -27,8 +25,7 @@
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al/science" />
-    <meta property="twitter:title"
-        content="Science Stream - Application for Advanced Level Admission Registration" />
+    <meta property="twitter:title" content="Science Stream - Application for Advanced Level Admission Registration" />
     <meta property="twitter:description"
         content="Unlock your potential in the world of science! Join our science section to delve into the fascinating realms of biology, chemistry, physics, and more. Explore limitless opportunities for discovery and innovation. Apply now to shape your future in the sciences! - Prince of Wales' College, Moratuwa" />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
@@ -46,7 +43,7 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <?php 
     include '../../database_connection.php';
-    include '../../header.php';
+    include '../../views/includes/header.php';
     ?>
 
 
@@ -66,10 +63,10 @@
             });
         });
 
-        $(document).ready(function() {
-            $('#schoolname').on('input', function(e) {
+        $(document).ready(function () {
+            $('#schoolname').on('input', function (e) {
                 var value = $(this).val();
-                var newValue = value.replace(/['"]/g, ''); 
+                var newValue = value.replace(/['"]/g, '');
                 $(this).val(newValue);
             });
         });
@@ -83,7 +80,8 @@
     <div class="container">
         <form class="form-horizontal" method="POST" action="science_insert.php">
             <h5 class="text-center"></h5>
-            <h4 class="text-center"> Application for 2025 Advanced Level Admission Registration </h4>
+            <h4 class="text-center"> Application for <?php echo $alformyear ?> Advanced Level Admission Registration
+            </h4>
             <h4 class="text-center"> Science Stream </h4>
             <div class="form-group">
                 <div class="alert alert-danger">
@@ -91,17 +89,20 @@
                     <p> Students in Sinhala Medium can select <b>ICT subject</b> in English Medium</p>
                 </div>
             </div>
-    
+
             <!--Subject Selection-->
             <div class="form-group">
                 <label for="subject_selection" class="col-sm-2 col-form-label"> Subjects wish to apply </label>
                 <div class="col-sm-5">
                     <select id="subject" name="sscience" style="min-height:30px;">
                         <option value="Biology / Physics / Chemistry"> Biology / Physics / Chemistry</option>
-                        <option value="Combined Mathematics / Physics / ICT (Sinhala Medium)"> Combined Mathematics / Physics / ICT (Sinhala Medium)</option>
-                        <option value="Combined Mathematics / Physics / ICT (English Medium)"> Combined Mathematics / Physics / ICT (English Medium)</option>
-                        <option value="Combined Mathematics / Physics / Chemistry"> Combined Mathematics / Physics / Chemistry </option>
-                    
+                        <option value="Combined Mathematics / Physics / ICT (Sinhala Medium)"> Combined Mathematics /
+                            Physics / ICT (Sinhala Medium)</option>
+                        <option value="Combined Mathematics / Physics / ICT (English Medium)"> Combined Mathematics /
+                            Physics / ICT (English Medium)</option>
+                        <option value="Combined Mathematics / Physics / Chemistry"> Combined Mathematics / Physics /
+                            Chemistry </option>
+
                     </select>
                 </div>
 
@@ -132,18 +133,18 @@
                     </label>
                 </div>
 
-      
+
 
                 <div class="col-sm-2 col-form-label">
-                    <label for="nic">School Admission Number</label>
+                    <label for="SchoolIndexNo">School Admission Number</label>
                 </div>
                 <div class="col-sm-2">
-                    <input type="number" class="form-control" id="SchoolIndexNo" name="SchoolIndexNo" 
+                    <input type="number" class="form-control" id="SchoolIndexNo" name="SchoolIndexNo"
                         placeholder="School Admission No" required>
                 </div>
 
             </div>
-            
+
 
             <div class="form-group">
                 <label for="school" class="col-sm-3 col-form-label">School or Private Candiate at GCE OL</label>
@@ -201,11 +202,13 @@
             </div>
             <!--NIC-->
             <div class="form-group">
-                <label for="nic" class="col-sm-2 col-form-label ">National Idenetity Card No. (if any)</label>
-                <div class="col-sm-2">
-                    <input type="tel" class="form-control" id="nic" name="nic" maxlength="12">
+                <label for="nic" class="col-sm-2 col-form-label">National Identity Card No. (if any)</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nic" name="nic" maxlength="15" pattern="\d{15}"
+                        title="Enter exactly 15 digits">
                 </div>
             </div>
+
             <!--Address-->
             <div class="form-group">
                 <label for="address" class="col-sm-2 col-form-label ">Personal Address</label>
@@ -233,7 +236,7 @@
                     <input type="text" class="form-control" name="gname" required>
                 </div>
             </div>
-                       <!--Contact Number-->
+            <!--Contact Number-->
             <div class="form-group">
                 <label for="contact" class=" col-sm-2 col-form-label ">Contact No.</label>
                 <div class="col-sm-2">
@@ -242,14 +245,16 @@
                 </div>
                 <div class="col-sm-1">&nbsp;</div>
                 <div class="col-sm-2">
-                    <input type="tel" class="form-control" id="mobile1" placeholder="Mobile 1" name="mobile1" pattern="[0-9()+-\s]*">
+                    <input type="tel" class="form-control" id="mobile1" placeholder="Mobile 1" name="mobile1"
+                        pattern="[0-9()+-\s]*">
                 </div>
                 <div class="col-sm-1">&nbsp;</div>
                 <div class="col-sm-2">
-                    <input type="tel" class="form-control" id="mobile" placeholder="Mobile 2" name="mobile2" pattern="[0-9()+-\s]*">
+                    <input type="tel" class="form-control" id="mobile" placeholder="Mobile 2" name="mobile2"
+                        pattern="[0-9()+-\s]*">
                 </div>
             </div>
-            
+
 
             <!-- Email-->
 
@@ -268,7 +273,7 @@
                     <label for="nic">Distance to the Prince of Wales' College from your place (in Km)</label>
                 </div>
                 <div class="col-sm-3">
-                    <input type="number" class="form-control" id="distance" name="distance" 
+                    <input type="number" class="form-control" id="distance" name="distance"
                         placeholder="Enter numeric values only" required>
                 </div>
 
@@ -294,10 +299,10 @@
             <div class="form-group">
 
                 <div class="col-xs-6 col-sm-3">
-                    <label for="nic">Examination Index Number</label>
+                    <label for="indexno">Examination Index Number</label>
                 </div>
                 <div class="col-xs-6 col-sm-3">
-                    <input type="text" class="form-control" id="indexno" name="indexno" 
+                    <input type="text" class="form-control" id="indexno" name="indexno"
                         placeholder="Examination Index No" required>
                 </div>
 
@@ -509,9 +514,12 @@
                                     <option value="Communication Media Studies">Media Studies</option>
                                     <option value="Design Construction Tech"> Design & Construction Tech </option>
                                     <option value="Design Mechanical Tech"> Design & Mechanical Tech </option>
-                                    <option value="Design Electrical Electronic Tech"> Design, trical & tronic Tech</option>
-                                    <option value="Electronic Writing Shorthand Sinhala"> Electronic Writing (Sinhala) </option>
-                                    <option value="Electronic Writing Shorthand Tamil"> Electronic Writing (Tamil) </option>
+                                    <option value="Design Electrical Electronic Tech"> Design, trical & tronic Tech
+                                    </option>
+                                    <option value="Electronic Writing Shorthand Sinhala"> Electronic Writing (Sinhala)
+                                    </option>
+                                    <option value="Electronic Writing Shorthand Tamil"> Electronic Writing (Tamil)
+                                    </option>
 
                                 </select>
                             </td>
@@ -574,24 +582,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <script>
-        // Get references to the radio buttons and the select element
         const chkYes = document.getElementById("chkYes");
         const chkNo = document.getElementById("chkNo");
         const SchoolIndexNo = document.getElementById("SchoolIndexNo");
 
-        // Add an event listener to the radio buttons to enable/disable the select element
         chkYes.addEventListener("change", function () {
-            SchoolIndexNolass.disabled = false; // Enable the select element when "Yes" is selected
+            SchoolIndexNolass.disabled = false;
         });
 
         chkNo.addEventListener("change", function () {
-            SchoolIndexNo.disabled = true; // Disable the select element when "No" is selected
+            SchoolIndexNo.disabled = true;
         });
-
     </script>
 
     <?php 
-    include '../../footer.php';
+    include '../../views/includes/footer.php';
 ?>
 
 </body>

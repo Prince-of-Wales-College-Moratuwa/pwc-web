@@ -139,7 +139,7 @@
                 <p>The concept of the "Beautiful Wales" by the present Principal, in order to develop the
                     infrastructure, and resources of the college in the year 2023, with the generous support
                     and contribution from the Old Boys' Association in the journey of becoming the best
-                    college in year 2025.
+                    college in Sri Lanka.
                     Our tribute to the present Principal and all the committed teachers and staff, the
                     School Development Society, and the Old Boys' Association for this great work.
                     It's time to gather around our Alma mater to make her beautiful and glamorous.</p>

@@ -97,7 +97,7 @@ if ($currentDate < $birthday) {
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">OUR</h6>
                     <h1 class="mb-4">VISION</h1>
-                    <p class="mb-4">To Make the School with the Best Students in Every Sector in Sri Lanka by 2025</p>
+                    <p class="mb-4">To become the school with the best children in all respects in Sri Lanka</p>
                     <br>
                     <h6 class="section-title bg-white text-start text-primary pe-3">OUR</h6>
                     <h1 class="mb-4">MISSION</h1>

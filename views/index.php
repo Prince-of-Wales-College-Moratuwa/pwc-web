@@ -75,6 +75,9 @@ if ($currentDate < $birthday) {
     $age = date("Y") - $birthYear;
 }
 
+    include 'birthday-msg.php';
+
+    
 ?>
 
 <!-- Carousel Start -->
