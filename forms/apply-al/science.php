@@ -42,7 +42,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <?php 
-    include '../database_connection.php';
+    include '../../database_connection.php';
     include '../../views/includes/header.php';
     ?>
 

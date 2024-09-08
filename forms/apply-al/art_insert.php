@@ -24,7 +24,7 @@
 
 if(isset($_POST['submit'])){
  
-    include '../database_connection.php';
+    include '../../database_connection.php';
 
 $sart1 = $_POST['sart1'];
 $sart2 = $_POST['sart2'];
