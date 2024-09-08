@@ -23,7 +23,7 @@ include 'header.php';
 
 <?php
 if (isset($_POST['submit'])) {
-    include '../../database_connection.php';
+    include '../database_connection.php';
 
     $day = isset($_POST['day']) ? $_POST['day'] : "";
     $month = isset($_POST['month']) ? $_POST['month'] : "";

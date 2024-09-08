@@ -48,7 +48,7 @@ and open the template in the editor.
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <?php 
-    include '../../database_connection.php';
+    include '../database_connection.php';
     include '../../views/includes/header.php';
     ?>
 
@@ -198,8 +198,7 @@ and open the template in the editor.
             <div class="form-group">
                 <label for="nic" class="col-sm-2 col-form-label">National Identity Card No. (if any)</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nic" name="nic" maxlength="15" pattern="\d{15}"
-                        title="Enter exactly 15 digits">
+                    <input type="number" class="form-control" id="nic" name="nic">
                 </div>
             </div>
             <!--Address-->
