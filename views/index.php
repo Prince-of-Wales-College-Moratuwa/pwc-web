@@ -116,9 +116,22 @@ if ($currentDate < $birthday) {
 
     <br>
 
+    <?php
+
+$query = "SELECT * FROM special_announcements WHERE id = 1";
+$statement = $connect->prepare($query);
+$statement->execute();
+$announcement = $statement->fetch(PDO::FETCH_ASSOC);
+
+$published = isset($announcement['published']) ? $announcement['published'] : 'No';
+
+?>
+
+<?php if ($published === 'Yes'): ?>
+
     <style>
         .notice-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url(content/img/img-home/notice/DSC06736.webp);
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url('<?= htmlspecialchars($announcement['image_link']) ?>');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -128,24 +141,25 @@ if ($currentDate < $birthday) {
             background: rgba(15, 23, 43, .7);
         }
     </style>
-
-    <div class="container-fluid bg-primary py-5 mb-5 notice-header">
+    <div class="container-fluid py-5 mb-5 notice-header">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="h1 text-white animated slideInDown">Silver Winner | Best School Website</h1>
-                <p class=" mb-3 text-white animated slideInDown"><b>princeofwales.edu.lk Wins Best School Website Silver
-                        Award at BestWeb.LK 2024 Contest.</b></p>
+                <h1 class="h1 text-white animated slideInDown"><?= htmlspecialchars($announcement['title']) ?></h1>
+                <p class="mb-3 text-white animated slideInDown"><b><?= htmlspecialchars($announcement['content']) ?></b></p>
                 <br>
                 <center>
-                    <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024"
+                    <a href="<?= htmlspecialchars($announcement['button_link']) ?>"
                         target="_blank"
                         style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s">Read More!</a>
+                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s"><?= htmlspecialchars($announcement['button_text']) ?></a>
                 </center>
-
             </div>
         </div>
     </div>
+<?php endif; ?>
+
+
+
 
     <!-- <br>
     <div class="container-fluid bg-primary py-5 mb-5 notice-header">
