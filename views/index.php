@@ -60,6 +60,7 @@
 
     <?php
     include 'includes/header.php';
+    include 'popup-msg.php';
     ?>
 
 </head>
@@ -75,7 +76,7 @@ if ($currentDate < $birthday) {
     $age = date("Y") - $birthYear;
 }
 
-    include 'birthday-msg.php';
+    
 
     
 ?>

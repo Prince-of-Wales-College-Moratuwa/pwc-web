@@ -38,7 +38,7 @@
 
 <?php
 $currentDate = new DateTime();
-$deadlineDate = new DateTime("2025-12-11");
+$deadlineDate = new DateTime("2024-09-08");
 
 if ($currentDate < $deadlineDate) {
     echo '<div class="container-xxl py-5">';
