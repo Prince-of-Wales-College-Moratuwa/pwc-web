@@ -10,26 +10,26 @@
     <meta name="author" content="">
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Art Stream - Application for Advanced Level Admission Registration" />
+    <meta name="title" content="Application for Professional Entry Registration" />
     <meta name="description" content="" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://princeofwales.edu.lk/apply-al/art" />
-    <meta property="og:title" content="Art Stream - Application for Advanced Level Admission Registration" />
+    <meta property="og:url" content="https://princeofwales.edu.lk/apply-al/professional" />
+    <meta property="og:title" content="Application for Professional Entry Registration" />
     <meta property="og:description" content="" />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al/art" />
-    <meta property="twitter:title" content="Art Stream - Application for Advanced Level Admission Registration" />
+    <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al/professional" />
+    <meta property="twitter:title" content="Application for Professional Entry Registration" />
     <meta property="twitter:description" content="" />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
 
 
-    <title>Art Stream - Application for Advanced Level Admission Registration</title>
+    <title>Application for Professional Entry Registration</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -73,10 +73,9 @@
 <body>
 
     <div class="container">
-        <form class="form-horizontal" method="POST" action="art_insert.php">
+        <form class="form-horizontal" method="POST" action="professional_insert.php">
             <h5 class="text-center"></h5>
-            <h4 class="text-center"> Application for <?php echo $alformyear ?> Advanced Level Admission Registration </h4>
-            <h4 class="text-center"> Art Stream </h4>
+            <h4 class="text-center"> Application for <?php echo $alformyear ?> Professional Entry Registration </h4>
             <div class="form-group"></div>
             <div class="form-group">
                 <div class="alert alert-danger">
@@ -89,41 +88,20 @@
                 <div class="form-group">
                     <label for="subject_selection" class="col-sm-2 col-form-label"> Subjects wish to apply </label>
                     <div class="col-sm-3">
-                        <select id="subject" name="sart1" style="min-height:30px;">
-                            <option value="None"> Category 1</option>
+                        <select id="subject" name="professionalcat" style="min-height:30px;">
+                            <option value="None"> Select</option>
 
-                            <option value="Sinhala"> Sinhala </option>
-                            <option value="Japan"> Japan </option>
-                            <option value="Dancing-Indigenous">Dancing-Indigenous</option>
-                            <option value="Art">Art</option>
-                            <option value="Music Oriental">Music Oriental</option>
-                            <option value="Drama & Theatre">Drama & Theatre</option>
-                            <option value="Japanese Language">Japanese Language</option>
-                            <option value="Political Science">Political Science</option>
+                            <option value="සෞඛ්‍ය හා සමාජ සේවා"> සෞඛ්‍ය හා සමාජ සේවා </option>
+                            <option value="සමාජ සංස්කෘතික අධ්‍යයන"> සමාජ සංස්කෘතික අධ්‍යයන </option>
+                            <option value="නිර්මාණකරණය">නිර්මාණකරණය</option>
+                            <option value="කෘෂි හා ආහාර තාක්ෂණවේදය">කෘෂි හා ආහාර තාක්ෂණවේදය</option>
+                            <option value="තාක්ෂණික අධ්‍යයනය">තාක්ෂණික අධ්‍යයනය</option>
+                            <option value="සංවරණය හා ආගන්තුක සත්කාර සේවා">සංවරණය හා ආගන්තුක සත්කාර සේවා</option>
+                            <option value="පරිසර ආශ්‍රිත අධ්‍යයනය">පරිසර ආශ්‍රිත අධ්‍යයනය</option>
                         </select> </div>
                     <div class="col-sm-1">&nbsp;</div>
 
-                    <div class="col-sm-3">
-                        <select id="subject" name="sart2" style="min-height:30px;">
-                            <option value="None"> Category 2</option>
-
-                            <option value="Media & Communication Studies"> Media & Communication Studies </option>
-                            <option value="ICT (Sinhala Medium)"> ICT (Sinhala Medium) </option>
-                            <option value="ICT (English Medium)"> ICT (English Medium) </option>
-                            <option value="Geography"> Geography </option>
-                        </select>
-                    </div>
-                    <div class="col-sm-1">&nbsp;</div>
-
-                    <div class="col-sm-2">
-                        <select id="subject" name="sart3" style="min-height:30px;">
-                            <option value="None"> Category 3</option>
-                            <option value="Economics"> Economics </option>
-                            <option value="Chinese"> Chinese </option>
-                            <option value="Logic and Scientific Method"> Logic and Scientific Method </option>
-                            <option value="Buddhist Civilization"> Buddhist Civilization </option>
-                        </select>
-                    </div>
+            
                 </div>
                 <hr>
             </DIV>
