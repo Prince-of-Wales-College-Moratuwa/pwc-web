@@ -149,15 +149,27 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
                 <p class="mb-3 text-white animated slideInDown"><b><?= htmlspecialchars($announcement['content']) ?></b></p>
                 <br>
                 <center>
-                    <a href="<?= htmlspecialchars($announcement['button_link']) ?>"
-                        target="_blank"
-                        style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s"><?= htmlspecialchars($announcement['button_text']) ?></a>
+                    <?php
+           
+                    $link = htmlspecialchars($announcement['button_link']);
+                    $domain = 'princeofwales.edu.lk';
+                    
+                    if (strpos($link, $domain) !== false) {
+                        
+                        echo '<a href="' . $link . '"';
+                    } else {
+                       
+                        echo '<a href="' . $link . '" target="_blank"';
+                    }
+                    ?>
+                    style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
+                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s"><?= htmlspecialchars($announcement['button_text']) ?></a>
                 </center>
             </div>
         </div>
     </div>
 <?php endif; ?>
+
 
 </div>
 
