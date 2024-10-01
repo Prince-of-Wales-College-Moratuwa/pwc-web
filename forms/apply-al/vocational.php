@@ -10,26 +10,26 @@
     <meta name="author" content="">
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Application for Professional Entry Registration" />
+    <meta name="title" content="Application for Vocational Stream Registration" />
     <meta name="description" content="" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://princeofwales.edu.lk/apply-al/professional" />
-    <meta property="og:title" content="Application for Professional Entry Registration" />
+    <meta property="og:url" content="https://princeofwales.edu.lk/apply-al/vocational" />
+    <meta property="og:title" content="Application for Vocational Stream Registration" />
     <meta property="og:description" content="" />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al/professional" />
-    <meta property="twitter:title" content="Application for Professional Entry Registration" />
+    <meta property="twitter:url" content="https://princeofwales.edu.lk/apply-al/vocational" />
+    <meta property="twitter:title" content="Application for Vocational Stream Registration" />
     <meta property="twitter:description" content="" />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/about-pwc.webp" />
 
 
 
-    <title>Application for Professional Entry Registration</title>
+    <title>Application for Vocational Stream Registration</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -73,9 +73,9 @@
 <body>
 
     <div class="container">
-        <form class="form-horizontal" method="POST" action="professional_insert.php">
+        <form class="form-horizontal" method="POST" action="vocational_insert.php">
             <h5 class="text-center"></h5>
-            <h4 class="text-center"> Application for <?php echo $alformyear ?> Professional Entry Registration </h4>
+            <h4 class="text-center"> Application for <?php echo $alformyear ?> Vocational Stream Registration </h4>
             <div class="form-group"></div>
             <div class="form-group">
                 <div class="alert alert-danger">
@@ -88,7 +88,7 @@
                 <div class="form-group">
                     <label for="subject_selection" class="col-sm-2 col-form-label"> Subjects wish to apply </label>
                     <div class="col-sm-3">
-                        <select id="subject" name="professionalcat" style="min-height:30px;">
+                        <select id="subject" name="vocationalcat" style="min-height:30px;">
                             <option value="None"> Select</option>
 
                             <option value="සෞඛ්‍ය හා සමාජ සේවා"> සෞඛ්‍ය හා සමාජ සේවා </option>

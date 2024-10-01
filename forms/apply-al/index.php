@@ -69,7 +69,7 @@ if ($currentDate < $deadlineDate) {
     echo '                <a class="btn btn-primary py-3 px-5 mt-2 " href="commerce" data-wow-delay="0.7s">COMMERCE</a>';
     echo '                <a class="btn btn-primary py-3 px-5 mt-2 " href="tech" data-wow-delay="0.7s">TECHNOLOGY</a>';
     echo '                <a class="btn btn-primary py-3 px-5 mt-2 " href="art" data-wow-delay="0.7s">ARTS</a>';
-    echo '                <a class="btn btn-primary py-3 px-5 mt-2 " href="professional" data-wow-delay="0.7s">PROFESSIONAL ENTRY</a>';
+    echo '                <a class="btn btn-primary py-3 px-5 mt-2 " href="vocational" data-wow-delay="0.7s">VOCATIONAL</a>';
     echo '            </center>';
     
     echo '        </div>';

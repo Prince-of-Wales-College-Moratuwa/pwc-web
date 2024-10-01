@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
  
     include '../../database_connection.php';
 
-$professionalcat = $_POST['professionalcat'];
+$vocationalcat = $_POST['vocationalcat'];
 $school = $_POST['school'];
 $SchoolIndexNo = isset($_POST['SchoolIndexNo']) ? $_POST['SchoolIndexNo'] : "NULL";
 $school_private = $_POST['school_private'];
@@ -73,8 +73,8 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
   
       $sql = "UPDATE pwc_db_al 
       SET 
-        Stream = 'Professional Entry',
-        Subject = '$professionalcat',
+        Stream = 'vocational Entry',
+        Subject = '$vocationalcat',
         almedium = '$almedium',
         pwc_Other = '$school',
         SchoolIndexNo = '$SchoolIndexNo',
@@ -137,7 +137,7 @@ if (mysqli_num_rows($nicCheckResult) > 0) {
 $sql = "INSERT INTO pwc_db_al
 (Reference_no,Stream,Subject,almedium,pwc_Other,SchoolIndexNo,School_Private_Candidate,School,S_District,Name,Name_with_Initials,Birthday,NIC,Address1,Address2,City,Guardian_Name,ResidentialNo,Mobile1,Mobile2,E_mail,Distance,Transport,IndexNo,olMedium,Religion,Sinhala,English,Science,Mathematics,History,Optional1,Result1,Optional2,Result2,Optional3,Result3) 
 VALUES
-('$referenceno','Professional Entry','$professionalcat','Sinhala','$school', '$SchoolIndexNo', '$school_private','$schoolname','$schooldistrict','$fname','$iname','$birthday','$nic','$address1','$address2','$city','$gname','$residential','$mobile1','$mobile2','$email','$distance','$transport','$indexno','$olmedium','$religion','$sinhala','$english','$science','$maths','$history','$op1','$optional1','$op2','$optional2','$op3','$optional3')";
+('$referenceno','vocational Entry','$vocationalcat','Sinhala','$school', '$SchoolIndexNo', '$school_private','$schoolname','$schooldistrict','$fname','$iname','$birthday','$nic','$address1','$address2','$city','$gname','$residential','$mobile1','$mobile2','$email','$distance','$transport','$indexno','$olmedium','$religion','$sinhala','$english','$science','$maths','$history','$op1','$optional1','$op2','$optional2','$op3','$optional3')";
 
 
 if(mysqli_query($db, $sql)){
