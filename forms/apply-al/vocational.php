@@ -88,20 +88,105 @@
                 <div class="form-group">
                     <label for="subject_selection" class="col-sm-2 col-form-label"> Subjects wish to apply </label>
                     <div class="col-sm-3">
-                        <select id="subject" name="vocationalcat" style="min-height:30px;">
-                            <option value="None"> Select</option>
+                        <select id="subject" name="vocational1" style="min-height:30px;">
+                            <option value="None"> Subject 1</option>
 
-                            <option value="සෞඛ්‍ය හා සමාජ සේවා"> සෞඛ්‍ය හා සමාජ සේවා </option>
-                            <option value="සමාජ සංස්කෘතික අධ්‍යයන"> සමාජ සංස්කෘතික අධ්‍යයන </option>
-                            <option value="නිර්මාණකරණය">නිර්මාණකරණය</option>
-                            <option value="කෘෂි හා ආහාර තාක්ෂණවේදය">කෘෂි හා ආහාර තාක්ෂණවේදය</option>
-                            <option value="තාක්ෂණික අධ්‍යයනය">තාක්ෂණික අධ්‍යයනය</option>
-                            <option value="සංවරණය හා ආගන්තුක සත්කාර සේවා">සංවරණය හා ආගන්තුක සත්කාර සේවා</option>
-                            <option value="පරිසර ආශ්‍රිත අධ්‍යයනය">පරිසර ආශ්‍රිත අධ්‍යයනය</option>
+                            <option value="ළමා මනෝ විද්‍යාව හා ආරක්ෂණය"> ළමා මනෝ විද්‍යාව හා ආරක්ෂණය </option>
+                            <option value="සෞඛ්‍ය හා සමාජ ආරක්ෂණය"> සෞඛ්‍ය හා සමාජ ආරක්ෂණය </option>
+                            <option value="ශාරීරික අධ්‍යාපනය හා ක්‍රීඩා">ශාරීරික අධ්‍යාපනය හා ක්‍රීඩා</option>
+                            <option value="ප්‍රාසාංගික කලාව">ප්‍රාසාංගික කලාව</option>
+                            <option value="කාර්‍ය සිද්ධි කළමනාකරණය">කාර්‍ය සිද්ධි කළමනාකරණය</option>
+                            <option value="ශිල්ප කලා">ශිල්ප කලා</option>
+                            <option value="අභ්‍යන්තර නිර්මාණකරණය">අභ්‍යන්තර නිර්මාණකරණය</option>
+                            <option value="විලාසිතා නිර්මාණකරණය">විලාසිතා නිර්මාණකරණය</option>
+                            <option value="ග්‍රැෆික් නිර්මාණකරණය">ග්‍රැෆික් නිර්මාණකරණය</option>
+                            <option value="කලාව හා පිරිසැලසුම්කරණය">කලාව හා පිරිසැලසුම්කරණය</option>
+                            <option value="භූ දර්ශන නිර්මාණකරණය">භූ දර්ශන නිර්මාණකරණය</option>
+                            <option value="වෙබ් නිර්මාණකරණය">වෙබ් නිර්මාණකරණය</option>
+                            <option value="ව්‍යවහාරික උද්‍යාන විද්‍යා තාක්ෂණ අධ්‍යනය">ව්‍යවහාරික උද්‍යාන විද්‍යා තාක්ෂණ අධ්‍යනය</option>
+                            <option value="පශු සම්පත් නිෂ්පාදන තාක්ෂණ අධ්‍යනය">පශු සම්පත් නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ආහාර නිෂ්පාදන තාක්ෂණ අධ්‍යනය">ආහාර නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ජලජ සම්පත් තාක්ෂණ අධ්‍යනය">ජලජ සම්පත් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="වැවිලි බෝග නිෂ්පාදන තාක්ෂණ අධ්‍යනය">වැවිලි බෝග නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ඉදිකිරීම් තාක්ෂණ අධ්‍යනය">ඉදිකිරීම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="මෝටර් යාන්ත්‍රික තාක්ෂණ අධ්‍යනය">මෝටර් යාන්ත්‍රික තාක්ෂණ අධ්‍යනය</option>
+                            <option value="විදුලිය හා ඉලෙක්ට්‍රොනික තාක්ෂණ අධ්‍යනය">විදුලිය හා ඉලෙක්ට්‍රොනික තාක්ෂණ අධ්‍යනය</option>
+                            <option value="පේෂකර්ම හා ඇගලුම් තාක්ෂණ අධ්‍යනය">පේෂකර්ම හා ඇගලුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ලෝහ සැකසුම් තාක්ෂණ අධ්‍යනය">ලෝහ සැකසුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ඇලුමිනියම් පිරිසැකසුම් තාක්ෂණ අධ්‍යනය">ඇලුමිනියම් පිරිසැකසුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="මෘදුකාංග සංවර්ධනය">මෘදුකාංග සංවර්ධනය</option>
+                            <option value="සංචරණය හා ආගන්තුක සත්කාර">සංචරණය හා ආගන්තුක සත්කාර</option>
+                            <option value="පාරිසරික අධ්‍යනය">පාරිසරික අධ්‍යනය</option>
+
                         </select> </div>
                     <div class="col-sm-1">&nbsp;</div>
 
-            
+                    <div class="col-sm-3">
+                        <select id="subject" name="vocational2" style="min-height:30px;">
+                            <option value="None"> Subject 2</option>
+
+                            <option value="ළමා මනෝ විද්‍යාව හා ආරක්ෂණය"> ළමා මනෝ විද්‍යාව හා ආරක්ෂණය </option>
+                            <option value="සෞඛ්‍ය හා සමාජ ආරක්ෂණය"> සෞඛ්‍ය හා සමාජ ආරක්ෂණය </option>
+                            <option value="ශාරීරික අධ්‍යාපනය හා ක්‍රීඩා">ශාරීරික අධ්‍යාපනය හා ක්‍රීඩා</option>
+                            <option value="ප්‍රාසාංගික කලාව">ප්‍රාසාංගික කලාව</option>
+                            <option value="කාර්‍ය සිද්ධි කළමනාකරණය">කාර්‍ය සිද්ධි කළමනාකරණය</option>
+                            <option value="ශිල්ප කලා">ශිල්ප කලා</option>
+                            <option value="අභ්‍යන්තර නිර්මාණකරණය">අභ්‍යන්තර නිර්මාණකරණය</option>
+                            <option value="විලාසිතා නිර්මාණකරණය">විලාසිතා නිර්මාණකරණය</option>
+                            <option value="ග්‍රැෆික් නිර්මාණකරණය">ග්‍රැෆික් නිර්මාණකරණය</option>
+                            <option value="කලාව හා පිරිසැලසුම්කරණය">කලාව හා පිරිසැලසුම්කරණය</option>
+                            <option value="භූ දර්ශන නිර්මාණකරණය">භූ දර්ශන නිර්මාණකරණය</option>
+                            <option value="වෙබ් නිර්මාණකරණය">වෙබ් නිර්මාණකරණය</option>
+                            <option value="ව්‍යවහාරික උද්‍යාන විද්‍යා තාක්ෂණ අධ්‍යනය">ව්‍යවහාරික උද්‍යාන විද්‍යා තාක්ෂණ අධ්‍යනය</option>
+                            <option value="පශු සම්පත් නිෂ්පාදන තාක්ෂණ අධ්‍යනය">පශු සම්පත් නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ආහාර නිෂ්පාදන තාක්ෂණ අධ්‍යනය">ආහාර නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ජලජ සම්පත් තාක්ෂණ අධ්‍යනය">ජලජ සම්පත් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="වැවිලි බෝග නිෂ්පාදන තාක්ෂණ අධ්‍යනය">වැවිලි බෝග නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ඉදිකිරීම් තාක්ෂණ අධ්‍යනය">ඉදිකිරීම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="මෝටර් යාන්ත්‍රික තාක්ෂණ අධ්‍යනය">මෝටර් යාන්ත්‍රික තාක්ෂණ අධ්‍යනය</option>
+                            <option value="විදුලිය හා ඉලෙක්ට්‍රොනික තාක්ෂණ අධ්‍යනය">විදුලිය හා ඉලෙක්ට්‍රොනික තාක්ෂණ අධ්‍යනය</option>
+                            <option value="පේෂකර්ම හා ඇගලුම් තාක්ෂණ අධ්‍යනය">පේෂකර්ම හා ඇගලුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ලෝහ සැකසුම් තාක්ෂණ අධ්‍යනය">ලෝහ සැකසුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ඇලුමිනියම් පිරිසැකසුම් තාක්ෂණ අධ්‍යනය">ඇලුමිනියම් පිරිසැකසුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="මෘදුකාංග සංවර්ධනය">මෘදුකාංග සංවර්ධනය</option>
+                            <option value="සංචරණය හා ආගන්තුක සත්කාර">සංචරණය හා ආගන්තුක සත්කාර</option>
+                            <option value="පාරිසරික අධ්‍යනය">පාරිසරික අධ්‍යනය</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1">&nbsp;</div>
+
+                    <div class="col-sm-2">
+                        <select id="subject" name="vocational3" style="min-height:30px;">
+                            <option value="None"> Subject 3</option>
+                            <option value="ළමා මනෝ විද්‍යාව හා ආරක්ෂණය"> ළමා මනෝ විද්‍යාව හා ආරක්ෂණය </option>
+                            <option value="සෞඛ්‍ය හා සමාජ ආරක්ෂණය"> සෞඛ්‍ය හා සමාජ ආරක්ෂණය </option>
+                            <option value="ශාරීරික අධ්‍යාපනය හා ක්‍රීඩා">ශාරීරික අධ්‍යාපනය හා ක්‍රීඩා</option>
+                            <option value="ප්‍රාසාංගික කලාව">ප්‍රාසාංගික කලාව</option>
+                            <option value="කාර්‍ය සිද්ධි කළමනාකරණය">කාර්‍ය සිද්ධි කළමනාකරණය</option>
+                            <option value="ශිල්ප කලා">ශිල්ප කලා</option>
+                            <option value="අභ්‍යන්තර නිර්මාණකරණය">අභ්‍යන්තර නිර්මාණකරණය</option>
+                            <option value="විලාසිතා නිර්මාණකරණය">විලාසිතා නිර්මාණකරණය</option>
+                            <option value="ග්‍රැෆික් නිර්මාණකරණය">ග්‍රැෆික් නිර්මාණකරණය</option>
+                            <option value="කලාව හා පිරිසැලසුම්කරණය">කලාව හා පිරිසැලසුම්කරණය</option>
+                            <option value="භූ දර්ශන නිර්මාණකරණය">භූ දර්ශන නිර්මාණකරණය</option>
+                            <option value="වෙබ් නිර්මාණකරණය">වෙබ් නිර්මාණකරණය</option>
+                            <option value="ව්‍යවහාරික උද්‍යාන විද්‍යා තාක්ෂණ අධ්‍යනය">ව්‍යවහාරික උද්‍යාන විද්‍යා තාක්ෂණ අධ්‍යනය</option>
+                            <option value="පශු සම්පත් නිෂ්පාදන තාක්ෂණ අධ්‍යනය">පශු සම්පත් නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ආහාර නිෂ්පාදන තාක්ෂණ අධ්‍යනය">ආහාර නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ජලජ සම්පත් තාක්ෂණ අධ්‍යනය">ජලජ සම්පත් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="වැවිලි බෝග නිෂ්පාදන තාක්ෂණ අධ්‍යනය">වැවිලි බෝග නිෂ්පාදන තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ඉදිකිරීම් තාක්ෂණ අධ්‍යනය">ඉදිකිරීම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="මෝටර් යාන්ත්‍රික තාක්ෂණ අධ්‍යනය">මෝටර් යාන්ත්‍රික තාක්ෂණ අධ්‍යනය</option>
+                            <option value="විදුලිය හා ඉලෙක්ට්‍රොනික තාක්ෂණ අධ්‍යනය">විදුලිය හා ඉලෙක්ට්‍රොනික තාක්ෂණ අධ්‍යනය</option>
+                            <option value="පේෂකර්ම හා ඇගලුම් තාක්ෂණ අධ්‍යනය">පේෂකර්ම හා ඇගලුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ලෝහ සැකසුම් තාක්ෂණ අධ්‍යනය">ලෝහ සැකසුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="ඇලුමිනියම් පිරිසැකසුම් තාක්ෂණ අධ්‍යනය">ඇලුමිනියම් පිරිසැකසුම් තාක්ෂණ අධ්‍යනය</option>
+                            <option value="මෘදුකාංග සංවර්ධනය">මෘදුකාංග සංවර්ධනය</option>
+                            <option value="සංචරණය හා ආගන්තුක සත්කාර">සංචරණය හා ආගන්තුක සත්කාර</option>
+                            <option value="පාරිසරික අධ්‍යනය">පාරිසරික අධ්‍යනය</option>
+                        </select>
+                    </div>
+
                 </div>
                 <hr>
             </DIV>
@@ -495,9 +580,12 @@
                                     <option value="Communication Media Studies">Media Studies</option>
                                     <option value="Design Construction Tech"> Design & Construction Tech </option>
                                     <option value="Design Mechanical Tech"> Design & Mechanical Tech </option>
-                                    <option value="Design Electrical Electronic Tech"> Design, trical & tronic Tech</option>
-                                    <option value="Electronic Writing Shorthand Sinhala"> Electronic Writing (Sinhala) </option>
-                                    <option value="Electronic Writing Shorthand Tamil"> Electronic Writing (Tamil) </option>
+                                    <option value="Design Electrical Electronic Tech"> Design, trical & tronic Tech
+                                    </option>
+                                    <option value="Electronic Writing Shorthand Sinhala"> Electronic Writing (Sinhala)
+                                    </option>
+                                    <option value="Electronic Writing Shorthand Tamil"> Electronic Writing (Tamil)
+                                    </option>
 
                                 </select>
                             </td>
