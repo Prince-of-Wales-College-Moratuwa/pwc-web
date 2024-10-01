@@ -79,8 +79,7 @@
             <div class="form-group"></div>
             <div class="form-group">
                 <div class="alert alert-danger">
-                    <p> Subjects are in <b>Sinhala</b> Medium </p>
-                    <p> Select <b>one Subject</b> from each Category</p>
+                    <p> මෙම විෂයන් අදාල ගුරු සම්පත් අනූව හැදෑරිය හැකි හෝ නොහැකි බව සම්මුඛ පරීක්ෂණයේ දී තහවුරු කරනු ඇත.</p>
                 </div>
             </div>
             <!--Subject Selection-->
