@@ -146,7 +146,7 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <h1 class="h1 text-white animated slideInDown"><?= htmlspecialchars($announcement['title']) ?></h1>
-                <p class="mb-3 text-white animated slideInDown"><b><?= htmlspecialchars($announcement['content']) ?></b></p>
+                <p class="mb-3 text-white animated slideInDown"><b><?= $announcement['content'] ?></b></p>
                 <br>
                 <center>
                     <?php

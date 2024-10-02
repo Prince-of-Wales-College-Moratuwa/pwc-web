@@ -38,7 +38,7 @@
 
 <?php
 $currentDate = new DateTime();
-$deadlineDate = new DateTime("2024-10-15");
+$deadlineDate = new DateTime("2024-10-09");
 
 if ($currentDate < $deadlineDate) {
     echo '<div class="container-xxl py-5">';
@@ -48,8 +48,13 @@ if ($currentDate < $deadlineDate) {
     echo '            <h1 class="mb-5">Admission Registration - Advanced Level ' . $alformyear . '</h1>';
     echo '            <h1 class="mb-5"> උසස් පෙළ ' . $alformyear . ' - ඇතුලත් වීමේ අයදුම්පත </h1>';
     echo '        </div>';
-    
     echo '        <div class="form-group wow fadeInUp" data-wow-delay="0.1s">';
+    echo '<div class="alert alert-danger">';
+    echo '<ul>';
+    echo '<li>The closing date for Prince of Wales College students to apply is <b>Friday, 4 October</b>.</li>';
+    echo '<li>The deadline for out-of-school applicants is <b>Wednesday, October 9</b>.</li>';
+    echo '</ul>';
+    echo '</div>';
     echo '            <p> 1. First Select the relevant stream you wished to apply.</p>';
     echo '            <p> 2. Select one of the subject in three category. Refer the details on subject selection for each';
     echo '                category.';
@@ -58,9 +63,9 @@ if ($currentDate < $deadlineDate) {
     echo '            <p> 4. You cannot alter your submission so be careful and check thoroughly before submission.</p>';
     echo '            <p> 5. You will get a registration reference number after successful submission. Keep that for your future';
     echo '                reference</p>';
-    // echo '            <a href="Application Details.pdf" download>';
-    // echo '                <p>අයදුම්පත උපදෙස් පත්‍රිකාව සහ විෂය සංයෝජන - click here</p>';
-    // echo '            </a>';
+    echo '            <a href="Application Details.pdf" download>';
+    echo '                <p>අයදුම්පත උපදෙස් පත්‍රිකාව සහ විෂය සංයෝජන - click here</p>';
+    echo '            </a>';
     echo '            <hr><br>';
     echo '            <p style="text-align:center"> <b>Please select one of the stream that you wish to apply.</b></p>';
     
