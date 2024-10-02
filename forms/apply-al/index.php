@@ -58,9 +58,9 @@ if ($currentDate < $deadlineDate) {
     echo '            <p> 4. You cannot alter your submission so be careful and check thoroughly before submission.</p>';
     echo '            <p> 5. You will get a registration reference number after successful submission. Keep that for your future';
     echo '                reference</p>';
-    echo '            <a href="Application Details.pdf" download>';
-    echo '                <p>අයදුම්පත උපදෙස් පත්‍රිකාව සහ විෂය සංයෝජන - click here</p>';
-    echo '            </a>';
+    // echo '            <a href="Application Details.pdf" download>';
+    // echo '                <p>අයදුම්පත උපදෙස් පත්‍රිකාව සහ විෂය සංයෝජන - click here</p>';
+    // echo '            </a>';
     echo '            <hr><br>';
     echo '            <p style="text-align:center"> <b>Please select one of the stream that you wish to apply.</b></p>';
     
