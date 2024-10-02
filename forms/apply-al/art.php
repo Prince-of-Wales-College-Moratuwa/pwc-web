@@ -93,7 +93,6 @@
                             <option value="None"> Category 1</option>
 
                             <option value="Sinhala"> Sinhala </option>
-                            <option value="Japan"> Japan </option>
                             <option value="Dancing-Indigenous">Dancing-Indigenous</option>
                             <option value="Art">Art</option>
                             <option value="Music Oriental">Music Oriental</option>
