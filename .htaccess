@@ -1,28 +1,25 @@
 RewriteEngine On
 
-# Redirect requests for .php files to the same URL without the .php extension
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php [NC,L]
+# Exclude URLs that start with /forms from being rewritten
+RewriteCond %{REQUEST_URI} !^/forms [NC]
 
+# Serve files without the .php extension (e.g., /clubs will serve /clubs.php)
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [NC,L]
+
+# Redirect .php URLs to clean URLs (e.g., /clubs.php -> /clubs)
+RewriteCond %{REQUEST_URI} !^/forms [NC]
+RewriteCond %{THE_REQUEST} \s([^.]+)\.php\s [NC]
+RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+
+
+
+# Security measures to restrict access to certain files
 <Files "README.md">
     <If "%{HTTP_REFERER} == ''">
         Require all denied
     </If>
 </Files>
-
-<IfModule mod_headers.c>
-    <FilesMatch "\.pdf$">
-        Header set Content-Disposition "inline"
-    </FilesMatch>
-</IfModule>
-
-<IfModule mod_headers.c>
-    <FilesMatch "\.(pdf)$">
-        Header set Content-Disposition "inline"
-    </FilesMatch>
-</IfModule>
-
 
 <Files ".gitignore">
     <If "%{HTTP_REFERER} == ''">
@@ -30,9 +27,12 @@ RewriteRule ^(.*)$ $1.php [NC,L]
     </If>
 </Files>
 
-RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/index(\.(html|php))?$ [NC]
-RewriteRule ^index(\.(html|php))?$ / [R=301,L]
+# Force inline display of PDFs
+<IfModule mod_headers.c>
+    <FilesMatch "\.pdf$">
+        Header set Content-Disposition "inline"
+    </FilesMatch>
+</IfModule>
 
 
 # root
@@ -145,6 +145,7 @@ RewriteRule ^forms/apply-al/science$ forms/apply-al/science.php [NC,L]
 RewriteRule ^forms/apply-al/commerce$ forms/apply-al/commerce.php [NC,L]
 RewriteRule ^forms/apply-al/tech$ forms/apply-al/tech.php [NC,L]
 RewriteRule ^forms/apply-al/art$ forms/apply-al/art.php [NC,L]
+RewriteRule ^forms/apply-al/vocational$ forms/apply-al/vocational.php [NC,L]
 
 
 #Rules Blocked
