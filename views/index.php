@@ -115,8 +115,6 @@ if ($currentDate < $birthday) {
 
 
 
-    <br>
-
     <?php
 
 $query = "SELECT * FROM special_announcements WHERE id = 1";
@@ -128,8 +126,8 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
 
 ?>
 
-<?php if ($published === 'Yes'): ?>
-
+    <?php if ($published === 'Yes'): ?>
+<br>
     <style>
         .notice-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url('<?= $announcement['image_link'] ?>');
@@ -162,13 +160,15 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
                         echo '<a href="' . $link . '" target="_blank"';
                     }
                     ?>
-                    style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff; border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn" data-wow-delay="0.1s"><?= htmlspecialchars($announcement['button_text']) ?></a>
+                    style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff;
+                    border-radius: 5px; transition: background-color 0.3s ease-in-out;"
+                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn"
+                    data-wow-delay="0.1s"><?= htmlspecialchars($announcement['button_text']) ?></a>
                 </center>
             </div>
         </div>
     </div>
-<?php endif; ?>
+    <?php endif; ?>
 
 
 </div>
@@ -176,7 +176,7 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
 
 <!-- Counter Start -->
 
-<div class="container-xxl py-5">
+<div class="container-xxl py-3">
     <div class="container">
         <div class="row g-4">
             <!-- First row for mobile -->
