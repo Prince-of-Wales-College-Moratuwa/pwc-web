@@ -12,6 +12,8 @@ RewriteCond %{REQUEST_URI} !^/forms [NC]
 RewriteCond %{THE_REQUEST} \s([^.]+)\.php\s [NC]
 RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
 
+#External Redirectors
+Redirect 301 /cits/codeflare24 https://eventshere.lk/events/900992/CODEFLARE--24---ICT-DAY
 
 
 # Security measures to restrict access to certain files
