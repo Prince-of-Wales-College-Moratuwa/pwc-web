@@ -17,7 +17,7 @@ include 'admin-header.php';
 
 ?>
 
-<div class="container-fluid py-1">
+<div class="container-fluid py-2">
 	<div class="dropdown">
 		<h1 class="mb-5"> Dashboard
 			<i class="dropdown-icon fas fa-caret-down"></i></h1>
