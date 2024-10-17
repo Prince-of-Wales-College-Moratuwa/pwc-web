@@ -3,6 +3,10 @@ RewriteEngine On
 # Exclude URLs that start with /forms from being rewritten
 RewriteCond %{REQUEST_URI} !^/forms [NC]
 
+# Exclude the /admin folder from all rewrite rules
+RewriteCond %{REQUEST_URI} ^/admin [NC]
+RewriteRule ^ - [L]
+
 # Serve files without the .php extension (e.g., /clubs will serve /clubs.php)
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^([^/]+)$ $1.php [NC,L]
@@ -11,6 +15,7 @@ RewriteRule ^([^/]+)$ $1.php [NC,L]
 RewriteCond %{REQUEST_URI} !^/forms [NC]
 RewriteCond %{THE_REQUEST} \s([^.]+)\.php\s [NC]
 RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+
 
 #External Redirectors
 Redirect 301 /cits/codeflare24 https://eventshere.lk/events/900992/CODEFLARE--24---ICT-DAY
@@ -39,6 +44,8 @@ Redirect 301 /cits/codeflare24 https://eventshere.lk/events/900992/CODEFLARE--24
 
 # root
 RewriteRule ^$ views/index.php [NC,L]
+
+
 
 
 # Blog

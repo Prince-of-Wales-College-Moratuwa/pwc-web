@@ -2,19 +2,19 @@
 
 $page = 'blog';
 
-include '../database_connection.php';
+include '../../database_connection.php';
 
-include '../functions.php';
+include '../../functions.php';
 
 
 
 if(!is_admin_login())
 {
-	header('location:../admin_login.php');
+	header('location:../../admin_login.php');
 	exit();
 } 
 
-include 'admin-header.php';
+include '../admin-header.php';
 
 ?>
 
@@ -196,7 +196,7 @@ $title = $_POST['title'];
 
 $file = $_FILES['photo']['name'];
 $file_loc = $_FILES['photo']['tmp_name'];
-$folder = "../content/img/img-blog/";
+$folder = "../../content/img/img-blog/";
 $new_file_name = strtolower($file);
 $final_file = str_replace(' ', '-', $new_file_name);
 $title = strtolower(str_replace(' ', '-', $title));
@@ -228,5 +228,5 @@ $final_file = $title . '-blog-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
 
 
 	<?php
-include 'admin-footer.php';
+include '../admin-footer.php';
 ?>

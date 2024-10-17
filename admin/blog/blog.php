@@ -4,19 +4,19 @@ $page = 'blog';
 
 
 
-include '../database_connection.php';
+include '../../database_connection.php';
 
-include './admin-functions.php';
-include '../functions.php';
+include './../admin-functions.php';
+include '../../functions.php';
 
 
 if(!is_admin_login())
 {
-	header('location:../admin_login.php');
+	header('location:../../admin_login.php');
 	exit();
 }
 
-include 'admin-header.php';
+include '../admin-header.php';
 
 
 
@@ -24,7 +24,7 @@ include 'admin-header.php';
 
 <div class="container-fluid py-4" style="min-height: 700px;">
 	<h1>Blog
-	<a href="special-announcements.php" class="btn btn-success btn-sm">Click Here to Add Special Announcement</a>
+	<a href="../special-announcements.php" class="btn btn-success btn-sm">Click Here to Add Special Announcement</a>
 
 	</h1>
 
@@ -74,7 +74,7 @@ $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
 						<td><?php echo($row["title"]) ?></td>
 
 						<td>
-							<a href="../blog/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
+							<a href="../../blog/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
 							<a href="news_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
 							<a href="news_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
 						</td>
@@ -100,5 +100,5 @@ $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
 
 
 <?php
-include 'admin-footer.php';
+include '../admin-footer.php';
 ?>

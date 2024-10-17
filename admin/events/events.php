@@ -2,19 +2,19 @@
 
 $page = 'events';
 
-include '../database_connection.php';
+include '../../database_connection.php';
 
-include './admin-functions.php';
-include '../functions.php';
+include './../admin-functions.php';
+include '../../functions.php';
 
 
 if(!is_admin_login())
 {
-	header('location:../admin_login.php');
+	header('location:../../admin_login.php');
 	exit();
 }
 
-include 'admin-header.php';
+include '../admin-header.php';
 
 ?>
 
@@ -69,7 +69,7 @@ include 'admin-header.php';
 						<td><?php echo($row["organizer_name"]) ?></td>
 
 						<td>
-							<a href="../events/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
+							<a href="../../events/<?php echo $row["slug"]; ?>" target="_blank" class="btn btn-success btn-sm">View</a>
 							<a  href="events_edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
 							<a href="event_delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
 						</td>
@@ -93,5 +93,5 @@ include 'admin-header.php';
 </div>
 
 <?php
-include 'admin-footer.php';
+include '../admin-footer.php';
 ?>

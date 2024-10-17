@@ -1,14 +1,14 @@
 <?php
 $page = 'events';
-include '../database_connection.php';
-include '../functions.php';
+include '../../database_connection.php';
+include '../../functions.php';
 
 if (!is_admin_login()) {
-    header('location:../admin_login.php');
+    header('location:../../admin_login.php');
     exit();
 }
 
-include 'admin-header.php';
+include '../admin-header.php';
 
 if (count($_POST) > 0) {
     // Fetch the row data here
@@ -37,12 +37,12 @@ if (count($_POST) > 0) {
     );
 
     if (!empty($_FILES['img']['name'])) {
-        if (!empty($row['img']) && file_exists('../content/img/img-events/' . $row['img'])) {
-            $currentImagePath = '../content/img/img-events/' . $row['img'];
+        if (!empty($row['img']) && file_exists('../../content/img/img-events/' . $row['img'])) {
+            $currentImagePath = '../../content/img/img-events/' . $row['img'];
             unlink($currentImagePath);
         }
 
-        $uploadDirectory = '../content/img/img-events/';
+        $uploadDirectory = '../../content/img/img-events/';
         $uploadedFileName = $_FILES['img']['name'];
         $uploadFilePath = $uploadDirectory . $uploadedFileName;
 
@@ -215,5 +215,5 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 </div>
 
 <?php
-include 'admin-footer.php';
+include '../admin-footer.php';
 ?>

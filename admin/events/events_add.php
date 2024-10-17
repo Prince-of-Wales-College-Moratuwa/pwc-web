@@ -2,18 +2,18 @@
 
 $page = 'events';
 
-include '../database_connection.php';
+include '../../database_connection.php';
 
-include '../functions.php';
+include '../../functions.php';
 
 
 
 if(!is_admin_login())
 {
-	header('location:../admin_login.php');
+	header('location:../../admin_login.php');
 	exit();
 }
-include 'admin-header.php';
+include '../admin-header.php';
 
 ?>
 
@@ -166,7 +166,7 @@ if(isset($_POST["add_event"]))
 
 		$file = $_FILES['photo']['name'];
 		$file_loc = $_FILES['photo']['tmp_name'];
-		$folder = "../content/img/img-events/";
+		$folder = "../../content/img/img-events/";
 		$new_file_name = strtolower($file);
 		$final_file = str_replace(' ', '-', $new_file_name);
 		$title = strtolower(str_replace(' ', '-', $title));
@@ -192,7 +192,7 @@ if(isset($_POST["add_event"]))
 	
 	echo '<script>
 	alert("Event created successfully!");
-	window.open("../events/' . $formdata['slug'] . '", "_blank");
+	window.open("../../events/' . $formdata['slug'] . '", "_blank");
   </script>';
 
 }
@@ -201,5 +201,5 @@ if(isset($_POST["add_event"]))
 
 
 	<?php
-include 'admin-footer.php';
+include '../admin-footer.php';
 ?>

@@ -65,7 +65,7 @@ if(isset($_POST["login_button"]))
 				{
 					$_SESSION['admin_id'] = $row['admin_id'];
 
-					header('location:admin/index.php');
+					header('location:admin/');
 				}
 				else
 				{

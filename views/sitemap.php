@@ -25,7 +25,7 @@ include 'includes/header.php';
 
 <body>
     <div class="container mt-5">
-        <h6 class="section-title bg-white text-start text-primary pe-3">princeofwales.edu.lk</h6>
+        <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $_SERVER['HTTP_HOST']; ?></h6>
 
         <h1 class="mb-4">Site Map</h1>
         <h2>Main Links</h2>

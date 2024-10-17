@@ -1,14 +1,14 @@
 <?php
 $page = 'blog';
-include '../database_connection.php';
-include '../functions.php';
+include '../../database_connection.php';
+include '../../functions.php';
 
 if (!is_admin_login()) {
-    header('location:../admin_login.php');
+    header('location:../../admin_login.php');
     exit();
 }
 
-include 'admin-header.php';
+include '../admin-header.php';
 
 $sql = "SELECT * FROM pwc_db_news WHERE id = :id";
 $stmt = $connect->prepare($sql);
@@ -49,12 +49,12 @@ if (count($_POST) > 0) {
     ];
     
     if (!empty($_FILES['image']['name'])) {
-        if (!empty($row['photo']) && file_exists('../content/img/img-blog/' . $row['photo'])) {
-            $currentImagePath = '../content/img/img-blog/' . $row['photo'];
+        if (!empty($row['photo']) && file_exists('../../content/img/img-blog/' . $row['photo'])) {
+            $currentImagePath = '../../content/img/img-blog/' . $row['photo'];
             unlink($currentImagePath);
         }
     
-        $uploadDirectory = '../content/img/img-blog/';
+        $uploadDirectory = '../../content/img/img-blog/';
         $uploadedFileName = $_FILES['image']['name'];
         $uploadFilePath = $uploadDirectory . $uploadedFileName;
     
@@ -264,5 +264,5 @@ $row['photo'] = isset($row['photo']) ? $row['photo'] : '';
 </div>
 
 <?php
-include 'admin-footer.php';
+include '../admin-footer.php';
 ?>
