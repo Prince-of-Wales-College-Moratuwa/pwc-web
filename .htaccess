@@ -143,9 +143,6 @@ ErrorDocument 403 /views/errors/403.php
 ErrorDocument 500 /views/errors/500.php
 
 
-#Admin
-RewriteRule ^admin-access$ admin_login.php [NC,L]
-
 
 #Forms
 RewriteRule ^forms/students-information$ forms/students-info/form.php [NC,L]
