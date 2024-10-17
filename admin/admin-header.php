@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="generator" content="">
-    <title>Admin</title>
+    <title>Admin Dashboard</title>
     <link rel="canonical" href="">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/admin/css/styles.css">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- icons -->
-    <link rel="icon" href="../logo-pwc.png">
+    <link rel="icon" href="/content/icons/logo-pwc.ico">
     <meta name="theme-color" content="#800000">
     <style>
         .breadcrumb {

@@ -1,3 +1,8 @@
+<head>
+<title>Login - Admin Dashboard</title>
+<link rel="icon" href="/content/icons/logo-pwc.ico">
+
+</head>
 <?php
 
 //admin_login.php

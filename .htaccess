@@ -7,11 +7,11 @@ RewriteCond %{REQUEST_URI} !^/forms [NC]
 RewriteCond %{REQUEST_URI} ^/admin [NC]
 RewriteRule ^ - [L]
 
-# Serve files without the .php extension (e.g., /clubs will serve /clubs.php)
+# Serve files without the .php extension
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^([^/]+)$ $1.php [NC,L]
 
-# Redirect .php URLs to clean URLs (e.g., /clubs.php -> /clubs)
+# Redirect .php URLs to clean URLs
 RewriteCond %{REQUEST_URI} !^/forms [NC]
 RewriteCond %{THE_REQUEST} \s([^.]+)\.php\s [NC]
 RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
