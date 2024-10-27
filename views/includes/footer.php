@@ -83,7 +83,7 @@
                         style="text-align: left;" href="mailto:info@princeofwales.edu.lk">info@princeofwales.edu.lk</a>
                 </p>
                 <div class="d-flex">
-                    <a class="btn btn-outline-light btn-social me-2" href="https://www.facebook.com/cambrians.media"
+                    <a class="btn btn-outline-light btn-social me-2" href="https://www.facebook.com/cmbulive"
                         target="_blank" title="Visit our Facebook page">
                         <i class="fab fa-facebook-f"></i>
                     </a>

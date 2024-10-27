@@ -138,7 +138,7 @@
                 <a href="https://www.instagram.com/cmbulive/" target="_blank">
                     <img src="images/instagram logo.webp" class="social-media" alt="instagram-logo">
                 </a>
-                <a href="https://www.facebook.com/cambrians.media" target="_blank">
+                <a href="https://www.facebook.com/cmbulive" target="_blank">
                     <img src="images/facebook logo.webp" class="social-media" alt="facebook-logo">
                 </a>
                 <a href="https://www.youtube.com/cmbulive" target="_blank">
