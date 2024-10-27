@@ -96,7 +96,7 @@
                         title="Join our WhatsApp Channel">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CMBUlive" target="_blank"
+                    <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/cmbulive" target="_blank"
                         title="Subscribe to our YouTube channel">
                         <i class="fab fa-youtube"></i>
                     </a>
