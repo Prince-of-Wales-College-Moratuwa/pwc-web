@@ -20,6 +20,7 @@ RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
 #External Redirectors
 Redirect 301 /cits/codeflare24 https://eventshere.lk/events/900992/CODEFLARE--24---ICT-DAY
 Redirect 301 /cmbulive/sadbhashana24/registration https://princeofwales.edu.lk/blog/sadhbhashana24-registrations
+Redirect 301 /sadbhashana24 https://forms.gle/YFbVssgtTCfVda8K9
 
 
 # Security measures to restrict access to certain files
