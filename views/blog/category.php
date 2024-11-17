@@ -16,7 +16,7 @@ $total_results = $statement->fetchColumn();
 $total_pages = ceil($total_results / $limit);
 
 // Fetch posts for the current page
-$query = "SELECT * FROM pwc_db_news WHERE categoryslug=? ORDER BY date DESC, id DESC LIMIT $start, $limit";
+$query = "SELECT * FROM pwc_db_news WHERE categoryslug=? AND date <= NOW() ORDER BY date DESC, id DESC LIMIT $start, $limit";
 $statement = $connect->prepare($query);
 $statement->execute([$categoryslug]);
 $rows = $statement->fetchAll();
@@ -140,7 +140,7 @@ $article_count = $statement->fetchColumn();
                         <article class="article-entry">
                             <a href="/blog/<?php echo $row["slug"]; ?>" class="blog-img">
                                 <img src="/content/img/img-blog/<?php echo htmlspecialchars($row["photo"]); ?>" alt="<?php echo htmlspecialchars($row["title"]); ?>" loading="lazy"><br><br>
-                                <p class="meta"><span class="day"><?php echo htmlspecialchars($row["date"]); ?></span> │ <span></span> <span><?php echo htmlspecialchars($row["category"]); ?></span></p>
+                                <p class="meta"><span class="day"><?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date)); ?></span> │ <span></span> <span><?php echo htmlspecialchars($row["category"]); ?></span></p>
                             </a>
                             <div class="desc">
                                 <h4><a href="/blog/<?php echo htmlspecialchars($row["slug"]); ?>"><?php echo htmlspecialchars($row["title"]); ?></a></h4>

@@ -137,7 +137,7 @@ try {
                         <a href="/blog/<?php echo $row["slug"]; ?>" class="blog-img">
                             <img src="/content/img/img-blog/<?php echo $row["photo"]; ?>"
                                 alt="<?php echo $row["title"]; ?>" loading="lazy"><br><br>
-                            <p class="meta"><span class="day"><?php echo $row["date"]; ?></span> │ <span></span>
+                            <p class="meta"><span class="day"><?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date)); ?></span> │ <span></span>
                                 <span><?php echo $row["category"]; ?></span></p>
                         </a>
                         <div class="desc">

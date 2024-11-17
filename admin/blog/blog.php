@@ -70,7 +70,7 @@ $query = "SELECT * FROM pwc_db_news ORDER BY date DESC";
 			{ 
 				?>
 					<tr>
-						<td><?php echo($row["date"]) ?></td>
+						<td><?php echo date("Y-m-d H:i", strtotime($row["date"])); ?></td>
 						<td><?php echo($row["title"]) ?></td>
 
 						<td>

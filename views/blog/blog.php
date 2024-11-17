@@ -50,7 +50,7 @@ foreach ($rows as $row) {
     content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
 
 
-    <?php include '../includes/header.php'; ?>
+  <?php include '../includes/header.php'; ?>
 
 </head>
 
@@ -104,18 +104,18 @@ if ($schoolPride == 'ON') {
 ?>
 
 
-<script>
-    function openFacebookLinksInNewTab() {
+    <script>
+      function openFacebookLinksInNewTab() {
         var links = document.querySelectorAll('a[href*="facebook.com"]');
-        links.forEach(function(link) {
-            link.setAttribute('target', '_blank'); 
+        links.forEach(function (link) {
+          link.setAttribute('target', '_blank');
         });
-    }
+      }
 
-    document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         openFacebookLinksInNewTab();
-    });
-</script>
+      });
+    </script>
 
 
     <header>
@@ -127,14 +127,15 @@ if ($schoolPride == 'ON') {
           <div class="row g-5">
             <div class="col-12 wow fadeInUp">
               <a href="/blog/category/<?php echo strtolower($row["category"]); ?>">
-              <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
+                <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
               </a>
               <h3 class="mb-4"><?php echo $row["title"]; ?></h3>
-              <h4 class="h6 bg-white text-start text-primary" style="font-size: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+              <h4 class="h6 bg-white text-start text-primary" style="font-size: 15px;"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-patch-check-fill" viewBox="0 0 16 16">
                   <path
                     d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-                </svg> Published By: <?php echo $row["author"]; ?> | <?php echo $row["date"]; ?></h4>
+                </svg> Published By: <?php echo $row["author"]; ?> | <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
               <br>
               <div class="position-relative">
                 <img class="img-fluid w-100 h-100" src="/content/img/img-blog/<?php echo $row["photo"]; ?>"
@@ -153,24 +154,24 @@ if ($schoolPride == 'ON') {
           <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
               <a href="/blog/category/<?php echo strtolower($row["category"]); ?>">
-              <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
+                <h6 class="section-title bg-white text-start text-primary pe-3"><?php echo $row["category"]; ?></h6>
               </a>
               <h3 class="mb-4"><?php echo $row["title"]; ?></h3>
               <h4 class="h6 bg-white text-start text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                   height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
                   <path
                     d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-                </svg> Published By: <?php echo $row["author"]; ?> | <?php echo $row["date"]; ?></h4>
+                </svg> Published By: <?php echo $row["author"]; ?> | <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
               <p class="mb-4"><?php echo $row["content"]; ?></p>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
               <div class="position-relative ">
                 <img class="img-fluid w-100 h-100" src="/content/img/img-blog/<?php echo $row["photo"]; ?>"
                   alt="<?php echo $row["title"]; ?>" style="object-fit: cover; border-radius: 8px;">
-                </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </article>
 
@@ -186,20 +187,20 @@ if ($schoolPride == 'ON') {
 
           .desktop-layout {
             display: none;
-            
+
           }
         }
 
-        
+
         @media only screen and (min-width: 768px) {
           .mobile-layout {
             display: none;
-         
+
           }
 
           .desktop-layout {
             display: block;
-           
+
           }
         }
       </style>
