@@ -109,7 +109,7 @@ include 'includes/header.php';
         <h2>Blog Posts</h2>
         <?php
 
-            $query = "SELECT slug, title FROM pwc_db_news";
+            $query = "SELECT slug, title FROM pwc_db_news WHERE date <= NOW()";
             $statement = $connect->prepare($query);
             $statement->execute();
             $result = $statement->fetchAll();

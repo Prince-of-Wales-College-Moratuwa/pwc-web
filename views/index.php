@@ -6,6 +6,8 @@
 
     <?php
     $page = 'home';
+include '../sitemap-gen.php';
+
 ?>
     <?php 
     include '../database_connection.php';
@@ -268,7 +270,7 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
 
             <?php 
 
-$query = "SELECT * FROM pwc_db_news ORDER BY date DESC, id DESC";
+$query = "SELECT * FROM pwc_db_news WHERE date <= NOW() ORDER BY date DESC, id DESC";
 
 $statement = $connect->prepare($query);
 

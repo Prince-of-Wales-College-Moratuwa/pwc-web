@@ -196,14 +196,14 @@ $row['photo'] = isset($row['photo']) ? $row['photo'] : '';
                         </div>
                     </div>
 
+                    <?php $dateTimeValue = date('Y-m-d\TH:i', strtotime($row['date'])); ?>
                     <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Date</label>
-                            <input type="date" name="date" id="date" class="form-control"
-                                value="<?php echo $row['date']; ?>"
-                                oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase()" />
-                        </div>
-                    </div>
+    <div class="mb-3">
+        <label class="form-label">Date and Time</label>
+        <input type="datetime-local" name="date" id="date" class="form-control"
+            value="<?php echo $dateTimeValue; ?>" />
+    </div>
+</div>
 
                     <div class="col-md-6">
                         <div class="mb-3">

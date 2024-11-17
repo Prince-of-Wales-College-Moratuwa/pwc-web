@@ -50,6 +50,13 @@ include '../admin-header.php';
 					</div>
 					<div class="col-md-6">
 						<div class="mb-3">
+							<label class="form-label">Date and Time</label>
+							<input type="datetime-local" name="date" id="date" class="form-control"
+								value="<?php echo date('Y-m-d\TH:i'); ?>" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="mb-3">
 							<label class="form-label">Description</label>
 							<div id="content"></div>
 
@@ -67,7 +74,9 @@ include '../admin-header.php';
 									});
 							</script>
 						</div>
-						
+
+
+
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label class="form-label">Category</label>
@@ -106,6 +115,7 @@ include '../admin-header.php';
 								<option value="Student">Student</option>
 							</select>
 						</div>
+
 					</div>
 
 
@@ -190,6 +200,7 @@ if (isset($_POST["add_news"])) {
         ':author' => $formdata['author'],
         ':schoolPride' => $formdata['schoolPride'],
         ':categoryslug' => $categoryslug, 
+        ':date' => $_POST['date'],
     );
 
 $title = $_POST['title'];
@@ -209,7 +220,7 @@ $final_file = $title . '-blog-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
         $query = "
         INSERT INTO pwc_db_news 
         (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride) 
-        VALUES (:title, :content, :category, :slug, :photo, CURDATE(), :content, :author, :categoryslug, :schoolPride)
+        VALUES (:title, :content, :category, :slug, :photo, CURDATE(), :content, :author, :categoryslug, :schoolPride, date = :date, )
         ";
 
         $data[':photo'] = $image; 

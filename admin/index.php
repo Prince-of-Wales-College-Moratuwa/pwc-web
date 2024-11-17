@@ -12,7 +12,7 @@ if(!is_admin_login())
 	exit();
 }
 
-include '../sitemap-gen.php';
+include 'sitemap-gen.php';
 include 'admin-header.php';
 
 ?>
