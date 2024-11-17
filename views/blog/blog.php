@@ -27,6 +27,13 @@ foreach ($rows as $row) {
 
   <title><?php echo $row["title"]; ?></title>
 
+  <?php 
+$date = $row["date"]; 
+if (strtotime($date) > strtotime(date("Y-m-d"))) {
+    echo '<meta name="robots" content="noindex">';
+}
+?>
+
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="<?php echo $row["title"]; ?>" />
@@ -135,7 +142,8 @@ if ($schoolPride == 'ON') {
                   class="bi bi-patch-check-fill" viewBox="0 0 16 16">
                   <path
                     d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-                </svg> Published By: <?php echo $row["author"]; ?> | <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
+                </svg> Published By: <?php echo $row["author"]; ?> |
+                <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
               <br>
               <div class="position-relative">
                 <img class="img-fluid w-100 h-100" src="/content/img/img-blog/<?php echo $row["photo"]; ?>"
@@ -161,7 +169,8 @@ if ($schoolPride == 'ON') {
                   height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
                   <path
                     d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-                </svg> Published By: <?php echo $row["author"]; ?> | <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
+                </svg> Published By: <?php echo $row["author"]; ?> |
+                <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
               <p class="mb-4"><?php echo $row["content"]; ?></p>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
