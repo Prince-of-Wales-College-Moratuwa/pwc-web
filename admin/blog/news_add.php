@@ -191,6 +191,7 @@ if (isset($_POST["add_news"])) {
     $formdata['author'] = isset($_POST["author"]) ? trim($_POST["author"]) : '';
     $formdata['schoolPride'] = isset($_POST["schoolPride"]) ? trim($_POST["schoolPride"]) : '';
     $formdata['slug'] = trim($_POST["slug"]);
+    $formdata['date'] = trim($_POST["date"]);
 
     $data = array(
         ':title' => $formdata['title'],
@@ -200,7 +201,7 @@ if (isset($_POST["add_news"])) {
         ':author' => $formdata['author'],
         ':schoolPride' => $formdata['schoolPride'],
         ':categoryslug' => $categoryslug, 
-        ':date' => $_POST['date'],
+        ':date' => $formdata['date']
     );
 
 $title = $_POST['title'];
@@ -220,7 +221,7 @@ $final_file = $title . '-blog-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
         $query = "
         INSERT INTO pwc_db_news 
         (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride) 
-        VALUES (:title, :content, :category, :slug, :photo, CURDATE(), :content, :author, :categoryslug, :schoolPride, date = :date, )
+        VALUES (:title, :content, :category, :slug, :photo, :date, :content, :author, :categoryslug, :schoolPride )
         ";
 
         $data[':photo'] = $image; 
