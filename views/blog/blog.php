@@ -27,13 +27,6 @@ foreach ($rows as $row) {
 
   <title><?php echo $row["title"]; ?></title>
 
-  <?php 
-$date = $row["date"]; 
-if (strtotime($date) > strtotime(date("Y-m-d"))) {
-    echo '<meta name="robots" content="noindex">';
-}
-?>
-
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="<?php echo $row["title"]; ?>" />
