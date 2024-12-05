@@ -130,7 +130,7 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
 ?>
 
     <?php if ($published === 'Yes'): ?>
-<br>
+    <br>
     <style>
         .notice-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url('<?= $announcement['image_link'] ?>');
@@ -294,7 +294,9 @@ if($statement->rowCount() > 0)
                     <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
                         <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["title"]; ?>"
                             width="600" height="400" loading="lazy"><br><br>
-                        <p class="meta"><span class="day"><?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date)); ?></span> │ <span></span>
+                        <p class="meta"><span
+                                class="day"><?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date)); ?></span>
+                            │ <span></span>
                             <span><?php echo $row["category"]; ?></span></p>
                     </a>
                     <div class="desc">
@@ -332,21 +334,40 @@ if($statement->rowCount() > 0)
 
 <!-- Events Start -->
 
+
 <style>
-            .course-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 400px; /* Ensure all boxes have the same height */
-}
-.course-item .text-center {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+    /* Ensure the container for the image maintains 1:1 ratio */
+    .image-container {
+        width: 100%;
+        /* Full width of the card */
+        padding-top: 100%;
+        /* 1:1 aspect ratio using padding hack */
+        position: relative;
+        /* For positioning the image absolutely */
+        overflow: hidden;
+        /* Crop the overflowing parts of the image */
+        border-radius: 10px;
+        /* Optional: Rounded corners */
+    }
+
+    /* Properly fit the image inside the container */
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image scales and crops to fit the container */
+    }
+
+    /* Flexbox improvements */
+    .course-item {
+        display: flex;
+        flex-direction: column;
+    }
 </style>
+
 
 <div class="container-xxl py-5">
     <div class="container">
@@ -371,27 +392,25 @@ if($statement->rowCount() > 0)
         $rowCount++;
 ?>
 
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-light d-flex flex-column" style="min-height: 300px;">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" style="width: auto;" loading="lazy"
-                            src="content/img/img-events/<?php echo($row["img"]) ?>" alt="<?php echo($row["title"]) ?>">
-                    </div>
-                    <div class="text-center p-4 flex-grow-1">
-                        <h4 class="mb-4"><?php echo($row["title"]) ?></h4>
-                    </div>
-                    <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                        <a href="events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                            style="border-radius: 30px 30px 30px 30px;">View Event</a>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i
-                                class="fa fa-calendar text-primary me-2"></i><?php echo($row["date"]) ?></small>
-                        <small class="flex-fill text-center py-2"><i
-                                class="fa fa-map-marker text-primary me-2"></i><?php echo($row["location"]) ?></small>
-                    </div>
-                </div>
-            </div>
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="course-item bg-light d-flex flex-column h-100">
+        <div class="position-relative overflow-hidden image-container">
+            <img class="img-fluid" loading="lazy" src="../content/img/img-events/<?php echo $row["img"]; ?>" alt="<?php echo $row["title"]; ?>">
+        </div>
+        <div class="text-center p-4 flex-grow-1">
+            <h4 class="mb-4"><?php echo $row["title"]; ?></h4>
+        </div>
+        <div class="mt-auto w-100 d-flex justify-content-center mb-4">
+            <a href="/events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px;">View Event</a>
+        </div>
+        <div class="d-flex border-top">
+            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i><?php echo $row["date"]; ?></small>
+            <small class="flex-fill text-center py-2"><i class="fa fa-map-marker text-primary me-2"></i><?php echo $row["location"]; ?></small>
+        </div>
+    </div>
+</div>
+
+
             <?php 
     if ($rowCount >= $limit) {
         break;

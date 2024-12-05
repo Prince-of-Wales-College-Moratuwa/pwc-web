@@ -54,6 +54,13 @@ include '../includes/header.php'; ?>
     justify-content: space-between;
     height: 400px; /* Ensure all boxes have the same height */
 }
+		.course-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ensures 1:1 aspect ratio */
+    object-fit: cover; /* Prevents distortion and ensures the image fills the area */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
 .course-item .text-center {
     flex-grow: 1;
     display: flex;
@@ -81,7 +88,7 @@ include '../includes/header.php'; ?>
     </div>
     <!-- Header End -->
 
-<!-- Up Events Start -->
+	<!-- Up Events Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-4 justify-content-center">
@@ -119,15 +126,15 @@ include '../includes/header.php'; ?>
             } else {
                 foreach ($upcomingEvents as $row) {
                     echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-                    echo '<div class="course-item bg-light d-flex flex-column" style="min-height: 300px;">';
-                    echo '<div class="position-relative overflow-hidden">';
-                    echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '" style="width: auto;">';
+                    echo '<div class="course-item bg-light d-flex flex-column h-100">';
+                    echo '<div class="position-relative overflow-hidden image-container">';
+                    echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '">';
                     echo '</div>';
                     echo '<div class="text-center p-4 flex-grow-1">';
                     echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
                     echo '</div>';
                     echo '<div class="mt-auto w-100 d-flex justify-content-center mb-4">';
-                    echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;" aria-label="Read more about ' . $row["event_title"] . '">View Event</a>';
+                    echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px;" aria-label="Read more about ' . $row["event_title"] . '">View Event</a>';
                     echo '</div>';
                     echo '<div class="d-flex border-top">';
                     echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
@@ -144,15 +151,15 @@ include '../includes/header.php'; ?>
             </div>';
             foreach ($pastEvents as $row) {
                 echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-                echo '<div class="course-item bg-light d-flex flex-column" style="min-height: 300px;">';
-                echo '<div class="position-relative overflow-hidden">';
-                echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '" style="width: auto;">';
+                echo '<div class="course-item bg-light d-flex flex-column h-100">';
+                echo '<div class="position-relative overflow-hidden image-container">';
+                echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '">';
                 echo '</div>';
                 echo '<div class="text-center p-4 flex-grow-1">';
                 echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
                 echo '</div>';
                 echo '<div class="mt-auto w-100 d-flex justify-content-center mb-4">';
-                echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;" aria-label="Read more about ' . $row["title"] . '">View Event</a>';
+                echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px;" aria-label="Read more about ' . $row["title"] . '">View Event</a>';
                 echo '</div>';
                 echo '<div class="d-flex border-top">';
                 echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
@@ -166,6 +173,33 @@ include '../includes/header.php'; ?>
         </div>
     </div>
 </div>
+
+<style>
+/* Ensure the container for the image maintains 1:1 ratio */
+.image-container {
+    width: 100%; /* Full width of the card */
+    padding-top: 100%; /* 1:1 aspect ratio using padding hack */
+    position: relative; /* For positioning the image absolutely */
+    overflow: hidden; /* Crop the overflowing parts of the image */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Properly fit the image inside the container */
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales and crops to fit the container */
+}
+
+/* Flexbox improvements */
+.course-item {
+    display: flex;
+    flex-direction: column;
+}
+</style>
 
 
 
