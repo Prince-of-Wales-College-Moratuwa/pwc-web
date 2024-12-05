@@ -355,18 +355,17 @@ if($statement->rowCount() > 0)
 ?>
 
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-light">
+                <div class="course-item bg-light d-flex flex-column" style="min-height: 300px;">
                     <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" style="width: auto;"
-                            src="content/img/img-events/<?php echo($row["img"]) ?>" alt="<?php echo($row["title"]) ?>"
-                            loading="lazy">
+                        <img class="img-fluid" style="width: auto;" loading="lazy"
+                            src="content/img/img-events/<?php echo($row["img"]) ?>" alt="<?php echo($row["title"]) ?>">
                     </div>
-                    <div class="text-center p-4 pb-0">
+                    <div class="text-center p-4 flex-grow-1">
                         <h4 class="mb-4"><?php echo($row["title"]) ?></h4>
                     </div>
-                    <div class="w-100 d-flex justify-content-center bottom-0 start-0 mb-4">
+                    <div class="mt-auto w-100 d-flex justify-content-center mb-4">
                         <a href="events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                            style="border-radius: 30px 30 30 30px;">View Event</a>
+                            style="border-radius: 30px 30px 30px 30px;">View Event</a>
                     </div>
                     <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-2"><i
@@ -397,12 +396,8 @@ if($statement->rowCount() > 0)
             Events</a>
     </center>
 </div>
-
-
-
-</div>
-</div>
 <!-- Events End -->
+
 
 
 

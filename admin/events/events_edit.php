@@ -31,7 +31,6 @@ if (count($_POST) > 0) {
         ':organizer_name' => $_POST['organizer_name'],
         ':organizer_phone' => $_POST['organizer_phone'],
         ':about' => $_POST['about'],
-        ':other_details' => $_POST['other_details'],
         ':slug' => $_POST['slug'],
         ':id' => $_GET['id']
     );
@@ -61,7 +60,6 @@ if (count($_POST) > 0) {
                 organizer_name = :organizer_name, 
                 organizer_phone = :organizer_phone, 
                 about = :about, 
-                other_details = :other_details, 
                 slug = :slug,
                 img = :img
             WHERE id = :id";
@@ -155,13 +153,6 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="mb-3">
-							<label class="form-label">Agenda / Other Details</label>
-							<input type="text" name="other_details" id="other_details" class="form-control"
-								value="<?php echo $row['other_details']; ?>" />
-						</div>
-					</div>
 
 					<div class="col-md-6">
 						<div class="mb-3">

@@ -75,15 +75,13 @@ include '../includes/header.php'; ?>
 
         <div class="row mt-4">
           <div class="col-md-12">
+            <br>
             <p><i class="fa fa-user text-primary me-2"></i>Event Organizer: <b><?php echo $row["organizer_name"]; ?></b>
             </p>
             <p><i class="fa fa-phone text-primary me-2"></i>Contact: <?php echo $row["organizer_phone"]; ?></p>
             <br>
             <h3>About this Event</h3>
             <p><?php echo $row["about"]; ?></p>
-
-            <h3>Agenda and other Details</h3>
-            <p><?php echo $row["other_details"]; ?></p>
 
           </div>
 

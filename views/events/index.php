@@ -66,7 +66,6 @@ include '../includes/header.php'; ?>
     </div>
     <!-- Header End -->
 
-
 <!-- Up Events Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -105,15 +104,15 @@ include '../includes/header.php'; ?>
             } else {
                 foreach ($upcomingEvents as $row) {
                     echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-                    echo '<div class="course-item bg-light">';
+                    echo '<div class="course-item bg-light d-flex flex-column" style="min-height: 300px;">';
                     echo '<div class="position-relative overflow-hidden">';
                     echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '" style="width: auto;">';
                     echo '</div>';
-                    echo '<div class="text-center p-4 pb-0">';
+                    echo '<div class="text-center p-4 flex-grow-1">';
                     echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
                     echo '</div>';
-                    echo '<div class="w-100 d-flex justify-content-center mb-4">';
-                    echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;" aria-label="Read more about ' . $row["event_title"] . '">View Event</a>';
+                    echo '<div class="mt-auto w-100 d-flex justify-content-center mb-4">';
+                    echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;" aria-label="Read more about ' . $row["event_title"] . '">View Event</a>';
                     echo '</div>';
                     echo '<div class="d-flex border-top">';
                     echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
@@ -130,15 +129,15 @@ include '../includes/header.php'; ?>
             </div>';
             foreach ($pastEvents as $row) {
                 echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-                echo '<div class="course-item bg-light">';
+                echo '<div class="course-item bg-light d-flex flex-column" style="min-height: 300px;">';
                 echo '<div class="position-relative overflow-hidden">';
                 echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '" style="width: auto;">';
                 echo '</div>';
-                echo '<div class="text-center p-4 pb-0">';
+                echo '<div class="text-center p-4 flex-grow-1">';
                 echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
                 echo '</div>';
-                echo '<div class="w-100 d-flex justify-content-center mb-4">';
-                echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30 30 30px;" aria-label="Read more about ' . $row["title"] . '">View Event</a>';
+                echo '<div class="mt-auto w-100 d-flex justify-content-center mb-4">';
+                echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;" aria-label="Read more about ' . $row["title"] . '">View Event</a>';
                 echo '</div>';
                 echo '<div class="d-flex border-top">';
                 echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
@@ -152,6 +151,7 @@ include '../includes/header.php'; ?>
         </div>
     </div>
 </div>
+
 
 
 
