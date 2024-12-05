@@ -74,7 +74,7 @@
 
 
 
-<?php
+    <?php
 $currentDate = new DateTime();
 $start = new DateTime($currentDate->format('Y') . '-12-01');
 $end = new DateTime($currentDate->format('Y') . '-12-31');
@@ -95,8 +95,6 @@ if ($currentDate >= $start && $currentDate <= $end) {
     ';
 }
 ?>
-
-
 
 
     <style>

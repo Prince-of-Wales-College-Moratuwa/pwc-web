@@ -62,6 +62,7 @@ include '../sitemap-gen.php';
 
     <?php
     include 'includes/header.php';
+    include 'includes/fireworks.php';
     include 'popup-msg.php';
     ?>
 
@@ -78,7 +79,7 @@ if ($currentDate < $birthday) {
     $age = date("Y") - $birthYear;
 }
 
-    
+
 
     
 ?>
