@@ -331,6 +331,23 @@ if($statement->rowCount() > 0)
 <br> <br>
 
 <!-- Events Start -->
+
+<style>
+            .course-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Ensure all boxes have the same height */
+}
+.course-item .text-center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+</style>
+
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">

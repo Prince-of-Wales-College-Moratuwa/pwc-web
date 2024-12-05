@@ -47,6 +47,21 @@ include '../includes/header.php'; ?>
         .event-page-header-inner {
             background: rgba(15, 23, 43, .7);
         }
+
+        .course-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Ensure all boxes have the same height */
+}
+.course-item .text-center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
     </style>
 
 </head>
