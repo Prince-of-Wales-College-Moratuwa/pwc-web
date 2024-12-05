@@ -327,7 +327,7 @@
 
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                         <h6 class="section-title bg-white text-start text-primary pe-3">COMMUNITY SERVICE CLUB</h6>
-                        <h1 class="mb-4">CAMBRIANS' ST. JHONS' AMBULANCE</h1>
+                        <h1 class="mb-4">CAMBRIANS' ST. JOHNS' AMBULANCE</h1>
                         <p class="mb-4">The Cambrians' St. John's Ambulance, also known as the College First Aid Unit,
                             at Prince of Wales College, exemplifies the spirit of compassion, preparedness, and
                             community service. Under the guidance and expertise of its devoted teachers in charge, Mrs.
