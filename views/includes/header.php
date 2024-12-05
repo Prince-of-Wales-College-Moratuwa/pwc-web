@@ -84,10 +84,11 @@ if ($currentDate >= $start && $currentDate <= $end) {
     <script src="/resources/js/snow/snowstorm.js"></script>
     <script>
         snowStorm.snowStick = false;
+        snowStorm.disableMobile = false; 
         snowStorm.zIndex = 9999;
-        snowStorm.flakesMaxActive = 90; // Maximum active snowflakes
+        snowStorm.flakesMaxActive = 90; 
         snowStorm.flakeBottom = null;
-        snowStorm.animationInterval = 50; // Adjust speed
+        snowStorm.animationInterval = 50;
         snowStorm.followMouse = false;
         snowStorm.usePositionFixed = false;
     </script>
