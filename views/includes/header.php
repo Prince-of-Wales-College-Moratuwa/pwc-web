@@ -85,7 +85,7 @@ if ($currentDate >= $start && $currentDate <= $end) {
     <script>
         snowStorm.snowStick = false;
         snowStorm.zIndex = 9999;
-        snowStorm.flakesMaxActive = 100; // Maximum active snowflakes
+        snowStorm.flakesMaxActive = 75; // Maximum active snowflakes
         snowStorm.flakeBottom = null;
         snowStorm.animationInterval = 50; // Adjust speed
         snowStorm.followMouse = false;
