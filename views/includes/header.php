@@ -74,6 +74,28 @@
 
 
 
+<?php
+$currentDate = new DateTime();
+$start = new DateTime($currentDate->format('Y') . '-12-01');
+$end = new DateTime($currentDate->format('Y') . '-12-31');
+
+if ($currentDate >= $start && $currentDate <= $end) {
+    echo '
+    <script src="/resources/js/snow/snowstorm.js"></script>
+    <script>
+        snowStorm.snowStick = false;
+        snowStorm.zIndex = 9999;
+        snowStorm.flakesMaxActive = 100; // Maximum active snowflakes
+        snowStorm.flakeBottom = null;
+        snowStorm.animationInterval = 50; // Adjust speed
+        snowStorm.followMouse = false;
+        snowStorm.usePositionFixed = false;
+    </script>
+    ';
+}
+?>
+
+
 
 
     <style>
