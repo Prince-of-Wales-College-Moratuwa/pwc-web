@@ -80,19 +80,8 @@ $start = new DateTime($currentDate->format('Y') . '-12-01');
 $end = new DateTime($currentDate->format('Y') . '-12-31');
 
 if ($currentDate >= $start && $currentDate <= $end) {
-    echo '
-    <script src="/resources/js/snow/snowstorm.js"></script>
-    <script>
-        snowStorm.snowStick = false;
-        snowStorm.disableMobile = false; 
-        snowStorm.zIndex = 9999;
-        snowStorm.flakesMaxActive = 90; 
-        snowStorm.flakeBottom = null;
-        snowStorm.animationInterval = 50;
-        snowStorm.followMouse = false;
-        snowStorm.usePositionFixed = false;
-    </script>
-    ';
+    include 'snow.php';
+
 }
 ?>
 
