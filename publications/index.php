@@ -195,7 +195,7 @@
     <div class="container-xxl py-5" id="vod-mod">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-publications/music.webp" alt="music-on-demand"
@@ -225,7 +225,7 @@
     <div class="container-xxl py-5" id="vod-mod">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="/content/img/img-publications/video.webp" alt="video-on-demand"

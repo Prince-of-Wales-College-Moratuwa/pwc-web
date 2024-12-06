@@ -262,10 +262,13 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;"> <!-- Updated height -->
                 <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/about-pwc.webp"
-                        alt="Learning Begins With Us" style="object-fit: cover;" loading="lazy">
+                    <img class="img-fluid position-absolute w-100 h-100" 
+                        src="content/img/img-home/about-pwc.webp"
+                        alt="Learning Begins With Us" 
+                        style="object-fit: cover;" 
+                        loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -288,6 +291,7 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
     </div>
 </div>
 <!-- About End -->
+
 
 
 
@@ -436,7 +440,7 @@ if($statement->rowCount() > 0)
                     </div>
                     <div class="mt-auto w-100 d-flex justify-content-center mb-4">
                         <a href="/events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                            style="border-radius: 30px;">View Event</a>
+                            >View Event</a>
                     </div>
                     <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-2"><i
@@ -494,7 +498,7 @@ foreach ($rows as $row) {
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 500px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/principal-pwc.webp"
                         alt="pwc principal" style="object-fit: cover;" loading="lazy">
@@ -595,7 +599,7 @@ foreach ($rows as $row) {
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-home/big-match-pwc.webp"
                         alt="big match" style="object-fit: cover;" loading="lazy">

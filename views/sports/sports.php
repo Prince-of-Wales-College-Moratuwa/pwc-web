@@ -92,7 +92,6 @@
             </center>
         </div>
     </div>
-    </div>
 
 
     <div class="container-xxl py-5" id="team-sports">

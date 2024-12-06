@@ -324,7 +324,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                             download target="_blank" data-wow-delay="0.7s">Download MP3</a>
 
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
                         <div class="position-relative h-100">
                             <img class="img-fluid position-absolute w-100 h-100"
                                 src="content/img/img-about/sinhala-anthem-pwc.webp" alt="Sinhala Anthem PWC"
@@ -344,7 +344,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                 </div>
 
                 <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
                         <div class="position-relative h-100">
                             <img class="img-fluid position-absolute w-100 h-100"
                                 src="content/img/img-about/english-anthem-pwc.webp" alt="English Anthem PWC"
@@ -420,7 +420,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
             </div>
 
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100"
                             src="content/img/img-about/house-system-pwc.webp" alt="house flags"
@@ -619,7 +619,7 @@ if($statement->rowCount() > 0)
     <br>
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
                 <div class="position-relative h-100">
                     <img class="img-fluid position-absolute w-100 h-100"
                         src="content/img/img-about/location-new-pwc.webp" alt="Locations" style="object-fit: cover;"
