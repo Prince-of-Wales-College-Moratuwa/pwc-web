@@ -64,7 +64,40 @@ include '../sitemap-gen.php';
     include 'includes/header.php';
     include 'includes/fireworks.php';
     include 'popup-msg.php';
-    ?>
+    
+if (date('m-d') == '09-14') {
+    echo '<div class="confetti-container"></div>';
+    
+    echo '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>';
+    
+    echo '
+    <script>
+      var end = Date.now() + (2 * 1000);
+      var colors = [\'#800080\', \'#ffd700\', \'#800000\'];
+    
+      (function frame() {
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors
+        });
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors
+        });
+    
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    </script>';
+}
+?>
 
 </head>
 
@@ -392,23 +425,27 @@ if($statement->rowCount() > 0)
         $rowCount++;
 ?>
 
-<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="course-item bg-light d-flex flex-column h-100">
-        <div class="position-relative overflow-hidden image-container">
-            <img class="img-fluid" loading="lazy" src="../content/img/img-events/<?php echo $row["img"]; ?>" alt="<?php echo $row["title"]; ?>">
-        </div>
-        <div class="text-center p-4 flex-grow-1">
-            <h4 class="mb-4"><?php echo $row["title"]; ?></h4>
-        </div>
-        <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-            <a href="/events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px;">View Event</a>
-        </div>
-        <div class="d-flex border-top">
-            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i><?php echo $row["date"]; ?></small>
-            <small class="flex-fill text-center py-2"><i class="fa fa-map-marker text-primary me-2"></i><?php echo $row["location"]; ?></small>
-        </div>
-    </div>
-</div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item bg-light d-flex flex-column h-100">
+                    <div class="position-relative overflow-hidden image-container">
+                        <img class="img-fluid" loading="lazy" src="../content/img/img-events/<?php echo $row["img"]; ?>"
+                            alt="<?php echo $row["title"]; ?>">
+                    </div>
+                    <div class="text-center p-4 flex-grow-1">
+                        <h4 class="mb-4"><?php echo $row["title"]; ?></h4>
+                    </div>
+                    <div class="mt-auto w-100 d-flex justify-content-center mb-4">
+                        <a href="/events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                            style="border-radius: 30px;">View Event</a>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-2"><i
+                                class="fa fa-calendar text-primary me-2"></i><?php echo $row["date"]; ?></small>
+                        <small class="flex-fill text-center py-2"><i
+                                class="fa fa-map-marker text-primary me-2"></i><?php echo $row["location"]; ?></small>
+                    </div>
+                </div>
+            </div>
 
 
             <?php 

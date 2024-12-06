@@ -9,7 +9,7 @@ $yearDifference = $currentYear - $baseYear;
 $currentDate = date("m-d");
 
 $startDate = "09-12";
-$endDate = "09-21";
+$endDate = "09-16";
 
 if ($currentDate >= $startDate && $currentDate <= $endDate) {
     echo '<!DOCTYPE html>
@@ -28,7 +28,7 @@ if ($currentDate >= $startDate && $currentDate <= $endDate) {
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 9998; 
+            z-index: 100; 
         }
         .popup-box {
             background-color: #ffffff;
@@ -38,7 +38,6 @@ if ($currentDate >= $startDate && $currentDate <= $endDate) {
             text-align: center;
             width: 500px; /* Increased width */
             position: relative; 
-            z-index: 9999; 
         }
         .popup-box h1 {
             color: #800000; /* Maroon color */
@@ -60,19 +59,10 @@ if ($currentDate >= $startDate && $currentDate <= $endDate) {
         .popup-box button:hover {
             background-color: #a00000; /* Darker maroon on hover */
         }
-        .confetti-container {
-            position: absolute; /* Absolute to ensure it covers entire viewport */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 10000; /* Above everything else */
-        }
+
     </style>
 </head>
 <body>
- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script>
         function closePopup() {
             document.getElementById("popup-overlay").style.display = "none";

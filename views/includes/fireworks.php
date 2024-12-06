@@ -2,7 +2,7 @@
 // Get the current date
 $currentDate = date('m-d');
 
-if ($currentDate == '01-01' || $currentDate == '09-14') {
+if ($currentDate == '01-01') {
     ?>
     <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
 
