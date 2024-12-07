@@ -22,19 +22,19 @@ include 'admin-header.php';
 
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Add Prefects Topboard Member</h1>
+	<h1>Add Current Head Prefect</h1>
 
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-		<li class="breadcrumb-item active">Add Prefects Topboard Member</li>
+		<li class="breadcrumb-item active">Add Current Head Prefect</li>
 	</ol>
 
 
 
 	<div class="card mb-4">
 		<div class="card-header">
-        Add Prefects Topboard Member
+        Add Current Head Prefect
 		</div>
 		<div class="card-body">
 			<form action="" method="POST" enctype="multipart/form-data">

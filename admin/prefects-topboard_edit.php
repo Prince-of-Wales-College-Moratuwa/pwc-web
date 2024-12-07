@@ -50,17 +50,17 @@ if (count($_POST) > 0) {
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-    <h1>Edit Prefects Topboard Members</h1>
+    <h1>Edit Current Head Prefect</h1>
 
     <?php if(isset($message)) {echo $message; } ?>
 
     <ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
         <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-        <li class="breadcrumb-item active">Edit Prefects Topboard Member</li>
+        <li class="breadcrumb-item active">Edit Current Head Prefect</li>
     </ol>
     <div class="card mb-4">
         <div class="card-header">
-            Edit Prefects Topboard Member
+            Edit Current Head Prefect
         </div>
         <div class="card-body">
             <form action="" method="POST" enctype="multipart/form-data">

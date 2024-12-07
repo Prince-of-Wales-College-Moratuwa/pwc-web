@@ -110,7 +110,7 @@ date_default_timezone_set('Asia/Colombo');
                         <a class="nav-link <?php if ($page === 'principal-msg') echo 'active'; ?>" href="/admin/principal-msg.php?id=1"><img src="/admin/ion-icon/comment.png" width="20px">&nbsp Principal's Msg</a>
                         <a class="nav-link <?php if ($page === 'past-principals') echo 'active'; ?>" href="/admin/past-principals.php"><img src="/admin/ion-icon/owner.png" width="20px">&nbsp Past Principals</a>
                         <a class="nav-link <?php if ($page === 'school-admins') echo 'active'; ?>" href="/admin/school-admins.php"><img src="/admin/ion-icon/profile.png" width="20px">&nbsp School Admins</a>
-                        <a class="nav-link <?php if ($page === 'prefects-topboard') echo 'active'; ?>" href="/admin/prefects-topboard.php"><img src="/admin/ion-icon/badge.png" width="20px">&nbsp Prefect Topboard</a>
+                        <a class="nav-link <?php if ($page === 'prefects-topboard') echo 'active'; ?>" href="/admin/prefects-topboard.php"><img src="/admin/ion-icon/badge.png" width="20px">&nbsp Current Head Prefect</a>
                         <a class="nav-link <?php if ($page === 'past-prefects') echo 'active'; ?>" href="/admin/past-prefects.php"><img src="/admin/ion-icon/badge (1).png" width="20px">&nbsp Past Headprefects</a>
                         <a class="nav-link <?php if ($page === 'bigmatch') echo 'active'; ?>" href="/admin/bigmatch/bigmatch.php"><img src="/admin/ion-icon/cricket.png" width="20px">&nbsp Big Match</a>
 
