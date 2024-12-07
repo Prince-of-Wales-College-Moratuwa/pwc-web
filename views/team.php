@@ -256,7 +256,7 @@
                             <img src="/content/img/team/cits.webp" alt="CITS Logo"
                                 style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 100%; height: auto;">
                         </div>
-                            <h4 style="color: #856404; "><strong>Cambrians ICT Society</strong></h4>
+                            <h4 style="color: #856404; "><strong>Cambrians' ICT Society</strong></h4>
                         </div>
 
                         <hr style="border: 1px solid #856404; width: 50%; margin: 20px auto;">
