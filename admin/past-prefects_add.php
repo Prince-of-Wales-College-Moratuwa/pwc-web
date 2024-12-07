@@ -95,7 +95,7 @@ if (isset($_POST["add_past-principal"])) {
 
         $statement->execute($data);
 
-		echo '<script>window.open("../about/prefects-guild", "_blank");</script>';
+		echo '<script>window.open("../clubs/prefects-guild", "_blank");</script>';
         exit();
 
     }

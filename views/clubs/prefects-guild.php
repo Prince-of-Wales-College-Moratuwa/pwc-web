@@ -18,7 +18,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://princeofwales.edu.lk/about/prefects-guild" />
+    <meta property="og:url" content="https://princeofwales.edu.lk/clubs/prefects-guild" />
     <meta property="og:title" content="Prefects' Guild | Prince of Wales' College" />
     <meta property="og:description"
         content="Elevating Leadership: Join the Prince of Wales College Prefects' Guild. Empowerment, Excellence, and Unity in Action. Discover your leadership potential today!" />
@@ -27,7 +27,7 @@
 
     <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://princeofwales.edu.lk/about/prefects-guild" />
+    <meta property="twitter:url" content="https://princeofwales.edu.lk/clubs/prefects-guild" />
     <meta property="twitter:title" content="Prefects' Guild | Prince of Wales' College" />
     <meta property="twitter:description"
         content="Elevating Leadership: Join the Prince of Wales College Prefects' Guild. Empowerment, Excellence, and Unity in Action. Discover your leadership potential today!" />
