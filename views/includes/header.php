@@ -231,19 +231,10 @@ if ($currentDate >= $start && $currentDate <= $end) {
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
                 <a href="/events/"
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'events') echo 'active'; ?>">Events</a>
-
-                <div class="nav-item dropdown">
                     <a href="/publications"
-                        class="nav-link dropdown-toggle <?php if ($page === 'publications') echo 'active'; ?> nav-link pulse">Publications</a>
-                    <div class="dropdown-menu fade-down m-0" style="font-size: 15px;">
-                        <a class="dropdown-item" href="/publications#school-magazine"><b>MAGAZINES</b></a>
-                        <a class="dropdown-item" href="/publications#golden-book"><b>GOLDEN BOOK</b></a>
-                        <a class="dropdown-item" href="/publications#projects"><b>PROJECTS</b></a>
-                        <a class="dropdown-item" href="/publications#golden-captures"><b>GOLDEN CAPTURES</b></a>
-                        <a class="dropdown-item" href="/publications#vod-mod"><b>VOD & MOD</b></a>
-                    </div>
-                </div>
+                    class="nav-item nav-link nav-link pulse <?php if ($page === 'publications') echo 'active'; ?>">Publications</a>
 
+            
                 <div class="nav-item dropdown">
                     <a href="/sports"
                         class="nav-link dropdown-toggle <?php if ($page === 'sports') echo 'active'; ?> nav-link pulse">Sports</a>
