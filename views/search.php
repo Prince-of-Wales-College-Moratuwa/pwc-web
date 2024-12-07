@@ -25,10 +25,35 @@
             border-radius: 0 25px 25px 0;
             color: white;
         }
+
+        .sports-page-header {
+            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-home/header-main-pwc_desktop.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .sports-page-header-inner {
+            background: rgba(15, 23, 43, .7);
+        }
+
     </style>
 </head>
 
 <body>
+
+ <!-- Header Start -->
+ <div class="container-fluid bg-primary py-5 mb-5 sports-page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">SEARCH</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
