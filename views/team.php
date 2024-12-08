@@ -152,6 +152,8 @@
                      
                             <a href="https://www.instagram.com/ni_msar.a/" target="_blank">
                                 <i class="fab fa-instagram"></i>
+                            <a href="https://www.linkedin.com/in/nimsara-sankalpa-92681a336/" class="me-2" target="_blank">
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </div>
                     </div>
@@ -322,6 +324,8 @@
                     <p><i class="fa fa-calendar text-primary me-2"></i>Date: <b>15th September 2023</b></p>
                     <p><i class="fa fa-map-marker text-primary me-2"></i>Location: <b>School Auditorium</b></p>
                 </p>
+                <a class="btn btn-primary py-3 px-5 mt-2"
+                href="blog/official-website-launch">Read More</a>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
                 <div class="position-relative h-100">
