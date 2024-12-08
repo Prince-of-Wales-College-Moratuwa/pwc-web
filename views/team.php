@@ -152,7 +152,7 @@
                      
                             <a href="https://www.instagram.com/ni_msar.a/" class="me-2" target="_blank">
                                 <i class="fab fa-instagram"></i>
-                            <a href="https://www.linkedin.com/in/nimsara-sankalpa-92681a336/" class="me-2" target="_blank">
+                            <a href="https://www.linkedin.com/in/nimsara-sankalpa-92681a336/" target="_blank">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </div>
