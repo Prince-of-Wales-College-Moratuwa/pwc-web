@@ -52,6 +52,9 @@ foreach ($rows as $row) {
 
   <?php include '../includes/header.php'; ?>
 
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss">
+
+
 </head>
 
 <body>
