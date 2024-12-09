@@ -214,25 +214,28 @@ $final_file = str_replace(' ', '-', $new_file_name);
 $title = strtolower(str_replace(' ', '-', $title));
 $final_file = $title . '-blog-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
 
+
 	
+if (move_uploaded_file($file_loc, $folder . $final_file)) {
+    $image = $final_file;
+    
+    include '../../tg_auto.php';
 
-    if (move_uploaded_file($file_loc, $folder . $final_file)) {
-        $image = $final_file;
-        $query = "
-        INSERT INTO pwc_db_news 
-        (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride) 
-        VALUES (:title, :content, :category, :slug, :photo, :date, :content, :author, :categoryslug, :schoolPride )
-        ";
+    $query = "
+    INSERT INTO pwc_db_news 
+    (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride) 
+    VALUES (:title, :content, :category, :slug, :photo, :date, :content, :author, :categoryslug, :schoolPride )
+    ";
 
-        $data[':photo'] = $image; 
-        $statement = $connect->prepare($query);
+    $data[':photo'] = $image; 
+    $statement = $connect->prepare($query);
 
-        $statement->execute($data);
+    $statement->execute($data);
 
-		echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
-        exit();
+    echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
+    exit();
+}
 
-    }
 }
 
 ?>

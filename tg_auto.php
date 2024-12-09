@@ -12,13 +12,15 @@ $lastProcessedFile = "last_guid.txt";
 // Fetch the RSS feed
 $rssContent = file_get_contents($rssFeedUrl);
 if (!$rssContent) {
-    die("Unable to fetch RSS feed.");
+    echo '<script>alert("Unable to fetch RSS feed.");</script>';
+    exit;
 }
 
 // Parse the RSS feed
 $rss = simplexml_load_string($rssContent);
 if (!$rss) {
-    die("Invalid RSS feed format.");
+    echo '<script>alert("Invalid RSS feed format.");</script>';
+    exit;
 }
 
 // Read the last processed GUID
@@ -51,9 +53,9 @@ foreach ($rss->channel->item as $item) {
     $hashtagsText = implode(" ", $hashtags[0]);
 
     // Format the Telegram message
-    $message = "*$title*\n\n" .
-               strip_tags($description) . "\n\n" .
-               "Read More | $link\n\n" .
+    $message = "*$title*\n\n" . 
+               strip_tags($description) . "\n\n" . 
+               "Read More | $link\n\n" . 
                $hashtagsText;
 
     // Turn off link preview by adding `disable_web_page_preview`
@@ -78,7 +80,8 @@ foreach ($rss->channel->item as $item) {
     // Execute and check the response
     $response = curl_exec($ch);
     if ($response === false) {
-        die("Failed to send message to Telegram: " . curl_error($ch));
+        echo '<script>alert("Failed to send message to Telegram: ' . curl_error($ch) . '");</script>';
+        exit;
     }
 
     // Close cURL
@@ -86,8 +89,7 @@ foreach ($rss->channel->item as $item) {
 
     // Save the current item's GUID as the last processed GUID
     file_put_contents($lastProcessedFile, $guid);
+    echo '<script>alert("RSS feed processed and notifications sent.");</script>';
     break; // Process only the first valid item published today
 }
-
-echo "RSS feed processed and notifications sent.";
 ?>
