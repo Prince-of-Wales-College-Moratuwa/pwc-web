@@ -26,8 +26,8 @@ if (!$rss) {
 // Read the last processed GUID
 $lastProcessedGuid = file_exists($lastProcessedFile) ? file_get_contents($lastProcessedFile) : "";
 
-// Current date and time
-$currentDateTime = new DateTime();
+// Get today's date in the RSS date format (e.g., "Mon, 09 Dec 2024")
+$today = date("D, d M Y");
 
 // Loop through RSS items
 foreach ($rss->channel->item as $item) {
@@ -36,18 +36,15 @@ foreach ($rss->channel->item as $item) {
     $link = (string)$item->link; // Dynamic entity link from RSS
     $description = (string)$item->description;
     $imageUrl = (string)$item->enclosure['url']; // Assuming RSS includes <enclosure> for images
-    $pubDate = new DateTime((string)$item->pubDate);
+    $pubDate = (string)$item->pubDate;
 
-    // Skip items already processed
-    if ($guid === $lastProcessedGuid) {
-        continue;
+    // Check if the item's publication date matches today's date
+    if (strpos($pubDate, $today) === false) {
+        continue; // Skip items not published today
     }
 
-    // Check if publication date is in the future
-    if ($pubDate > $currentDateTime) {
-        // Schedule message
-        echo '<script>alert("Message scheduled for future date.");</script>';
-        // Use a scheduling library or store details in a database/cron job for future execution
+    // If this item is already processed, skip it
+    if ($guid === $lastProcessedGuid) {
         continue;
     }
 
@@ -95,7 +92,7 @@ foreach ($rss->channel->item as $item) {
 
     // Save the current item's GUID as the last processed GUID
     file_put_contents($lastProcessedFile, $guid);
-    echo '<script>alert("Message sent to Telegram.");</script>';
-    break; // Process only the first valid item
+    echo '<script>alert("RSS feed processed and notifications sent.");</script>';
+    break; // Process only the first valid item published today
 }
 ?>

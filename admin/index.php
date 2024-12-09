@@ -19,10 +19,30 @@ include 'admin-header.php';
 
 ?>
 
+
+<script>
+        function refreshFeed() {
+            fetch('auto-post/tg_auto.php', {
+                method: 'GET',
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert("Feed refreshed: " + data); // Show response in an alert
+            })
+            .catch(error => {
+                alert("Error refreshing feed: " + error);
+            });
+        }
+    </script>
+
 <div class="container-fluid py-4">
 	<div class="dropdown">
 		<h1 class="mb-5"> Dashboard
-			<i class="dropdown-icon fas fa-caret-down"></i></h1>
+			<i class="dropdown-icon fas fa-caret-down"></i>
+            <button class="btn btn-success btn-sm" onclick="refreshFeed()">Refresh Feed</button>
+        
+        </h1>
+
 
 		<div class="dropdown-content">
 			<a class="nav-link <?php if ($page === 'index') echo 'active'; ?>" href="/admin"><img
