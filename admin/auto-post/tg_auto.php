@@ -7,7 +7,7 @@ $chatId = "-1002437489499"; // Use channel ID if sending to a Telegram channel
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
 
 // File to store the last processed item's GUID
-$lastProcessedFile = "../../last_guid.txt";
+$lastProcessedFile = "last_guid.txt";
 
 // Fetch the RSS feed
 $rssContent = file_get_contents($rssFeedUrl);
@@ -26,8 +26,8 @@ if (!$rss) {
 // Read the last processed GUID
 $lastProcessedGuid = file_exists($lastProcessedFile) ? file_get_contents($lastProcessedFile) : "";
 
-// Get today's date in the RSS date format (e.g., "Mon, 09 Dec 2024")
-$today = date("D, d M Y");
+// Current date and time
+$currentDateTime = new DateTime();
 
 // Loop through RSS items
 foreach ($rss->channel->item as $item) {
@@ -36,15 +36,18 @@ foreach ($rss->channel->item as $item) {
     $link = (string)$item->link; // Dynamic entity link from RSS
     $description = (string)$item->description;
     $imageUrl = (string)$item->enclosure['url']; // Assuming RSS includes <enclosure> for images
-    $pubDate = (string)$item->pubDate;
+    $pubDate = new DateTime((string)$item->pubDate);
 
-    // Check if the item's publication date matches today's date
-    if (strpos($pubDate, $today) === false) {
-        continue; // Skip items not published today
+    // Skip items already processed
+    if ($guid === $lastProcessedGuid) {
+        continue;
     }
 
-    // If this item is already processed, skip it
-    if ($guid === $lastProcessedGuid) {
+    // Check if publication date is in the future
+    if ($pubDate > $currentDateTime) {
+        // Schedule message
+        echo '<script>alert("Message scheduled for future date.");</script>';
+        // Use a scheduling library or store details in a database/cron job for future execution
         continue;
     }
 
@@ -92,7 +95,7 @@ foreach ($rss->channel->item as $item) {
 
     // Save the current item's GUID as the last processed GUID
     file_put_contents($lastProcessedFile, $guid);
-    echo '<script>alert("RSS feed processed and notifications sent.");</script>';
-    break; // Process only the first valid item published today
+    echo '<script>alert("Message sent to Telegram.");</script>';
+    break; // Process only the first valid item
 }
 ?>

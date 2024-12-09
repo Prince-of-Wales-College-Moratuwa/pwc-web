@@ -5,8 +5,9 @@ include 'database_connection.php';
 // Fetch blog posts with date <= current date and time
 $query = "SELECT title, slug, content, author, date, photo 
           FROM pwc_db_news 
-          WHERE date <= NOW()
           ORDER BY date DESC";
+
+//WHERE date <= NOW()
 
 $statement = $connect->prepare($query);
 $statement->execute();
