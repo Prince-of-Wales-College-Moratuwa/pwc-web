@@ -124,11 +124,8 @@ try {
                 $total_results = $statement->fetchColumn();
                 $total_pages = ceil($total_results / $limit);
 
-
-                $current_time = date("Y-m-d H:i:s");
-
                 // Fetch limited posts for current page
-                $query = "SELECT * FROM pwc_db_news WHERE date <= '$current_time' ORDER BY date DESC, id DESC LIMIT $start, $limit";
+                $query = "SELECT * FROM pwc_db_news WHERE date <= NOW() ORDER BY date DESC, id DESC LIMIT $start, $limit";
                 $statement = $connect->prepare($query);
                 $statement->execute();
 

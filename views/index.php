@@ -308,9 +308,7 @@ $published = isset($announcement['published']) ? $announcement['published'] : 'N
 
             <?php 
 
-                $current_time = date("Y-m-d H:i:s");
-
-$query = "SELECT * FROM pwc_db_news WHERE date <= '$current_time' ORDER BY date DESC, id DESC";
+$query = "SELECT * FROM pwc_db_news WHERE date <= NOW() ORDER BY date DESC, id DESC";
 
 $statement = $connect->prepare($query);
 
