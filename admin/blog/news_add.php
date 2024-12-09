@@ -219,8 +219,6 @@ $final_file = $title . '-blog-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
 if (move_uploaded_file($file_loc, $folder . $final_file)) {
     $image = $final_file;
     
-    include '../../tg_auto.php';
-
     $query = "
     INSERT INTO pwc_db_news 
     (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride) 
@@ -231,6 +229,8 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
     $statement = $connect->prepare($query);
 
     $statement->execute($data);
+
+    include '../../tg_auto.php';
 
     echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
     exit();
