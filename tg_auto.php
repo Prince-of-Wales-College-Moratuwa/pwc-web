@@ -52,9 +52,12 @@ foreach ($rss->channel->item as $item) {
     preg_match_all('/#\w+/', $description, $hashtags);
     $hashtagsText = implode(" ", $hashtags[0]);
 
-    // Format the Telegram message
+    // Remove hashtags from the description to avoid repetition
+    $descriptionWithoutHashtags = preg_replace('/#\w+/', '', $description);
+
+    // Format the Telegram message (no hashtags in the description)
     $message = "*$title*\n\n" . 
-               strip_tags($description) . "\n\n" . 
+               strip_tags($descriptionWithoutHashtags) . "\n\n" . 
                "Read More | $link\n\n" . 
                $hashtagsText;
 
