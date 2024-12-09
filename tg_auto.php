@@ -7,7 +7,7 @@ $chatId = "-1002437489499"; // Use channel ID if sending to a Telegram channel
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
 
 // File to store the last processed item's GUID
-$lastProcessedFile = "last_guid.txt";
+$lastProcessedFile = "../../last_guid.txt";
 
 // Fetch the RSS feed
 $rssContent = file_get_contents($rssFeedUrl);
