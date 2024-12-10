@@ -9,6 +9,9 @@ $rssFeedUrl = "https://princeofwales.edu.lk/rss";
 // File to store the last processed item's GUID
 $lastProcessedFile = "last_guid_fb.txt";
 
+// Set timezone to Sri Lanka Standard Time (UTC +5:30)
+date_default_timezone_set('Asia/Colombo');
+
 // Fetch the RSS feed
 $rssContent = file_get_contents($rssFeedUrl);
 if (!$rssContent) {
@@ -35,10 +38,6 @@ foreach ($rss->channel->item as $item) {
     $title = (string)$item->title;
     $link = (string)$item->link;
     $description = (string)$item->description;
-    
-    // Check if <br> tags are present in the description and replace them with newline characters
-    $description = preg_replace('/<br\s*\/?>/i', "\n", $description);
-
     $imageUrl = (string)$item->enclosure['url']; // Assuming RSS includes <enclosure> for images
     $pubDate = (string)$item->pubDate;
 
@@ -59,7 +58,7 @@ foreach ($rss->channel->item as $item) {
     $cleanDescription = preg_replace('/#\w+/', '', $description);
 
     // Format the Facebook post message
-    $message = strip_tags($cleanDescription) . "Read more | $link";
+    $message = strip_tags($cleanDescription) . "\n\n" . "Read more | $link";
 
     // Add hashtags at the end of the message if any were found
     if (!empty($hashtags[0])) {
