@@ -4,7 +4,7 @@ $pageId = "113882365076383"; // Replace with your page ID
 $accessToken = "EAA6yrfZCpcSEBO55o1nZChRs0x7kyuIwYMAZBfeTZCmgVNiWpLlyOjPZBBsIksaqoaGZAx9SC3mxPZCfytcvRqNIHB9dyMpdZAmauITeVURwBZAawJFCL23WtpXSrLZCQ7xgYl4cXa59www1dQjZBqE9LgWl342JnZBjvxGHacwuSmuaiMW5zT8fZAbJ8qNEeBZAiDFZBbVR5QewZBKbOuzcmGiKaK7P5RfVJvfrHSZCWWfDZCvisq"; // Replace with your Facebook page access token
 
 // RSS feed URL
-$rssFeedUrl = "https://princeofwales.edu.lk/rss";
+$rssFeedUrl = "https://princeofwales.edu.lk/rss-fb";
 
 // File to store the last processed item's GUID
 $lastProcessedFile = "last_guid_fb.txt";
@@ -65,6 +65,13 @@ foreach ($rss->channel->item as $item) {
         $message .= "\n\n" . implode(" ", $hashtags[0]);
     }
 
+    // Convert the publication date to Unix timestamp
+    $pubTimestamp = strtotime($pubDate);
+
+    // Adjust the publication date for the local time zone (+5:30)
+    // We add 5 hours and 30 minutes to the timestamp to adjust to SLST
+    $pubTimestampLocal = $pubTimestamp + (5 * 3600) + (30 * 60);
+
     // Facebook post URL (using /photos endpoint for images)
     $postUrl = "https://graph.facebook.com/$pageId/photos";
 
@@ -74,6 +81,16 @@ foreach ($rss->channel->item as $item) {
         'url' => $imageUrl, // Use the image URL from the RSS feed
         'access_token' => $accessToken
     ];
+
+    // Check if the publication date is in the future
+    if ($pubTimestampLocal > time()) {
+        // Schedule the post
+        $postData['scheduled_publish_time'] = $pubTimestampLocal;
+        $postData['published'] = false; // Don't publish immediately
+    } else {
+        // Instant posting (this section can be modified to suit other use cases)
+        $postData['published'] = true;
+    }
 
     // Initialize cURL for posting to Facebook
     $ch = curl_init();
@@ -94,7 +111,7 @@ foreach ($rss->channel->item as $item) {
 
     // Save the current item's GUID as the last processed GUID
     file_put_contents($lastProcessedFile, $guid);
-    echo '<script>alert("Post sent to Facebook Page: FrontLine Developers.");</script>';
+    echo '<script>alert("Post scheduled to Facebook Page: FrontLine Developers.");</script>';
     break; // Process only the first valid item published today
 }
 ?>
