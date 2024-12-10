@@ -1,7 +1,7 @@
 <?php
 // Facebook API credentials
 $pageId = "113882365076383"; // Replace with your page ID
-$accessToken = "EAA6yrfZCpcSEBO55o1nZChRs0x7kyuIwYMAZBfeTZCmgVNiWpLlyOjPZBBsIksaqoaGZAx9SC3mxPZCfytcvRqNIHB9dyMpdZAmauITeVURwBZAawJFCL23WtpXSrLZCQ7xgYl4cXa59www1dQjZBqE9LgWl342JnZBjvxGHacwuSmuaiMW5zT8fZAbJ8qNEeBZAiDFZBbVR5QewZBKbOuzcmGiKaK7P5RfVJvfrHSZCWWfDZCvisq"; // Replace with your Facebook page access token
+$accessToken = "EAA6yrfZCpcSEBO9uQKeZATJPqrnBqp7ZACLUDaRoA5UtmEp06ZAkjyDLhjrcD1autqNrjQtbY8hPk3LJ90e15KF3ibhikdVGlEyFKs0ZBZBs8tidbS2xO48FyPXXgZAvd9DQBBIL07uZBjNg7vMPSHZB8AsxPm44QZA5iHV0UpYG2DztszQFTcsn8vAw9zb4wWqzmPJU8KWIXsHNAc55QmKaSdueV0ZBPc2eM7zQZCSoZBFPG"; // Replace with your Facebook page access token
 
 // RSS feed URL
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
