@@ -1,7 +1,7 @@
 <?php
 // Instagram API credentials
 $instagramUserId = "17841470743116279"; // Replace with your Instagram user ID
-$accessToken = "IGQWRONkV3QjhEbGR2aG1ld182S2Rncmk2X1VMNE45a1ZAaM2ZA6eDNicUNhSHg4Um1MOFF2dlBVMngtRDJGUktWRnVYU3U3RUtUNlJnN1ZAhLUVreTdTSXZA5czhTcWs3RTN0RGhfWXFDMkxKemdCSlRBY05ZARE83WGcZD"; // Replace with your Instagram access token
+$accessToken = "IGQWRORkljN2l1VGp0X1pNSlR0ak9aYkp6dXpEcElhTXptZAV90Y2xsYW9JS2dqdl9UTmhrUlE0ZA2loZAnhjQ1ZACSkVtWGFqYlFtaW1Ua0dHVnhiaV9MLUMxYUhDOXZAfNC1PZAzR6WFFEemlzd25rY0tTSFFLVlI5Wm8ZD"; // Replace with your Instagram access token
 
 // RSS feed URL
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
