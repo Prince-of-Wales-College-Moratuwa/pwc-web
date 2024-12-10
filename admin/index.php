@@ -50,7 +50,7 @@ include 'admin-header.php';
 	<div class="dropdown">
 		<h1 class="mb-5"> Dashboard
 			<i class="dropdown-icon fas fa-caret-down"></i>
-            <button class="btn btn-success btn-sm" onclick="refreshFeed()">Refresh Feed</button>
+            <!-- <button class="btn btn-success btn-sm" onclick="refreshFeed()">Refresh Feed</button> -->
         
         </h1>
 

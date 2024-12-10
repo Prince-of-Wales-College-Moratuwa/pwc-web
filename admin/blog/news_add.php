@@ -167,7 +167,7 @@ include '../admin-header.php';
     </div>
 </div>
 
-
+<p><b>Scheduled posts will not publish directly on social media. After scheduling on the website, copy the link and manually schedule it on social media platforms.</b></p>
 		
 				<div class="mt-4 mb-3 text-center">
 
@@ -178,6 +178,29 @@ include '../admin-header.php';
 		</div>
 	</div>
 
+	<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dateInput = document.getElementById('date');
+        const socialMediaSection = document.querySelector('.col-md-6 .mb-3:has(#publish_telegram)');
+
+        function toggleSocialMediaSection() {
+            const selectedDate = new Date(dateInput.value);
+            const currentDate = new Date();
+
+            if (selectedDate > currentDate) {
+                socialMediaSection.style.display = 'none'; // Hide the section
+            } else {
+                socialMediaSection.style.display = 'block'; // Show the section
+            }
+        }
+
+        // Initialize visibility on page load
+        toggleSocialMediaSection();
+
+        // Add an event listener to handle changes in the date input
+        dateInput.addEventListener('change', toggleSocialMediaSection);
+    });
+</script>
 
 	<?php
 
@@ -246,19 +269,18 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 
     $statement->execute($data);
 
-// Check if both checkboxes are checked
-if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on') {
-	include '../auto-post/tg_auto.php';
-}
 
-$post_date = date('Y-m-d H:i:s', strtotime($_POST['date']));
-if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= date('Y-m-d H:i:s')) {
-    include '../auto-post/fb_auto.php';
-} else {
-    include '../auto-post/fb_schedule.php';
-}
-
-
+	$post_date = date('Y-m-d H:i:s', strtotime($_POST['date']));
+	$current_date = date('Y-m-d H:i:s');
+	
+	if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on' && $post_date <= $current_date) {
+		include '../auto-post/tg_auto.php';
+	}
+	
+	if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
+		include '../auto-post/fb_auto.php';
+	}
+	
 
 echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
 exit();
