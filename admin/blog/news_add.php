@@ -160,11 +160,11 @@ include '../admin-header.php';
 					<br>
     <div class="mb-3">
         <label class="form-label">Also Share to:</label><br>
-        <label class="form-label"><b>Telegram</b> (Testing)</label>
+        <label class="form-label"><b>Telegram</b></label>
         <input type="checkbox" name="publish_telegram" id="publish_telegram" checked />
-        <br>
+        <!-- <br>
         <label class="form-label"><b>Facebook</b> (Testing)</label>
-        <input type="checkbox" name="publish_facebook" id="publish_facebook" />
+        <input type="checkbox" name="publish_facebook" id="publish_facebook" /> -->
 		<!-- <br>
         <label class="form-label"><b>Instagram</b> (Testing)</label>
         <input type="checkbox" name="publish_instagram" id="publish_instagram" /> -->
@@ -291,13 +291,13 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 		file_put_contents('../auto-post/last_guid.txt', $full_url, LOCK_EX);
 	}
 	
-	if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
-		include '../auto-post/fb_auto.php';
-	} else {
-		$slug = $_POST['slug'] ?? 'no-slug';
-		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
-		file_put_contents('../auto-post/last_guid_fb.txt', $full_url, LOCK_EX);
-	}
+	// if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
+	// 	include '../auto-post/fb_auto.php';
+	// } else {
+	// 	$slug = $_POST['slug'] ?? 'no-slug';
+	// 	$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
+	// 	file_put_contents('../auto-post/last_guid_fb.txt', $full_url, LOCK_EX);
+	// }
 	
 	// if (isset($_POST['publish_instagram']) && $_POST['publish_instagram'] == 'on' && $post_date <= $current_date) {
 	// 	include '../auto-post/ig_auto.php';
