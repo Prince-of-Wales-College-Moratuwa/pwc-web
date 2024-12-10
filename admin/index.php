@@ -27,7 +27,7 @@ include 'admin-header.php';
             })
             .then(response => response.text())
             .then(data => {
-                alert("TG Feed refreshed: " + data); // Show response in an alert
+                alert("Telegram Feed refreshed: " + data); // Show response in an alert
             })
             .catch(error => {
                 alert("Error refreshing feed: " + error);
@@ -38,7 +38,7 @@ include 'admin-header.php';
             })
             .then(response => response.text())
             .then(data => {
-                alert("FB Feed refreshed: " + data); // Show response in an alert
+                alert("FaceBook Feed refreshed: " + data); // Show response in an alert
             })
             .catch(error => {
                 alert("Error refreshing feed: " + error);
