@@ -78,7 +78,7 @@ foreach ($rss->channel->item as $item) {
     // Prepare the data for the post
     $postData = [
         'message' => $message,
-        'link' => $imageUrl, // Use the image URL from the RSS feed
+        'url' => $imageUrl, // Use the image URL from the RSS feed
         'access_token' => $accessToken
     ];
 
