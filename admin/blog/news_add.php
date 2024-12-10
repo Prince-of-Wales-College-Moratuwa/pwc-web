@@ -274,21 +274,25 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 	$post_date = date('Y-m-d H:i:s', strtotime($_POST['date']));
 	$current_date = date('Y-m-d H:i:s');
 	
-	if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on' && $post_date <= $current_date) {
-		include '../auto-post/tg_auto.php';
-	} else {
-		$slug = $_POST['slug'] ?? 'no-slug';
-		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
-		file_put_contents('../auto-post/last_guid.txt', $full_url, LOCK_EX);
-	}
+	include '../auto-post/tg_auto.php';
+	include '../auto-post/fb_auto.php';
+
+
+	// if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on' && $post_date <= $current_date) {
+	// 	include '../auto-post/tg_auto.php';
+	// } else {
+	// 	$slug = $_POST['slug'] ?? 'no-slug';
+	// 	$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
+	// 	file_put_contents('../auto-post/last_guid.txt', $full_url, LOCK_EX);
+	// }
 	
-	if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
-		include '../auto-post/fb_auto.php';
-	} else {
-		$slug = $_POST['slug'] ?? 'no-slug';
-		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
-		file_put_contents('../auto-post/last_guid_fb.txt', $full_url, LOCK_EX);
-	}
+	// if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
+	// 	include '../auto-post/fb_auto.php';
+	// } else {
+	// 	$slug = $_POST['slug'] ?? 'no-slug';
+	// 	$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
+	// 	file_put_contents('../auto-post/last_guid_fb.txt', $full_url, LOCK_EX);
+	// }
 	
 	
 

@@ -9,9 +9,6 @@ $rssFeedUrl = "https://princeofwales.edu.lk/rss";
 // File to store the last processed item's GUID
 $lastProcessedFile = "last_guid_fb.txt";
 
-// Set timezone to Sri Lanka Standard Time (UTC +5:30)
-date_default_timezone_set('Asia/Colombo');
-
 // Fetch the RSS feed
 $rssContent = file_get_contents($rssFeedUrl);
 if (!$rssContent) {
