@@ -73,12 +73,12 @@ foreach ($rss->channel->item as $item) {
     $pubTimestampLocal = $pubTimestamp + (5 * 3600) + (30 * 60);
 
     // Facebook post URL (using /photos endpoint for images)
-    $postUrl = "https://graph.facebook.com/$pageId/photos";
+    $postUrl = "https://graph.facebook.com/$pageId/feed";
 
     // Prepare the data for the post
     $postData = [
         'message' => $message,
-        'url' => $imageUrl, // Use the image URL from the RSS feed
+        'link' => $imageUrl, // Use the image URL from the RSS feed
         'access_token' => $accessToken
     ];
 
