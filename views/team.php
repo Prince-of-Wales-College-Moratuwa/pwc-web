@@ -192,7 +192,7 @@
                         <div class="text-center p-4 flex-grow-1">
                             <h4 class="mb-4">Dasindu Nimnal</h4>
                             <p><i class="fa fa-camera text-primary me-2"></i>Photographer</p>
-                            <p class="text-muted">Committee Member at Cambrians Media & Broadcasting Unit</p>
+                            <p class="text-muted">Coordinator at Cambrians Media & Broadcasting Unit</p>
                         </div>
                         <div class="mt-auto w-100 d-flex justify-content-center mb-4">
                             <a href="https://www.facebook.com/profile.php?id=100082846762501" class="me-2"

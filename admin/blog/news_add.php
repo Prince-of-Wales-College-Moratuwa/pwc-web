@@ -157,17 +157,18 @@ include '../admin-header.php';
 
 				</div>
 				<div class="col-md-6">
+					<br>
     <div class="mb-3">
-        <label class="form-label">Social Media:</label><br>
-        <label class="form-label">Publish to <b>Telegram</b></label>
+        <label class="form-label">Also Share to:</label><br>
+        <label class="form-label"><b>Telegram</b> (Testing)</label>
         <input type="checkbox" name="publish_telegram" id="publish_telegram" checked />
         <br>
-        <label class="form-label">Publish to <b>Facebook</b></label>
-        <input type="checkbox" name="publish_facebook" id="publish_facebook" checked />
+        <label class="form-label"><b>Facebook</b> (Testing)</label>
+        <input type="checkbox" name="publish_facebook" id="publish_facebook" />
     </div>
 </div>
 
-<p><b>Scheduled posts will not publish directly on social media. After scheduling on the website, copy the link and manually schedule it on social media platforms.</b></p>
+<p>* Scheduled posts will not publish directly on social media. After scheduling on the website, copy the link and manually schedule it on social media platforms.</p>
 		
 				<div class="mt-4 mb-3 text-center">
 
@@ -275,11 +276,20 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 	
 	if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on' && $post_date <= $current_date) {
 		include '../auto-post/tg_auto.php';
+	} else {
+		$slug = $_POST['slug'] ?? 'no-slug';
+		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
+		file_put_contents('../auto-post/last_guid.txt', $full_url, LOCK_EX);
 	}
 	
 	if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
 		include '../auto-post/fb_auto.php';
+	} else {
+		$slug = $_POST['slug'] ?? 'no-slug';
+		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
+		file_put_contents('../auto-post/last_guid_fb.txt', $full_url, LOCK_EX);
 	}
+	
 	
 
 echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
