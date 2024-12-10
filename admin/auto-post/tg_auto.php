@@ -35,6 +35,10 @@ foreach ($rss->channel->item as $item) {
     $title = (string)$item->title;
     $link = (string)$item->link; // Dynamic entity link from RSS
     $description = (string)$item->description;
+
+    // Check if <br> tags are present in the description and replace them with newline characters
+    $description = preg_replace('/<br\s*\/?>/i', "\n", $description);
+
     $imageUrl = (string)$item->enclosure['url']; // Assuming RSS includes <enclosure> for images
     $pubDate = (string)$item->pubDate;
 
@@ -56,8 +60,7 @@ foreach ($rss->channel->item as $item) {
     $descriptionWithoutHashtags = preg_replace('/#\w+/', '', $description);
 
     // Format the Telegram message (no hashtags in the description)
-    $message = "*$title*\n\n" . 
-               strip_tags($descriptionWithoutHashtags) . "\n\n" . 
+    $message = strip_tags($descriptionWithoutHashtags) . 
                "Read More | $link\n\n" . 
                $hashtagsText;
 

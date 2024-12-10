@@ -38,6 +38,10 @@ foreach ($rss->channel->item as $item) {
     $title = (string)$item->title;
     $link = (string)$item->link;
     $description = (string)$item->description;
+    
+    // Check if <br> tags are present in the description and replace them with newline characters
+    $description = preg_replace('/<br\s*\/?>/i', "\n", $description);
+
     $imageUrl = (string)$item->enclosure['url']; // Assuming RSS includes <enclosure> for images
     $pubDate = (string)$item->pubDate;
 
@@ -58,7 +62,7 @@ foreach ($rss->channel->item as $item) {
     $cleanDescription = preg_replace('/#\w+/', '', $description);
 
     // Format the Facebook post message
-    $message = strip_tags($cleanDescription) . "\n\n" . "Read more | $link";
+    $message = strip_tags($cleanDescription) . "Read more | $link";
 
     // Add hashtags at the end of the message if any were found
     if (!empty($hashtags[0])) {
