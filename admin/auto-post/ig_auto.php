@@ -1,7 +1,7 @@
 <?php
 // Instagram API credentials
-$instagramUserId = "your-instagram-user-id"; // Replace with your Instagram user ID
-$accessToken = "your-instagram-access-token"; // Replace with your Instagram access token
+$instagramUserId = "17841470743116279"; // Replace with your Instagram user ID
+$accessToken = "IGQWRONkV3QjhEbGR2aG1ld182S2Rncmk2X1VMNE45a1ZAaM2ZA6eDNicUNhSHg4Um1MOFF2dlBVMngtRDJGUktWRnVYU3U3RUtUNlJnN1ZAhLUVreTdTSXZA5czhTcWs3RTN0RGhfWXFDMkxKemdCSlRBY05ZARE83WGcZD"; // Replace with your Instagram access token
 
 // RSS feed URL
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
@@ -28,6 +28,16 @@ $lastProcessedGuid = file_exists($lastProcessedFile) ? file_get_contents($lastPr
 
 // Get today's date in the RSS date format (e.g., "Mon, 09 Dec 2024")
 $today = date("D, d M Y");
+// Function to extract hashtags from a string
+function extractHashtags($text) {
+    preg_match_all('/#\w+/u', $text, $matches);
+    return implode(' ', $matches[0]); // Return hashtags as a string
+}
+
+// Function to remove hashtags from the text
+function removeHashtags($text) {
+    return preg_replace('/#\w+/u', '', $text); // Remove all hashtags
+}
 
 // Loop through RSS items
 foreach ($rss->channel->item as $item) {
@@ -48,8 +58,12 @@ foreach ($rss->channel->item as $item) {
         continue;
     }
 
+    // Extract hashtags and clean the description
+    $hashtags = extractHashtags($description);
+    $cleanDescription = removeHashtags($description);
+
     // Format the Instagram caption
-    $caption = $title . "\n\n" . strip_tags($description) . "\n\n" . "Read more: $link";
+    $caption = $title . "\n\n" . strip_tags($cleanDescription) . "\n\n" . "Read more: $link\n\n" . $hashtags;
 
     // Step 1: Upload the media to Instagram
     $uploadUrl = "https://graph.facebook.com/v13.0/$instagramUserId/media";
@@ -104,4 +118,3 @@ foreach ($rss->channel->item as $item) {
     echo '<script>alert("RSS feed processed and post sent to Instagram.");</script>';
     break; // Process only the first valid item published today
 }
-?>

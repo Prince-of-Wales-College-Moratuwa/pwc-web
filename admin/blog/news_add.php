@@ -165,6 +165,9 @@ include '../admin-header.php';
         <br>
         <label class="form-label"><b>Facebook</b> (Testing)</label>
         <input type="checkbox" name="publish_facebook" id="publish_facebook" />
+		<br>
+        <label class="form-label"><b>Instagram</b> (Testing)</label>
+        <input type="checkbox" name="publish_instagram" id="publish_instagram" />
     </div>
 </div>
 
@@ -290,6 +293,13 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 		file_put_contents('../auto-post/last_guid_fb.txt', $full_url, LOCK_EX);
 	}
 	
+	if (isset($_POST['publish_instagram']) && $_POST['publish_instagram'] == 'on' && $post_date <= $current_date) {
+		include '../auto-post/ig_auto.php';
+	} else {
+		$slug = $_POST['slug'] ?? 'no-slug';
+		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
+		file_put_contents('../auto-post/last_guid_ig.txt', $full_url, LOCK_EX);
+	}
 	
 
 echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
