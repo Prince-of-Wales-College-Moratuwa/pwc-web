@@ -231,6 +231,7 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
     $statement->execute($data);
 
     include '../auto-post/tg_auto.php';
+    include '../auto-post/fb_auto.php';
 
     echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
     exit();
