@@ -64,6 +64,7 @@ RewriteRule ^blog/page/([0-9]+)/?$ views/blog/index.php?page=$1 [L,QSA]
 
 #RSS
 RewriteRule ^rss/$ rss.php [NC,L]
+RewriteRule ^rss-fb/$ rss-fb.php [NC,L]
 
 
 # Redirect to clean URLs

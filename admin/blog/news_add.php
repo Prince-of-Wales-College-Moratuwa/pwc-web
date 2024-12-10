@@ -138,6 +138,7 @@ include '../admin-header.php';
 						</div>
 					</div>
 
+
 					<script>
 						function checkFileType() {
 							const fileInput = document.getElementById('photo');
@@ -155,7 +156,22 @@ include '../admin-header.php';
 					</script>
 
 				</div>
+				<div class="col-md-6">
+    <div class="mb-3">
+        <label class="form-label">Social Media:</label><br>
+        <label class="form-label">Publish to <b>Telegram</b></label>
+        <input type="checkbox" name="publish_telegram" id="publish_telegram" checked />
+        <br>
+        <label class="form-label">Publish to <b>Facebook</b></label>
+        <input type="checkbox" name="publish_facebook" id="publish_facebook" checked />
+    </div>
+</div>
+
+
+		
 				<div class="mt-4 mb-3 text-center">
+
+
 					<input type="submit" name="add_news" class="btn btn-success" value="Publish" />
 				</div>
 			</form>
@@ -230,11 +246,17 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 
     $statement->execute($data);
 
-    include '../auto-post/tg_auto.php';
-    include '../auto-post/fb_auto.php';
+// Check if both checkboxes are checked
+if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on') {
+	include '../auto-post/tg_auto.php';
+}
 
-    echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
-    exit();
+if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on') {
+	include '../auto-post/fb_auto.php';
+}
+
+echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
+exit();
 }
 
 }
