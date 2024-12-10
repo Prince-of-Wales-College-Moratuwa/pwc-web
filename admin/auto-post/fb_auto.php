@@ -65,8 +65,8 @@ foreach ($rss->channel->item as $item) {
     // Convert the publication date to Unix timestamp
     $pubTimestamp = strtotime($pubDate);
 
-    // Facebook post URL (for both scheduling and instant posting)
-    $postUrl = "https://graph.facebook.com/$pageId/feed";
+    // Facebook post URL (using /photos endpoint for images)
+    $postUrl = "https://graph.facebook.com/$pageId/photos";
 
     // Prepare the data for the post
     $postData = [
