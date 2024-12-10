@@ -169,9 +169,12 @@ include '../admin-header.php';
         <label class="form-label"><b>Instagram</b> (Testing)</label>
         <input type="checkbox" name="publish_instagram" id="publish_instagram" /> -->
     </div>
+	<div class="mb-4">
+<p>* Scheduled posts will not publish directly on social media. After scheduling on the website, copy the link and manually schedule it on social media platforms.</p>
+        
+    </div>
 </div>
 
-<p>* Scheduled posts will not publish directly on social media. After scheduling on the website, copy the link and manually schedule it on social media platforms.</p>
 		
 				<div class="mt-4 mb-3 text-center">
 
@@ -186,6 +189,7 @@ include '../admin-header.php';
     document.addEventListener('DOMContentLoaded', function () {
         const dateInput = document.getElementById('date');
         const socialMediaSection = document.querySelector('.col-md-6 .mb-3:has(#publish_telegram)');
+        const notice = document.querySelector('.col-md-6 .mb-4');
 
         function toggleSocialMediaSection() {
             const selectedDate = new Date(dateInput.value);
@@ -193,8 +197,10 @@ include '../admin-header.php';
 
             if (selectedDate > currentDate) {
                 socialMediaSection.style.display = 'none'; // Hide the section
+                notice.style.display = 'block'; // Hide the section
             } else {
                 socialMediaSection.style.display = 'block'; // Show the section
+                notice.style.display = 'none'; // Hide the section
             }
         }
 
