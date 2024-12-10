@@ -251,9 +251,12 @@ if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on') {
 	include '../auto-post/tg_auto.php';
 }
 
-if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on') {
-	include '../auto-post/fb_auto.php';
+if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $_POST['date'] <= date('Y-m-d H:i:s')) {
+    include '../auto-post/fb_auto.php';
+} else {
+    include '../auto-post/fb_schedule.php';
 }
+
 
 echo '<script>window.open("/blog/' . $formdata['slug'] . '", "_blank");</script>';
 exit();
