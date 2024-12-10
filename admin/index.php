@@ -27,7 +27,18 @@ include 'admin-header.php';
             })
             .then(response => response.text())
             .then(data => {
-                alert("Feed refreshed: " + data); // Show response in an alert
+                alert("TG Feed refreshed: " + data); // Show response in an alert
+            })
+            .catch(error => {
+                alert("Error refreshing feed: " + error);
+            });
+
+            fetch('auto-post/fb_auto.php', {
+                method: 'GET',
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert("FB Feed refreshed: " + data); // Show response in an alert
             })
             .catch(error => {
                 alert("Error refreshing feed: " + error);

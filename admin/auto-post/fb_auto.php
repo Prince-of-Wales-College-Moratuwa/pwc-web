@@ -1,7 +1,7 @@
 <?php
 // Facebook API credentials
 $pageId = "113882365076383"; // Replace with your page ID
-$accessToken = "EAA6yrfZCpcSEBO7xPg3dO86oaXqzfuW4nZB72iqvFQtv2TUr7xLZAmGzNKmfxNQBgUoy3DebFzwB2NoZBztZCk3nVYNwZCGZBZCoVtxVAD8vgZCr15ZCWYHCzuqoyRoZBe9nqnwRxxt9Aj3gtnVm1sRF3tBdfyZClqGVc8dUSOvQXiA1mQEpEGFV6tQD6McMCxtky6cTORzK2VnYADRWSHNlhjBT7dZBlVneZCBjTYAOgzZCdkZD"; // Replace with your Facebook page access token
+$accessToken = "EAA6yrfZCpcSEBO55o1nZChRs0x7kyuIwYMAZBfeTZCmgVNiWpLlyOjPZBBsIksaqoaGZAx9SC3mxPZCfytcvRqNIHB9dyMpdZAmauITeVURwBZAawJFCL23WtpXSrLZCQ7xgYl4cXa59www1dQjZBqE9LgWl342JnZBjvxGHacwuSmuaiMW5zT8fZAbJ8qNEeBZAiDFZBbVR5QewZBKbOuzcmGiKaK7P5RfVJvfrHSZCWWfDZCvisq"; // Replace with your Facebook page access token
 
 // RSS feed URL
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
@@ -48,16 +48,27 @@ foreach ($rss->channel->item as $item) {
         continue;
     }
 
+    // Extract hashtags from the description using a regular expression
+    preg_match_all('/#\w+/', $description, $hashtags);
+
+    // Remove hashtags from the description
+    $cleanDescription = preg_replace('/#\w+/', '', $description);
+
     // Format the Facebook post message
-    $message = $title . "\n\n" . strip_tags($description) . "\n\n" . "Read more: $link";
+    $message = strip_tags($cleanDescription) . "\n\n" . "Read more | $link";
+
+    // Add hashtags at the end of the message if any were found
+    if (!empty($hashtags[0])) {
+        $message .= "\n\n" . implode(" ", $hashtags[0]);
+    }
 
     // Facebook post URL
-    $postUrl = "https://graph.facebook.com/$pageId/feed";
+    $postUrl = "https://graph.facebook.com/$pageId/photos";
 
     // Prepare data to post
     $postData = [
         'message' => $message,
-        'link' => $link,
+        'url' => $imageUrl, // Use the image URL from the RSS feed
         'access_token' => $accessToken
     ];
 
