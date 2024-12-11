@@ -6,6 +6,9 @@ $chatId = "-1002437489499"; // Use channel ID if sending to a Telegram channel
 // RSS feed URL
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
 
+// File to store the last processed item's GUID
+$lastProcessedFile = "last_guid.txt";
+
 // Fetch the RSS feed
 $rssContent = file_get_contents($rssFeedUrl);
 if (!$rssContent) {
@@ -19,6 +22,9 @@ if (!$rss) {
     echo '<script>alert("Invalid RSS feed format.");</script>';
     exit;
 }
+
+// Read the last processed GUID
+$lastProcessedGuid = file_exists($lastProcessedFile) ? file_get_contents($lastProcessedFile) : "";
 
 // Get today's date in the RSS date format (e.g., "Mon, 09 Dec 2024")
 $today = date("D, d M Y");
@@ -37,9 +43,9 @@ foreach ($rss->channel->item as $item) {
         continue; // Skip items not published today
     }
 
-    // Check if the final_slug matches the RSS feed link
-    if ($link !== $full_url) {
-        continue; // Skip items that do not match the RSS feed link
+    // If this item is already processed, skip it
+    if ($guid === $lastProcessedGuid) {
+        continue;
     }
 
     // Extract hashtags from the description (e.g., #example)
@@ -50,7 +56,8 @@ foreach ($rss->channel->item as $item) {
     $descriptionWithoutHashtags = preg_replace('/#\w+/', '', $description);
 
     // Format the Telegram message (no hashtags in the description)
-    $message = strip_tags($descriptionWithoutHashtags) . "\n\n" . 
+    $message = "*$title*\n\n" . 
+               strip_tags($descriptionWithoutHashtags) . "\n\n" . 
                "Read More | $link\n\n" . 
                $hashtagsText;
 
@@ -83,7 +90,9 @@ foreach ($rss->channel->item as $item) {
     // Close cURL
     curl_close($ch);
 
-    echo '<script>alert("Post Sent to Telegram Channel: TEST RSS");</script>';
-    break; // Process only the first valid item
+    // Save the current item's GUID as the last processed GUID
+    file_put_contents($lastProcessedFile, $guid);
+    echo '<script>alert("Post Sent to Telegram Channel : TEST RSS");</script>';
+    break; // Process only the first valid item published today
 }
 ?>

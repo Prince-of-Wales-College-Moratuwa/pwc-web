@@ -284,10 +284,12 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 	$current_date = date('Y-m-d H:i:s');
 	
 	if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on' && $post_date <= $current_date) {
+		include '../auto-post/tg_auto.php';
+	} else {
 		$slug = $_POST['slug'] ?? 'no-slug';
 		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
-		include '../auto-post/tg_auto.php';
-	} 
+		file_put_contents('../auto-post/last_guid.txt', $full_url, LOCK_EX);
+	}
 	
 	// if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
 	// 	include '../auto-post/fb_auto.php';
