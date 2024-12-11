@@ -147,6 +147,7 @@ if ($schoolPride == 'ON') {
                 <br><br>
               </div>
               <p class="mb-4"><?php echo $row["content"]; ?></p>
+              <p class="mb-4"><?php echo $row["tags"]; ?></p>
             </div>
           </div>
         </div>
@@ -168,6 +169,7 @@ if ($schoolPride == 'ON') {
                 </svg> Published By: <?php echo $row["author"]; ?> |
                 <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
               <p class="mb-4"><?php echo $row["content"]; ?></p>
+              <p class="mb-4"><?php echo $row["tags"]; ?></p>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
               <div class="position-relative ">
