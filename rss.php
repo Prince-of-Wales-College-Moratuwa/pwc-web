@@ -33,22 +33,23 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>';
       <link>https://princeofwales.edu.lk/blog/<?php echo htmlspecialchars($row["slug"], ENT_QUOTES, 'UTF-8'); ?></link>
 
       <description>
-  <?php 
-    $content = html_entity_decode($row["content"]);
-    
-    // Convert HTML tags to Markdown
-    $content = preg_replace('/<strong>(.*?)<\/strong>/', '**$1**', $content);   // <strong> to ** for bold
-    $content = preg_replace('/<em>(.*?)<\/em>/', '*$1*', $content);           // <em> to * for italics
-    $content = preg_replace('/<i>(.*?)<\/i>/', '*$1*', $content);             // <i> to * for italics
-    $content = preg_replace('/<b>(.*?)<\/b>/', '**$1**', $content);           // <b> to ** for bold
-    $content = preg_replace('/<u>(.*?)<\/u>/', '<u>$1</u>', $content);         // <u> is rare, preserving as-is
-    $content = preg_replace('/<a href="(.*?)">(.*?)<\/a>/', '[$2]($1)', $content); // <a> to [text](url) for links
-    $content = preg_replace('/<p>(.*?)<\/p>/', "\n\n$1", $content);           // <p> to new lines
-    $content = preg_replace('/<br\s*\/?>/', "\n", $content);                  
-    // <br> to new lines
-    
-    echo $content;  // Convert newlines to <br> tags for output
-  ?>
+      <?php 
+  $content = html_entity_decode($row["content"]);
+  
+  // Convert HTML tags to Markdown
+  $content = preg_replace('/<strong>(.*?)<\/strong>/', '**$1**', $content);   // <strong> to ** for bold
+  $content = preg_replace('/<em>(.*?)<\/em>/', '*$1*', $content);           // <em> to * for italics
+  $content = preg_replace('/<i>(.*?)<\/i>/', '*$1*', $content);             // <i> to * for italics
+  $content = preg_replace('/<b>(.*?)<\/b>/', '**$1**', $content);           // <b> to ** for bold
+  $content = preg_replace('/<u>(.*?)<\/u>/', '<u>$1</u>', $content);         // <u> is rare, preserving as-is
+  $content = preg_replace('/<a href="(.*?)">(.*?)<\/a>/', '[$2]($1)', $content); // <a> to [text](url) for links
+  $content = preg_replace('/<p>(.*?)<\/p>/', "\n\n$1", $content);           // <p> to new lines
+  $content = preg_replace('/<br\s*\/?>/', "\n", $content);                  // <br> to new lines
+  
+  // Output the content with newlines
+  echo $content; 
+?>
+
 </description>
 
 
