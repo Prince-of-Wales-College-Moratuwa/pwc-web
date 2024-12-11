@@ -23,7 +23,7 @@ include '../admin-header.php';
 
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Write New Article</h1>
+	<h3>Write New Article</h3>
 
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
@@ -39,180 +39,166 @@ include '../admin-header.php';
 			Write New Article
 		</div>
 		<div class="card-body">
-			<form action="" method="POST" enctype="multipart/form-data">
+		<form action="" method="POST" enctype="multipart/form-data">
 
-				<div class="row">
-					<div class="col-md-6">
-						<div class="mb-3">
-							<label class="form-label">Title</label>
-							<input type="text" name="title" id="title" class="form-control" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="mb-3">
-							<label class="form-label">Date and Time</label>
-							<input type="datetime-local" name="date" id="date" class="form-control"
-								value="<?php echo date('Y-m-d\TH:i'); ?>" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="mb-3">
-							<label class="form-label">Description</label>
-							<div id="content"></div>
+<div class="row">
+	<!-- Left Column -->
+	<div class="col-md-6">
+		<div class="mb-3">
+			<label class="form-label">Title</label>
+			<input type="text" name="title" id="title" class="form-control" />
+		</div>
 
-							<input type="hidden" name="editorContent" id="editorContent" value="">
-							<script>
-								ClassicEditor
-									.create(document.querySelector('#content'))
-									.then(editor => {
-										editor.model.document.on('change:data', () => {
-											document.querySelector('#editorContent').value = editor.getData();
-										});
-									})
-									.catch(error => {
-										console.error(error);
-									});
-							</script>
-						</div>
-
-
-
-						<div class="col-md-6">
-							<div class="mb-3">
-								<label class="form-label">Category</label>
-								<select name="category" id="category" class="form-control">
-									<option value="Sports">Sports</option>
-									<option value="Aesthetic">Aesthetic
-									</option>
-									<option value="Education">Education
-									</option>
-									<option value="Academic">Academic
-									</option>
-									<option value="Announcements">Announcements</option>
-									<option value="Exclusives">Exclusives</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div class="mb-3">
-								<label class="form-label">Slug</label>
-								<input type="text" name="slug" id="slug" class="form-control"
-									oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase()" />
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-md-6">
-						<div class="mb-3">
-							<label class="form-label">Author</label>
-							<select name="author" id="author" class="form-control">
-								<option value="CMBU">CMBU</option>
-								<option value="Principal">Principal</option>
-								<option value="Admin">Admin</option>
-								<option value="Teacher">Teacher</option>
-								<option value="Student">Student</option>
-							</select>
-						</div>
-
-					</div>
-
-
-					<div class="col-md-6">
-						<div class="mb-3">
-							<label class="form-label">School Pride Annimation</label>
-							<select name="schoolPride" id="schoolPride" class="form-control">
-								<option value="ON">ON</option>
-								<option value="OFF">OFF</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="col-md-6">
-						<div class="mb-3">
-							<label class="form-label">Featured Image</label>
-							<input type="file" class="form-control" name="photo" placeholder="Featured Image" id="photo"
-								onchange="checkFileType()">
-							<p id="fileMessage"></p>
-						</div>
-					</div>
-
-
-					<script>
-						function checkFileType() {
-							const fileInput = document.getElementById('photo');
-							const fileMessage = document.getElementById('fileMessage');
-
-							const allowedExtensions = /(\.webp)$/i;
-
-							if (!allowedExtensions.test(fileInput.value)) {
-								fileInput.value = '';
-								fileMessage.innerHTML = 'Please upload .webp file.';
-							} else {
-								fileMessage.innerHTML = '';
-							}
-						}
-					</script>
-
-				</div>
-				<div class="col-md-6">
-					<br>
-    <div class="mb-3">
-        <label class="form-label">Also Share to:</label><br>
-        <label class="form-label"><b>Telegram</b></label>
-        <input type="checkbox" name="publish_telegram" id="publish_telegram" checked />
-        <!-- <br>
-        <label class="form-label"><b>Facebook</b> (Testing)</label>
-        <input type="checkbox" name="publish_facebook" id="publish_facebook" /> -->
-		<!-- <br>
-        <label class="form-label"><b>Instagram</b> (Testing)</label>
-        <input type="checkbox" name="publish_instagram" id="publish_instagram" /> -->
-    </div>
-	<div class="mb-4">
-<p>* Scheduled posts will not publish directly on social media. After scheduling on the website, copy the link and manually schedule it on social media platforms.</p>
-        
-    </div>
 </div>
 
-		
-				<div class="mt-4 mb-3 text-center">
-
-
-					<input type="submit" name="add_news" class="btn btn-success" value="Publish" />
-				</div>
-			</form>
+		<div class="col-md-12">
+			<label class="form-label">Description</label>
+			<div id="content"></div>
+			<input type="hidden" name="editorContent" id="editorContent" value="">
+			<script>
+				ClassicEditor
+					.create(document.querySelector('#content'))
+					.then(editor => {
+						editor.model.document.on('change:data', () => {
+							document.querySelector('#editorContent').value = editor.getData();
+						});
+					})
+					.catch(error => {
+						console.error(error);
+					});
+			</script>
 		</div>
+
+	<div class="col-md-6">
+
+
+		<div class="mb-3">
+			<label class="form-label">Category</label>
+			<select name="category" id="category" class="form-control">
+				<option value="Sports">Sports</option>
+				<option value="Aesthetic">Aesthetic</option>
+				<option value="Education">Education</option>
+				<option value="Academic">Academic</option>
+				<option value="Announcements">Announcements</option>
+				<option value="Exclusives">Exclusives</option>
+			</select>
+		</div>
+
+		<div class="mb-3">
+			<label class="form-label">Caption</label>
+			<textarea name="caption" id="caption" class="form-control" rows="3"></textarea>
+		</div>
+
+		<div class="mb-3">
+			<label class="form-label">Tags</label>
+			<input type="text" name="tags" id="tags" class="form-control" />
+		</div>
+
+		<div class="mb-3">
+			<label class="form-label">Slug</label>
+			<input type="text" name="slug" id="slug" class="form-control"
+				   oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase()" />
+		</div>
+
 	</div>
 
-	<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const dateInput = document.getElementById('date');
-        const socialMediaSection = document.querySelector('.col-md-6 .mb-3:has(#publish_telegram)');
-        const notice = document.querySelector('.col-md-6 .mb-4');
+	<!-- Right Column -->
+	<div class="col-md-6">
+		<div class="mb-3">
+			<label class="form-label">Date and Time</label>
+			<input type="datetime-local" name="date" id="date" class="form-control"
+				   value="<?php echo date('Y-m-d\TH:i'); ?>" />
+		</div>
 
-        function toggleSocialMediaSection() {
-            const selectedDate = new Date(dateInput.value);
-            const currentDate = new Date();
+		<div class="mb-3">
+			<label class="form-label">Author</label>
+			<select name="author" id="author" class="form-control">
+				<option value="CMBU">CMBU</option>
+				<option value="Principal">Principal</option>
+				<option value="Admin">Admin</option>
+				<option value="Teacher">Teacher</option>
+				<option value="Student">Student</option>
+			</select>
+		</div>
 
-            if (selectedDate > currentDate) {
-                socialMediaSection.style.display = 'none'; // Hide the section
-                notice.style.display = 'block'; // Hide the section
-            } else {
-                socialMediaSection.style.display = 'block'; // Show the section
-                notice.style.display = 'none'; // Hide the section
-            }
-        }
+		<div class="mb-3">
+			<label class="form-label">School Pride Animation</label>
+			<select name="schoolPride" id="schoolPride" class="form-control">
+				<option value="ON">ON</option>
+				<option value="OFF">OFF</option>
+			</select>
+		</div>
 
-        // Initialize visibility on page load
-        toggleSocialMediaSection();
+		<div class="mb-3">
+			<label class="form-label">Featured Image</label>
+			<input type="file" class="form-control" name="photo" placeholder="Featured Image" id="photo"
+				   onchange="checkFileType()">
+			<p id="fileMessage"></p>
+		</div>
 
-        // Add an event listener to handle changes in the date input
-        dateInput.addEventListener('change', toggleSocialMediaSection);
-    });
+		<script>
+			function checkFileType() {
+				const fileInput = document.getElementById('photo');
+				const fileMessage = document.getElementById('fileMessage');
+
+				const allowedExtensions = /(\.webp)$/i;
+
+				if (!allowedExtensions.test(fileInput.value)) {
+					fileInput.value = '';
+					fileMessage.innerHTML = 'Please upload .webp file.';
+				} else {
+					fileMessage.innerHTML = '';
+				}
+			}
+		</script>
+
+		<div class="mb-3">
+			<label class="form-label"><b>Also Share to:</b></label><br>
+			<label class="form-label"><b>Telegram</b></label>
+			<input type="checkbox" name="publish_telegram" id="publish_telegram" checked />
+		</div>
+
+		<div class="mb-4">
+			<p>* Scheduled posts will not publish directly on social media. After scheduling on the website, copy the link and manually schedule it on social media platforms.</p>
+		</div>
+	</div>
+</div>
+
+<div class="mt-4 mb-3 text-center">
+	<input type="submit" name="add_news" class="btn btn-success" value="Publish" />
+</div>
+</form>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const dateInput = document.getElementById('date');
+		const socialMediaSection = document.querySelector('.col-md-6 .mb-3:has(#publish_telegram)');
+		const notice = document.querySelector('.col-md-6 .mb-4');
+
+		function toggleSocialMediaSection() {
+			const selectedDate = new Date(dateInput.value);
+			const currentDate = new Date();
+
+			if (selectedDate > currentDate) {
+				socialMediaSection.style.display = 'none'; // Hide the section
+				notice.style.display = 'block'; // Hide the section
+			} else {
+				socialMediaSection.style.display = 'block'; // Show the section
+				notice.style.display = 'none'; // Hide the section
+			}
+		}
+
+		// Initialize visibility on page load
+		toggleSocialMediaSection();
+
+		// Add an event listener to handle changes in the date input
+		dateInput.addEventListener('change', toggleSocialMediaSection);
+	});
 </script>
 
-	<?php
+<?php
 
 if (isset($_POST["add_news"])) {
     $formdata = array();
@@ -220,6 +206,9 @@ if (isset($_POST["add_news"])) {
     $formdata['title'] = trim($_POST["title"]);
     $formdata['content'] = isset($_POST["editorContent"]) ? trim($_POST["editorContent"]) : '';
     $formdata['category'] = trim($_POST["category"]);
+
+	$formdata['caption'] = trim($_POST["caption"]);  // New caption field
+    $formdata['tags'] = trim($_POST["tags"]);  // New tags field
 
     if ($formdata['category'] == "Sports") {
         $categoryslug = "sports";
@@ -250,7 +239,9 @@ if (isset($_POST["add_news"])) {
         ':author' => $formdata['author'],
         ':schoolPride' => $formdata['schoolPride'],
         ':categoryslug' => $categoryslug, 
-        ':date' => $formdata['date']
+        ':date' => $formdata['date'],
+		':caption' => $formdata['caption'],  // Add caption to data array
+        ':tags' => $formdata['tags']  // Add tags to data array
     );
 
 $title = $_POST['title'];
@@ -270,8 +261,8 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
     
     $query = "
     INSERT INTO pwc_db_news 
-    (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride) 
-    VALUES (:title, :content, :category, :slug, :photo, :date, :content, :author, :categoryslug, :schoolPride )
+    (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride, caption, tags) 
+    VALUES (:title, :content, :category, :slug, :photo, :date, :content, :author, :categoryslug, :schoolPride, :caption, :tags )
     ";
 
     $data[':photo'] = $image; 
@@ -318,6 +309,6 @@ exit();
 
 
 
-	<?php
+<?php
 include '../admin-footer.php';
 ?>
