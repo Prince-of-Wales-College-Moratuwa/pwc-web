@@ -2,17 +2,14 @@
 include '../../database_connection.php';
 
 $platform = 'telegram'; 
-$query = "SELECT token1, token2 FROM tokens WHERE platform = ?";
-$stmt = $conn->prepare($query);
-$stmt->bind_param("s", $platform);
+$query = "SELECT token1, token2 FROM tokens WHERE platform = :platform";
+$stmt = $connect->prepare($query);
+$stmt->bindParam(':platform', $platform, PDO::PARAM_STR);
 $stmt->execute();
-$stmt->bind_result($botToken, $chatId);
-$stmt->fetch();
-$stmt->close();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Telegram Bot API credentials
-$botToken = $botToken;
-$chatId = $chatId; // Use channel ID if sending to a Telegram channel
+$botToken = $result['token1'];
+$chatId = $result['token2']; // Use channel ID if sending to a Telegram channel
 
 // RSS feed URL
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
