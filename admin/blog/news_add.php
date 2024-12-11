@@ -52,7 +52,7 @@ include '../admin-header.php';
 </div>
 
 		<div class="col-md-12">
-			<label class="form-label">Description</label>
+		<label class="form-label">Description (One or more paragraphs)</label>
 			<div id="content"></div>
 			<input type="hidden" name="editorContent" id="editorContent" value="">
 			<script>
@@ -85,7 +85,7 @@ include '../admin-header.php';
 		</div>
 
 		<div class="mb-3">
-			<label class="form-label">Caption</label>
+		<label class="form-label">Caption (Single paragraph - Used for Social Media)</label>
 			<textarea name="caption" id="caption" class="form-control" rows="3"></textarea>
 		</div>
 
@@ -156,6 +156,10 @@ include '../admin-header.php';
 			<label class="form-label"><b>Also Share to:</b></label><br>
 			<label class="form-label"><b>Telegram</b></label>
 			<input type="checkbox" name="publish_telegram" id="publish_telegram" checked />
+			<label class="form-label"><b>Facebook</b>(Coming Soon)</label>
+			<input type="checkbox" name="publish_facebook" id="publish_facebook" />
+			<label class="form-label"><b>Instagram</b>(Coming Soon)</label>
+			<input type="checkbox" name="publish_instagram" id="publish_instagram" />
 		</div>
 
 		<div class="mb-4">
@@ -276,11 +280,12 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
 	
 	if (isset($_POST['publish_telegram']) && $_POST['publish_telegram'] == 'on' && $post_date <= $current_date) {
 		include '../auto-post/tg_auto.php';
-	} else {
-		$slug = $_POST['slug'] ?? 'no-slug';
-		$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
-		file_put_contents('../auto-post/last_guid.txt', $full_url, LOCK_EX);
-	}
+	} 
+	// else {
+	// 	$slug = $_POST['slug'] ?? 'no-slug';
+	// 	$full_url = "https://princeofwales.edu.lk/blog/" . $slug;
+	// 	file_put_contents('../auto-post/last_guid.txt', $full_url, LOCK_EX);
+	// }
 	
 	// if (isset($_POST['publish_facebook']) && $_POST['publish_facebook'] == 'on' && $post_date <= $current_date) {
 	// 	include '../auto-post/fb_auto.php';

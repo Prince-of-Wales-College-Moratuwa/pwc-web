@@ -1,7 +1,18 @@
 <?php
+include '../../database_connection.php';
+
+$platform = 'telegram'; 
+$query = "SELECT token1, token2 FROM tokens WHERE platform = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $platform);
+$stmt->execute();
+$stmt->bind_result($botToken, $chatId);
+$stmt->fetch();
+$stmt->close();
+
 // Telegram Bot API credentials
-$botToken = "7764590275:AAGzNd2YcBCshcVjCLo7sAOoQQiqvD-nIQs";
-$chatId = "-1002437489499"; // Use channel ID if sending to a Telegram channel
+$botToken = $botToken;
+$chatId = $chatId; // Use channel ID if sending to a Telegram channel
 
 // RSS feed URL
 $rssFeedUrl = "https://princeofwales.edu.lk/rss";
