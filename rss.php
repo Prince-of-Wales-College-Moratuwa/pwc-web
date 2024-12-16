@@ -3,12 +3,10 @@
 include 'database_connection.php';
 
 // Fetch blog posts with date <= current date and time
-$query = "SELECT title, slug, content, author, date, photo, caption, tags 
+$query = "SELECT title, slug, content, author, date, photo, caption, tags, extra_link
           FROM pwc_db_news 
           WHERE date <= NOW()
           ORDER BY date DESC";
-
-//
 
 $statement = $connect->prepare($query);
 $statement->execute();
@@ -40,6 +38,10 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>';
         <enclosure 
           url="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" 
           type="image/webp" />
+      <?php endif; ?>
+
+      <?php if (!empty($row["extra_link"])): ?>
+        <extralink><?php echo htmlspecialchars($row["extra_link"], ENT_QUOTES, 'UTF-8'); ?></extralink>
       <?php endif; ?>
 
     </item>

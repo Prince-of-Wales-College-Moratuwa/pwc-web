@@ -89,9 +89,44 @@ include '../admin-header.php';
 			<textarea name="caption" id="caption" class="form-control" rows="3"></textarea>
 		</div>
 
+		<div class="mb-3 d-flex align-items-center">
+             
+             <!-- Toggle Button -->
+<div class="form-check form-switch me-3" style="display: inline-block;">
+    <input class="form-check-input" type="checkbox" id="toggleButton">
+    <label class="form-check-label" for="toggleButton"></label>
+</div>
+
+<!-- Dropdown with Add Option -->
+<label for="extralinktype" class="form-label me-2">Extra Link:</label>
+<select id="extralinktype" class="form-select me-2" style="width: 30%;" disabled>
+    <option value="">Choose an option</option>
+    <option value="Album Link | ">Album Link | </option>
+    <!-- Add more options here if necessary -->
+</select>
+
+<!-- Extra Field -->
+<label for="extra" class="form-label me-2">Link:</label>
+<input type="text" id="extralink" name="extralink" class="form-control me-3" style="width: 30%;" disabled>
+
+<script>
+    // JavaScript to handle toggle functionality
+    document.getElementById('toggleButton').addEventListener('change', function () {
+        const isActive = this.checked;
+        // Enable or disable fields based on the toggle button
+        document.getElementById('extralinktype').disabled = !isActive;
+        document.getElementById('extralink').disabled = !isActive;
+    });
+</script>
+
+
+               
+            </div>
+
+
 		<div class="mb-3">
 			<label class="form-label">Tags</label>
-			<input type="text" name="tags" id="tags" class="form-control" />
+			<input type="text" name="tags" id="tags" placeholder="#CMBU #PWC" class="form-control" />
 		</div>
 
 		<div class="mb-3">
@@ -155,9 +190,9 @@ include '../admin-header.php';
 		<div class="mb-3">
 			<label class="form-label"><b>Also Share to:</b></label><br>
 			<label class="form-label"><b>Telegram</b></label>
-			<input type="checkbox" name="publish_telegram" id="publish_telegram" checked />
+			<input type="checkbox" name="publish_telegram" id="publish_telegram" checked /><br>
 			<label class="form-label"><b>Facebook</b>(Coming Soon)</label>
-			<input type="checkbox" name="publish_facebook" id="publish_facebook" />
+			<input type="checkbox" name="publish_facebook" id="publish_facebook" /><br>
 			<label class="form-label"><b>Instagram</b>(Coming Soon)</label>
 			<input type="checkbox" name="publish_instagram" id="publish_instagram" />
 		</div>
@@ -214,6 +249,19 @@ if (isset($_POST["add_news"])) {
 	$formdata['caption'] = trim($_POST["caption"]);  // New caption field
     $formdata['tags'] = trim($_POST["tags"]);  // New tags field
 
+
+	    // Handle extra link concatenation based on the toggle button and form input
+		$dropdown_value = isset($_POST["extralinktype"]) ? trim($_POST["extralinktype"]) : '';
+		$link_value = isset($_POST["extralink"]) ? trim($_POST["extralink"]) : '';
+	
+		// Combine dropdown and link value if either is provided
+		if (!empty($dropdown_value) || !empty($link_value)) {
+			$formdata['extra_link'] = "Album Link | " . $dropdown_value . $link_value;
+		} else {
+			$formdata['extra_link'] = NULL; // If both are empty, set to NULL
+		}
+
+
     if ($formdata['category'] == "Sports") {
         $categoryslug = "sports";
     } elseif ($formdata['category'] == "Aesthetic") {
@@ -245,7 +293,8 @@ if (isset($_POST["add_news"])) {
         ':categoryslug' => $categoryslug, 
         ':date' => $formdata['date'],
 		':caption' => $formdata['caption'],  // Add caption to data array
-        ':tags' => $formdata['tags']  // Add tags to data array
+        ':tags' => $formdata['tags'],  // Add tags to data array
+		':extra_link' => $formdata['extra_link'] // Save the concatenated value
     );
 
 $title = $_POST['title'];
@@ -264,10 +313,10 @@ if (move_uploaded_file($file_loc, $folder . $final_file)) {
     $image = $final_file;
     
     $query = "
-    INSERT INTO pwc_db_news 
-    (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride, caption, tags) 
-    VALUES (:title, :content, :category, :slug, :photo, :date, :content, :author, :categoryslug, :schoolPride, :caption, :tags )
-    ";
+INSERT INTO pwc_db_news 
+        (title, content, category, slug, photo, date, excerpt, author, categoryslug, schoolPride, caption, tags, extra_link) 
+        VALUES (:title, :content, :category, :slug, :photo, :date, :content, :author, :categoryslug, :schoolPride, :caption, :tags, :extra_link)
+        ";
 
     $data[':photo'] = $image; 
     $statement = $connect->prepare($query);

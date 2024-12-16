@@ -63,11 +63,20 @@ foreach ($rss->channel->item as $item) {
     // Remove hashtags from the description to avoid repetition
     $descriptionWithoutHashtags = preg_replace('/#\w+/', '', $description);
 
+    // Check for extralink and format the message accordingly
+    $extraLink = isset($item->extralink) ? (string)$item->extralink : "";
+
     // Format the Telegram message (no hashtags in the description)
-    $message = "*$title*\n\n" . 
-               strip_tags($descriptionWithoutHashtags) . "\n\n" . 
-               "Read More | $link\n\n" . 
-               $hashtagsText;
+    if ($extraLink) {
+        $message = strip_tags("*$descriptionWithoutHashtags*") . "\n\n" . 
+                   "Read More | $link\n\n" . 
+                   "$extraLink\n\n" . 
+                   $hashtagsText;
+    } else {
+        $message = strip_tags("*$descriptionWithoutHashtags*") . "\n\n" . 
+                   "Read More | $link\n\n" . 
+                   $hashtagsText;
+    }
 
     // Turn off link preview by adding `disable_web_page_preview`
     $sendMessageUrl = "https://api.telegram.org/bot$botToken/sendPhoto";

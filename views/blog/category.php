@@ -1,5 +1,7 @@
 <?php
 include '../../database_connection.php';
+$page = 'blog';
+
 
 // Get the category slug and page number from the URL
 $categoryslug = isset($_GET['categoryslug']) ? $_GET['categoryslug'] : '';
