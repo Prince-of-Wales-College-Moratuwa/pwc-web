@@ -377,40 +377,45 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 
     </div>
 
-    <div class="container-xxl py-5" id="flag">
+    <div class="container-xxl py-5" id="flag-crest">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
-                <h1 class="mb-5">FLAG</h1>
+                <h1 class="mb-5">FLAG & CREST</h1>
             </div>
 
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-about/flag-pwc.webp"
+                        <img class="img-fluid position-absolute w-100 h-100" src="content/img/img-about/crest-flag.webp"
                             alt="flag-pwc" style="object-fit: cover;" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <p class="mb-4">The flag of Prince of Wales College in Moratuwa is a simple yet elegant design that
-                        proudly represents the school. It features three vibrant colors: purple, gold, and maroon. The
-                        flag is divided into three horizontal stripes, with the top and bottom stripes being purple and
-                        the middle one being maroon. <br><br> In the center of the maroon stripe, there is a bold gold
-                        emblem
-                        that showcases the school's emblem or logo. This flag symbolizes the school's pride, identity,
-                        and values, making it a source of unity and recognition among the students and alumni of Prince
-                        of Wales College in Moratuwa.
-                        <br><br>
-                        The colors purple, gold, and maroon on the flag make it look special and remind us of the
-                        school's long history. The flag is like a treasure that tells the story of our school. When we
-                        see this flag flying, it shows that the school is very serious about teaching and doing well.
+                    <p class="mb-4">The flag and crest of Prince of Wales College in Moratuwa together form a powerful
+                        representation of the school’s identity, heritage, and values. The flag, with its vibrant
+                        purple, gold, and maroon stripes, symbolizes the unity and pride of the school community. In the
+                        center, the bold gold emblem highlights the college's strong traditions and commitment to
+                        excellence. <br><br>
+
+                        Complementing the flag is the college's crest, a symbol of knowledge, discipline, and
+                        achievement. The crest features a shield adorned with meaningful elements, each reflecting the
+                        school’s mission and values. Surrounded by a banner with the school’s motto, the crest adds a
+                        sense of dignity and purpose to the flag's design. <br><br>
+
+                        Together, the flag and crest serve as a reminder of the school’s rich history and its dedication
+                        to nurturing the potential of every student. They unite students, alumni, and faculty, creating
+                        a strong bond that represents the pride, spirit, and legacy of Prince of Wales College in
+                        Moratuwa.
                     </p>
                     <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/img/logo-pwc.png" target="_blank"
-                        data-wow-delay="0.1s">View School Logo</a>
+                        data-wow-delay="0.1s">View College Crest</a>
                 </div>
             </div>
         </div>
+
     </div>
+
 
     <div class="container-xxl py-5" id="houses">
         <div class="container">
@@ -650,7 +655,7 @@ if($statement->rowCount() > 0)
 
     <!-- history Start -->
 
-    
+
     <style>
         .explore-history-page-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/img-home/explore-history-pwc.webp);

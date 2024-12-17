@@ -69,8 +69,8 @@ foreach ($rss->channel->item as $item) {
     // Format the Telegram message (no hashtags in the description)
     if ($extraLink) {
         $message = strip_tags("*$descriptionWithoutHashtags*") . "\n\n" . 
-                   "Read More | $link\n\n" . 
                    "$extraLink\n\n" . 
+                   "Read More | $link\n\n" . 
                    $hashtagsText;
     } else {
         $message = strip_tags("*$descriptionWithoutHashtags*") . "\n\n" . 

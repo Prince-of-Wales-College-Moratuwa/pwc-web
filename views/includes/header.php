@@ -280,7 +280,7 @@ if ($currentDate >= $start && $currentDate <= $end) {
                         <a class="dropdown-item" href="/about#vission-mission"><b>VISION & MISSION</b></a>
                         <a class="dropdown-item" href="/about#alumini"><b>ALUMNI</b></a>
                         <a class="dropdown-item" href="/about#anthems"><b>ANTHEMS</b></a>
-                        <a class="dropdown-item" href="/about#flag"><b>FLAG</b></a>
+                        <a class="dropdown-item" href="/about#flag-crest"><b>FLAG & CREST</b></a>
                         <a class="dropdown-item" href="/about#houses"><b>HOUSES</b></a>
                         <a class="dropdown-item" href="/about#administration"><b>ADMINISTRATION</b></a>
                         <a class="dropdown-item" href="/about#locations"><b>LOCATIONS</b></a>

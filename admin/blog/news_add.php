@@ -100,7 +100,7 @@ include '../admin-header.php';
 <!-- Dropdown with Add Option -->
 <label for="extralinktype" class="form-label me-2">Extra Link:</label>
 <select id="extralinktype" class="form-select me-2" style="width: 30%;" disabled>
-    <option value="">Choose an option</option>
+    <option value="">Choose URL Type</option>
     <option value="Album Link | ">Album Link | </option>
     <!-- Add more options here if necessary -->
 </select>
@@ -125,7 +125,7 @@ include '../admin-header.php';
 
 
 		<div class="mb-3">
-			<label class="form-label">Tags</label>
+			<label class="form-label"># Tags</label>
 			<input type="text" name="tags" id="tags" placeholder="#CMBU #PWC" class="form-control" />
 		</div>
 
@@ -250,11 +250,9 @@ if (isset($_POST["add_news"])) {
     $formdata['tags'] = trim($_POST["tags"]);  // New tags field
 
 
-	    // Handle extra link concatenation based on the toggle button and form input
 		$dropdown_value = isset($_POST["extralinktype"]) ? trim($_POST["extralinktype"]) : '';
 		$link_value = isset($_POST["extralink"]) ? trim($_POST["extralink"]) : '';
 	
-		// Combine dropdown and link value if either is provided
 		if (!empty($dropdown_value) || !empty($link_value)) {
 			$formdata['extra_link'] = "Album Link | " . $dropdown_value . $link_value;
 		} else {
