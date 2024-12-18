@@ -131,18 +131,21 @@
 
     <!-- Footer Bottom -->
     <div class="container">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">Prince
-                        of Wales' College</a>, All Right Reserved. │ Developed By <a class="border-bottom"
-                        href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom"
-                        href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcasting
-                        Unit</a>
-                </div>
+    <div class="copyright">
+        <div class="row">
+            <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
+                &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">PRINCEOFWALES.EDU.LK</a>, is Licensed Under 
+                    <a class="border-bottom" href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+                        CC BY-NC 4.0</a>. All Right Reserved. │ Developed By <a class="border-bottom"
+                    href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom"
+                    href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcasting
+                    Unit</a>
+                
             </div>
         </div>
     </div>
+</div>
+
 </div>
 <!-- Footer End -->
 
