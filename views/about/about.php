@@ -51,19 +51,6 @@
         }
     </style>
 
-    <?php 
-$birthYear = 1876;
-$currentDate = date("m-d");
-$birthday = "09-14";
-
-if ($currentDate < $birthday) {
-    $age = date("Y") - $birthYear - 1;
-} else {
-    $age = date("Y") - $birthYear;
-}
-
-?>
-
 </head>
 
 <body>
@@ -116,53 +103,92 @@ if ($currentDate < $birthday) {
         </div>
     </div>
 
-    <!-- Counter Start -->
+   <!-- Counter Start -->
+<?php 
+$birthYear = 1876;
+$currentDate = date("m-d");
+$birthday = "09-14";
 
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <!-- First row for mobile -->
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="yearsOfExcellence"><?php echo $age ?></p>
-                            <p class="h5 mb-3">Years of Excellence</p>
-                        </div>
+if ($currentDate < $birthday) {
+    $age = date("Y") - $birthYear - 1;
+} else {
+    $age = date("Y") - $birthYear;
+}  
+?>
+<div class="container-xxl py-3">
+    <div class="container">
+        <div class="row g-4">
+            <!-- First row for mobile -->
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="yearsOfExcellence" data-target="<?php echo $age ?>">0</p>
+                        <p class="h5 mb-3">Years of Excellence</p>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="numberOfStudents">4,000+</p>
-                            <p class="h5 mb-3">Students</p>
-                        </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-child text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="numberOfStudents" data-target="4000">0</p>
+                        <p class="h5 mb-3">Students</p>
                     </div>
                 </div>
-                <!-- Second row for mobile -->
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="qualifiedStaff">200+</p>
-                            <p class="h5 mb-3">Qualified Staff</p>
-                        </div>
+            </div>
+            <!-- Second row for mobile -->
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="qualifiedStaff" data-target="200">0</p>
+                        <p class="h5 mb-3">Qualified Staff</p>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                            <p class="h1 mb-3" id="clubsAndSports">50+</p>
-                            <p class="h5 mb-3">Clubs & Sports</p>
-                        </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
+                        <p class="h1 mb-3" id="clubsAndSports" data-target="50">0</p>
+                        <p class="h5 mb-3">Clubs & Sports</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Counter End -->
+</div>
+<!-- Counter End -->
+
+<script>
+    // Counter Functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.h1[id]');
+        
+        counters.forEach(counter => {
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const increment = target / 200; // Adjust the speed of the counter
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 20); // Adjust timing between updates
+                } else {
+                    counter.innerText = target;
+
+                    if (counter.id === "numberOfStudents" || counter.id === "qualifiedStaff" || counter.id === "clubsAndSports") {
+                        counter.innerText += "+";
+                    }
+                }
+            };
+
+            updateCounter();
+        });
+    });
+</script>
 
     <br><br>
 

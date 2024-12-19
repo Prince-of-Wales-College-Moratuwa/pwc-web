@@ -24,7 +24,8 @@
         opacity: 0;
         transform: translateX(-100%);
         transition: transform 0.5s ease, opacity 0.5s ease;
-        z-index: 9999; /* Make sure it's above all layers */
+        z-index: 9999;
+        /* Make sure it's above all layers */
     }
 
     .notification.active {
@@ -50,7 +51,8 @@
 
     .notification-icon i {
         font-size: 24px;
-        color: #800000; /* Icon color */
+        color: #800000;
+        /* Icon color */
     }
 
     .notification-content {
@@ -137,12 +139,13 @@ $notifications = [
     '03-04' => ['title' => 'Founder\'s Day', 'message' => 'Celebrating our Founder\'s Day with pride.', 'icon' => 'fas fa-flag'],
     '04-13' => ['title' => 'Sinhala and Tamil New Year', 'message' => 'Wishing everyone a prosperous New Year!', 'icon' => 'fas fa-sun'],
     '04-14' => ['title' => 'Sinhala and Tamil New Year', 'message' => 'Wishing everyone a prosperous New Year!', 'icon' => 'fas fa-sun'],
-    '04-15' => ['title' => 'Eid Mubarak', 'message' => 'Wishing all our Muslim students and staff a blessed Eid filled with happiness and prosperity.', 'icon' => 'fas fa-moon'],
     '05-10' => ['title' => 'Happy Mother\'s Day', 'message' => 'A heartfelt thank you to all the wonderful mothers in our school community.', 'icon' => 'fas fa-female'],
     '06-05' => ['title' => 'Happy World Environment Day', 'message' => 'Let\'s work together to create a greener and cleaner future for our planet.', 'icon' => 'fas fa-leaf'],
     '06-19' => ['title' => 'Happy Father\'s Day', 'message' => 'A big thank you to all the fathers for their love and support!', 'icon' => 'fas fa-male'],
     '09-08' => ['title' => 'Happy World Literacy Day!', 'message' => 'Let’s spread the gift of literacy and knowledge to every corner of the world.', 'icon' => 'fas fa-book'],
     '09-14' => ['title' => (date("Y") - 1876) . ' Years of Excellence','message' => 'Happy Birthday to Prince of Wales College!','icon' => 'fas fa-birthday-cake'],
+    '10-01' => [
+    'title' => 'Happy Children\'s Day', 'message' => 'A day to celebrate the joy, innocence, and potential of every child. Have a fun-filled day!', 'icon' => 'fas fa-child'],
     '10-05' => ['title' => 'Happy Teachers\' Day', 'message' => 'Celebrating the dedication and hard work of our amazing teachers!', 'icon' => 'fas fa-chalkboard-teacher'],
     '12-24' => ['title' => 'Merry Christmas', 'message' => 'Wishing everyone a season filled with love, joy, and peace!', 'icon' => 'fas fa-gift'],
     '12-25' => ['title' => 'Merry Christmas', 'message' => 'Wishing everyone a joyful Christmas!', 'icon' => 'fas fa-tree'],
@@ -158,7 +161,7 @@ $notifications = [
     ],
     '07-04' => [
         'title' => 'On this day in 1991',
-        'message' => 'On July 4, 1991, the school was declared a national school.',
+        'message' => 'On July 4, 1991, Prince of Wales College was named as national school.',
         'icon' => 'fas fa-school'
     ],
     '11-01' => [
@@ -169,6 +172,11 @@ $notifications = [
     '09-15' => [
         'title' => 'On this day in 2023',
         'message' => 'On September 15, 2023, Cambrians ICT Society launched the official website of Prince of Wales College.',
+        'icon' => 'fas fa-flag'
+    ],
+    '08-15' => [
+        'title' => 'On this day in 2024',
+        'message' => 'On August 15, 2023, Prince of Wales College won the Best School Website Silver Award at BestWeb.LK 2024.',
         'icon' => 'fas fa-flag'
     ],
 ];
@@ -196,7 +204,7 @@ if ($notification): ?>
     // Show the notification
     setTimeout(() => {
         notification.classList.add('active');
-    }, 500);
+    }, 1500);
 
     // Function to hide the notification
     function hideNotification() {
