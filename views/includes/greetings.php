@@ -163,7 +163,12 @@ $notifications = [
     ],
     '11-01' => [
         'title' => 'On this day in 2024',
-        'message' => 'On December 1, 2024, Cambrians ICT Society organized the first ICT Day at Prince of Wales College.',
+        'message' => 'On November 1, 2024, Cambrians ICT Society organized the first ICT Day at Prince of Wales College.',
+        'icon' => 'fas fa-flag'
+    ],
+    '09-15' => [
+        'title' => 'On this day in 2023',
+        'message' => 'On September 15, 2023, Cambrians ICT Society launched the official website of Prince of Wales College.',
         'icon' => 'fas fa-flag'
     ],
 ];
