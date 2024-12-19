@@ -61,7 +61,10 @@ include '../sitemap-gen.php';
 
 
     <?php
+
     include 'includes/header.php';
+    include 'includes/greetings.php';
+
     include 'includes/fireworks.php';
     include 'popup-msg.php';
     

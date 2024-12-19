@@ -50,7 +50,11 @@ foreach ($rows as $row) {
     content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
 
 
-  <?php include '../includes/header.php'; ?>
+  <?php include '../includes/header.php';
+    include '../includes/greetings.php';
+  
+  ?>
+  
 
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss">
 
