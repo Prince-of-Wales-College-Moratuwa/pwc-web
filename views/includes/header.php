@@ -83,7 +83,10 @@ if ($currentDate >= $start && $currentDate <= $end) {
     include 'snow.php';
 }
 
+if ($currentDate == new DateTime($currentDate->format('Y') . '-01-01')) {
 include 'fireworks.php';
+}
+
 ?>
 
 
