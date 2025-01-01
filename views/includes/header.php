@@ -81,8 +81,9 @@ $end = new DateTime($currentDate->format('Y') . '-12-31');
 
 if ($currentDate >= $start && $currentDate <= $end) {
     include 'snow.php';
-
 }
+
+include 'fireworks.php';
 ?>
 
 

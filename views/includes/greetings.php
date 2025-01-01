@@ -133,7 +133,7 @@
 date_default_timezone_set('Asia/Colombo');
 $today = date('Y-m-d');
 $notifications = [
-    '01-01' => ['title' => 'Happy New Year', 'message' => 'Let\'s welcome the new year with excitement!', 'icon' => 'fas fa-fireworks'],
+    '01-01' => ['title' => 'Happy New Year', 'message' => 'Let\'s welcome the new year with excitement!', 'icon' => 'fas fa-star'],
     '02-02' => ['title' => 'Anniversary of CMBU', 'message' => 'Happy Anniversary to our Media Unit!', 'icon' => 'fas fa-cogs'],
     '02-04' => ['title' => 'Happy Independence Day!', 'message' => 'Celebrating the freedom and pride of our nation. Let’s keep working together for a brighter future.', 'icon' => 'fas fa-flag'],
     '03-04' => ['title' => 'Founder\'s Day', 'message' => 'Celebrating our Founder\'s Day with pride.', 'icon' => 'fas fa-flag'],

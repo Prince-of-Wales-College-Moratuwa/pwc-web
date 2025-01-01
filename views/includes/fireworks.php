@@ -22,7 +22,7 @@ if ($currentDate == '01-01') {
                 explosion: 5,
                 hue: {
                     min: 0, // Maroon (Red)
-                    max: 20, // Maroon
+                    max: 255, // Maroon
                 },
             });
 
