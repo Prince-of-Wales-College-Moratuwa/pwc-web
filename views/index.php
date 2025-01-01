@@ -65,8 +65,7 @@ include '../sitemap-gen.php';
     include 'includes/header.php';
     include 'includes/greetings.php';
 
-    include 'includes/fireworks.php';
-    include 'popup-msg.php';
+    include 'includes/popup-msg.php';
     
 if (date('m-d') == '09-14') {
     echo '<div class="confetti-container"></div>';

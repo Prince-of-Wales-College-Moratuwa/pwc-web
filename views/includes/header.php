@@ -83,9 +83,10 @@ if ($currentDate >= $start && $currentDate <= $end) {
     include 'snow.php';
 }
 
-if ($currentDate == new DateTime($currentDate->format('Y') . '-01-01')) {
-include 'fireworks.php';
+if ($currentDate->format('Y-m-d') === (new DateTime($currentDate->format('Y') . '-01-01'))->format('Y-m-d')) {
+    include 'fireworks.php';
 }
+
 
 ?>
 
@@ -235,10 +236,10 @@ include 'fireworks.php';
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'blog') echo 'active'; ?>">Blog</a>
                 <a href="/events/"
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'events') echo 'active'; ?>">Events</a>
-                    <a href="/publications"
+                <a href="/publications"
                     class="nav-item nav-link nav-link pulse <?php if ($page === 'publications') echo 'active'; ?>">Publications</a>
 
-            
+
                 <div class="nav-item dropdown">
                     <a href="/sports"
                         class="nav-link dropdown-toggle <?php if ($page === 'sports') echo 'active'; ?> nav-link pulse">Sports</a>
