@@ -174,6 +174,25 @@
     });
 </script>
 
+
+<!-- Seasonal Effects -->
+<?php
+$currentDate = new DateTime();
+$start = new DateTime($currentDate->format('Y') . '-12-01');
+$end = new DateTime($currentDate->format('Y') . '-12-31');
+
+if ($currentDate >= $start && $currentDate <= $end) {
+    include 'snow.php';
+}
+
+$fireworksstart = new DateTime($currentDate->format('Y') . '-01-01');
+$fireworksend = new DateTime($currentDate->format('Y') . '-01-07');
+
+if ($currentDate >= $fireworksstart && $currentDate <= $fireworksend) {
+    include 'fireworks.php';
+}
+?>
+
 <!-- JavaScript Libraries -->
 <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

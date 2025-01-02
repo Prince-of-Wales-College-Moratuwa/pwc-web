@@ -74,24 +74,7 @@
 
 
 
-    <?php
-$currentDate = new DateTime();
-$start = new DateTime($currentDate->format('Y') . '-12-01');
-$end = new DateTime($currentDate->format('Y') . '-12-31');
 
-if ($currentDate >= $start && $currentDate <= $end) {
-    include 'snow.php';
-}
-
-$fireworksstart = new DateTime($currentDate->format('Y') . '-01-01');
-$fireworksend = new DateTime($currentDate->format('Y') . '-01-07');
-
-if ($currentDate >= $fireworksstart && $currentDate <= $fireworksend) {
-    include 'fireworks.php';
-}
-
-
-?>
 
 
     <style>
