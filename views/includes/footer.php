@@ -186,7 +186,7 @@ if ($currentDate >= $start && $currentDate <= $end) {
 }
 
 $fireworksstart = new DateTime($currentDate->format('Y') . '-01-01');
-$fireworksend = new DateTime($currentDate->format('Y') . '-01-07');
+$fireworksend = new DateTime($currentDate->format('Y') . '-01-03');
 
 if ($currentDate >= $fireworksstart && $currentDate <= $fireworksend) {
     include 'fireworks.php';
