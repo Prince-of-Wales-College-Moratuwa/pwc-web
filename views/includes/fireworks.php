@@ -1,10 +1,3 @@
-<?php
-// Get the current date
-$currentDate = date('m-d');
-
-if ($currentDate == '01-01') {
-    ?>
-    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
 
     <div id="fireworks-container"></div>
 
@@ -55,6 +48,5 @@ if ($currentDate == '01-01') {
             /* Start fully visible */
         }
     </style>
-    <?php
-}
-?>
+
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>

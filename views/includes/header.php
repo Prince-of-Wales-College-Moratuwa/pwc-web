@@ -83,7 +83,10 @@ if ($currentDate >= $start && $currentDate <= $end) {
     include 'snow.php';
 }
 
-if ($currentDate->format('Y-m-d') === (new DateTime($currentDate->format('Y') . '-01-01'))->format('Y-m-d')) {
+$fireworksstart = new DateTime($currentDate->format('Y') . '-01-01');
+$fireworksend = new DateTime($currentDate->format('Y') . '-01-07');
+
+if ($currentDate >= $fireworksstart && $currentDate <= $fireworksend) {
     include 'fireworks.php';
 }
 
