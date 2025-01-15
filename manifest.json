@@ -9,8 +9,12 @@
   "id": "pwa-8x4t2z1q",
   "dir": "ltr",
   "categories": [
-      "school"
-  ],
+    "education",
+    "kids",
+    "news",
+    "social",
+    "sports"
+],
   "scope_extensions": [
       {"origin": "*.princeofwales.edu.lk"},
       {"origin": "princeofwales.edu.lk"}
