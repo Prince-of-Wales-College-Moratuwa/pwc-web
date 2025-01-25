@@ -109,7 +109,7 @@ foreach ($rss->channel->item as $item) {
 
     // Save the current item's GUID as the last processed GUID
     file_put_contents($lastProcessedFile, $guid);
-    echo '<script>alert("Post Sent to Telegram Channel : Cambrians Media & Broadcasting Unit");</script>';
+    echo '<script>alert("Post Sent to Telegram Channel : @cmbulive");</script>';
     break; // Process only the first valid item published today
 }
 ?>
