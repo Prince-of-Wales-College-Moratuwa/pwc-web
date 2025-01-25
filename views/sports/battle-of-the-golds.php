@@ -133,7 +133,7 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3"><?php echo $twodayplayed; ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodayplayed; ?></h1>
                         <h5 class="mb-3">Matches Played</h5>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3"><?php echo $twodaypwcWonCount; ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaypwcWonCount; ?></h1>
                         <h5 class="mb-3">Matches Won By PWC</h5>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3"><?php echo $twodaysscWonCount; ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaysscWonCount; ?></h1>
                         <h5 class="mb-3">Matches Won by SSC</h5>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3"><?php echo $twodaynoResultCount; ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaynoResultCount; ?></h1>
                         <h5 class="mb-3">NR / Drawn</h5>
                     </div>
                 </div>
