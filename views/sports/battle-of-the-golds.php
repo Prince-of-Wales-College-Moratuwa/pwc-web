@@ -37,7 +37,7 @@
             content="https://princeofwales.edu.lk/content/img/img-sports/battle-of-the-golds-header-pwc.webp" />
 
 
-            <?php include '../includes/header.php'; ?>
+        <?php include '../includes/header.php'; ?>
 
 
 
@@ -90,71 +90,112 @@
         </div>
 
         <div class="row g-4">
-
             <?php
-                $query = "SELECT * FROM bigmatch_2day_results WHERE result NOT LIKE '%not played%'";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $twodayplayed = $statement->rowCount();
-            ?>
+    // Get total matches played
+    $query = "SELECT * FROM bigmatch_2day_results WHERE result NOT LIKE '%not played%'";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $twodayplayed = $statement->rowCount();
 
+    // Get matches won by PWC
+    $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) LIKE LOWER('%Won by PWC%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $twodaypwcWonCount = $statement->rowCount();
+
+    // Get matches won by SSC
+    $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) LIKE LOWER('%Won by SSC%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $twodaysscWonCount = $statement->rowCount();
+
+    // Get matches with no result (drawn or NR)
+    $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) NOT LIKE LOWER('%Won by PWC%') AND LOWER(result) NOT LIKE LOWER('%Won by SSC%') AND LOWER(result) NOT LIKE LOWER('%not played%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $twodaynoResultCount = $statement->rowCount();
+
+    // Get the latest year from the database
+    $query = "SELECT MAX(year) as latest_year FROM bigmatch_2day_results";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+    $latestYear = isset($result['latest_year']) ? $result['latest_year'] : date('Y'); // Default to current year if no data
+    $nextYear = $latestYear + 1;
+
+    // Calculate percentages
+    $pwcPercent = ($twodaypwcWonCount / $twodayplayed) * 100;
+    $sscPercent = ($twodaysscWonCount / $twodayplayed) * 100;
+    $drawPercent = ($twodaynoResultCount / $twodayplayed) * 100;
+    ?>
+
+            <!-- Matches Played -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodayplayed ?></h1>
+                        <h1 class="mb-3"><?php echo $twodayplayed; ?></h1>
                         <h5 class="mb-3">Matches Played</h5>
                     </div>
                 </div>
             </div>
 
-
-            <?php
-                $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) LIKE LOWER('%Won by PWC%')";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $twodaypwcWonCount = $statement->rowCount();
-            ?>
+            <!-- Matches Won by PWC -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaypwcWonCount ?></h1>
+                        <h1 class="mb-3"><?php echo $twodaypwcWonCount; ?></h1>
                         <h5 class="mb-3">Matches Won By PWC</h5>
                     </div>
                 </div>
             </div>
 
-
-            <?php
-                $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) LIKE LOWER('%Won by SSC%')";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $twodaysscWonCount = $statement->rowCount();
-            ?>
+            <!-- Matches Won by SSC -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaysscWonCount ?></h1>
+                        <h1 class="mb-3"><?php echo $twodaysscWonCount; ?></h1>
                         <h5 class="mb-3">Matches Won by SSC</h5>
                     </div>
                 </div>
             </div>
 
-
-            <?php
-                $query = "SELECT * FROM bigmatch_2day_results WHERE LOWER(result) NOT LIKE LOWER('%Won By PWC%') AND LOWER(result) NOT LIKE LOWER('%Won by SSC%') AND LOWER(result) NOT LIKE LOWER('%not played')";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $twodaynoResultCount = $statement->rowCount();
-            ?>
+            <!-- NR / Drawn -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $twodaynoResultCount ?></h1>
+                        <h1 class="mb-3"><?php echo $twodaynoResultCount; ?></h1>
                         <h5 class="mb-3">NR / Drawn</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Win Predictor Bar -->
+            <div class="col-12 mt-5 wow fadeInUp">
+                <h4 class="text-center mb-3">Win Predictor <?php echo $nextYear; ?></h4>
+                <p class="text-center" style="font-size: 12px; color: gray;">This prediction is based on all past
+                    results.</p>
+                <div class="d-flex">
+                    <!-- PWC Section -->
+                    <div
+                        style="width: <?php echo $pwcPercent; ?>%; background-color: maroon; height: 30px; border-radius: 5px 0 0 5px;">
+                    </div>
+                    <!-- Draw Section -->
+                    <div style="width: <?php echo $drawPercent; ?>%; background-color: gray; height: 30px;">
+                    </div>
+                    <!-- SSC Section -->
+                    <div
+                        style="width: <?php echo $sscPercent; ?>%; background-color: green; height: 30px; border-radius: 0 5px 5px 0;">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <span>PWC: <?php echo round($pwcPercent, 1); ?>%</span>
+                    <span>Draw: <?php echo round($drawPercent, 1); ?>%</span>
+                    <span>SSC: <?php echo round($sscPercent, 1); ?>%</span>
+                </div>
+            </div>
         </div>
+
+
         <br><br>
         <center><button class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" id="show2dayresults">View Full Results
                 Sheet</button></center>
@@ -294,6 +335,72 @@ if($statement->rowCount() > 0)
                 </div>
             </div>
         </div>
+
+        <!-- PHP Logic for Win Predictor -->
+        <?php
+    // Total Matches Played
+    $query = "SELECT * FROM bigmatch_1day_results WHERE result NOT LIKE '%not played%'";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $onedayplayed = $statement->rowCount();
+
+    // Matches Won by PWC
+    $query = "SELECT * FROM bigmatch_1day_results WHERE LOWER(result) LIKE LOWER('%PWC Won%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $onedaypwcWonCount = $statement->rowCount();
+
+    // Matches Won by SSC
+    $query = "SELECT * FROM bigmatch_1day_results WHERE LOWER(result) LIKE LOWER('%SSC Won%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $onedaysscWonCount = $statement->rowCount();
+
+    // NR / Drawn Matches
+    $query = "SELECT * FROM bigmatch_1day_results WHERE LOWER(result) NOT LIKE LOWER('%PWC Won%') AND LOWER(result) NOT LIKE LOWER('%SSC Won%') AND LOWER(result) NOT LIKE LOWER('%not played%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $onedaynoResultCount = $statement->rowCount();
+
+        // Get the latest year from the database
+        $query = "SELECT MAX(year) as latest_year FROM bigmatch_1day_results";
+        $statement = $connect->prepare($query);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        $latestYear = isset($result['latest_year']) ? $result['latest_year'] : date('Y'); // Default to current year if no data
+        $nextYear = $latestYear + 1;
+
+    // Calculate Percentages
+    $pwcPercent = ($onedayplayed > 0) ? ($onedaypwcWonCount / $onedayplayed) * 100 : 0;
+    $sscPercent = ($onedayplayed > 0) ? ($onedaysscWonCount / $onedayplayed) * 100 : 0;
+    $drawPercent = ($onedayplayed > 0) ? ($onedaynoResultCount / $onedayplayed) * 100 : 0;
+?>
+
+        <!-- Win Predictor Bar -->
+        <div class="col-12 mt-5 wow fadeInUp">
+            <h4 class="text-center mb-3">Win Predictor <?php echo $nextYear; ?></h4>
+            <p class="text-center" style="font-size: 12px; color: gray;">This prediction is based on all past results.
+            </p>
+            <div class="d-flex">
+                <!-- PWC Section -->
+                <div
+                    style="width: <?php echo $pwcPercent; ?>%; background-color: maroon; height: 30px; border-radius: 5px 0 0 5px;">
+                </div>
+                <!-- Draw Section -->
+                <div style="width: <?php echo $drawPercent; ?>%; background-color: gray; height: 30px;">
+                </div>
+                <!-- SSC Section -->
+                <div
+                    style="width: <?php echo $sscPercent; ?>%; background-color: green; height: 30px; border-radius: 0 5px 5px 0;">
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+                <span>PWC: <?php echo round($pwcPercent, 1); ?>%</span>
+                <span>Draw/NR: <?php echo round($drawPercent, 1); ?>%</span>
+                <span>SSC: <?php echo round($sscPercent, 1); ?>%</span>
+            </div>
+        </div>
+
         <br><br>
         <center><button class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" id="show1dayresults">View Full Results
                 Sheet</button></center>
@@ -357,76 +464,115 @@ if($statement->rowCount() > 0)
         </div>
 
 
+        <?php
+    // Total T20 Matches Played
+    $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) NOT LIKE LOWER('%not played%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $t20played = $statement->rowCount();
+
+    // Matches Won by PWC
+    $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) LIKE LOWER('%PWC Won%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $pwcWonCount = $statement->rowCount();
+
+    // Matches Won by SSC
+    $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) LIKE LOWER('%SSC Won%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $sscWonCount = $statement->rowCount();
+
+    // No Results (Draw/NR)
+    $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) NOT LIKE LOWER('%PWC Won%') AND LOWER(result) NOT LIKE LOWER('%SSC Won%') AND LOWER(result) NOT LIKE LOWER('%not played%')";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $noResultCount = $statement->rowCount();
+
+    // Calculate Percentages
+    $pwcPercent = ($t20played > 0) ? ($pwcWonCount / $t20played) * 100 : 0;
+    $sscPercent = ($t20played > 0) ? ($sscWonCount / $t20played) * 100 : 0;
+    $drawPercent = ($t20played > 0) ? ($noResultCount / $t20played) * 100 : 0;
+
+          // Get the latest year from the database
+          $query = "SELECT MAX(year) as latest_year FROM bigmatch_t20_results";
+          $statement = $connect->prepare($query);
+          $statement->execute();
+          $result = $statement->fetch(PDO::FETCH_ASSOC);
+          $latestYear = isset($result['latest_year']) ? $result['latest_year'] : date('Y'); // Default to current year if no data
+          $nextYear = $latestYear + 1;
+?>
+
         <div class="row g-4">
-
-            <?php
-                $query = "SELECT * FROM bigmatch_t20_results";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $t20played = $statement->rowCount();
-            ?>
-
+            <!-- Matches Played -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $t20played ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $t20played; ?></h1>
                         <h5 class="mb-3">Matches Played</h5>
                     </div>
                 </div>
             </div>
 
-            <?php
-                $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) LIKE LOWER('%PWC Won%')";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $pwcWonCount = $statement->rowCount();
-            ?>
-
+            <!-- Matches Won by PWC -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $pwcWonCount ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $pwcWonCount; ?></h1>
                         <h5 class="mb-3">Matches Won by PWC</h5>
                     </div>
                 </div>
             </div>
 
-            <?php
-                $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) LIKE LOWER('%SSC Won%')";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $sscWonCount = $statement->rowCount();
-            ?>
-
+            <!-- Matches Won by SSC -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $sscWonCount ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $sscWonCount; ?></h1>
                         <h5 class="mb-3">Matches Won by SSC</h5>
                     </div>
                 </div>
             </div>
 
-            <?php
-                $query = "SELECT * FROM bigmatch_t20_results WHERE LOWER(result) NOT LIKE LOWER('%PWC Won%') AND LOWER(result) NOT LIKE LOWER('%SSC Won%')";
-                $statement = $connect->prepare($query);
-                $statement->execute();
-                $noResultCount = $statement->rowCount();
-            ?>
-
+            <!-- No Results -->
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <h1 class="mb-3" style="color: maroon;"><?php echo $noResultCount ?></h1>
+                        <h1 class="mb-3" style="color: maroon;"><?php echo $noResultCount; ?></h1>
                         <h5 class="mb-3">No Results</h5>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+        <div class="col-12 mt-5 wow fadeInUp">
+            <h4 class="text-center mb-3">Win Predictor <?php echo $nextYear; ?></h4>
+            <p class="text-center" style="font-size: 12px; color: gray;">This prediction is based on all past results.
+            </p>
+            <div class="d-flex">
+                <!-- PWC Section -->
+                <div
+                    style="width: <?php echo $pwcPercent; ?>%; background-color: maroon; height: 30px; border-radius: 5px 0 0 5px;">
+                </div>
+                <!-- Draw Section -->
+                <div style="width: <?php echo $drawPercent; ?>%; background-color: gray; height: 30px;">
+                </div>
+                <!-- SSC Section -->
+                <div
+                    style="width: <?php echo $sscPercent; ?>%; background-color: green; height: 30px; border-radius: 0 5px 5px 0;">
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+                <span>PWC: <?php echo round($pwcPercent, 1); ?>%</span>
+                <span>NR: <?php echo round($drawPercent, 1); ?>%</span>
+                <span>SSC: <?php echo round($sscPercent, 1); ?>%</span>
+            </div>
+        </div>
         <br><br>
         <center><button class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" id="showt20results">View Full Results
                 Sheet</button></center>
-
     </div>
 
 
@@ -575,7 +721,7 @@ if($statement->rowCount() > 0)
                         </div>
                     </div>
                 </div>
-                
+
 
                 <?php 
                         }
@@ -636,7 +782,7 @@ if($statement->rowCount() > 0)
         });
     </script>
 
-<?php include '../includes/footer.php'; ?>
+    <?php include '../includes/footer.php'; ?>
 
 
 </body>
