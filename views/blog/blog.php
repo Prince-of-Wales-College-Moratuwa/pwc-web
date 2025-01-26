@@ -31,7 +31,10 @@ foreach ($rows as $row) {
   <!-- Primary Meta Tags -->
   <meta name="title" content="<?php echo $row["title"]; ?>" />
   <meta name="description" content="<?= htmlspecialchars(strip_tags($row['excerpt'])) ?>" />
-
+  <meta name="keywords" content="<?php echo htmlspecialchars($row['tags'], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta name="author" content="<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article" />
@@ -39,18 +42,28 @@ foreach ($rows as $row) {
   <meta property="og:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="og:title" content="<?php echo $row["title"]; ?>" />
   <meta property="og:description" content="<?= htmlspecialchars(strip_tags($row['excerpt'])) ?>" />
-
-  <meta property="og:image"
-    content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="og:site_name" content="Prince of Wales College" />
+  <meta property="article:published_time" content="<?php echo date('c', strtotime($row['date'])); ?>" />
+  <meta property="article:author" content="<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>" />
 
   <!-- Twitter / WA / TG -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="twitter:title" content="<?php echo $row["title"]; ?>" />
   <meta property="twitter:description" content="<?= htmlspecialchars(strip_tags($row['excerpt'])) ?>" />
-  <meta property="twitter:image"
-    content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="twitter:site" content="@PrinceOfWales" />
+  <meta property="twitter:creator" content="@<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>" />
 
+
+      <!-- AI Meta Tags -->
+      <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
 
   <?php include '../includes/header.php';
     include '../includes/greetings.php';

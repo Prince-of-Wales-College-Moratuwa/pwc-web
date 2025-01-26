@@ -42,6 +42,14 @@ include '../sitemap-gen.php';
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
+    <!-- AI Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+
 
 
     <script>

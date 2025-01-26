@@ -16,7 +16,7 @@
         <meta name="description"
             content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!" />
         <meta name="keywords"
-            content="prince of wales college big match, prince of wales college vs st. Sebastian college, battle of the golds" />
+            content="prince of wales college big match, prince of wales college vs st. Sebastian college, battle of the golds, cricket match, school cricket, sports rivalry, annual cricket match, PWC vs SSC, cricket tradition, school sports event" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
@@ -36,6 +36,16 @@
         <meta property="twitter:image"
             content="https://princeofwales.edu.lk/content/img/img-sports/battle-of-the-golds-header-pwc.webp" />
 
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="Battle of The Golds | Prince of Wales' College">
+        <meta itemprop="description" content="Experience the excitement of the Prince of Wales College Big Match (Battle of the Golds) – a legendary sporting showdown that defines tradition and rivalry. Join us for thrilling cricket action and unforgettable moments!">
+        <meta itemprop="image" content="https://princeofwales.edu.lk/content/img/img-sports/battle-of-the-golds-header-pwc.webp">
+
+        <!-- Additional Meta Tags for AI Chatbots -->
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Prince of Wales' College">
+        <meta name="language" content="English">
+        <meta name="revisit-after" content="7 days">
 
         <?php include '../includes/header.php'; ?>
 
