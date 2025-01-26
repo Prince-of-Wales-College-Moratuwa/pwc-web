@@ -197,8 +197,12 @@
 
 
         <br><br>
-        <center><button class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" id="show2dayresults">View Full Results
-                Sheet</button></center>
+        <center>
+    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="show2dayresults">
+        Click to View Past Match Scores
+    </button>
+</center>
+
 
     </div>
 
@@ -402,8 +406,12 @@ if($statement->rowCount() > 0)
         </div>
 
         <br><br>
-        <center><button class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" id="show1dayresults">View Full Results
-                Sheet</button></center>
+        <center>
+    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="show1dayresults">
+        Click to View Past Match Scores
+    </button>
+</center>
+
 
     </div>
 
@@ -571,8 +579,12 @@ if($statement->rowCount() > 0)
             </div>
         </div>
         <br><br>
-        <center><button class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" id="showt20results">View Full Results
-                Sheet</button></center>
+        <center>
+    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="showt20results">
+        Click to View Past Match Scores
+    </button>
+</center>
+
     </div>
 
 
