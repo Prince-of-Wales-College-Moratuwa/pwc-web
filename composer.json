@@ -1,10 +1,4 @@
 {
     "name": "phpcomp/pwc",
-    "authors": [
-        {
-            "name": "nelitha13",
-            "email": "nelithavindinu7@gmail.com"
-        }
-    ],
     "require": {}
 }
