@@ -69,7 +69,7 @@ include '../sitemap-gen.php';
 
 
     <?php
-
+ob_start();
     include 'includes/header.php';
     include 'includes/greetings.php';
 
@@ -797,7 +797,9 @@ foreach ($rows as $row) {
 
 
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php';
+ob_end_flush();
+?>
 
 </body>
 
