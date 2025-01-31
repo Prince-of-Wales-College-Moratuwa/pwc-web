@@ -103,8 +103,8 @@
         </div>
     </div>
 
-   <!-- Counter Start -->
-<?php 
+    <!-- Counter Start -->
+    <?php 
 $birthYear = 1876;
 $currentDate = date("m-d");
 $birthday = "09-14";
@@ -115,80 +115,81 @@ if ($currentDate < $birthday) {
     $age = date("Y") - $birthYear;
 }  
 ?>
-<div class="container-xxl py-3">
-    <div class="container">
-        <div class="row g-4">
-            <!-- First row for mobile -->
-            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
-                        <p class="h1 mb-3" id="yearsOfExcellence" data-target="<?php echo $age ?>">0</p>
-                        <p class="h5 mb-3">Years of Excellence</p>
+    <div class="container-xxl py-3">
+        <div class="container">
+            <div class="row g-4">
+                <!-- First row for mobile -->
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-place-of-worship text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="yearsOfExcellence" data-target="<?php echo $age ?>">0</p>
+                            <p class="h5 mb-3">Years of Excellence</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                        <p class="h1 mb-3" id="numberOfStudents" data-target="4000">0</p>
-                        <p class="h5 mb-3">Students</p>
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-child text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="numberOfStudents" data-target="4000">0</p>
+                            <p class="h5 mb-3">Students</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Second row for mobile -->
-            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <p class="h1 mb-3" id="qualifiedStaff" data-target="200">0</p>
-                        <p class="h5 mb-3">Qualified Staff</p>
+                <!-- Second row for mobile -->
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="qualifiedStaff" data-target="200">0</p>
+                            <p class="h5 mb-3">Qualified Staff</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                        <p class="h1 mb-3" id="clubsAndSports" data-target="50">0</p>
-                        <p class="h5 mb-3">Clubs & Sports</p>
+                <div class="col-6 col-sm-6 col-md-3 wow fadeInUp">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-running text-primary mb-4"></i>
+                            <p class="h1 mb-3" id="clubsAndSports" data-target="50">0</p>
+                            <p class="h5 mb-3">Clubs & Sports</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Counter End -->
+    <!-- Counter End -->
 
-<script>
-    // Counter Functionality
-    document.addEventListener('DOMContentLoaded', () => {
-        const counters = document.querySelectorAll('.h1[id]');
-        
-        counters.forEach(counter => {
-            const updateCounter = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
+    <script>
+        // Counter Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.h1[id]');
 
-                const increment = target / 200; // Adjust the speed of the counter
+            counters.forEach(counter => {
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
 
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCounter, 20); // Adjust timing between updates
-                } else {
-                    counter.innerText = target;
+                    const increment = target / 200; // Adjust the speed of the counter
 
-                    if (counter.id === "numberOfStudents" || counter.id === "qualifiedStaff" || counter.id === "clubsAndSports") {
-                        counter.innerText += "+";
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCounter, 20); // Adjust timing between updates
+                    } else {
+                        counter.innerText = target;
+
+                        if (counter.id === "numberOfStudents" || counter.id === "qualifiedStaff" ||
+                            counter.id === "clubsAndSports") {
+                            counter.innerText += "+";
+                        }
                     }
-                }
-            };
+                };
 
-            updateCounter();
+                updateCounter();
+            });
         });
-    });
-</script>
+    </script>
 
     <br><br>
 
@@ -319,87 +320,60 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 
         <!-- stars End -->
 
+<!--Anthem-->
+<div class="container-xxl py-5" id="anthems">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
+            <h1 class="mb-5">ANTHEM</h1>
+        </div>
 
-
-        <!-- Identity Start -->
-        <div class="container-xxl py-5" id="anthems">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
-                    <h1 class="mb-5">SINHALA ANTHEM</h1>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="content/img/img-about/pwc-english-anthem.webp" alt="English Anthem PWC" style="object-fit: cover;" loading="lazy">
                 </div>
 
+                <div class="mt-3 text-center">
+                    <audio class="w-100 custom-playbar" controls>
+                        <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg">
+                    </audio>
+                    <br><br>
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.mp3" download target="_blank" data-wow-delay="0.7s">Download MP3</a>
+                </div>
+            </div>
 
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <p class="mb-4">The Sinhala Anthem of Prince of Wales College Moratuwa is a special song that
-                            represents the school in Sri Lanka. It's sung in the Sinhala language and holds a lot of
-                            pride
-                            and significance for the students and teachers. <br><br> This anthem talks about the
-                            school's
-                            history,
-                            values, and the strong sense of belonging that the school community shares. When sung, it
-                            creates unity and a feeling of loyalty among the students, serving as a symbol of their love
-                            for
-                            Prince of Wales College Moratuwa.
-                        </p>
-                        <audio controls>
-                            <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg"> </audio>
-                        <br><br>
-                        <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.mp3"
-                            download target="_blank" data-wow-delay="0.7s">Download MP3</a>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="content/img/img-about/pwc-sinhala-anthem.webp" alt="Sinhala Anthem PWC" style="object-fit: cover;" loading="lazy">
+                </div>
 
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
-                        <div class="position-relative h-100">
-                            <img class="img-fluid position-absolute w-100 h-100"
-                                src="content/img/img-about/sinhala-anthem-pwc.webp" alt="Sinhala Anthem PWC"
-                                style="object-fit: cover;" loading="lazy">
-                        </div>
-                    </div>
+                <div class="mt-3 text-center">
+                    <audio class="w-100 custom-playbar" controls>
+                        <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg">
+                    </audio>
+                    <br><br>
+                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.mp3" download target="_blank" data-wow-delay="0.7s">Download MP3</a>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
-                    <h1 class="mb-5">ENGLISH ANTHEM</h1>
-                </div>
+<style>
+    .custom-playbar {
+        border-radius: 8px;
+        background-color: #f8f9fa; 
+        padding: 10px;
+    }
 
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
-                        <div class="position-relative h-100">
-                            <img class="img-fluid position-absolute w-100 h-100"
-                                src="content/img/img-about/english-anthem-pwc.webp" alt="English Anthem PWC"
-                                style="object-fit: cover;" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <br>
-                        <p class="mb-4">The English anthem of Prince of Wales College Moratuwa is a special song that
-                            represents our school's identity and values. It's a symbol of our pride and unity, sung
-                            during
-                            important school events. <br><br> The anthem's lyrics emphasize our commitment to education,
-                            character
-                            development, and excellence, instilling a sense of school spirit and loyalty among students.
-                            Whether at sports events or graduation ceremonies, the English anthem is a cherished part of
-                            our
-                            school experience, bringing us together and reminding us of our school's history and
-                            traditions.
-                        </p>
-                        <br>
-                        <audio controls>
-                            <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg"> </audio>
-                        <br><br>
-                        <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.mp3"
-                            download target="_blank" data-wow-delay="0.7s">Download MP3</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    .custom-playbar::-webkit-media-controls-panel {
+        border-radius: 8px;
+    }
+
+</style>
+
 
     </div>
 
