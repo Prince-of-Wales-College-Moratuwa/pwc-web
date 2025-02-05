@@ -320,59 +320,64 @@ if ($currentDate >= 1 && $currentDate <= 5) {
 
         <!-- stars End -->
 
-<!--Anthem-->
-<div class="container-xxl py-5" id="anthems">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
-            <h1 class="mb-5">ANTHEM</h1>
-        </div>
-
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="position-relative">
-                    <img class="img-fluid w-100" src="content/img/img-about/pwc-english-anthem.webp" alt="English Anthem PWC" style="object-fit: cover;" loading="lazy">
+        <!--Anthem-->
+        <div class="container-xxl py-5" id="anthems">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-center text-primary px-3">College</h6>
+                    <h1 class="mb-5">ANTHEM</h1>
                 </div>
 
-                <div class="mt-3 text-center">
-                    <audio class="w-100 custom-playbar" preload="none" controls>
-                        <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg">
-                    </audio>
-                    <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/English-Anthem-PWC.mp3" download target="_blank" data-wow-delay="0.7s">Download MP3</a>
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="content/img/img-about/pwc-english-anthem.webp"
+                                alt="Prince of Wales College English Anthem" style="object-fit: cover;" loading="lazy">
+                        </div>
+
+                        <div class="mt-3 text-center">
+                            <audio class="w-100 custom-playbar" preload="none" controls>
+                                <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg">
+                            </audio>
+                            <br><br>
+                            <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn"
+                                href="content/audio/English-Anthem-PWC.mp3" download target="_blank"
+                                data-wow-delay="0.7s">Download MP3</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="content/img/img-about/pwc-sinhala-anthem.webp"
+                                alt="Prince of Wales College Sinhala Anthem" style="object-fit: cover;" loading="lazy">
+                        </div>
+
+                        <div class="mt-3 text-center">
+                            <audio class="w-100 custom-playbar" preload="none" controls>
+                                <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg">
+                            </audio>
+                            <br><br>
+                            <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn"
+                                href="content/audio/Sinhala-Anthem-PWC.mp3" download target="_blank"
+                                data-wow-delay="0.7s">Download MP3</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
-                <div class="position-relative">
-                    <img class="img-fluid w-100" src="content/img/img-about/pwc-sinhala-anthem.webp" alt="Sinhala Anthem PWC" style="object-fit: cover;" loading="lazy">
-                </div>
-
-                <div class="mt-3 text-center">
-                    <audio class="w-100 custom-playbar" preload="none" controls>
-                        <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg">
-                    </audio>
-                    <br><br>
-                    <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="content/audio/Sinhala-Anthem-PWC.mp3" download target="_blank" data-wow-delay="0.7s">Download MP3</a>
-                </div>
-            </div>
         </div>
-    </div>
-</div>
 
 
-<style>
-    .custom-playbar {
-        border-radius: 8px;
-        background-color: #f8f9fa; 
-        padding: 10px;
-    }
+        <style>
+            .custom-playbar {
+                border-radius: 8px;
+                background-color: #f8f9fa;
+                padding: 10px;
+            }
 
-    .custom-playbar::-webkit-media-controls-panel {
-        border-radius: 8px;
-    }
-
-</style>
+            .custom-playbar::-webkit-media-controls-panel {
+                border-radius: 8px;
+            }
+        </style>
 
 
     </div>
