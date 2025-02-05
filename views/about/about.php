@@ -335,7 +335,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                 </div>
 
                 <div class="mt-3 text-center">
-                    <audio class="w-100 custom-playbar" controls>
+                    <audio class="w-100 custom-playbar" preload="none" controls>
                         <source src="content/audio/English-Anthem-PWC.webm" type="audio/mpeg">
                     </audio>
                     <br><br>
@@ -349,7 +349,7 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                 </div>
 
                 <div class="mt-3 text-center">
-                    <audio class="w-100 custom-playbar" controls>
+                    <audio class="w-100 custom-playbar" preload="none" controls>
                         <source src="content/audio/Sinhala-Anthem-PWC.webm" type="audio/mpeg">
                     </audio>
                     <br><br>
