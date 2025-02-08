@@ -33,20 +33,24 @@ if (!$rss) {
 
 // Read the last processed GUID
 $lastProcessedGuid = file_exists($lastProcessedFile) ? file_get_contents($lastProcessedFile) : "";
+$processed = false;
 
 // Loop through RSS items
 foreach ($rss->channel->item as $item) {
     $guid = (string)$item->guid;
+    
+    // If the GUID file is empty, process only the latest item
+    if ($lastProcessedGuid === "" && !$processed) {
+        $processed = true;
+    } elseif ($guid === $lastProcessedGuid) {
+        break; // Stop processing once we reach the last processed item
+    }
+    
     $title = (string)$item->title;
     $link = (string)$item->link; // Dynamic entity link from RSS
     $description = (string)$item->description;
     $imageUrl = (string)$item->enclosure['url']; // Assuming RSS includes <enclosure> for images
     
-    // If this item is already processed, skip it
-    if ($guid === $lastProcessedGuid) {
-        continue;
-    }
-
     // Extract hashtags from the description (e.g., #example)
     preg_match_all('/#\w+/', $description, $hashtags);
     $hashtagsText = implode(" ", $hashtags[0]);
@@ -102,4 +106,3 @@ foreach ($rss->channel->item as $item) {
     file_put_contents($lastProcessedFile, $guid);
     echo '<script>alert("Post Sent to Telegram Channel : @cmbulive");</script>';
 }
-?>
