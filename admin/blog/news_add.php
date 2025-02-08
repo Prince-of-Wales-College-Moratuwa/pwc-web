@@ -143,6 +143,10 @@ include '../admin-header.php';
 			<label class="form-label">Date and Time</label>
 			<input type="datetime-local" name="date" id="date" class="form-control"
 				   value="<?php echo date('Y-m-d\TH:i'); ?>" />
+
+				   <br>
+				   <p><b>Notice:</b> Auto posting only processes posts published today. If you are posting an older entry, publish it with today's date first, then update it to the correct date on the edit page after publishing.</p>
+				   
 		</div>
 
 		<div class="mb-3">
