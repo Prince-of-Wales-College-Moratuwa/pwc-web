@@ -34,9 +34,6 @@ if (!$rss) {
 // Read the last processed GUID
 $lastProcessedGuid = file_exists($lastProcessedFile) ? file_get_contents($lastProcessedFile) : "";
 
-// Get today's date in the RSS date format (e.g., "Mon, 09 Dec 2024")
-$today = date("D, d M Y");
-
 // Loop through RSS items
 foreach ($rss->channel->item as $item) {
     $guid = (string)$item->guid;
@@ -44,13 +41,7 @@ foreach ($rss->channel->item as $item) {
     $link = (string)$item->link; // Dynamic entity link from RSS
     $description = (string)$item->description;
     $imageUrl = (string)$item->enclosure['url']; // Assuming RSS includes <enclosure> for images
-    $pubDate = (string)$item->pubDate;
-
-    // Check if the item's publication date matches today's date
-    if (strpos($pubDate, $today) === false) {
-        continue; // Skip items not published today
-    }
-
+    
     // If this item is already processed, skip it
     if ($guid === $lastProcessedGuid) {
         continue;
@@ -110,6 +101,5 @@ foreach ($rss->channel->item as $item) {
     // Save the current item's GUID as the last processed GUID
     file_put_contents($lastProcessedFile, $guid);
     echo '<script>alert("Post Sent to Telegram Channel : @cmbulive");</script>';
-    break; // Process only the first valid item published today
 }
 ?>
