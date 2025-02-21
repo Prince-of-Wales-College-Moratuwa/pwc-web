@@ -129,11 +129,45 @@ include '../admin-header.php';
 			<input type="text" name="tags" id="tags" placeholder="#CMBU #PWC" class="form-control" />
 		</div>
 
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 		<div class="mb-3">
-			<label class="form-label">Slug</label>
-			<input type="text" name="slug" id="slug" class="form-control"
-				   oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase()" />
-		</div>
+    <label class="form-label">Slug</label>
+    <input type="text" name="slug" id="slug" class="form-control"
+           oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase(); checkSlug()" />
+    <small id="slug-error" class="text-danger"></small>
+</div>
+
+<script>
+    function checkSlug() {
+        let slug = document.getElementById("slug").value.trim();
+        let errorMsg = document.getElementById("slug-error");
+
+        if (slug.length === 0) {
+            errorMsg.innerText = "";
+            return;
+        }
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "check_slug.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log("Response from server:", xhr.responseText);
+                if (xhr.responseText.trim() === "exists") {
+                    errorMsg.innerText = "This slug is already taken!";
+                } else {
+                    errorMsg.innerText = "";
+                }
+            }
+        };
+        xhr.send("slug=" + encodeURIComponent(slug));
+    }
+</script>
+
+
+
 
 	</div>
 
