@@ -94,16 +94,16 @@
                                 Cambrians' Media & Broadcasting Unit</p>
                         </div>
                         <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                            <a href="https://facebook.com/nelitha.13" class="me-2" target="_blank">
+                            <a href="https://facebook.com/itsnelitha" class="me-2" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://instagram.com/nelitha.13" class="me-2" target="_blank">
+                            <a href="https://instagram.com/itsnelitha" class="me-2" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/nelitha13/" class="me-2" target="_blank">
+                            <a href="https://www.linkedin.com/in/itsnelitha" class="me-2" target="_blank">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://www.nelitha13.github.io/" target="_blank">
+                            <a href="https://itsnelitha.github.io/" target="_blank">
                                 <i class="fas fa-globe"></i>
                             </a>
                         </div>
