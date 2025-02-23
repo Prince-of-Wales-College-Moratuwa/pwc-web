@@ -1,145 +1,132 @@
 RewriteEngine On
 
-# Exclude URLs that start with /forms from being rewritten
-RewriteCond %{REQUEST_URI} !^/forms [NC]
+# Enable Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
 
-# Exclude the /admin folder from all rewrite rules
-RewriteCond %{REQUEST_URI} ^/admin [NC]
-RewriteRule ^ - [L]
-
-# Serve files without the .php extension
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^([^/]+)$ $1.php [NC,L]
-
-# Redirect .php URLs to clean URLs
-RewriteCond %{REQUEST_URI} !^/forms [NC]
-RewriteCond %{THE_REQUEST} \s([^.]+)\.php\s [NC]
-RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
-
-
-#External Redirectors
-Redirect 301 /cits/codeflare24 https://eventshere.lk/events/900992/CODEFLARE--24---ICT-DAY
-Redirect 301 /cmbulive/sadbhashana24/registration https://princeofwales.edu.lk/blog/sadhbhashana24-registrations
-Redirect 301 /sadbhashana24 https://forms.gle/YFbVssgtTCfVda8K9
-
-
-# Security measures to restrict access to certain files
+# ============================
+# SECURITY MEASURES
+# ============================
 <Files "README.md">
     <If "%{HTTP_REFERER} == ''">
         Require all denied
     </If>
 </Files>
-
 <Files ".gitignore">
     <If "%{HTTP_REFERER} == ''">
         Require all denied
     </If>
 </Files>
 
-# Force inline display of PDFs
-<IfModule mod_headers.c>
-    <FilesMatch "\.pdf$">
-        Header set Content-Disposition "inline"
-    </FilesMatch>
-</IfModule>
+# Restrict Access to Sensitive Files
+<FilesMatch "web\.config">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+Options -Indexes
 
+# ============================
+# REWRITE RULES
+# ============================
 
-# root
+# Exclude Specific URLs from Rewrite Rules
+RewriteCond %{REQUEST_URI} !^/forms [NC]
+RewriteCond %{REQUEST_URI} ^/admin [NC]
+RewriteRule ^ - [L]
+
+# Serve Files Without .php Extension
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [NC,L]
+
+# Redirect .php URLs to Clean URLs
+RewriteCond %{REQUEST_URI} !^/forms [NC]
+RewriteCond %{THE_REQUEST} \s([^.]+)\.php\s [NC]
+RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+
+# ============================
+# EXTERNAL REDIRECTORS
+# ============================
+Redirect 301 /cits/codeflare24 https://eventshere.lk/events/900992/CODEFLARE--24---ICT-DAY
+Redirect 301 /cmbulive/sadbhashana24/registration https://princeofwales.edu.lk/blog/sadhbhashana24-registrations
+Redirect 301 /sadbhashana24 https://forms.gle/YFbVssgtTCfVda8K9
+
+# ============================
+# ROUTING
+# ============================
+
+# Root
 RewriteRule ^$ views/index.php [NC,L]
 
-
-
-
 # Blog
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteRule ^news/(.*)$ /blog/$1 [R=301,L]
-</IfModule>
+RewriteRule ^news/(.*)$ /blog/$1 [R=301,L]
+RewriteRule ^news(.*)$ /blog/$1 [R=301,L]
 RewriteRule ^blog/$ views/blog/index.php [NC,L]
 RewriteRule ^blog$ views/blog/index.php [NC,L]
-
 RewriteRule ^blog/([a-zA-Z0-9_-]+)$ views/blog/blog.php?slug=$1 [L]
-
 RewriteRule ^blog/page/([0-9]+)/?$ views/blog/index.php?page=$1 [L,QSA]
 
-#RSS
+# RSS Feed
 RewriteRule ^rss/$ rss.php [NC,L]
 
-
-# Redirect to clean URLs
+# Blog Categories
 RewriteRule ^blog/category/([^/]+)/?$ views/blog/category.php?categoryslug=$1 [L,QSA]
 RewriteRule ^blog/category/([^/]+)/page/([0-9]+)/?$ views/blog/category.php?categoryslug=$1&page=$2 [L,QSA]
 
-# Redirect from old URLs to new ones
-RewriteCond %{QUERY_STRING} categoryslug=([^&]+)&page=([0-9]+)
-RewriteRule ^blog/category.php$ /blog/category/%1/page/%2? [R=301,L]
-RewriteCond %{QUERY_STRING} categoryslug=([^&]+)
-RewriteRule ^blog/category.php$ /blog/category/%1? [R=301,L]
-
-
-
-#Events
+# Events
 RewriteRule ^events/$ views/events/index.php [NC,L]
 RewriteRule ^events/([a-zA-Z0-9_-]+)$ views/events/event.php?slug=$1 [L]
 
-
-#Publications
+# Publications
 RewriteRule ^publications$ publications/index.php [NC,L]
 RewriteRule ^publications/golden-captures$ publications/golden-captures/index.php [NC,L]
 RewriteRule ^publications/music$ publications/music/index.php [NC,L]
-
 RewriteRule ^publications/projects/lassana-wales$ publications/projects/lassana-wales.php [NC,L]
 
-RewriteRule ^publications/golden-book/education-sector$ publications/golden-book/education-sector/index.html [NC,L]
-RewriteRule ^publications/golden-book/sports-sector/$ publications/golden-book/sports-sector/index.html [NC,L]
-RewriteRule ^publications/school-magazine$ publications-pwc/school-magazine/index.html [NC,L]
-
-
-#Sports
+# Sports
 RewriteRule ^sports$ views/sports/sports.php [NC,L]
-
 RewriteRule ^big-match$ views/sports/battle-of-the-golds.php [NC,L]
 RewriteRule ^battle-of-the-golds$ views/sports/battle-of-the-golds.php [NC,L]
 
-#Clubs
+# Clubs
 RewriteRule ^clubs$ views/clubs/clubs.php [NC,L]
 RewriteRule ^clubs/prefects-guild$ views/clubs/prefects-guild.php [NC,L]
 
-#History
+# History
 RewriteRule ^history$ views/history/history.php [NC,L]
 RewriteRule ^history/former-principals$ views/history/former-principals.php [NC,L]
 
-#About
+# About
 RewriteRule ^about$ views/about/about.php [NC,L]
 RewriteRule ^about/school-administration$ views/about/school-administration.php [NC,L]
-
 RewriteRule ^about/lassana-wales$ publications/projects/lassana-wales.php [NC,L]
 RewriteRule ^about/school-infrastructure$ views/about/locations/school-infrastructure.php [NC,L]
-RewriteRule ^about/school-infrastructure/founders-statue$ views/about/locations/location-founders-statue.php [NC,L]
-RewriteRule ^about/school-infrastructure/the-shrine$ views/about/locations/location-the-shrine.php [NC,L]
 
-#Contect
+# Contact
 RewriteRule ^contact$ views/contact/contact.php [NC,L]
 RewriteRule ^contact-success$ views/contact/success.php [NC,L]
 
-#Search
+# Search
 RewriteRule ^search$ views/search.php [NC,L]
 
-#Other
+# Other Pages
 RewriteRule ^team$ views/team.php [NC,L]
 RewriteRule ^principal-message$ views/principal-msg.php [NC,L]
 RewriteRule ^sitemap$ views/sitemap.php [NC,L]
 RewriteRule ^faq$ views/faq.php [NC,L]
 
-#Legal
+# Legal Pages
 RewriteRule ^privacy$ views/legal/privacy.php [NC,L]
 RewriteRule ^cookies$ views/legal/cookies.php [NC,L]
 RewriteRule ^terms$ views/legal/terms.php [NC,L]
 RewriteRule ^disclaimer$ views/legal/disclaimer.php [NC,L]
 RewriteRule ^imprint$ views/legal/imprint.php [NC,L]
 
-
-#Errors
+# Error Pages
 RewriteRule ^404$ views/errors/404.php [NC,L]
 RewriteRule ^offline$ views/errors/offline.php [NC,L]
 ErrorDocument 400 /views/errors/400.php
@@ -148,62 +135,34 @@ ErrorDocument 404 /views/errors/404.php
 ErrorDocument 403 /views/errors/403.php
 ErrorDocument 500 /views/errors/500.php
 
-
-
-#Forms
+# Forms
 RewriteRule ^forms/students-information$ forms/students-info/form.php [NC,L]
+RewriteRule ^forms/apply-al/(science|commerce|tech|art|vocational)$ forms/apply-al/$1.php [NC,L]
 
-RewriteRule ^forms/apply-al/science$ forms/apply-al/science.php [NC,L]
-RewriteRule ^forms/apply-al/commerce$ forms/apply-al/commerce.php [NC,L]
-RewriteRule ^forms/apply-al/tech$ forms/apply-al/tech.php [NC,L]
-RewriteRule ^forms/apply-al/art$ forms/apply-al/art.php [NC,L]
-RewriteRule ^forms/apply-al/vocational$ forms/apply-al/vocational.php [NC,L]
-
-
-#Rules Blocked
-<FilesMatch "web\.config">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-
-<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|inc|bak)$">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-
-Options -Indexes
-
-
+# ============================
+# CACHE CONTROL & PERFORMANCE
+# ============================
 <IfModule mod_expires.c>
   ExpiresActive On
-
- # Images
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
-
-  # Video
   ExpiresByType video/webm "access plus 1 year"
   ExpiresByType video/mp4 "access plus 1 year"
-  ExpiresByType video/mpeg "access plus 1 year"
-
-  # Fonts
   ExpiresByType font/ttf "access plus 1 year"
-  ExpiresByType font/otf "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType application/font-woff "access plus 1 year"
-  ExpiresByType application/font-woff2 "access plus 1 year"
-
-  # CSS, JavaScript
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+</IfModule>
 
-  # Others
-  ExpiresByType application/pdf "access plus 1 year"
-  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+# ============================
+# INLINE PDF DISPLAY
+# ============================
+<IfModule mod_headers.c>
+    <FilesMatch "\.pdf$">
+        Header set Content-Disposition "inline"
+    </FilesMatch>
 </IfModule>

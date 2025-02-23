@@ -23,7 +23,7 @@ include '../sitemap-gen.php';
     <meta name="description"
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta name="keywords"
-        content="prince of wales college, prince of wales college moratuwa, prince of wales college moratuwa website, prince of wales college moratuwa contact number, prince of wales college moratuwa logo, prince of wales college moratuwa address, prince of wales college moratuwa big match, prince of wales college moratuwa sri lanka, prince of wales college moratuwa principal" />
+        content="prince of wales college, prince of wales college moratuwa, වේල්ස් කුමර විදුහල, prince of wales college sri lanka, charles henry de soyza, prince of wales college moratuwa website, prince of wales college moratuwa contact number, prince of wales college moratuwa logo, prince of wales college moratuwa address, prince of wales college moratuwa big match, prince of wales college moratuwa sri lanka, prince of wales college moratuwa principal" />
     <meta name="author" content="Cambrians' ICT Society" />
 
     <!-- Open Graph / Facebook -->
