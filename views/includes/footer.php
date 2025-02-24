@@ -48,7 +48,7 @@
                 <h4 class="text-white mb-4">Prince of Wales' College</h4>
                 <p class="small mb-4">Established in 1876, Prince of Wales’ College has grown into a prestigious
                     institution, making its mark as a leading school in Sri Lanka.</p>
-                    <iframe src="https://pwc.betteruptime.com/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
+                    <iframe src="https://status.princeofwales.edu.lk/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
             </div>
             <!-- Quick Links -->
             <div class="col-lg-3 col-md-6">
