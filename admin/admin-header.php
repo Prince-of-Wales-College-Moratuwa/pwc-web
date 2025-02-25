@@ -88,11 +88,13 @@ date_default_timezone_set('Asia/Colombo');
 <body class="sb-nav-fixed">
 
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-
         <a class="navbar-brand ps-3" href="/admin/">
-            <img src="/content/img/logo-pwc.png" alt="pwc logo" width="35px">&nbsp;&nbsp;&nbsp;Admin - Prince of Wales' College
+            <img src="/content/img/logo-pwc.png" alt="PWC Logo" width="35px">
+            <span class="ms-2">Admin - Prince of Wales' College</span>
         </a>
-
+        <div class="ms-auto">
+            <iframe src="https://status.princeofwales.edu.lk/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
+        </div>
     </nav>
 
     
