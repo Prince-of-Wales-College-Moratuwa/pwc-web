@@ -89,7 +89,7 @@ RewriteRule ^publications/projects/lassana-wales$ publications/projects/lassana-
 
 # Sports
 RewriteRule ^sports$ views/sports/sports.php [NC,L]
-RewriteRule ^big-match$ views/sports/battle-of-the-golds.php [NC,L]
+RewriteRule ^big-match$ /battle-of-the-golds [R=301,L]
 RewriteRule ^battle-of-the-golds$ views/sports/battle-of-the-golds.php [NC,L]
 
 # Clubs
