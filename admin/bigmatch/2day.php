@@ -23,18 +23,18 @@ include '../admin-header.php';
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Two Day Matches</h1>
+	<h1>Test Matches</h1>
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="/admin/index.php">Dashboard</a></li>
-		<li class="breadcrumb-item active">Two Day Matches</li>
+		<li class="breadcrumb-item active">Test Matches</li>
 	</ol>
 
 	<div class="card mb-4">
 		<div class="card-header">
 			<div class="row">
 				<div class="col col-md-6">
-					<i class="fas fa-table me-1"></i> Two Day Matches
+					<i class="fas fa-table me-1"></i> Test Matches
 				</div>
 				<div class="col col-md-6" align="right">
 					<a href="2day_add.php" class="btn btn-success btn-sm">Add</a>

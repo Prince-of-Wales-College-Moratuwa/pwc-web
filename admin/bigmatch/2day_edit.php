@@ -42,18 +42,18 @@ if (count($_POST) > 0) {
 ?>
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-    <h1>Edit Two Day Match</h1>
+    <h1>Edit Test Match</h1>
 
     <?php if(isset($message)) {echo $message; } ?>
 
     <ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
         <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="bigmatch.php">Bigmatch</a></li>
-        <li class="breadcrumb-item active">Edit Two Day Match</li>
+        <li class="breadcrumb-item active">Edit Test Match</li>
     </ol>
     <div class="card mb-4">
         <div class="card-header">
-            Edit Two Day Match (Add a "+" sign in front of the score for the team that batted first.)
+            Edit Test Match (Add a "+" sign in front of the score for the team that batted first.)
         </div>
         <div class="card-body">
             <form action="" method="POST" enctype="multipart/form-data">

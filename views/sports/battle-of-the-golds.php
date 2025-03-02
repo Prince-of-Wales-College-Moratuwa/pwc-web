@@ -96,7 +96,7 @@
 
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">past Results</h6>
-            <h1 class="mb-5">2-Day Matches</h1>
+            <h1 class="mb-5">Test Matches</h1>
         </div>
 
         <div class="row g-4">
@@ -207,49 +207,60 @@
 
 
         <br><br>
-        <center>
-    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="show2dayresults">
-        Click to View Past Match Scores
-    </button>
-</center>
+  
 
 
     </div>
 
 
 
-    <div class="container mt-5">
-        <table class="table table-bordered" id="2dayresults" style="display:none;">
-            <thead class="thead-light">
-                <tr>
-                    <th rowspan='2'>Year</th>
-                    <th rowspan='1' colspan="2">PWC</th>
-                    <th rowspan='1' colspan="2">SSC</th>
-                    <th>Result</th>
-                </tr>
-            </thead>
-            <tr>
-                <th rowspan='1' colspan="1"></th>
-                <th rowspan='1' colspan="1">1st Innings</th>
-                <th rowspan='1' colspan="1">2nd Innings</th>
-                <th rowspan='1' colspan="1">1st Innings</th>
-                <th rowspan='1' colspan="1">2nd Innings</th>
-            </tr>
-
-            <?php
-
-$query = "SELECT * FROM bigmatch_2day_results ORDER BY year DESC";
-
+    <?php
+// Fetch the latest 5 years of results
+$query = "SELECT * FROM bigmatch_2day_results ORDER BY year DESC LIMIT 5";
 $statement = $connect->prepare($query);
-
 $statement->execute();
+$latestResults = $statement->fetchAll();
 
-if($statement->rowCount() > 0)
-{
-    foreach($statement->fetchAll() as $row)
-    { 
-
+// Fetch the remaining results
+$query = "SELECT * FROM bigmatch_2day_results ORDER BY year DESC LIMIT 18446744073709551615 OFFSET 5";
+$statement = $connect->prepare($query);
+$statement->execute();
+$remainingResults = $statement->fetchAll();
 ?>
+
+<!-- Display the latest 5 years of results -->
+<div class="container mt-5">
+    <table class="table table-bordered" id="2dayresults">
+        <thead class="thead-light">
+            <tr>
+                <th rowspan='2'>Year</th>
+                <th rowspan='1' colspan="2">PWC</th>
+                <th rowspan='1' colspan="2">SSC</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tr>
+            <th rowspan='1' colspan="1"></th>
+            <th rowspan='1' colspan="1">1st Innings</th>
+            <th rowspan='1' colspan="1">2nd Innings</th>
+            <th rowspan='1' colspan="1">1st Innings</th>
+            <th rowspan='1' colspan="1">2nd Innings</th>
+        </tr>
+
+        <?php foreach($latestResults as $row): ?>
+        <tr>
+            <td><?php echo $row["year"]; ?></td>
+            <td><?php echo $row["pwc_1st"]; ?></td>
+            <td><?php echo $row["pwc_2nd"]; ?></td>
+            <td><?php echo $row["ssc_1st"]; ?></td>
+            <td><?php echo $row["ssc_2nd"]; ?></td>
+            <td><?php echo $row["result"]; ?></td>
+        </tr>
+        <?php endforeach; ?>
+
+        <!-- Placeholder for remaining results -->
+        <tbody id="remainingResults" style="display: none;">
+            <?php foreach($remainingResults as $row): ?>
             <tr>
                 <td><?php echo $row["year"]; ?></td>
                 <td><?php echo $row["pwc_1st"]; ?></td>
@@ -258,17 +269,16 @@ if($statement->rowCount() > 0)
                 <td><?php echo $row["ssc_2nd"]; ?></td>
                 <td><?php echo $row["result"]; ?></td>
             </tr>
-            <?php 
-					}
-		}	
-        ?>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
 
-            <tr>
-                <td colspan="7">+ Batted First</td>
-            </tr>
-        </table>
-    </div>
-
+<center>
+    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="showMore2dayresults">
+        Show More 🡇
+    </button>
+</center>
 
 
 
@@ -416,57 +426,64 @@ if($statement->rowCount() > 0)
         </div>
 
         <br><br>
-        <center>
-    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="show1dayresults">
-        Click to View Past Match Scores
-    </button>
-</center>
 
 
     </div>
 
-    <div class="container mt-5">
-        <table class="table table-bordered" id="1dayresults" style="display:none;">
-            <thead class="thead-light">
-                <tr>
-                    <td>Year</td>
-                    <td>PWC</td>
-                    <td>SSC</td>
-                    <td>Result</td>
-                </tr>
-            </thead>
-
-            <?php
-
-$query = "SELECT * FROM bigmatch_1day_results ORDER BY year DESC";
-
+    <?php
+// Fetch the latest 5 years of 1-day results
+$query = "SELECT * FROM bigmatch_1day_results ORDER BY year DESC LIMIT 5";
 $statement = $connect->prepare($query);
-
 $statement->execute();
+$latest1DayResults = $statement->fetchAll();
 
-if($statement->rowCount() > 0)
-{
-    foreach($statement->fetchAll() as $row)
-    { 
-
+// Fetch the remaining 1-day results
+$query = "SELECT * FROM bigmatch_1day_results ORDER BY year DESC LIMIT 18446744073709551615 OFFSET 5";
+$statement = $connect->prepare($query);
+$statement->execute();
+$remaining1DayResults = $statement->fetchAll();
 ?>
+
+<!-- Display the latest 5 years of 1-day results -->
+<div class="container mt-5">
+    <table class="table table-bordered" id="1dayresults">
+        <thead class="thead-light">
+            <tr>
+                <td>Year</td>
+                <td>PWC</td>
+                <td>SSC</td>
+                <td>Result</td>
+            </tr>
+        </thead>
+
+        <?php foreach($latest1DayResults as $row): ?>
+        <tr>
+            <td><?php echo $row["year"]; ?></td>
+            <td><?php echo $row["pwc"]; ?></td>
+            <td><?php echo $row["ssc"]; ?></td>
+            <td><?php echo $row["result"]; ?></td>
+        </tr>
+        <?php endforeach; ?>
+
+        <!-- Placeholder for remaining 1-day results -->
+        <tbody id="remaining1DayResults" style="display: none;">
+            <?php foreach($remaining1DayResults as $row): ?>
             <tr>
                 <td><?php echo $row["year"]; ?></td>
                 <td><?php echo $row["pwc"]; ?></td>
                 <td><?php echo $row["ssc"]; ?></td>
                 <td><?php echo $row["result"]; ?></td>
             </tr>
-            <?php 
-					}
-		}	
-        ?>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
 
-            <tr>
-                <td colspan="5">+ Batted First</td>
-            </tr>
-
-        </table>
-    </div>
+<center>
+    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="showMore1dayresults">
+        Show More 🡇
+    </button>
+</center>
 
 
 
@@ -589,58 +606,67 @@ if($statement->rowCount() > 0)
             </div>
         </div>
         <br><br>
-        <center>
-    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="showt20results">
-        Click to View Past Match Scores
-    </button>
-</center>
 
     </div>
 
-
-    <div class="container mt-5">
-        <table class="table table-bordered" id="t20results" style="display:none;">
-            <thead class="thead-light">
-                <tr>
-                    <th rowspan='2'>Year</th>
-                    <th>PWC</th>
-                    <th>SSC</th>
-                    <th>Result</th>
-                </tr>
-            </thead>
-
-
-            <?php
-
-$query = "SELECT * FROM bigmatch_t20_results ORDER BY year DESC";
-
+    <?php
+// Fetch the latest 5 years of T20 results
+$query = "SELECT * FROM bigmatch_t20_results ORDER BY year DESC LIMIT 5";
 $statement = $connect->prepare($query);
-
 $statement->execute();
+$latestT20Results = $statement->fetchAll();
 
-if($statement->rowCount() > 0)
-{
-    foreach($statement->fetchAll() as $row)
-    { 
-
+// Fetch the remaining T20 results
+$query = "SELECT * FROM bigmatch_t20_results ORDER BY year DESC LIMIT 18446744073709551615 OFFSET 5";
+$statement = $connect->prepare($query);
+$statement->execute();
+$remainingT20Results = $statement->fetchAll();
 ?>
+
+<!-- Display the latest 5 years of T20 results -->
+<div class="container mt-5">
+    <table class="table table-bordered" id="t20results">
+        <thead class="thead-light">
+            <tr>
+                <th rowspan='2'>Year</th>
+                <th>PWC</th>
+                <th>SSC</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+
+        <?php foreach($latestT20Results as $row): ?>
+        <tr>
+            <td><?php echo $row["year"]; ?></td>
+            <td><?php echo $row["pwc"]; ?></td>
+            <td><?php echo $row["ssc"]; ?></td>
+            <td><?php echo $row["result"]; ?></td>
+        </tr>
+        <?php endforeach; ?>
+
+        <!-- Placeholder for remaining T20 results -->
+        <tbody id="remainingT20Results" style="display: none;">
+            <?php foreach($remainingT20Results as $row): ?>
             <tr>
                 <td><?php echo $row["year"]; ?></td>
                 <td><?php echo $row["pwc"]; ?></td>
                 <td><?php echo $row["ssc"]; ?></td>
                 <td><?php echo $row["result"]; ?></td>
             </tr>
-            <?php 
-					}
-		}	
-        ?>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
 
-            <tr>
-                <td colspan="5">+ Batted First</td>
-            </tr>
+<center>
+    <button class="btn wow fadeInUp" style="background-color: maroon; color: white; padding: 15px 30px; margin-top: 10px; font-size: 16px; border-radius: 5px;" id="showMoreT20results">
+        Show More 🡇
+    </button>
+</center>
 
-        </table>
-    </div>
+
+
+
 
     <br><br>
 
@@ -800,6 +826,42 @@ if($statement->rowCount() > 0)
                 } else {
                     myTable.style.display = "none";
                 }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var showMoreButton = document.getElementById("showMore2dayresults");
+            var remainingResults = document.getElementById("remainingResults");
+
+            showMoreButton.addEventListener("click", function () {
+                remainingResults.style.display = "table-row-group";
+                showMoreButton.style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var showMoreButton1Day = document.getElementById("showMore1dayresults");
+            var remaining1DayResults = document.getElementById("remaining1DayResults");
+
+            showMoreButton1Day.addEventListener("click", function () {
+                remaining1DayResults.style.display = "table-row-group";
+                showMoreButton1Day.style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var showMoreButtonT20 = document.getElementById("showMoreT20results");
+            var remainingT20Results = document.getElementById("remainingT20Results");
+
+            showMoreButtonT20.addEventListener("click", function () {
+                remainingT20Results.style.display = "table-row-group";
+                showMoreButtonT20.style.display = "none";
             });
         });
     </script>

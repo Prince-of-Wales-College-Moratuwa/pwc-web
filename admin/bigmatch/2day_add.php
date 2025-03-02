@@ -22,20 +22,20 @@ include '../admin-header.php';
 
 
 <div class="container-fluid py-4" style="min-height: 700px;">
-	<h1>Add Two Day Match</h1>
+	<h1>Add Test Match</h1>
 
 
 	<ol class="breadcrumb mt-4 mb-4 bg-light p-2 border">
 		<li class="breadcrumb-item"><a href="/admin/index.php">Dashboard</a></li>
 		<li class="breadcrumb-item"><a href="/admin/bigmatch/bigmtach.php">Bigmatch</a></li>
-		<li class="breadcrumb-item active">Add Two Day Match</li>
+		<li class="breadcrumb-item active">Add Test Match</li>
 	</ol>
 
 
 
 	<div class="card mb-4">
 		<div class="card-header">
-			Add Two Day Match (Add a "+" sign in front of the score for the team that batted first.)
+			Add Test Match (Add a "+" sign in front of the score for the team that batted first.)
 		</div>
 		<div class="card-body">
 			<form action="" method="POST" enctype="multipart/form-data">

@@ -29,7 +29,7 @@ include '../admin-header.php';
     <div class="col-xl-3 col-md-6">
 	<a href="2day.php" class="card bg-primary text-white mb-4">
 		<div class="card-body">
-			<h2 class="text-center">2 Day Matches</h1>
+			<h2 class="text-center">Test Matches</h1>
 		</div>
 	</a>
 </div>
