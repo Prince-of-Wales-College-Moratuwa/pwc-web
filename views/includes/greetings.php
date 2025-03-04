@@ -136,7 +136,7 @@ $notifications = [
     '01-01' => ['title' => 'Happy New Year', 'message' => 'Let\'s welcome the new year with excitement!', 'icon' => 'fas fa-star'],
     '02-02' => ['title' => 'Anniversary of CMBU', 'message' => 'Happy Anniversary to our Media Unit!', 'icon' => 'fas fa-cogs'],
     '02-04' => ['title' => 'Happy Independence Day!', 'message' => 'Celebrating the freedom and pride of our nation. Let’s keep working together for a brighter future.', 'icon' => 'fas fa-flag'],
-    '03-04' => ['title' => 'Founder\'s Day', 'message' => 'Celebrating our Founder\'s Day with pride.', 'icon' => 'fas fa-flag'],
+    '03-03' => ['title' => 'Founder\'s Day', 'message' => 'Celebrating our Founder\'s Day with pride.', 'icon' => 'fas fa-flag'],
     '04-13' => ['title' => 'Sinhala and Tamil New Year', 'message' => 'Wishing everyone a prosperous New Year!', 'icon' => 'fas fa-sun'],
     '04-14' => ['title' => 'Sinhala and Tamil New Year', 'message' => 'Wishing everyone a prosperous New Year!', 'icon' => 'fas fa-sun'],
     '05-10' => ['title' => 'Happy Mother\'s Day', 'message' => 'A heartfelt thank you to all the wonderful mothers in our school community.', 'icon' => 'fas fa-female'],
