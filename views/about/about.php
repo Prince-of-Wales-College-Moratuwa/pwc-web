@@ -470,11 +470,113 @@ if ($currentDate >= 1 && $currentDate <= 5) {
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Lewis (Red & Purple)</p>
                         </div>
                     </div>
+                    <button class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" onclick="openHousePopup()">Find Your House</button>
                 </div>
 
             </div>
         </div>
     </div>
+
+    <div id="housePopup" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 600px; width: 100%; height: auto;">
+            <div class="modal-content text-center p-4"
+                style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <div class="modal-header">
+                    <h5 class="modal-title">Find Your House</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="houseForm">
+                        <input type="number" id="admissionNumber" class="form-control mb-3"
+                            placeholder="Enter your admission number">
+                        <button class="btn" style="background-color: #800000; color: white;"
+                            onclick="calculateHouse()">Find</button>
+                    </div>
+                    <div id="loadingMessage" class="fs-5 mt-3" style="display: none;">🔍 Finding your house...</div>
+                    <div id="houseResult" class="mt-3 fw-bold" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+function openHousePopup() {
+    // Reset the modal content before opening
+    document.getElementById("houseForm").style.display = "block";
+    document.getElementById("loadingMessage").style.display = "none";
+    document.getElementById("houseResult").style.display = "none";
+    
+    let modal = new bootstrap.Modal(document.getElementById("housePopup"));
+    modal.show();
+}
+
+function calculateHouse() {
+    let admissionNumber = document.getElementById("admissionNumber").value;
+    let remainder = admissionNumber % 6;
+    let houses = [
+        { name: "Founders", colors: "❤️🖤", gradient: "linear-gradient(to right, red, black)" },  // Red and Black hearts
+        { name: "Gunawardana", colors: "💛🖤", gradient: "linear-gradient(to right, gold, black)" },  // Gold and Black hearts
+        { name: "Rodrigo", colors: "💜💛", gradient: "linear-gradient(to right, purple, gold)" },  // Purple and Gold hearts
+        { name: "Mendis", colors: "❤️💛", gradient: "linear-gradient(to right, red, gold)" },  // Red and Gold hearts
+        { name: "Jayasooriya", colors: "💙💛", gradient: "linear-gradient(to right, blue, gold)" },  // Blue and Gold hearts
+        { name: "Lewis", colors: "❤️💜", gradient: "linear-gradient(to right, red, purple)" }  // Red and Purple hearts
+    ];
+    
+    document.getElementById("houseForm").style.display = "none";
+    document.getElementById("loadingMessage").style.display = "block";
+    
+    setTimeout(() => {
+        let house = houses[remainder];
+        document.getElementById("loadingMessage").style.display = "none";
+        document.getElementById("houseResult").style.display = "block";
+        document.getElementById("houseResult").innerHTML = `
+            <div class='fs-4' style="background: ${house.gradient}; -webkit-background-clip: text; color: transparent; font-size: 2rem;">
+                You are a member of <br>
+                <strong style="font-size: 2.5rem;">${house.name}</strong> House!
+            </div>`;
+        
+        triggerConfetti();
+    }, 2500);
+}
+
+function triggerConfetti() {
+    const confetti = document.createElement("div");
+    confetti.innerHTML = "🎊🎊🎊";
+    confetti.style.position = "fixed";
+    confetti.style.top = "10%";
+    confetti.style.left = "50%";
+    confetti.style.transform = "translateX(-50%)";
+    confetti.style.fontSize = "2rem";
+    confetti.style.animation = "fadeOut 2s ease-out";
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 2000);
+}
+</script>
+
+<style>
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Center the modal content in the center of the screen */
+#housePopup .modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px; /* Increased width */
+    width: 100%;
+    height: auto; /* Adjust height to fit content */
+}
+
+/* Optional: Styling for the button */
+.btn {
+    background-color: #800000;
+    color: white;
+}
+</style>
+
 
 
     <!-- Administration Start -->
