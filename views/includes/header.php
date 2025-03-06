@@ -273,8 +273,8 @@
                         <a class="dropdown-item" href="/about#anthems"><b>ANTHEMS</b></a>
                         <a class="dropdown-item" href="/about#flag-crest"><b>FLAG & CREST</b></a>
                         <a class="dropdown-item" href="/about#houses"><b>HOUSES</b></a>
-                        <a class="dropdown-item" href="/about#administration"><b>ADMINISTRATION</b></a>
-                        <a class="dropdown-item" href="/about#locations"><b>LOCATIONS</b></a>
+                        <a class="dropdown-item" href="/about/school-administration"><b>ADMINISTRATION</b></a>
+                        <a class="dropdown-item" href="/about/school-infrastructure"><b>LOCATIONS</b></a>
                     </div>
                 </div>
 

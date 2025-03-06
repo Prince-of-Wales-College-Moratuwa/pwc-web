@@ -333,15 +333,15 @@ if (isset($_POST["add_news"])) {
 		':extra_link' => $formdata['extra_link'] // Save the concatenated value
     );
 
-$title = $_POST['title'];
+$slug = $_POST['slug'];
 
 $file = $_FILES['photo']['name'];
 $file_loc = $_FILES['photo']['tmp_name'];
 $folder = "../../content/img/img-blog/";
 $new_file_name = strtolower($file);
 $final_file = str_replace(' ', '-', $new_file_name);
-$title = strtolower(str_replace(' ', '-', $title));
-$final_file = $title . '-blog-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
+$slug = strtolower(str_replace(' ', '-', $slug));
+$final_file = $slug . '-blog-pwc.' . pathinfo($final_file, PATHINFO_EXTENSION);
 
 
 	
