@@ -90,6 +90,33 @@ foreach ($rows as $row) {
     });
   });
 </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "<?php echo htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>",
+  "description": "<?php echo htmlspecialchars(strip_tags($row['excerpt']), ENT_QUOTES, 'UTF-8'); ?>",
+  "image": "https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row['photo'], ENT_QUOTES, 'UTF-8'); ?>",
+  "author": {
+    "@type": "Person",
+    "name": "<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Prince of Wales College",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://princeofwales.edu.lk/content/img/logo-pwc.webp"
+    }
+  },
+  "datePublished": "<?php echo date('c', strtotime($row['date'])); ?>",
+  "dateModified": "<?php echo date('c', strtotime($row['date'])); ?>",
+  "url": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>",
+  "mainEntityOfPage": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>"
+}
+</script>
+
   
   <span>
     <link itemprop="thumbnailUrl"
