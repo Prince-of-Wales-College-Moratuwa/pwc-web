@@ -78,6 +78,19 @@ foreach ($rows as $row) {
 
 <body>
 
+<script async type="application/javascript"
+        src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+<script>
+  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+    basicSubscriptions.init({
+      type: "NewsArticle",
+      isPartOfType: ["Product"],
+      isPartOfProductId: "CAowjtCnDA:openaccess",
+      clientOptions: { theme: "light", lang: "en" },
+    });
+  });
+</script>
+  
   <span>
     <link itemprop="thumbnailUrl"
       href="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
