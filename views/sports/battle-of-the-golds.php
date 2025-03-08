@@ -95,7 +95,7 @@
     <div class="container">
 
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">past Results</h6>
+            <h6 class="section-title bg-white text-center text-primary px-3">HEAD-TO-HEAD</h6>
             <h1 class="mb-5">Test Matches</h1>
         </div>
 
@@ -289,7 +289,7 @@ $remainingResults = $statement->fetchAll();
     <div class="container">
 
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">past Results</h6>
+            <h6 class="section-title bg-white text-center text-primary px-3">HEAD-TO-HEAD</h6>
             <h1 class="mb-5">1-Day Limited Over Matches</h1>
         </div>
 
@@ -494,7 +494,7 @@ $remaining1DayResults = $statement->fetchAll();
     <div class="container">
 
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">past Results</h6>
+            <h6 class="section-title bg-white text-center text-primary px-3">HEAD-TO-HEAD</h6>
             <h1 class="mb-5">T20 Matches</h1>
         </div>
 
