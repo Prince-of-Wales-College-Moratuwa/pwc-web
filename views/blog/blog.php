@@ -99,7 +99,7 @@ foreach ($rows as $row) {
   "description": "<?php echo htmlspecialchars(strip_tags($row['excerpt']), ENT_QUOTES, 'UTF-8'); ?>",
   "image": "https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row['photo'], ENT_QUOTES, 'UTF-8'); ?>",
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": "<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>"
   },
   "publisher": {
