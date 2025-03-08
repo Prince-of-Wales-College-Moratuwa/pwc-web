@@ -78,6 +78,46 @@ foreach ($rows as $row) {
 
 <body>
 
+<script async type="application/javascript"
+        src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+<script>
+  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+    basicSubscriptions.init({
+      type: "NewsArticle",
+      isPartOfType: ["Product"],
+      isPartOfProductId: "CAowjtCnDA:openaccess",
+      clientOptions: { theme: "light", lang: "en" },
+    });
+  });
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "<?php echo htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>",
+  "description": "<?php echo htmlspecialchars(strip_tags($row['excerpt']), ENT_QUOTES, 'UTF-8'); ?>",
+  "image": "https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row['photo'], ENT_QUOTES, 'UTF-8'); ?>",
+  "author": {
+    "@type": "Organization",
+    "name": "<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Prince of Wales College",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://princeofwales.edu.lk/content/img/logo-pwc.webp"
+    }
+  },
+  "datePublished": "<?php echo date('c', strtotime($row['date'])); ?>",
+  "dateModified": "<?php echo date('c', strtotime($row['date'])); ?>",
+  "url": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>",
+  "mainEntityOfPage": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>"
+}
+</script>
+
+  
   <span>
     <link itemprop="thumbnailUrl"
       href="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
