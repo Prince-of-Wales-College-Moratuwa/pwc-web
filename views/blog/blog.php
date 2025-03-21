@@ -42,7 +42,8 @@ foreach ($rows as $row) {
   <meta property="og:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="og:title" content="<?php echo $row["title"]; ?>" />
   <meta property="og:description" content="<?= htmlspecialchars(strip_tags($row['excerpt'])) ?>" />
-  <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="og:image"
+    content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
   <meta property="og:site_name" content="Prince of Wales College" />
   <meta property="article:published_time" content="<?php echo date('c', strtotime($row['date'])); ?>" />
   <meta property="article:author" content="<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>" />
@@ -52,24 +53,25 @@ foreach ($rows as $row) {
   <meta property="twitter:url" content="https://princeofwales.edu.lk/blog/<?php echo $row["slug"]; ?>" />
   <meta property="twitter:title" content="<?php echo $row["title"]; ?>" />
   <meta property="twitter:description" content="<?= htmlspecialchars(strip_tags($row['excerpt'])) ?>" />
-  <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
+  <meta property="twitter:image"
+    content="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>" />
   <meta property="twitter:site" content="@PrinceOfWales" />
   <meta property="twitter:creator" content="@<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>" />
 
 
-      <!-- AI Meta Tags -->
-      <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <meta name="revisit-after" content="1 days">
-    <meta name="rating" content="general">
-    <meta name="distribution" content="global">
+  <!-- AI Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="revisit-after" content="1 days">
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
 
   <?php include '../includes/header.php';
     include '../includes/greetings.php';
   
   ?>
-  
+
 
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss">
 
@@ -78,46 +80,48 @@ foreach ($rows as $row) {
 
 <body>
 
-<script async type="application/javascript"
-        src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAowjtCnDA:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
+  <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+  <script>
+    (self.SWG_BASIC = self.SWG_BASIC || []).push(basicSubscriptions => {
+      basicSubscriptions.init({
+        type: "NewsArticle",
+        isPartOfType: ["Product"],
+        isPartOfProductId: "CAowjtCnDA:openaccess",
+        clientOptions: {
+          theme: "light",
+          lang: "en"
+        },
+      });
     });
-  });
-</script>
+  </script>
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "<?php echo htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>",
-  "description": "<?php echo htmlspecialchars(strip_tags($row['excerpt']), ENT_QUOTES, 'UTF-8'); ?>",
-  "image": "https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row['photo'], ENT_QUOTES, 'UTF-8'); ?>",
-  "author": {
-    "@type": "Organization",
-    "name": "<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Prince of Wales College",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://princeofwales.edu.lk/content/img/logo-pwc.webp"
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "<?php echo htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>",
+      "description": "<?php echo htmlspecialchars(strip_tags($row['excerpt']), ENT_QUOTES, 'UTF-8'); ?>",
+      "image": "https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row['photo'], ENT_QUOTES, 'UTF-8'); ?>",
+      "author": {
+        "@type": "Organization",
+        "name": "<?php echo htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8'); ?>"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Prince of Wales College",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://princeofwales.edu.lk/content/img/logo-pwc.webp"
+        }
+      },
+      "datePublished": "<?php echo date('c', strtotime($row['date'])); ?>",
+      "dateModified": "<?php echo date('c', strtotime($row['date'])); ?>",
+      "url": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>",
+      "mainEntityOfPage": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>"
     }
-  },
-  "datePublished": "<?php echo date('c', strtotime($row['date'])); ?>",
-  "dateModified": "<?php echo date('c', strtotime($row['date'])); ?>",
-  "url": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>",
-  "mainEntityOfPage": "https://princeofwales.edu.lk/blog/<?php echo $row['slug']; ?>"
-}
-</script>
+  </script>
 
-  
+
   <span>
     <link itemprop="thumbnailUrl"
       href="https://princeofwales.edu.lk/content/img/img-blog/<?php echo htmlspecialchars($row["photo"], ENT_QUOTES, 'UTF-8'); ?>">
@@ -206,6 +210,17 @@ if ($schoolPride == 'ON') {
                 <br><br>
               </div>
               <p class="mb-4"><?php echo $row["content"]; ?></p>
+              <?php 
+if (!empty($row["extra_link"])): 
+    $parts = explode(" | ", $row["extra_link"]); // Split text and URL
+    if (count($parts) == 2): 
+?>
+              <p class="mb-4"><a href="<?php echo htmlspecialchars($parts[1]); ?>"
+                  target="_blank"><?php echo htmlspecialchars($parts[0]); ?></a></p>
+              <?php 
+    endif;
+endif; 
+?>
               <p class="mb-4"><?php echo $row["tags"]; ?></p>
             </div>
           </div>
@@ -228,6 +243,17 @@ if ($schoolPride == 'ON') {
                 </svg> Published By: <?php echo $row["author"]; ?> |
                 <?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date));  ?></h4>
               <p class="mb-4"><?php echo $row["content"]; ?></p>
+              <?php 
+if (!empty($row["extra_link"])): 
+    $parts = explode(" | ", $row["extra_link"]); // Split text and URL
+    if (count($parts) == 2): 
+?>
+              <p class="mb-4"><a href="<?php echo htmlspecialchars($parts[1]); ?>"
+                  target="_blank"><?php echo htmlspecialchars($parts[0]); ?></a></p>
+              <?php 
+    endif;
+endif; 
+?>
               <p class="mb-4"><?php echo $row["tags"]; ?></p>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
