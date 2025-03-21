@@ -215,8 +215,9 @@ if (!empty($row["extra_link"])):
     $parts = explode(" | ", $row["extra_link"]); // Split text and URL
     if (count($parts) == 2): 
 ?>
-              <p class="mb-4"><a href="<?php echo htmlspecialchars($parts[1]); ?>"
-                  target="_blank"><?php echo htmlspecialchars($parts[0]); ?></a></p>
+              <p class="mb-4"><?php echo htmlspecialchars($parts[0]); ?> | <a
+                  href="<?php echo htmlspecialchars($parts[1]); ?>"
+                  target="_blank"><?php echo htmlspecialchars($parts[1]); ?></a></p>
               <?php 
     endif;
 endif; 
@@ -248,8 +249,9 @@ if (!empty($row["extra_link"])):
     $parts = explode(" | ", $row["extra_link"]); // Split text and URL
     if (count($parts) == 2): 
 ?>
-              <p class="mb-4"><a href="<?php echo htmlspecialchars($parts[1]); ?>"
-                  target="_blank"><?php echo htmlspecialchars($parts[0]); ?></a></p>
+              <p class="mb-4"><?php echo htmlspecialchars($parts[0]); ?> | <a
+                  href="<?php echo htmlspecialchars($parts[1]); ?>"
+                  target="_blank"><?php echo htmlspecialchars($parts[1]); ?></a></p>
               <?php 
     endif;
 endif; 
