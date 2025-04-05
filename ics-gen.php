@@ -21,7 +21,7 @@ fwrite($file, "METHOD:PUBLISH\r\n");
 fwrite($file, "PRODID:-//Prince of Wales College//Event Calendar//EN\r\n");
 
 // Fetch ALL future events from the database
-$query = "SELECT * FROM pwc_db_events WHERE date >= CURDATE() ORDER BY date ASC";
+$query = "SELECT * FROM pwc_db_events ORDER BY date ASC";
 $statement = $connect->prepare($query);
 $statement->execute();
 $events = $statement->fetchAll();
@@ -56,5 +56,5 @@ fwrite($file, "END:VCALENDAR\r\n");
 fclose($file);
 
 // Output success message
-echo "ICS file has been successfully generated and saved as 'pwc-calendar.ics' in the 'events' folder.";
+// echo "ICS file has been successfully generated and saved as 'pwc-calendar.ics' in the 'events' folder.";
 ?>
