@@ -166,3 +166,4 @@ RewriteRule ^forms/apply-al/(science|commerce|tech|art|vocational)$ forms/apply-
         Header set Content-Disposition "inline"
     </FilesMatch>
 </IfModule>
+
