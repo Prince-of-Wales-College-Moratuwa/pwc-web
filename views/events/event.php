@@ -3,7 +3,6 @@
 
 <head>
   <?php include '../../database_connection.php'; 
-    include '../../ics-gen.php';
 
     $page = 'events';
   

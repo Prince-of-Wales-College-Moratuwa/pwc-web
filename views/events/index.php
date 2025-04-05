@@ -7,7 +7,6 @@
     $page = 'events';
 
     include '../../database_connection.php';
-    include '../../ics-gen.php';
 
     ?>
 
@@ -93,7 +92,7 @@
     </div>
     <!-- Header End -->
 
-    <div class="container-xxl py-1">
+    <!-- <div class="container-xxl py-1">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
 
             <p class="mb-4">
@@ -101,19 +100,17 @@
             </p>
 
             <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                <!-- Google Calendar -->
+                
                 <a href="https://calendar.google.com/calendar/u/0/r?cid=https://princeofwales.edu.lk/pwc-calendar.ics"
                     class="btn btn-danger py-3 px-4 wow zoomIn" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-google me-2"></i> Google Calendar
                 </a>
 
-                <!-- Apple Calendar -->
                 <a href="webcal://princeofwales.edu.lk/pwc-calendar.ics"
                     class="btn btn-dark py-3 px-4 wow zoomIn" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-apple me-2"></i> Apple Calendar
                 </a>
 
-                <!-- ICS File -->
                 <a href="/pwc-calendar.ics"
                     class="btn btn-success py-3 px-4 wow zoomIn" target="_blank" rel="noopener noreferrer">
                     <i class="fa fa-download me-2"></i> .ICS File
@@ -121,7 +118,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
 
