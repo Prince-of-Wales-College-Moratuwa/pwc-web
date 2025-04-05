@@ -21,7 +21,7 @@ fwrite($file, "METHOD:PUBLISH\r\n");
 fwrite($file, "PRODID:-//Prince of Wales College//Event Calendar//EN\r\n");
 
 // Fetch ALL events from the database (including past events)
-$query = "SELECT * FROM pwc_db_events ORDER BY date DESC, time DESC";
+$query = "SELECT * FROM pwc_db_events ORDER BY date ASC";
 $statement = $connect->prepare($query);
 $statement->execute();
 $events = $statement->fetchAll();
@@ -37,15 +37,23 @@ foreach ($events as $row) {
     $endDateTime->modify('+2 hours'); // Adjust the end time as needed
     $end = $endDateTime->format('Ymd\THis\Z');
 
+    // Ensure all special characters are properly escaped
+    $title = addslashes($row["title"]);
+    $description = addslashes($row["about"]);
+    $location = addslashes($row["location"]);
+    $url = "https://princeofwales.edu.lk/events/" . $row["slug"];
+
     // Write each event in ICS format
     fwrite($file, "BEGIN:VEVENT\r\n");
     fwrite($file, "UID:" . md5($row["id"] . $row["title"]) . "@princeofwales.edu.lk\r\n");
-    fwrite($file, "SUMMARY:" . addslashes($row["title"]) . "\r\n");
-    fwrite($file, "DESCRIPTION:" . addslashes($row["about"]) . "\r\n");
+    fwrite($file, "SUMMARY:$title\r\n");
+    fwrite($file, "DESCRIPTION:$description\r\n");
     fwrite($file, "DTSTART:$start\r\n");
     fwrite($file, "DTEND:$end\r\n");
-    fwrite($file, "LOCATION:" . addslashes($row["location"]) . "\r\n");
-    fwrite($file, "URL:https://princeofwales.edu.lk/events/" . $row["slug"] . "\r\n");
+    fwrite($file, "LOCATION:$location\r\n");
+    fwrite($file, "URL:$url\r\n");
+    fwrite($file, "STATUS:CONFIRMED\r\n"); // You can set status to CONFIRMED or TENTATIVE
+    fwrite($file, "SEQUENCE:0\r\n"); // Sequence of the event
     fwrite($file, "END:VEVENT\r\n");
 }
 
