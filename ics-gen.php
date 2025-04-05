@@ -20,8 +20,8 @@ fwrite($file, "CALSCALE:GREGORIAN\r\n");
 fwrite($file, "METHOD:PUBLISH\r\n");
 fwrite($file, "PRODID:-//Prince of Wales College//Event Calendar//EN\r\n");
 
-// Fetch ALL future events from the database
-$query = "SELECT * FROM pwc_db_events ORDER BY date ASC";
+// Fetch ALL events from the database (including past events)
+$query = "SELECT * FROM pwc_db_events ORDER BY date DESC, time DESC";
 $statement = $connect->prepare($query);
 $statement->execute();
 $events = $statement->fetchAll();
