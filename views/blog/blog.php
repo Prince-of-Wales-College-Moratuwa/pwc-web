@@ -94,7 +94,7 @@ a:hover, a:focus {
 
 </style>
 
-  <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+  <!-- <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
   <script>
     (self.SWG_BASIC = self.SWG_BASIC || []).push(basicSubscriptions => {
       basicSubscriptions.init({
@@ -107,7 +107,7 @@ a:hover, a:focus {
         },
       });
     });
-  </script>
+  </script> -->
 
   <script type="application/ld+json">
     {
