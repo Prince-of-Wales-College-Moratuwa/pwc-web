@@ -3,6 +3,7 @@
 
 <head>
   <?php include '../../database_connection.php';
+
   $page = 'blog';
 
   ?>
@@ -79,6 +80,19 @@
 </head>
 
 <body>
+
+<style>
+  a {
+    color: #800000; 
+    text-decoration: none; 
+}
+
+a:hover, a:focus {
+    color: #660000; 
+    text-decoration: underline; 
+}
+
+</style>
 
   <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
   <script>
