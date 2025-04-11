@@ -6,12 +6,12 @@
 
     <?php
     $page = 'home';
-include '../sitemap-gen.php';
+    include '../sitemap-gen.php';
 
-?>
-    <?php 
+    ?>
+    <?php
     include '../database_connection.php';
-    
+
     ?>
 
     <title>Prince of Wales' College, Moratuwa</title>
@@ -54,13 +54,13 @@ include '../sitemap-gen.php';
 
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
+            window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/service-worker.js')
-                    .then(function (registration) {
+                    .then(function(registration) {
                         console.log('ServiceWorker registration successful with scope: ', registration
                             .scope);
                     })
-                    .catch(function (err) {
+                    .catch(function(err) {
                         console.error('ServiceWorker registration failed: ', err);
                     });
             });
@@ -69,18 +69,18 @@ include '../sitemap-gen.php';
 
 
     <?php
-ob_start();
+    ob_start();
     include 'includes/header.php';
     include 'includes/greetings.php';
 
     include 'includes/popup-msg.php';
-    
-if (date('m-d') == '09-14') {
-    echo '<div class="confetti-container"></div>';
-    
-    echo '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>';
-    
-    echo '
+
+    if (date('m-d') == '09-14') {
+        echo '<div class="confetti-container"></div>';
+
+        echo '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>';
+
+        echo '
     <script>
       var end = Date.now() + (2 * 1000);
       var colors = [\'#800080\', \'#ffd700\', \'#800000\'];
@@ -106,8 +106,8 @@ if (date('m-d') == '09-14') {
         }
       }());
     </script>';
-}
-?>
+    }
+    ?>
 
 </head>
 
@@ -148,64 +148,64 @@ if (date('m-d') == '09-14') {
 
     <?php
 
-$query = "SELECT * FROM special_announcements WHERE id = 1";
-$statement = $connect->prepare($query);
-$statement->execute();
-$announcement = $statement->fetch(PDO::FETCH_ASSOC);
+    $query = "SELECT * FROM special_announcements WHERE id = 1";
+    $statement = $connect->prepare($query);
+    $statement->execute();
+    $announcement = $statement->fetch(PDO::FETCH_ASSOC);
 
-$published = isset($announcement['published']) ? $announcement['published'] : 'No';
+    $published = isset($announcement['published']) ? $announcement['published'] : 'No';
 
-?>
+    ?>
 
     <?php if ($published === 'Yes'): ?>
-    <br>
-    <style>
-        .notice-header {
-            background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url('<?= $announcement['image_link'] ?>');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+        <br>
+        <style>
+            .notice-header {
+                background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 1)), url('<?= $announcement['image_link'] ?>');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
 
-        .notice-header-inner {
-            background: rgba(15, 23, 43, .7);
-        }
-    </style>
-    <div class="container-fluid py-5 mb-5 notice-header">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-                <h1 class="h1 text-white animated slideInDown"><?= htmlspecialchars($announcement['title']) ?></h1>
-                <p class="mb-3 text-white animated slideInDown"><b><?= $announcement['content'] ?></b></p>
-                <br>
-                <center>
-                    <?php
-           
-                    $link = htmlspecialchars($announcement['button_link']);
-                    $domain = 'princeofwales.edu.lk';
-                    
-                    if (strpos($link, $domain) !== false) {
-                        
-                        echo '<a href="' . $link . '"';
-                    } else {
-                       
-                        echo '<a href="' . $link . '" target="_blank"';
-                    }
-                    ?>
-                    style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff;
-                    border-radius: 5px; transition: background-color 0.3s ease-in-out;"
-                    class="btn btn-primary py-3 px-4 mt-1 wow zoomIn"
-                    data-wow-delay="0.1s"><?= htmlspecialchars($announcement['button_text']) ?></a>
-                </center>
+            .notice-header-inner {
+                background: rgba(15, 23, 43, .7);
+            }
+        </style>
+        <div class="container-fluid py-5 mb-5 notice-header">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="h1 text-white animated slideInDown"><?= htmlspecialchars($announcement['title']) ?></h1>
+                    <p class="mb-3 text-white animated slideInDown"><b><?= $announcement['content'] ?></b></p>
+                    <br>
+                    <center>
+                        <?php
+
+                        $link = htmlspecialchars($announcement['button_link']);
+                        $domain = 'princeofwales.edu.lk';
+
+                        if (strpos($link, $domain) !== false) {
+
+                            echo '<a href="' . $link . '"';
+                        } else {
+
+                            echo '<a href="' . $link . '" target="_blank"';
+                        }
+                        ?>
+                        style="display: inline-block; padding: 10px 20px; text-decoration: none; color: #ffffff;
+                        border-radius: 5px; transition: background-color 0.3s ease-in-out;"
+                        class="btn btn-primary py-3 px-4 mt-1 wow zoomIn"
+                        data-wow-delay="0.1s"><?= htmlspecialchars($announcement['button_text']) ?></a>
+                    </center>
+                </div>
             </div>
         </div>
-    </div>
     <?php endif; ?>
 
 
 </div>
 
 <!-- Counter Start -->
-<?php 
+<?php
 $birthYear = 1876;
 $currentDate = date("m-d");
 $birthday = "09-14";
@@ -214,7 +214,7 @@ if ($currentDate < $birthday) {
     $age = date("Y") - $birthYear - 1;
 } else {
     $age = date("Y") - $birthYear;
-}  
+}
 ?>
 <div class="container-xxl py-3">
     <div class="container">
@@ -266,7 +266,7 @@ if ($currentDate < $birthday) {
     // Counter Functionality
     document.addEventListener('DOMContentLoaded', () => {
         const counters = document.querySelectorAll('.h1[id]');
-        
+
         counters.forEach(counter => {
             const updateCounter = () => {
                 const target = +counter.getAttribute('data-target');
@@ -298,10 +298,10 @@ if ($currentDate < $birthday) {
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;"> <!-- Updated height -->
                 <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" 
+                    <img class="img-fluid position-absolute w-100 h-100"
                         src="content/img/img-home/about-pwc.webp"
-                        alt="Learning Begins With Us" 
-                        style="object-fit: cover;" 
+                        alt="Learning Begins With Us"
+                        style="object-fit: cover;"
                         loading="lazy">
                 </div>
             </div>
@@ -340,53 +340,55 @@ if ($currentDate < $birthday) {
 
         <div class="row">
 
-            <?php 
+            <?php
 
-$query = "SELECT * FROM pwc_db_news WHERE date <= NOW() ORDER BY date DESC, id DESC";
+            $query = "SELECT * FROM pwc_db_news WHERE date <= NOW() ORDER BY date DESC, id DESC";
 
-$statement = $connect->prepare($query);
+            $statement = $connect->prepare($query);
 
-$statement->execute();
+            $statement->execute();
 
-$limit = 3;
-$rowCount = 0;
+            $limit = 3;
+            $rowCount = 0;
 
-if($statement->rowCount() > 0)
-{
-    foreach ($statement->fetchAll() as $row) {
+            if ($statement->rowCount() > 0) {
+                foreach ($statement->fetchAll() as $row) {
 
-        $rowCount++;
-    
-        ?>
+                    $rowCount++;
+
+            ?>
 
 
-            <div class="col-md-4 animate-box wow fadeInUp" data-wow-delay="0.1s">
-                <article class="article-entry">
-                    <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
-                        <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["title"]; ?>"
-                            width="600" height="400" loading="lazy"><br><br>
-                        <p class="meta"><span
-                                class="day"><?php $date = $row["date"]; echo date("Y-m-d h:i A", strtotime($date)); ?></span>
-                            │ <span></span>
-                            <span><?php echo $row["category"]; ?></span></p>
-                    </a>
-                    <div class="desc">
-                        <h2 class="h1" style="font-size: 24px;"><a
-                                href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h2>
-                        <p><?php echo htmlspecialchars(strip_tags($row["excerpt"])); echo "......"; ?></p>
+                    <div class="col-md-4 animate-box wow fadeInUp" data-wow-delay="0.1s">
+                        <article class="article-entry">
+                            <a href="blog/<?php echo $row["slug"]; ?>" class="blog-img">
+                                <img src="content/img/img-blog/<?php echo $row["photo"]; ?>" alt="<?php echo $row["title"]; ?>"
+                                    width="600" height="400" loading="lazy"><br><br>
+                                <p class="meta"><span
+                                        class="day"><?php $date = $row["date"];
+                                                    echo date("Y-m-d h:i A", strtotime($date)); ?></span>
+                                    │ <span></span>
+                                    <span><?php echo $row["category"]; ?></span>
+                                </p>
+                            </a>
+                            <div class="desc">
+                                <h2 class="h1" style="font-size: 24px;"><a
+                                        href="blog/<?php echo $row["slug"]; ?>"><?php echo $row["title"]; ?></a></h2>
+                                <p><?php echo htmlspecialchars(strip_tags($row["excerpt"]));
+                                    echo "......"; ?></p>
+                            </div>
+                        </article>
                     </div>
-                </article>
-            </div>
 
 
-            <?php 
-                if ($rowCount >= $limit) {
-         
-                    break;
+            <?php
+                    if ($rowCount >= $limit) {
+
+                        break;
+                    }
                 }
-					}
-		}	
-        ?>
+            }
+            ?>
         </div>
     </div>
 
@@ -450,55 +452,74 @@ if($statement->rowCount() > 0)
 
         <div class="row g-4 justify-content-center">
 
-            <?php 
-$query = "SELECT * FROM pwc_db_events ORDER BY date DESC, id DESC";
-$statement = $connect->prepare($query);
-$statement->execute();
-$limit = 3;
-$rowCount = 0;
+            <?php
+            $query = "SELECT * FROM pwc_db_events ORDER BY date DESC, id DESC";
+            $statement = $connect->prepare($query);
+            $statement->execute();
+            $limit = 3;
+            $rowCount = 0;
 
-if($statement->rowCount() > 0)
-{
-    foreach ($statement->fetchAll() as $row) {
-        $rowCount++;
-?>
+            if ($statement->rowCount() > 0) {
+                foreach ($statement->fetchAll() as $row) {
+                    $rowCount++;
 
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-light d-flex flex-column h-100">
-                    <div class="position-relative overflow-hidden image-container">
-                        <img class="img-fluid" loading="lazy" src="../content/img/img-events/<?php echo $row["img"]; ?>"
-                            alt="<?php echo $row["title"]; ?>">
+                    // Calculate the difference between the current date and the event date
+                    $eventDate = new DateTime($row["date"]);
+                    $currentDate = new DateTime();
+                    $interval = $currentDate->diff($eventDate);
+                    $daysDifference = (int)$interval->format('%r%a'); // Positive for future, negative for past
+
+                    // Determine the label text
+                    if ($daysDifference < 0) {
+                        $statusLabel = "Event Ended";
+                    } elseif ($daysDifference === 0) {
+                        $statusLabel = "Today";
+                    } elseif ($daysDifference === 1) {
+                        $statusLabel = "1 Day More";
+                    } else {
+                        $statusLabel = "$daysDifference Days More";
+                    }
+            ?>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="course-item bg-light d-flex flex-column h-100">
+                            <div class="position-relative overflow-hidden image-container">
+                                <img class="img-fluid" loading="lazy" src="../content/img/img-events/<?php echo $row["img"]; ?>"
+                                    alt="<?php echo $row["title"]; ?>">
+                                <!-- Status Label -->
+                                <div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small" >
+                                    <?php echo $statusLabel; ?>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 flex-grow-1">
+                                <h4 class="mb-4"><?php echo $row["title"]; ?></h4>
+                            </div>
+                            <div class="mt-auto w-100 d-flex justify-content-center mb-4">
+                                <a href="/events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3">View Event</a>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i
+                                        class="fa fa-calendar text-primary me-2"></i><?php echo $row["date"]; ?></small>
+                                <small class="flex-fill text-center py-2"><i
+                                        class="fa fa-map-marker text-primary me-2"></i><?php echo $row["location"]; ?></small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-center p-4 flex-grow-1">
-                        <h4 class="mb-4"><?php echo $row["title"]; ?></h4>
-                    </div>
-                    <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                        <a href="/events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                            >View Event</a>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i
-                                class="fa fa-calendar text-primary me-2"></i><?php echo $row["date"]; ?></small>
-                        <small class="flex-fill text-center py-2"><i
-                                class="fa fa-map-marker text-primary me-2"></i><?php echo $row["location"]; ?></small>
-                    </div>
-                </div>
-            </div>
 
 
-            <?php 
-    if ($rowCount >= $limit) {
-        break;
-    }
-}
-} else {
-    echo '
+            <?php
+                    if ($rowCount >= $limit) {
+                        break;
+                    }
+                }
+            } else {
+                echo '
     <div class="text-center">
     <i class="fas fa-exclamation-circle text-primary mb-4"></i>
     No Upcoming Events to Show
     </div>';
-}
-?>
+            }
+            ?>
         </div>
 
     </div>
@@ -648,7 +669,8 @@ foreach ($rows as $row) {
                     Purple, Gold and Maroon of Prince of Wales' College and Green, White & Gold of St. Sebastian's
                     College. <br><br>Over the years, The Battle of the Golds has become a cherished
                     tradition, symbolizing the rich history and friendly rivalry between Prince of Wales' College and
-                    St. Sebastian's College.</p>
+                    St. Sebastian's College.
+                </p>
                 <br>
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="big-match" data-wow-delay="0.1s">Explore
                     Bigmatch</a>
@@ -745,14 +767,14 @@ foreach ($rows as $row) {
                     colorful collage of photographs, articles, and creative pieces that showcase the diversity and
                     talents of our college community.
 
-                    <ul>
-                        <li>Magazine</li>
-                        <li>Golden Book</li>
-                        <li>Projects</li>
-                        <li>Golden Captures</li>
-                        <li>Music on Demand</li>
-                        <li>Video on Demand</li>
-                    </ul>
+                <ul>
+                    <li>Magazine</li>
+                    <li>Golden Book</li>
+                    <li>Projects</li>
+                    <li>Golden Captures</li>
+                    <li>Music on Demand</li>
+                    <li>Video on Demand</li>
+                </ul>
                 </p>
 
                 <a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="publications" data-wow-delay="0.1s">View</a>

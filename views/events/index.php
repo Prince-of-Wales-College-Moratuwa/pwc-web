@@ -144,17 +144,35 @@
                     foreach ($statement->fetchAll() as $row) {
                         $eventDate = $row["date"];
 
-                        if ($eventDate > $currentDate) {
-                            $upcomingEvents[] = $row;
+                        // Calculate the difference between the current date and the event date
+                        $eventDateObj = new DateTime($eventDate);
+                        $currentDateObj = new DateTime();
+                        $interval = $currentDateObj->diff($eventDateObj);
+                        $daysDifference = (int)$interval->format('%r%a'); // Positive for future, negative for past
+
+                        // Determine the label text
+                        if ($daysDifference < 0) {
+                            $statusLabel = "Event Ended";
+                        } elseif ($daysDifference === 0) {
+                            $statusLabel = "Today";
+                        } elseif ($daysDifference === 1) {
+                            $statusLabel = "1 Day More";
                         } else {
-                            $pastEvents[] = $row;
+                            $statusLabel = "$daysDifference Days More";
+                        }
+
+                        if ($eventDate > $currentDate) {
+                            $upcomingEvents[] = array_merge($row, ["statusLabel" => $statusLabel]);
+                        } else {
+                            $pastEvents[] = array_merge($row, ["statusLabel" => $statusLabel]);
                         }
                     }
                 }
 
+                // Display upcoming events
                 echo '<div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Upcoming Events</h6>
-            </div>';
+                    <h6 class="section-title bg-white text-center text-primary px-3">Upcoming Events</h6>
+                </div>';
                 if (empty($upcomingEvents)) {
                     echo '<div class="text-center mb-5">';
                     echo '<i class="fas fa-exclamation-circle text-primary mb-4"></i>';
@@ -166,12 +184,16 @@
                         echo '<div class="course-item bg-light d-flex flex-column h-100">';
                         echo '<div class="position-relative overflow-hidden image-container">';
                         echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '">';
+                        // Status Label
+                        echo '<div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small" style="border-radius: 0 0 5px 0;">';
+                        echo $row["statusLabel"];
+                        echo '</div>';
                         echo '</div>';
                         echo '<div class="text-center p-4 flex-grow-1">';
                         echo '<h4 class="mb-4">' . $row["title"] . '</h4>';
                         echo '</div>';
                         echo '<div class="mt-auto w-100 d-flex justify-content-center mb-4">';
-                        echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" aria-label="Read more about ' . $row["event_title"] . '">View Event</a>';
+                        echo '<a href="/events/' . $row["slug"] . '" class="flex-shrink-0 btn btn-sm btn-primary px-3" aria-label="Read more about ' . $row["title"] . '">View Event</a>';
                         echo '</div>';
                         echo '<div class="d-flex border-top">';
                         echo '<small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i>' . $row["date"] . '</small>';
@@ -182,10 +204,10 @@
                     }
                 }
 
-                // past events
+                // Display past events
                 echo '<div class="text-center wow fadeInUp mb-5 mt-5" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Past Events</h6>
-            </div>';
+                    <h6 class="section-title bg-white text-center text-primary px-3">Past Events</h6>
+                </div>';
                 foreach ($pastEvents as $row) {
                     echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
                     echo '<div class="course-item bg-light d-flex flex-column h-100">';
