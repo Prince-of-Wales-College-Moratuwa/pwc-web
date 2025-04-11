@@ -463,32 +463,18 @@ if ($currentDate < $birthday) {
                 foreach ($statement->fetchAll() as $row) {
                     $rowCount++;
 
-                    // Calculate the difference between the current date and the event date
-                    $eventDate = new DateTime($row["date"]);
-                    $currentDate = new DateTime();
-                    $interval = $currentDate->diff($eventDate);
-                    $daysDifference = (int)$interval->format('%r%a'); // Positive for future, negative for past
-
-                    // Determine the label text
-                    if ($daysDifference < 0) {
-                        $statusLabel = "Event Ended";
-                    } elseif ($daysDifference === 0) {
-                        $statusLabel = "Today";
-                    } elseif ($daysDifference === 1) {
-                        $statusLabel = "1 Day More";
-                    } else {
-                        $statusLabel = "$daysDifference Days More";
-                    }
+                    // Get the event date and time
+                    $eventDateTime = $row["date"] . " " . $row["time"]; // Assuming `time` column exists
+                    $eventTimestamp = strtotime($eventDateTime);
             ?>
 
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="course-item bg-light d-flex flex-column h-100">
                             <div class="position-relative overflow-hidden image-container">
-                                <img class="img-fluid" loading="lazy" src="../content/img/img-events/<?php echo $row["img"]; ?>"
-                                    alt="<?php echo $row["title"]; ?>">
-                                <!-- Status Label -->
-                                <div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small" >
-                                    <?php echo $statusLabel; ?>
+                                <img class="img-fluid" loading="lazy" src="../content/img/img-events/<?php echo $row["img"]; ?>" alt="<?php echo $row["title"]; ?>">
+                                <!-- Countdown Timer -->
+                                <div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small" id="countdown-<?php echo $rowCount; ?>" style="border-radius: 0 0 5px 0;">
+                                    Loading...
                                 </div>
                             </div>
                             <div class="text-center p-4 flex-grow-1">
@@ -498,15 +484,41 @@ if ($currentDate < $birthday) {
                                 <a href="/events/<?php echo $row["slug"]; ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3">View Event</a>
                             </div>
                             <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-calendar text-primary me-2"></i><?php echo $row["date"]; ?></small>
-                                <small class="flex-fill text-center py-2"><i
-                                        class="fa fa-map-marker text-primary me-2"></i><?php echo $row["location"]; ?></small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i><?php echo $row["date"]; ?></small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-map-marker text-primary me-2"></i><?php echo $row["location"]; ?></small>
                             </div>
                         </div>
                     </div>
 
+                    <script>
+                        // JavaScript Countdown Timer
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const countdownElement = document.getElementById('countdown-<?php echo $rowCount; ?>');
+                            const eventTime = <?php echo $eventTimestamp * 1000; ?>; // Convert PHP timestamp to milliseconds
 
+                            function updateCountdown() {
+                                const now = new Date().getTime();
+                                const timeLeft = eventTime - now;
+
+                                if (timeLeft > 0) {
+                                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                                    countdownElement.textContent = `${days}D ${hours}H ${minutes}M ${seconds}S`;
+                                } else if (timeLeft > -18000000) { // Show "Happening Now" for 5 hours after the event starts
+                                    countdownElement.textContent = "HAPPENING NOW";
+                                } else {
+                                    countdownElement.textContent = "EVENT ENDED";
+                                }
+                            }
+
+                            // Update the countdown every second
+                            setInterval(updateCountdown, 1000);
+                            updateCountdown(); // Initial call to set the countdown immediately
+                        });
+                    </script>
             <?php
                     if ($rowCount >= $limit) {
                         break;

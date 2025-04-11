@@ -143,28 +143,14 @@
                 if ($statement->rowCount() > 0) {
                     foreach ($statement->fetchAll() as $row) {
                         $eventDate = $row["date"];
-
-                        // Calculate the difference between the current date and the event date
-                        $eventDateObj = new DateTime($eventDate);
-                        $currentDateObj = new DateTime();
-                        $interval = $currentDateObj->diff($eventDateObj);
-                        $daysDifference = (int)$interval->format('%r%a'); // Positive for future, negative for past
-
-                        // Determine the label text
-                        if ($daysDifference < 0) {
-                            $statusLabel = "Event Ended";
-                        } elseif ($daysDifference === 0) {
-                            $statusLabel = "Today";
-                        } elseif ($daysDifference === 1) {
-                            $statusLabel = "1 Day More";
-                        } else {
-                            $statusLabel = "$daysDifference Days More";
-                        }
+                        $eventTime = isset($row["time"]) ? $row["time"] : "00:00:00"; // Default to midnight if time is not set
+                        $eventDateTime = $eventDate . " " . $eventTime;
+                        $eventTimestamp = strtotime($eventDateTime);
 
                         if ($eventDate > $currentDate) {
-                            $upcomingEvents[] = array_merge($row, ["statusLabel" => $statusLabel]);
+                            $upcomingEvents[] = array_merge($row, ["eventTimestamp" => $eventTimestamp]);
                         } else {
-                            $pastEvents[] = array_merge($row, ["statusLabel" => $statusLabel]);
+                            $pastEvents[] = array_merge($row, ["eventTimestamp" => $eventTimestamp]);
                         }
                     }
                 }
@@ -184,9 +170,9 @@
                         echo '<div class="course-item bg-light d-flex flex-column h-100">';
                         echo '<div class="position-relative overflow-hidden image-container">';
                         echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '">';
-                        // Status Label
-                        echo '<div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small">';
-                        echo $row["statusLabel"];
+                        // Countdown Timer
+                        echo '<div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small" id="countdown-' . $row["id"] . '" style="border-radius: 0 0 5px 0;">';
+                        echo 'Loading...';
                         echo '</div>';
                         echo '</div>';
                         echo '<div class="text-center p-4 flex-grow-1">';
@@ -201,6 +187,34 @@
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
+                        // JavaScript for Countdown Timer
+                        echo '<script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const countdownElement = document.getElementById("countdown-' . $row["id"] . '");
+                                const eventTime = ' . ($row["eventTimestamp"] * 1000) . '; // Convert PHP timestamp to milliseconds
+
+                                function updateCountdown() {
+                                    const now = new Date().getTime();
+                                    const timeLeft = eventTime - now;
+
+                                    if (timeLeft > 0) {
+                                        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                                        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                                        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                                        countdownElement.textContent = `${days}D ${hours}H ${minutes}M ${seconds}S`;
+                                    } else if (timeLeft > -18000000) { // Show "Happening Now" for 5 hours after the event starts
+                                        countdownElement.textContent = "Happening Now";
+                                    } else {
+                                        countdownElement.textContent = "Event Ended";
+                                    }
+                                }
+
+                                setInterval(updateCountdown, 1000);
+                                updateCountdown();
+                            });
+                        </script>';
                     }
                 }
 
