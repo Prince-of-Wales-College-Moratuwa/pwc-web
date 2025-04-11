@@ -185,7 +185,7 @@
                         echo '<div class="position-relative overflow-hidden image-container">';
                         echo '<img class="img-fluid" loading="lazy" src="../content/img/img-events/' . $row["img"] . '" alt="' . $row["title"] . '">';
                         // Status Label
-                        echo '<div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small" style="border-radius: 0 0 5px 0;">';
+                        echo '<div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 small">';
                         echo $row["statusLabel"];
                         echo '</div>';
                         echo '</div>';
