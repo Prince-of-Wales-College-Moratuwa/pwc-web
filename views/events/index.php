@@ -73,6 +73,16 @@
             justify-content: center;
             text-align: center;
         }
+
+[id^="countdown-"] {
+    background-color: #800000 !important; 
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 0 0 8px 0 !important;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
     </style>
 
 </head>

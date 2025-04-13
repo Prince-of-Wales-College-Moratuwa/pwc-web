@@ -46,42 +46,57 @@ foreach ($rows as $row) {
   <?php include '../includes/header.php'; ?>
 
   <style>
+  .countdown-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff0f3; /* soft maroon-ish bg */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(128, 0, 0, 0.15); /* subtle maroon shadow */
+    border: 1px solid #e0c4c4;
+  }
+
+  .countdown-item {
+    text-align: center;
+    flex: 1;
+  }
+
+  .countdown-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #800000; /* maroon */
+    margin-bottom: 5px;
+  }
+
+  .countdown-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #6b0000; /* dark maroon */
+    letter-spacing: 0.5px;
+  }
+
+  .separator {
+    width: 1px;
+    height: 50px;
+    background-color: #d9a7a7; /* soft maroon line */
+    margin: 0 15px;
+  }
+
+  @media (max-width: 576px) {
     .countdown-container {
-      display: flex;
-      justify-content: space-between; 
-      align-items: center;
-      background-color: #222; 
-      padding: 15px 20px;
-      border-radius: 10px;
-      color: #fff; 
+      flex-direction: column;
     }
-
-    .countdown-item {
-      text-align: center;
-      flex: 1;
-    }
-
-    .countdown-number {
-      font-size: 2.5rem; 
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 5px; 
-    }
-
-    .countdown-label {
-      font-size: 0.9rem; 
-      font-weight: normal;
-      text-transform: uppercase; 
-      color: #aaa; 
-    }
-
     .separator {
-      width: 1px;
-      height: 50px; 
-      background-color: #444; 
-      margin: 0 15px; 
+      display: none;
     }
-  </style>
+    .countdown-item {
+      margin-bottom: 10px;
+    }
+  }
+</style>
+
 </head>
 
 <body>
