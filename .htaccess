@@ -104,6 +104,8 @@ RewriteRule ^about$ views/about/about.php [NC,L]
 RewriteRule ^about/school-administration$ views/about/school-administration.php [NC,L]
 RewriteRule ^about/lassana-wales$ publications/projects/lassana-wales.php [NC,L]
 RewriteRule ^about/school-infrastructure$ views/about/locations/school-infrastructure.php [NC,L]
+RewriteRule ^about/school-infrastructure/the-shrine$ views/about/locations/location-the-shrine.php [NC,L]
+RewriteRule ^about/school-infrastructure/founders-statue$ views/about/locations/location-founders-statue.php [NC,L]
 
 # Contact
 RewriteRule ^contact$ views/contact/contact.php [NC,L]
