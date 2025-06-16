@@ -318,6 +318,18 @@ if ($currentDate < $birthday) {
                     believe this would aid us to bridge the gap between the school and the parents, past pupils,
                     past teachers etc. We warmly welcome all of you to be a part of this and there-by keep the
                     evergreen Cambrian spirit high amongst us all!</p>
+
+                    <!-- DID YOU KNOW SIMPLE LINE START -->
+<div class="d-flex align-items-center gap-3 mb-4" style="border-left: 4px solid maroon; padding-left: 12px; max-width: 400px;">
+  <div>
+    <p class="text-primary fw-semibold mb-1" style="margin-bottom: 0; font-size: 1rem;">🤔 Did you know?</p>
+    <p id="fact" class="mb-0 fs-6 text-dark fact-fade" style="min-height: 48px;">
+      Loading fact...
+    </p>
+  </div>
+</div>
+<!-- DID YOU KNOW SIMPLE LINE END -->
+
                 <a class="btn btn-primary py-3 px-5 mt-2" href="about">Know More
                     About Us</a>
             </div>
@@ -326,6 +338,57 @@ if ($currentDate < $birthday) {
 </div>
 <!-- About End -->
 
+<style>
+  .fact-fade {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fact-fade.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+const facts = [
+  "Prince of Wales’ College was founded in 1876",
+  "Our motto ‘Ich Dien, Nihil per Saltum' means ‘I serve, not at a leap’ in Latin.",
+  "Cambrians have produced national-level cricketers and athletes!",
+  "The college colors — purple, gold, and maroon — represent strength, excellence, and loyalty.",
+  "The Cambrian Walk is one of the largest student-led parades in Sri Lanka!",
+  "We have over 50 active societies, clubs, and sports teams!",
+  "Our college has won multiple All-Island Media and ICT competitions!",
+  "The Cambrian Media Unit is a leading force in student broadcasting in Moratuwa!",
+  "Prince of Wales’ has its own digital media platform and mobile-friendly website!",
+  "Our annual big match against St. Sebastian’s College is one of the oldest in the country!",
+  "Past Cambrians include judges, artists, scholars, and even businessmen!",
+  "The college main hall feature beautiful colonial-era architecture!",
+  "Our official website ranked 2nd place (BestWebLK 2024) among all school websites in Sri Lanka, only 6 months after its launch!"
+];
+
+
+  let index = 0;
+  const factElement = document.getElementById("fact");
+
+  function updateFact() {
+    // hide old fact
+    factElement.classList.remove("show");
+
+    setTimeout(() => {
+      factElement.textContent = facts[index];
+      factElement.classList.add("show");
+
+      index = (index + 1) % facts.length;
+    }, 600); // match CSS transition duration
+  }
+
+  // Initialize
+  updateFact();
+
+  // Change fact every 5 seconds
+  setInterval(updateFact, 4000);
+</script>
 
 
 
