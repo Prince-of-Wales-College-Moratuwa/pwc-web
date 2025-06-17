@@ -4,9 +4,9 @@
         target="_blank" class="floating-logo-container" id="bestweb-logo">
         <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo" class="floating-logo">
     </a> -->
-    <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+    <!-- <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
-    </a>
+    </a> -->
 </div>
 
 <style>
@@ -149,6 +149,26 @@
 
 </div>
 <!-- Footer End -->
+
+
+
+<script>
+  window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Chat with us"};
+  (function(d,t) {
+    var BASE_URL="https://app.chatwoot.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'yuUYBeynKRwTwRkRFTEf9tFN',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
 
 
 <script>

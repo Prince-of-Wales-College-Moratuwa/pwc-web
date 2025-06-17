@@ -8,8 +8,9 @@
 include 'includes/header.php';
     ?>
 
+<!-- 
     <script async data-id="3312476668" id="chatling-embed-script" type="text/javascript"
-        src="https://chatling.ai/js/embed.js"></script>
+        src="https://chatling.ai/js/embed.js"></script> -->
 
 
     <title>Frequently Asked Questions - Prince of Wales' College, Moratuwa</title>
@@ -140,8 +141,8 @@ include 'includes/header.php';
         <div class="alert alert-danger" role="danger">
             If you have any further questions, please feel free to email us at <a
                 href="mailto:info@princeofwales.edu.lk"><b>info@princeofwales.edu.lk</b></a> or <a
-                href="mailto:office@princeofwales.edu.lk"><b>office@princeofwales.edu.lk</b></a>, or use our chatbot on
-            left corner of this page.
+                href="mailto:office@princeofwales.edu.lk"><b>office@princeofwales.edu.lk</b></a>, or use our live chat on
+            right corner of this page.
         </div>
 
     </div>

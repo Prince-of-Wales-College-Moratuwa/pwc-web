@@ -108,8 +108,7 @@ RewriteRule ^about/school-infrastructure/the-shrine$ views/about/locations/locat
 RewriteRule ^about/school-infrastructure/founders-statue$ views/about/locations/location-founders-statue.php [NC,L]
 
 # Contact
-RewriteRule ^contact$ views/contact/contact.php [NC,L]
-RewriteRule ^contact-success$ views/contact/success.php [NC,L]
+RewriteRule ^contact$ views/contact.php [NC,L]
 
 # Search
 RewriteRule ^search$ views/search.php [NC,L]

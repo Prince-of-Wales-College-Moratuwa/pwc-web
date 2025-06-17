@@ -32,11 +32,8 @@
     <meta property="twitter:image"
         content="https://princeofwales.edu.lk/content/img/img-contact/contact-header-pwc.webp" />
 
-    <?php include '../includes/header.php'; ?>
+    <?php include 'includes/header.php'; ?>
 
-
-    <script async data-id="3312476668" id="chatling-embed-script" type="text/javascript"
-        src="https://chatling.ai/js/embed.js"></script>
 
 
     <style>
@@ -117,72 +114,34 @@
                     frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe>
             </div>
-            <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <form id="contactForm" action="https://formspree.io/f/mzzpdvbd" method="POST">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
-                                    required>
-                                <label for="name">Your Name</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Your Email" required>
-                                <label for="email">Your Email</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" name="subject"
-                                    placeholder="Subject" required>
-                                <label for="subject">Subject</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                    name="message" style="height: 150px" required></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-                <script>
-                    document.getElementById('contactForm').addEventListener('submit', function (event) {
-                        event.preventDefault(); 
+<div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+    <div class="bg-light rounded p-4 h-100 d-flex flex-column justify-content-between">
+        <div>
+            <h4 class="text-primary mb-3">Need Assistance?</h4>
+            <p class="mb-4">Chat directly with our school staff for help with admissions, general info, or anything else you need.</p>
+            
+            <ul class="list-unstyled">
+                <li class="mb-3 d-flex align-items-start">
+                    <i class="fa fa-comments text-primary me-3 fs-4"></i>
+                    <span>Ask about general info or anything else.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                    <i class="fa fa-clock text-primary me-3 fs-4"></i>
+                    <span>Chat available during school hours.</span>
+                </li>
+                <li class="d-flex align-items-start">
+                    <i class="fa fa-user-friends text-primary me-3 fs-4"></i>
+                    <span>Typically replies within few hours.</span>
+                </li>
+            </ul>
+        </div>
+        <a href="#!" onclick="window.$chatwoot.toggle();" class="btn btn-primary w-100 mt-4">
+    Start Chat Now
+</a>
 
-                        var form = event.target;
-                        var formData = new FormData(form);
+    </div>
+</div>
 
-                        fetch(form.action, {
-                            method: form.method,
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        }).then(function (response) {
-                            if (response.ok) {
-                                var thankYouWindow = window.open('/contact-success', '_blank');
-                                setTimeout(function () {
-                                    thankYouWindow.close();
-                                }, 5000);
-                            } else {
-                                alert('There was a problem with the submission.');
-                            }
-                        }).catch(function (error) {
-                            console.error('Error:', error);
-                        });
-                    });
-                </script>
-
-
-            </div>
         </div>
 
     </div>
@@ -315,7 +274,7 @@
 </div>
 
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>
 
 
 </body>
