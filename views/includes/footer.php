@@ -1,10 +1,12 @@
 <!-- Container for Floating Icons -->
 <div class="floating-icons">
 
+  <!-- 
   <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024" title="Best School Website - Silver Award at Bestweb.LK"
         target="_blank" class="floating-logo-container" id="bestweb-logo">
         <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
+  -->
 
   <!-- <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
