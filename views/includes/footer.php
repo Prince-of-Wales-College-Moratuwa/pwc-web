@@ -91,13 +91,19 @@
   /* Reduce accessibility button size on mobile devices only */
   @media (max-width: 576px) {
     .accessibility-btn {
-      width: 44px;
-      height: 44px;
-      font-size: 1.1rem;
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      min-height: 44px !important;
+      padding: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 50% !important;
     }
-
     .accessibility-btn i {
-      font-size: 1.1rem;
+      font-size: 1.1rem !important;
+      line-height: 1 !important;
     }
 
     .woot-widget-holder .woot-launcher {
@@ -251,7 +257,6 @@ $encodedToken = base64_encode($websiteToken);
 
 
 <!-- Accessibility  -->
-<!-- Accessibility Widget -->
 <div id="accessibility-widget"
   class="position-fixed"
   style="bottom: 90px; right: 20px; z-index: 9999; display: flex; flex-direction: column-reverse; align-items: end;">
@@ -288,7 +293,6 @@ $encodedToken = base64_encode($websiteToken);
   </div>
 </div>
 
-<!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 <!-- Accessibility Styles -->
