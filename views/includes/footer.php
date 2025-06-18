@@ -151,14 +151,7 @@
 <!-- Footer End -->
 
 <?php
-$platform = 'https://app.chatwoot.com'; 
-$query = "SELECT token1 FROM tokens WHERE platform = :platform";
-$stmt = $connect->prepare($query);
-$stmt->bindParam(':platform', $platform, PDO::PARAM_STR);
-$stmt->execute();
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-$websiteToken = $result['token1'];
+$websiteToken = 'yuUYBeynKRwTwRkRFTEf9tFN';
 $encodedToken = base64_encode($websiteToken);
 ?>
 <script>
