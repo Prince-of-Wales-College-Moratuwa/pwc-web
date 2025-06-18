@@ -216,6 +216,124 @@ if ($currentDate >= $fireworksstart && $currentDate <= $fireworksend) {
 }
 ?>
 
+<!-- Accessibility  -->
+<div id="accessibility-widget"
+     class="position-fixed"
+     style="bottom: 90px; right: 20px; z-index: 9999; display: flex; flex-direction: column-reverse; align-items: end;">
+  
+  <button id="accessibilityBtn"
+          class="btn btn-primary accessibility-btn shadow"
+          aria-label="Accessibility Settings"
+          title="Accessibility Settings">
+    <i class="fa fa-universal-access"></i>
+  </button>
+
+  <div id="accessibilityPanel" class="card shadow p-3 mt-2 d-none accessibility-slide" style="min-width: 220px;">
+    <h6 class="mb-3 fw-semibold text-primary">Accessibility Settings</h6>
+    <button class="btn btn-link w-100 text-start py-2" onclick="changeFontSize(1)">
+      <i class="fa fa-plus fa-fw me-2"></i>Increase font
+    </button>
+    <button class="btn btn-link w-100 text-start py-2" onclick="changeFontSize(-1)">
+      <i class="fa fa-minus fa-fw me-2"></i>Decrease font
+    </button>
+    <button class="btn btn-link w-100 text-start py-2" onclick="toggleHighContrast()">
+      <i class="fa fa-circle-half-stroke fa-fw me-2"></i>High‑contrast
+    </button>
+    <button class="btn btn-link w-100 text-start py-2" onclick="resetAccessibility()">
+      <i class="fa fa-rotate-left fa-fw me-2"></i>Reset
+    </button>
+  </div>
+</div>
+
+<style>
+  .accessibility-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .accessibility-btn:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .accessibility-slide {
+    animation: slideUp 0.3s ease forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  body.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+
+  body.high-contrast a {
+    color: #ff0 !important;
+  }
+
+  .high-contrast img {
+    filter: brightness(0.8) contrast(1.5);
+  }
+</style>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<script>
+  let fontSize = 100;
+  const btn = document.getElementById('accessibilityBtn');
+  const icon = btn.querySelector('i');
+  const panel = document.getElementById('accessibilityPanel');
+
+  btn.addEventListener('click', () => {
+    panel.classList.toggle('d-none');
+
+    if (!panel.classList.contains('d-none')) {
+      panel.classList.remove('accessibility-slide');
+      void panel.offsetWidth;
+      panel.classList.add('accessibility-slide');
+    }
+
+    // Toggle icon fa-gear <-> fa-times
+    if (icon.classList.contains('fa-universal-access')) {
+      icon.classList.replace('fa-universal-access', 'fa-times');
+    } else {
+      icon.classList.replace('fa-times', 'fa-universal-access');
+    }
+  });
+
+  function changeFontSize(step) {
+    fontSize = Math.min(200, Math.max(70, fontSize + step * 10));
+    document.body.style.fontSize = fontSize + '%';
+  }
+
+  function toggleHighContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
+
+  function resetAccessibility() {
+    fontSize = 100;
+    document.body.style.fontSize = '100%';
+    document.body.classList.remove('high-contrast');
+  }
+</script>
+
+
 <!-- JavaScript Libraries -->
 <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
