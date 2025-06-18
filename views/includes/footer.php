@@ -150,26 +150,35 @@
 </div>
 <!-- Footer End -->
 
+<?php
+$platform = 'https://app.chatwoot.com'; 
+$query = "SELECT token1 FROM tokens WHERE platform = :platform";
+$stmt = $connect->prepare($query);
+$stmt->bindParam(':platform', $platform, PDO::PARAM_STR);
+$stmt->execute();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-
+$websiteToken = $result['token1'];
+$encodedToken = base64_encode($websiteToken);
+?>
 <script>
   window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Chat with us"};
   (function(d,t) {
-    var BASE_URL="https://app.chatwoot.com";
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=BASE_URL+"/packs/js/sdk.js";
+    var BASE_URL = "https://app.chatwoot.com";
+    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    g.src = BASE_URL + "/packs/js/sdk.js";
     g.defer = true;
     g.async = true;
-    s.parentNode.insertBefore(g,s);
-    g.onload=function(){
+    s.parentNode.insertBefore(g, s);
+    g.onload = function() {
+      var token = atob("<?php echo $encodedToken; ?>");
       window.chatwootSDK.run({
-        websiteToken: 'yuUYBeynKRwTwRkRFTEf9tFN',
+        websiteToken: token,
         baseUrl: BASE_URL
-      })
+      });
     }
-  })(document,"script");
+  })(document, "script");
 </script>
-
 
 <script>
     const bestwebLogo = document.getElementById('bestweb-logo');
