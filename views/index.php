@@ -272,7 +272,7 @@ if ($currentDate < $birthday) {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText;
 
-                const increment = target / 200; // Adjust the speed of the counter
+                const increment = target / 100; // Adjust the speed of the counter
 
                 if (count < target) {
                     counter.innerText = Math.ceil(count + increment);
