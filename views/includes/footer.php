@@ -251,6 +251,7 @@ $encodedToken = base64_encode($websiteToken);
 
 
 <!-- Accessibility  -->
+<!-- Accessibility Widget -->
 <div id="accessibility-widget"
   class="position-fixed"
   style="bottom: 90px; right: 20px; z-index: 9999; display: flex; flex-direction: column-reverse; align-items: end;">
@@ -264,23 +265,89 @@ $encodedToken = base64_encode($websiteToken);
 
   <div id="accessibilityPanel" class="card shadow p-3 mt-2 d-none accessibility-slide" style="min-width: 220px;">
     <h6 class="mb-3 fw-semibold text-primary">Accessibility Settings</h6>
+
     <button class="btn btn-link w-100 text-start py-2" onclick="changeFontSize(1)">
-      <i class="fa fa-plus fa-fw me-2"></i>Increase font
+      <i class="fa fa-plus fa-fw me-2"></i> Increase font
     </button>
+
     <button class="btn btn-link w-100 text-start py-2" onclick="changeFontSize(-1)">
-      <i class="fa fa-minus fa-fw me-2"></i>Decrease font
+      <i class="fa fa-minus fa-fw me-2"></i> Decrease font
     </button>
+
     <button class="btn btn-link w-100 text-start py-2" onclick="toggleHighContrast()">
-      <i class="fa fa-circle-half-stroke fa-fw me-2"></i>High‑contrast
+      <i class="fa fa-circle-half-stroke fa-fw me-2"></i> High‑contrast
     </button>
+
+    <button class="btn btn-link w-100 text-start py-2" onclick="toggleGreyscale()">
+      <i class="fa fa-circle-notch fa-fw me-2"></i> Greyscale
+    </button>
+
     <button class="btn btn-link w-100 text-start py-2" onclick="resetAccessibility()">
-      <i class="fa fa-rotate-left fa-fw me-2"></i>Reset
+      <i class="fa fa-rotate-left fa-fw me-2"></i> Reset
     </button>
   </div>
 </div>
 
+<!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+<!-- Accessibility Styles -->
+<style>
+  .accessibility-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .accessibility-btn:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .accessibility-slide {
+    animation: slideUp 0.3s ease forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  body.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+
+  body.high-contrast a {
+    color: #ff0 !important;
+  }
+
+  .high-contrast img {
+    filter: brightness(0.8) contrast(1.5);
+  }
+
+  /* Greyscale all but the widget */
+  body.greyscale :not(#accessibility-widget):not(#accessibility-widget *) {
+    filter: grayscale(100%) !important;
+  }
+
+  body.greyscale img:not(#accessibility-widget img) {
+    filter: grayscale(100%) !important;
+  }
+</style>
+
+<!-- Accessibility Script -->
 <script>
   let fontSize = 100;
   const btn = document.getElementById('accessibilityBtn');
@@ -292,7 +359,6 @@ $encodedToken = base64_encode($websiteToken);
 
   headingTags.forEach(tag => {
     document.querySelectorAll(tag).forEach((el, idx) => {
-
       const key = tag + '_' + idx;
       originalHeadingFontSizes[key] = window.getComputedStyle(el).fontSize;
       el.dataset.headingKey = key;
@@ -320,7 +386,7 @@ $encodedToken = base64_encode($websiteToken);
     document.body.style.fontSize = fontSize + '%';
 
     headingTags.forEach(tag => {
-      document.querySelectorAll(tag).forEach((el, idx) => {
+      document.querySelectorAll(tag).forEach((el) => {
         const key = el.dataset.headingKey;
         const originalSize = parseFloat(originalHeadingFontSizes[key]);
         const newSize = (originalSize * fontSize / 100);
@@ -333,13 +399,18 @@ $encodedToken = base64_encode($websiteToken);
     document.body.classList.toggle('high-contrast');
   }
 
+  function toggleGreyscale() {
+    document.body.classList.toggle('greyscale');
+  }
+
   function resetAccessibility() {
     fontSize = 100;
     document.body.style.fontSize = '100%';
     document.body.classList.remove('high-contrast');
+    document.body.classList.remove('greyscale');
 
     headingTags.forEach(tag => {
-      document.querySelectorAll(tag).forEach((el, idx) => {
+      document.querySelectorAll(tag).forEach((el) => {
         const key = el.dataset.headingKey;
         if (originalHeadingFontSizes[key]) {
           el.style.fontSize = originalHeadingFontSizes[key];
@@ -348,6 +419,7 @@ $encodedToken = base64_encode($websiteToken);
     });
   }
 </script>
+
 
 <!-- bestweb logo -->
 <script>

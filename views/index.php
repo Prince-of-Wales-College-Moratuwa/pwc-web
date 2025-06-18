@@ -352,7 +352,6 @@ if ($currentDate < $birthday) {
 
 <script>
 const facts = [
-  "Prince of Wales’ College was founded in 1876",
   "Our motto ‘Ich Dien, Nihil per Saltum' means ‘I serve, not at a leap’ in Latin.",
   "Cambrians have produced national-level cricketers and athletes!",
   "The college colors — purple, gold, and maroon — represent strength, excellence, and loyalty.",
