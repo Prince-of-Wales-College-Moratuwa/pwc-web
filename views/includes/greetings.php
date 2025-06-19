@@ -139,9 +139,7 @@ $notifications = [
     '03-03' => ['title' => 'Founder\'s Day', 'message' => 'Celebrating our Founder\'s Day with pride.', 'icon' => 'fas fa-flag'],
     '04-13' => ['title' => 'Sinhala and Tamil New Year', 'message' => 'Wishing everyone a prosperous New Year!', 'icon' => 'fas fa-sun'],
     '04-14' => ['title' => 'Sinhala and Tamil New Year', 'message' => 'Wishing everyone a prosperous New Year!', 'icon' => 'fas fa-sun'],
-    '05-10' => ['title' => 'Happy Mother\'s Day', 'message' => 'A heartfelt thank you to all the wonderful mothers in our school community.', 'icon' => 'fas fa-female'],
     '06-05' => ['title' => 'Happy World Environment Day', 'message' => 'Let\'s work together to create a greener and cleaner future for our planet.', 'icon' => 'fas fa-leaf'],
-    '06-19' => ['title' => 'Happy Father\'s Day', 'message' => 'A big thank you to all the fathers for their love and support!', 'icon' => 'fas fa-male'],
     '09-08' => ['title' => 'Happy World Literacy Day!', 'message' => 'Let’s spread the gift of literacy and knowledge to every corner of the world.', 'icon' => 'fas fa-book'],
     '09-14' => ['title' => (date("Y") - 1876) . ' Years of Excellence','message' => 'Happy Birthday to Prince of Wales College!','icon' => 'fas fa-birthday-cake'],
     '10-01' => [
