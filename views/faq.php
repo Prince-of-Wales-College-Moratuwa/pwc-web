@@ -8,9 +8,7 @@
 include 'includes/header.php';
     ?>
 
-<!-- 
-    <script async data-id="3312476668" id="chatling-embed-script" type="text/javascript"
-        src="https://chatling.ai/js/embed.js"></script> -->
+
 
 
     <title>Frequently Asked Questions - Prince of Wales' College, Moratuwa</title>
