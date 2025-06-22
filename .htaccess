@@ -113,6 +113,9 @@ RewriteRule ^contact$ views/contact.php [NC,L]
 # Search
 RewriteRule ^search$ views/search.php [NC,L]
 
+#Vote
+RewriteRule ^vote$ views/vote.php [NC,L]
+
 # Other Pages
 RewriteRule ^team$ views/team.php [NC,L]
 RewriteRule ^principal-message$ views/principal-msg.php [NC,L]
