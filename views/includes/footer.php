@@ -24,6 +24,21 @@
     padding-top: 100px;
   }
 
+  #bestweb-logo {
+    animation: floatUpDown 2.5s ease-in-out infinite;
+    display: block;
+  }
+
+  #bestweb-logo:hover .floating-logo {
+    filter: drop-shadow(0 0 12px gold) drop-shadow(0 0 4px #ffd700);
+  }
+
+  @keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+    100% { transform: translateY(0); }
+  }
+
   .floating-icons {
     position: fixed;
     bottom: 20px;
