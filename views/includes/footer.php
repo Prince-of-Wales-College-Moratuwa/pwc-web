@@ -7,10 +7,13 @@
         <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
  -->
-  <a href="https://ebadge.bestweb.lk/api/v1/clicked/princeofwales.edu.lk/BestWeb/2025/Rate_Us" title="Bestweb.LK" target="_blank" class="floating-logo-container" id="bestweb-logo">
-    <img src="https://ebadge.bestweb.lk/eBadgeSystem/domainNames/princeofwales.edu.lk/BestWeb/2025/Rate_Us/image.png" alt="logo" width="150" height="150" alt="BestWeb 2025 Logo" class="floating-logo" />
-  </a>
-
+<?php
+if ($page != 'vote') {
+  echo '<a href="https://ebadge.bestweb.lk/api/v1/clicked/princeofwales.edu.lk/BestWeb/2025/Rate_Us" title="Bestweb.LK" target="_blank" class="floating-logo-container" id="bestweb-logo">
+    <img src="https://ebadge.bestweb.lk/eBadgeSystem/domainNames/princeofwales.edu.lk/BestWeb/2025/Rate_Us/image.png" alt="BestWeb 2025 Logo" width="150" height="150" class="floating-logo" />
+  </a>';
+}
+?>
     <!-- <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
     </a> -->
@@ -30,7 +33,7 @@
   }
 
   #bestweb-logo:hover .floating-logo {
-    filter: drop-shadow(0 0 12px gold) drop-shadow(0 0 4px #ffd700);
+    filter: drop-shadow(0 0 4px #ffd70080) drop-shadow(0 0 2px #ffd70060);
   }
 
   @keyframes floatUpDown {
