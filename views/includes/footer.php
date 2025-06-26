@@ -7,14 +7,14 @@
         <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="BestWeb 2024 Logo" class="floating-logo">
     </a>
  -->
-<?php
-if ($page != 'vote') {
-  echo '<a href="https://ebadge.bestweb.lk/api/v1/clicked/princeofwales.edu.lk/BestWeb/2025/Rate_Us" title="Bestweb.LK" target="_blank" class="floating-logo-container" id="bestweb-logo">
+  <?php
+  if ($page != 'vote') {
+    echo '<a href="https://ebadge.bestweb.lk/api/v1/clicked/princeofwales.edu.lk/BestWeb/2025/Rate_Us" title="Bestweb.LK" target="_blank" class="floating-logo-container" id="bestweb-logo">
     <img src="https://ebadge.bestweb.lk/eBadgeSystem/domainNames/princeofwales.edu.lk/BestWeb/2025/Rate_Us/image.png" alt="BestWeb 2025 Logo" width="150" height="150" class="floating-logo" />
   </a>';
-}
-?>
-    <!-- <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+  }
+  ?>
+  <!-- <a href="#" title="Go to top" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
     </a> -->
 </div>
@@ -37,9 +37,17 @@ if ($page != 'vote') {
   }
 
   @keyframes floatUpDown {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-9px); }
-    100% { transform: translateY(0); }
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-9px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
   .floating-icons {
@@ -108,7 +116,6 @@ if ($page != 'vote') {
     filter: brightness(0.8) contrast(1.5);
   }
 
-  /* Reduce accessibility button size on mobile devices only */
   @media (max-width: 576px) {
     .accessibility-btn {
       width: 44px !important;
@@ -144,59 +151,76 @@ if ($page != 'vote') {
       <!-- About -->
       <div class="col-lg-3 col-md-6">
         <h4 class="text-white mb-4">Prince of Wales' College</h4>
-        <p class="small mb-4">Established in 1876, Prince of Wales’ College has grown into a prestigious
-          institution, making its mark as a leading school in Sri Lanka.</p>
-        <iframe src="https://status.princeofwales.edu.lk/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" title="site status" style="color-scheme: normal"></iframe>
+        <p class="small mb-4">
+          Established in 1876, Prince of Wales’ College has grown into a prestigious institution, making its mark as a leading school in Sri Lanka.
+        </p>
+        <iframe
+          src="https://status.princeofwales.edu.lk/badge?theme=dark"
+          width="250"
+          height="30"
+          frameborder="0"
+          scrolling="no"
+          title="site status"
+          style="color-scheme: normal; border-radius: 5px;">
+        </iframe>
       </div>
+
       <!-- Quick Links -->
       <div class="col-lg-3 col-md-6">
         <h4 class="text-white mb-4">Quick Links</h4>
         <ul class="list-unstyled">
-          <li><button class="btn btn-link p-0" id="install-button">Install App</button></li>
-          <li><a class="btn btn-link p-0" href="/about">About Us</a></li>
-          <li><a class="btn btn-link p-0" href="/contact">Contact Us</a></li>
-          <li><a class="btn btn-link p-0" href="/faq">Help / FAQ</a></li>
-          <li><a class="btn btn-link p-0" href="/sitemap">Site Map</a></li>
+          <li><button class="btn btn-link p-0 text-light link-hover" id="install-button" type="button">Install App</button></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/about">About Us</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/contact">Contact Us</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/faq">Help / FAQ</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/sitemap">Site Map</a></li>
         </ul>
       </div>
+
       <!-- Legal -->
       <div class="col-lg-3 col-md-6">
         <h4 class="text-white mb-4">Legal</h4>
         <ul class="list-unstyled">
-          <li><a class="btn btn-link p-0" href="/privacy">Privacy Policy</a></li>
-          <li><a class="btn btn-link p-0" href="/cookies">Cookies Policy</a></li>
-          <li><a class="btn btn-link p-0" href="/terms">Terms & Conditions</a></li>
-          <li><a class="btn btn-link p-0" href="/disclaimer">Disclaimer</a></li>
-          <li><a class="btn btn-link p-0" href="/imprint">Imprint</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/privacy">Privacy Policy</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/cookies">Cookies Policy</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/terms">Terms & Conditions</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/disclaimer">Disclaimer</a></li>
+          <li><a class="btn btn-link p-0 text-light link-hover" href="/imprint">Imprint</a></li>
         </ul>
       </div>
+
       <!-- Contact -->
       <div class="col-lg-3 col-md-6">
         <h4 class="text-white mb-4">Contact</h4>
-        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><a class="btn text-white p-0"
-            style="text-align: left;" href="https://maps.app.goo.gl/JtYdz2kuYA2DPQcg8" target="_blank">2AD,
-            Galle Road, Moratuwa</a></p>
-        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="btn text-white p-0"
-            style="text-align: left;" href="tel:94112645628">+94 112 645 628</a></p>
-        <p class="mb-2"><i class="fa fa-envelope me-3"></i><a class="btn text-white p-0"
-            style="text-align: left;" href="mailto:info@princeofwales.edu.lk">info@princeofwales.edu.lk</a>
+        <p class="mb-2">
+          <i class="fa fa-map-marker-alt me-3"></i>
+          <a class="btn text-white p-0 link-hover" style="text-align: left;" href="https://maps.app.goo.gl/JtYdz2kuYA2DPQcg8" target="_blank" rel="noopener noreferrer">
+            2AD, Galle Road, Moratuwa
+          </a>
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-phone-alt me-3"></i>
+          <a class="btn text-white p-0 link-hover" style="text-align: left;" href="tel:94112645628">
+            +94 112 645 628
+          </a>
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-envelope me-3"></i>
+          <a class="btn text-white p-0 link-hover" style="text-align: left;" href="mailto:info@princeofwales.edu.lk">
+            info@princeofwales.edu.lk
+          </a>
         </p>
         <div class="d-flex">
-          <a class="btn btn-outline-light btn-social me-2" href="https://www.facebook.com/cmbulive"
-            target="_blank" title="Visit our Facebook page">
+          <a class="btn btn-outline-light btn-social me-2" href="https://www.facebook.com/cmbulive" target="_blank" title="Visit our Facebook page" rel="noopener noreferrer" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a class="btn btn-outline-light btn-social me-2" href="https://www.instagram.com/cmbulive/"
-            target="_blank" title="Follow us on Instagram">
+          <a class="btn btn-outline-light btn-social me-2" href="https://www.instagram.com/cmbulive/" target="_blank" title="Follow us on Instagram" rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a class="btn btn-outline-light btn-social me-2"
-            href="https://whatsapp.com/channel/0029VanJvjFCMY0GGu2F6g3M" target="_blank"
-            title="Join our WhatsApp Channel">
+          <a class="btn btn-outline-light btn-social me-2" href="https://whatsapp.com/channel/0029VanJvjFCMY0GGu2F6g3M" target="_blank" title="Join our WhatsApp Channel" rel="noopener noreferrer" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/cmbulive" target="_blank"
-            title="Subscribe to our YouTube channel">
+          <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/cmbulive" target="_blank" title="Subscribe to our YouTube channel" rel="noopener noreferrer" aria-label="YouTube">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
@@ -206,22 +230,15 @@ if ($page != 'vote') {
     <!-- Awards Badges Row -->
     <div class="row mt-5">
       <div class="col-12 d-flex justify-content-center align-items-center" style="min-height: 100px;">
-        <div class="d-flex flex-wrap justify-content-center align-items-center">
-          <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024"
-            title="Best School Website - Silver Award at Bestweb.LK" target="_blank" class="me-3 mb-2">
-            <img src="/content/img/bestweb/Silver-Best School Website.webp"
-              alt="Best School Website - Silver Award" width="120px">
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+          <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024" title="Best School Website - Silver Award at Bestweb.LK" target="_blank" rel="noopener noreferrer" class="mb-2">
+            <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="Best School Website - Silver Award" width="120" loading="lazy" decoding="async" style="border-radius:6px;">
           </a>
-          <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank"
-            class="me-3 mb-2">
-            <img src="/content/img/bestweb/TopWebMay-150x150.jpg" width="80px" alt="TopWebLK May 2024">
+          <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank" rel="noopener noreferrer" class="mb-2">
+            <img src="/content/img/bestweb/TopWebMay-150x150.jpg" alt="TopWebLK May 2024" width="80" loading="lazy" decoding="async" style="border-radius:6px;">
           </a>
-          <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprinceofwales.edu.lk%2F"
-            title="This website runs on green hosting - verified by thegreenwebfoundation.org"
-            target="_blank" class="mb-2">
-            <img src="/content/img/princeofwales.edu.webp"
-              alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
-              width="140px">
+          <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprinceofwales.edu.lk%2F" title="This website runs on green hosting - verified by thegreenwebfoundation.org" target="_blank" rel="noopener noreferrer" class="mb-2">
+            <img src="/content/img/princeofwales.edu.webp" alt="This website runs on green hosting - verified by thegreenwebfoundation.org" width="140" loading="lazy" decoding="async" style="border-radius:6px;">
           </a>
         </div>
       </div>
@@ -232,21 +249,29 @@ if ($page != 'vote') {
   <div class="container">
     <div class="copyright">
       <div class="row">
-        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
+        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0 ">
           &copy; <?php echo date("Y"); ?> <a class="border-bottom" href="https://princeofwales.edu.lk/">PRINCEOFWALES.EDU.LK</a>, is Licensed Under
           <a class="border-bottom" href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
-            CC BY-NC 4.0</a>. All Right Reserved. │ Developed By <a class="border-bottom"
-            href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom"
-            href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcasting
-            Unit</a>
-
+            CC BY-NC 4.0</a>. All Right Reserved. │ Developed By <a class="border-bottom" href="/team">Cambrians' ICT Society</a> │ Media Partner: <a class="border-bottom" href="https://princeofwales.edu.lk/cmbu/" target="_blank">Cambrians' Media and Broadcasting Unit</a>
         </div>
       </div>
     </div>
   </div>
-
 </div>
 <!-- Footer End -->
+
+<style>
+  .btn-link {
+    font-weight: 500;
+  }
+  .btn-link.p-0 {
+    padding: 0 !important;
+  }
+  iframe, img {
+    border-radius: 6px;
+  }
+</style>
+
 
 <?php
 $websiteToken = 'yuUYBeynKRwTwRkRFTEf9tFN';

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rate Our Website - BestWeb.LK</title>
+<title>Vote For Wales</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <?php include 'includes/header.php';
@@ -71,7 +71,7 @@
 
             <!-- Right Column: Text & Button -->
             <div class="col-md-8 text-center text-md-start">
-                <h1 class="display-4 fw-bold text-maroon mb-3">Rate Our Website</h1>
+                <h1 class="display-4 fw-bold text-maroon mb-3">Vote For Wales</h1>
                 <p class="lead mb-4 text-muted">Support princeofwales.edu.lk to become the MOST POPULAR school website in BestWeb.lk 2025! Rate it before July 9th — let’s make this happen together!</p>
                 <button class="btn btn-maroon btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#confirmModal">Rate Now</button>
             </div>
@@ -165,7 +165,7 @@
 <div class="modal fade" id="confirmModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header"><h5 class="modal-title text-maroon">Ready to Rate?</h5></div>
+            <div class="modal-header"><h5 class="modal-title text-maroon">Ready to Vote?</h5></div>
             <div class="modal-body">When you’re all set, click <strong>Proceed</strong> to go to the voting platform.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
@@ -178,7 +178,7 @@
 <!-- Footer -->
 <footer class="py-5 bg-light text-center mt-auto">
     <div class="container">
-        <p class="text-maroon fs-5 fw-semibold mb-0">Your rate & review means the world to us. <b>#BeThereForWales</b></p>
+        <p class="text-maroon fs-5 fw-semibold mb-0">Your vote means the world to us. <b>#BeThereForWales</b></p>
     </div>
    
 </footer>
