@@ -73,7 +73,7 @@
             <div class="col-md-8 text-center text-md-start">
                 <h1 class="display-4 fw-bold text-maroon mb-3">Vote For Wales</h1>
                 <p class="lead mb-4 text-muted">Support princeofwales.edu.lk to become the MOST POPULAR school website in BestWeb.lk 2025! Rate it before July 9th — let’s make this happen together!</p>
-                <button class="btn btn-maroon btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#confirmModal">Rate Now</button>
+                <button class="btn btn-maroon btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#confirmModal">Vote Now</button>
             </div>
         </div>
     </div>
@@ -155,7 +155,7 @@
 
     <!-- Rating Website Section -->
     <div class="rating-notice">
-        <h5>Access the Official Rating Website</h5>
+        <h5>Official Voting Website</h5>
         <p>Please click the button below to navigate to the official platform and submit your vote.</p>
         <a href="https://ebadge.bestweb.lk/api/v1/clicked/princeofwales.edu.lk/BestWeb/2025/Rate_Us" target="_blank">Visit Rating Website</a>
     </div>
