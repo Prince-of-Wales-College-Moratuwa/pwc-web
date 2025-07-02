@@ -86,70 +86,96 @@
         <div class="accordion" id="stepsAccordion">
             <!-- Steps -->
             <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                        <i class="bi bi-globe2 me-2 text-maroon"></i> Go to the Rating Website
-                    </button>
-                </h2>
-                <div id="collapse1" class="accordion-collapse collapse">
-                    <div class="accordion-body">Visit <a href="https://ebadge.bestweb.lk/api/v1/clicked/princeofwales.edu.lk/BestWeb/2025/Rate_Us" target="_blank" class="text-maroon">https://www.rate.bestweb.lk/</a> and follow the instructions.</div>
-                </div>
-            </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse2">
-                        <i class="bi bi-shield-check me-2 text-maroon"></i> Click Verify Button
-                    </button>
-                </h2>
-                <div id="collapse2" class="accordion-collapse collapse">
-                    <div class="accordion-body">Click "Verify" and complete the verification process.</div>
-                </div>
-            </div>
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1">
+      <i class="bi bi-globe2 me-2 text-maroon"></i> Step 1: Visit the Voting Page
+    </button>
+  </h2>
+  <div id="collapse1" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      Go to <a href="https://princeofwales.edu.lk/voteforus" target="_blank" class="text-maroon">princeofwales.edu.lk/voteforus</a>
+    </div>
+  </div>
+</div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse3">
-                        <i class="bi bi-envelope-at me-2 text-maroon"></i> Enter Email or Phone Number
-                    </button>
-                </h2>
-                <div id="collapse3" class="accordion-collapse collapse">
-                    <div class="accordion-body">Provide your phone number or email as instructed.</div>
-                </div>
-            </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse4">
-                        <i class="bi bi-key me-2 text-maroon"></i> Enter OTP
-                    </button>
-                </h2>
-                <div id="collapse4" class="accordion-collapse collapse">
-                    <div class="accordion-body">Input the OTP you receive to proceed.</div>
-                </div>
-            </div>
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse2">
+      <i class="bi bi-image me-2 text-maroon"></i> Step 2: Click on Website Image
+    </button>
+  </h2>
+  <div id="collapse2" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      Tap on our school website's image shown on the page.
+    </div>
+  </div>
+</div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse5">
-                        <i class="bi bi-search me-2 text-maroon"></i> Search for Our Website "princeofwales.edu.lk"
-                    </button>
-                </h2>
-                <div id="collapse5" class="accordion-collapse collapse">
-                    <div class="accordion-body">Search “princeofwales.edu.lk” and select our school.</div>
-                </div>
-            </div>
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse3">
+      <i class="bi bi-hand-index-thumb me-2 text-maroon"></i> Step 3: Click the Rate Icon
+    </button>
+  </h2>
+  <div id="collapse3" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      Click the ⭐ Rate icon that appears after clicking the image.
+    </div>
+  </div>
+</div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse6">
-                        <i class="bi bi-star-fill me-2 text-maroon"></i> Give 5 Stars and Submit
-                    </button>
-                </h2>
-                <div id="collapse6" class="accordion-collapse collapse">
-                    <div class="accordion-body">Rate 5 stars, leave a comment if you’d like, and click submit. Thank you for your support!</div>
-                </div>
-            </div>
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse4">
+      <i class="bi bi-star-fill me-2 text-maroon"></i> Step 4: Give 5 Stars & Submit
+    </button>
+  </h2>
+  <div id="collapse4" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      Select 5 stars, write a comment if you'd like, and press "Submit".
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse5">
+      <i class="bi bi-shield-check me-2 text-maroon"></i> Step 5: Click Verify
+    </button>
+  </h2>
+  <div id="collapse5" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      Now click the <strong>Verify</strong> button to continue.
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse6">
+      <i class="bi bi-envelope-at me-2 text-maroon"></i> Step 6: Enter Email or Phone
+    </button>
+  </h2>
+  <div id="collapse6" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      Type your email address or mobile number for OTP verification.
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse7">
+      <i class="bi bi-key me-2 text-maroon"></i> Step 7: Enter the OTP
+    </button>
+  </h2>
+  <div id="collapse7" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      Enter the One-Time Password (OTP) sent to your email or phone. That’s it!
+    </div>
+  </div>
+</div>
+
         </div>
     </section>
 
