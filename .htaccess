@@ -115,6 +115,7 @@ RewriteRule ^search$ views/search.php [NC,L]
 
 #Vote
 RewriteRule ^vote$ views/bestwebvotepage.php [NC,L]
+Redirect 301 /voteforus https://rate.bestweb.lk/voting-categories/voting-websites/20/3621
 
 # Other Pages
 RewriteRule ^team$ views/team.php [NC,L]
