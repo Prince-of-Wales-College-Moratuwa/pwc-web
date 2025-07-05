@@ -133,14 +133,13 @@
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <p class="mb-3">
             <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://princeofwales.edu.lk">princeofwales.edu.lk</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://princeofwales.edu.lk/team">Cambrians ICT Society</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
-            Any unauthorized use is prohibited. All rights reserved. <br> The website's development was carried out by the dedicated team at Cambrians' ICT Society, <br> led by Nelitha Priyawansha as the Head of the Web Development Team. </p>
+            Any unauthorized use is prohibited. All rights reserved. <br> The website's development was carried out by the dedicated team at Cambrians' ICT Society, led by Nelitha Priyawansha as the Head of the Web Development Team. </p>
         </div>
     </div>
 
 
 
-
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-4">
         <div class="container">
 
 
@@ -151,9 +150,10 @@
                 $statement->execute();
 
                 if ($statement->rowCount() > 0) {
+                    $delay = 0.1;
                     foreach ($statement->fetchAll() as $row) {
                 ?>
-                        <div class="strip-card">
+                        <div class="strip-card wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
                             <div class="strip-card-img">
                                 <img src="/content/img/team/<?php echo $row["img"]; ?>"
                                     alt="<?php echo htmlspecialchars($row["name"]); ?>" />
@@ -165,6 +165,7 @@
                             </div>
                         </div>
                 <?php
+                        $delay += 0.1; // Increase delay for next card
                     }
                 }
                 ?>
