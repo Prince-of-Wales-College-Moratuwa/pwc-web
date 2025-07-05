@@ -695,7 +695,7 @@ function calculateHouse() {
                 ?>
                         <div class="strip-card wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
                             <div class="strip-card-img">
-                                <img src="/content/img/img-about/administration/<?php echo $row["img"]; ?>"
+                                <img src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>"
                                     alt="<?php echo htmlspecialchars($row["name"]); ?>" />
                             </div>
                             <div class="strip-card-text">
