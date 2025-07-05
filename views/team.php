@@ -4,7 +4,9 @@
 <head>
     <title>Web Development Team</title>
     <?php
-        $page = 'about';
+    $page = 'about';
+    include '../database_connection.php';
+
     ?>
 
     <!-- Primary Meta Tags -->
@@ -32,6 +34,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <?php include 'includes/header.php'; ?>
+
+
     <style>
         .sports-page-header {
             background: linear-gradient(rgba(56, 24, 24, 0.7), rgba(56, 24, 24, 0.7)), url(content/img/bestweb/2024/bestweb-awards-ceremony-2024-2.webp);
@@ -43,9 +48,69 @@
         .sports-page-header-inner {
             background: rgba(15, 23, 43, .7);
         }
+
+        .strip-card {
+            display: flex;
+            align-items: stretch;
+            background: #f8f9fa;
+            padding: 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+        }
+
+        .strip-card-img {
+            flex-shrink: 0;
+            width: 140px;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .strip-card-img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .strip-card-text {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .strip-card-text h5 {
+            margin: 0 0 0.2rem 0;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .strip-card-text small {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 350px) {
+            .strip-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .strip-card-img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            .strip-card-img img {
+                height: auto;
+                width: 100%;
+            }
+        }
     </style>
 
-    <?php include 'includes/header.php'; ?>
 
 </head>
 
@@ -67,8 +132,8 @@
     <div class="container-xxl py-1">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <p class="mb-3">
-                <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://princeofwales.edu.lk">princeofwales.edu.lk</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://princeofwales.edu.lk/team">Cambrians ICT Society</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
-                Any unauthorized use is prohibited. All rights reserved. <br> The website's development was carried out by the dedicated team at Cambrians' ICT Society, <br> led by Nelitha Priyawansha as the Head of the Web Development Team. </p>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://princeofwales.edu.lk">princeofwales.edu.lk</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://princeofwales.edu.lk/team">Cambrians ICT Society</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
+            Any unauthorized use is prohibited. All rights reserved. <br> The website's development was carried out by the dedicated team at Cambrians' ICT Society, <br> led by Nelitha Priyawansha as the Head of the Web Development Team. </p>
         </div>
     </div>
 
@@ -79,197 +144,95 @@
         <div class="container">
 
 
-            <div class="row g-4 justify-content-center">
-                <!-- Team Member 1: Nelitha Vindinu Priyawansha (Developer) -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-member-card bg-light d-flex flex-column h-100">
-                        <div class="position-relative overflow-hidden image-container">
-                            <img class="img-fluid" loading="lazy" src="../content/img/team/nelitha.webp"
-                                alt="Nelitha Vindinu Priyawansha">
+            <div class="d-flex flex-column gap-4">
+                <?php
+                $query = "SELECT * FROM pwc_db_team";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+
+                if ($statement->rowCount() > 0) {
+                    foreach ($statement->fetchAll() as $row) {
+                ?>
+                        <div class="strip-card">
+                            <div class="strip-card-img">
+                                <img src="/content/img/team/<?php echo $row["img"]; ?>"
+                                    alt="<?php echo htmlspecialchars($row["name"]); ?>" />
+                            </div>
+                            <div class="strip-card-text">
+                                <small><?php echo $row["post"]; ?></small>
+                                <h4><?php echo $row["name"]; ?></h4>
+                                <small><?php echo $row["quali"]; ?></small>
+                            </div>
                         </div>
-                        <div class="text-center p-4 flex-grow-1">
-                            <h4 class="mb-4">Nelitha Vindinu Priyawansha</h4>
-                            <p><i class="fa fa-laptop-code text-primary me-2"></i>Developer</p>
-                            <p class="text-muted"><b>President</b> at Cambrians' ICT Society | <b>Cinematographer & Video Editor</b> at
-                                Cambrians' Media & Broadcasting Unit</p>
-                        </div>
-                        <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                            <a href="https://facebook.com/itsnelitha" class="me-2" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://instagram.com/itsnelitha" class="me-2" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/itsnelitha" class="me-2" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://itsnelitha.github.io/" target="_blank">
-                                <i class="fas fa-globe"></i>
-                            </a>
-                        </div>
+                <?php
+                    }
+                }
+                ?>
+            </div>
+        </div>
+
+
+        <div class="row mt-5 justify-content-center">
+            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div style="background-color: #f8d7da; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h5 style="color: #721c24;" class="mb-3">Media Partner</h5>
+                    <div class="mb-3"
+                        style="overflow: hidden; width: 150px; height: 100px; position: relative; margin: 0 auto;">
+                        <img src="/cmbu/images/logo%20red.webp" alt="CMBU Logo"
+                            style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 100%; height: auto;">
+                    </div>
+                    <h4 style="color: #721c24;"><strong>Cambrians' Media & Broadcasting Unit</strong></h4>
+   
+                    <div class="mt-3">
+                        <a href="https://facebook.com/cmbulive" target="_blank"
+                            style="margin: 0 10px; color: #800000;">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="https://instagram.com/cmbulive" target="_blank"
+                            style="margin: 0 10px; color: #800000;">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VanJvjFCMY0GGu2F6g3M" target="_blank"
+                            style="margin: 0 10px; color: #800000;">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://youtube.com/cmbulive" target="_blank"
+                            style="margin: 0 10px; color: #800000;">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
+                        <a href="https://princeofwales.edu.lk/cmbu" target="_blank"
+                            style="margin: 0 10px; color: #800000;">
+                            <i class="fas fa-globe fa-2x"></i>
+                        </a>
                     </div>
                 </div>
-
-                <!-- Team Member 2: Tharul Bandara (Photographer, Graphics Designer) -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-member-card bg-light d-flex flex-column h-100">
-                        <div class="position-relative overflow-hidden image-container">
-                            <img class="img-fluid" loading="lazy" src="../content/img/team/tharul.webp"
-                                alt="Tharul Bandara">
-                        </div>
-                        <div class="text-center p-4 flex-grow-1">
-                            <h4 class="mb-4">Tharul Bandara</h4>
-                            <p><i class="fa fa-camera text-primary me-2"></i>Photographer, <i
-                                    class="fa fa-paint-brush text-primary me-2"></i>Graphics Designer</p>
-                            <p class="text-muted"><b>Head of Creative Media</b> at Cambrians Media & Broadcasting Unit</p>
-                        </div>
-                        <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                            <a href="https://www.facebook.com/profile.php?id=100085498870782" class="me-2"
-                                target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/cozimher.t.boy/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 3: Nimsara Sankalpa (Graphics Designer) -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-member-card bg-light d-flex flex-column h-100">
-                        <div class="position-relative overflow-hidden image-container">
-                            <img class="img-fluid " loading="lazy" src="../content/img/team/nimsara.webp"
-                                alt="Nimsara Sankalpa">
-                        </div>
-                        <div class="text-center p-4 flex-grow-1">
-                            <h4 class="mb-4">Nimsara Sankalpa</h4>
-                            <p><i class="fa fa-paint-brush text-primary me-2"></i>Graphics Designer</p>
-                            <p class="text-muted">Member at Cambrians Media & Broadcasting Unit</p>
-                        </div>
-                        <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                     
-                            <a href="https://www.instagram.com/ni_msar.a/" class="me-2" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            <a href="https://www.linkedin.com/in/nimsara-sankalpa-92681a336/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 4: Kavinu Pasandul (Photographer) -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-member-card bg-light d-flex flex-column h-100">
-                        <div class="position-relative overflow-hidden image-container">
-                            <img class="img-fluid " loading="lazy" src="../content/img/team/kavinu.webp"
-                                alt="Kavinu Pasandul">
-                        </div>
-                        <div class="text-center p-4 flex-grow-1">
-                            <h4 class="mb-4">Kavinu Pasandul</h4>
-                            <p><i class="fa fa-camera text-primary me-2"></i>Photographer</p>
-                            <p class="text-muted">Committee Member at Cambrians Media & Broadcasting Unit</p>
-                        </div>
-                        <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                            <a href="https://www.facebook.com/PodiSmoka" class="me-2" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/underrated.skingod/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 5: Dasindu Nimnal (Photographer) -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-member-card bg-light d-flex flex-column h-100">
-                        <div class="position-relative overflow-hidden image-container">
-                            <img class="img-fluid " loading="lazy" src="../content/img/team/dasindu.webp"
-                                alt="Dasindu Nimnal">
-                        </div>
-                        <div class="text-center p-4 flex-grow-1">
-                            <h4 class="mb-4">Dasindu Nimnal</h4>
-                            <p><i class="fa fa-camera text-primary me-2"></i>Photographer</p>
-                            <p class="text-muted">Coordinator at Cambrians Media & Broadcasting Unit</p>
-                        </div>
-                        <div class="mt-auto w-100 d-flex justify-content-center mb-4">
-                            <a href="https://www.facebook.com/profile.php?id=100082846762501" class="me-2"
-                                target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/dasiyh.h/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Media Partner and Special Thanks Section -->
-            <div class="row mt-5 justify-content-center">
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <div style="background-color: #f8d7da; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <h5 style="color: #721c24;" class="mb-3">Media Partner</h5>
-                        <!-- CMBU Logo with Cropped Top and Bottom, Centered -->
+
+
+            <div class="col-12 text-center mt-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div style="background-color: #fff3cd; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h5 style="color: #856404;" class="mb-3">Special Thanks</h5>
+
+                    <div class="mb-3">
                         <div class="mb-3"
-                            style="overflow: hidden; width: 150px; height: 100px; position: relative; margin: 0 auto;">
-                            <img src="/cmbu/images/logo%20red.webp" alt="CMBU Logo"
-                                style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 100%; height: auto;">
-                        </div>
-                        <h4 style="color: #721c24;"><strong>Cambrians' Media & Broadcasting Unit</strong></h4>
-                        <!-- Social Media Icons -->
-                        <div class="mt-3">
-                            <a href="https://facebook.com/cmbulive" target="_blank"
-                                style="margin: 0 10px; color: #800000;">
-                                <i class="fab fa-facebook fa-2x"></i>
-                            </a>
-                            <a href="https://instagram.com/cmbulive" target="_blank"
-                                style="margin: 0 10px; color: #800000;">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                            <a href="https://whatsapp.com/channel/0029VanJvjFCMY0GGu2F6g3M" target="_blank"
-                                style="margin: 0 10px; color: #800000;">
-                                <i class="fab fa-whatsapp fa-2x"></i>
-                            </a>
-                            <a href="https://youtube.com/cmbulive" target="_blank"
-                                style="margin: 0 10px; color: #800000;">
-                                <i class="fab fa-youtube fa-2x"></i>
-                            </a>
-                            <a href="https://princeofwales.edu.lk/cmbu" target="_blank"
-                                style="margin: 0 10px; color: #800000;">
-                                <i class="fas fa-globe fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-12 text-center mt-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div style="background-color: #fff3cd; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <h5 style="color: #856404;" class="mb-3">Special Thanks</h5>
-
-                        <div class="mb-3">
-                            <div class="mb-3"
                             style="overflow: hidden; width: 150px; height: 100px; position: relative; margin: 0 auto;">
                             <img src="/content/img/team/cits.webp" alt="CITS Logo"
                                 style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 100%; height: auto;">
                         </div>
-                            <h4 style="color: #856404; "><strong>Cambrians' ICT Society</strong></h4>
-                        </div>
-
-                        <hr style="border: 1px solid #856404; width: 50%; margin: 20px auto;">
-
-                        <h4 style="color: #856404;"><strong>Mr. Chamara Jeewantha, Mrs. Sharangika Perera</strong></h4>
+                        <h4 style="color: #856404; "><strong>Cambrians' ICT Society</strong></h4>
                     </div>
-                </div>
 
+                    <hr style="border: 1px solid #856404; width: 50%; margin: 20px auto;">
+
+                    <h4 style="color: #856404;"><strong>Mr. Chamara Jeewantha, Mrs. Sharangika Perera</strong></h4>
+                </div>
             </div>
 
-
         </div>
+
+
+    </div>
     </div>
 
     <div class="container-lg my-3">
@@ -294,8 +257,8 @@
                     significant achievement for our team. The event recognized the dedication, creativity, and
                     innovation behind the finest websites in the country, and this milestone reflects our commitment to
                     digital excellence.
-                    <p><i class="fa fa-calendar text-primary me-2"></i>Date: <b>14th August 2024</b></p>
-                    <p><i class="fa fa-map-marker text-primary me-2"></i>Location: <b>Cinnamon Grand Colombo</b></p>
+                <p><i class="fa fa-calendar text-primary me-2"></i>Date: <b>14th August 2024</b></p>
+                <p><i class="fa fa-map-marker text-primary me-2"></i>Location: <b>Cinnamon Grand Colombo</b></p>
                 </p>
                 <a class="btn btn-primary py-3 px-5 mt-2"
                     href="blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024">Read More</a>
@@ -320,11 +283,11 @@
                     ceremony, a showcase of innovative features, and heartfelt acknowledgments to mentors and
                     supporters. Captured moments of joy and teamwork highlight the dedication behind this achievement,
                     marking a new chapter in our digital journey.
-                    <p><i class="fa fa-calendar text-primary me-2"></i>Date: <b>15th September 2023</b></p>
-                    <p><i class="fa fa-map-marker text-primary me-2"></i>Location: <b>School Auditorium</b></p>
+                <p><i class="fa fa-calendar text-primary me-2"></i>Date: <b>15th September 2023</b></p>
+                <p><i class="fa fa-map-marker text-primary me-2"></i>Location: <b>School Auditorium</b></p>
                 </p>
                 <a class="btn btn-primary py-3 px-5 mt-2"
-                href="blog/official-website-launch">Read More</a>
+                    href="blog/official-website-launch">Read More</a>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
                 <div class="position-relative h-100">
@@ -342,6 +305,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <?php include 'includes/footer.php'; ?>
+
 </body>
 
 </html>
