@@ -49,6 +49,67 @@
         .about-page-header-inner {
             background: rgba(15, 23, 43, .7);
         }
+
+         .strip-card {
+            display: flex;
+            align-items: stretch;
+            background: #f8f9fa;
+            padding: 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+        }
+
+        .strip-card-img {
+            flex-shrink: 0;
+            width: 140px;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .strip-card-img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .strip-card-text {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .strip-card-text h5 {
+            margin: 0 0 0.2rem 0;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .strip-card-text small {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 350px) {
+            .strip-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .strip-card-img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            .strip-card-img img {
+                height: auto;
+                width: 100%;
+            }
+        }
     </style>
 
 </head>
@@ -202,8 +263,6 @@ if ($currentDate < $birthday) {
 
                 <?php
 
-https://dash.elfsight.com/
-
 $currentDate = date('d');
 //$currentDate = 13;
 
@@ -235,7 +294,6 @@ if ($currentDate >= 1 && $currentDate <= 5) {
     echo 'Not Available';
 }
 ?>
-
 
 
             </div>
@@ -535,22 +593,10 @@ function calculateHouse() {
                 <strong style="font-size: 2.5rem;">${house.name}</strong> House!
             </div>`;
         
-        triggerConfetti();
     }, 2500);
 }
 
-function triggerConfetti() {
-    const confetti = document.createElement("div");
-    confetti.innerHTML = "🎊🎊🎊";
-    confetti.style.position = "fixed";
-    confetti.style.top = "10%";
-    confetti.style.left = "50%";
-    confetti.style.transform = "translateX(-50%)";
-    confetti.style.fontSize = "2rem";
-    confetti.style.animation = "fadeOut 2s ease-out";
-    document.body.appendChild(confetti);
-    setTimeout(() => confetti.remove(), 2000);
-}
+
 </script>
 
 <style>
@@ -559,18 +605,16 @@ function triggerConfetti() {
     100% { opacity: 0; }
 }
 
-/* Center the modal content in the center of the screen */
 #housePopup .modal-dialog {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 600px; /* Increased width */
+    max-width: 600px; 
     width: 100%;
-    height: auto; /* Adjust height to fit content */
+    height: auto; 
 }
 
-/* Optional: Styling for the button */
 #houseForm .btn {
     background-color: #800000;
     color: white;
@@ -587,56 +631,39 @@ function triggerConfetti() {
                 <h1 class="mb-5">ADMINISTRATION</h1>
             </div>
 
+            <div class="d-flex flex-column gap-4">
+                <?php
+                $query = "SELECT * FROM about_school_administration LIMIT 4";
+                $statement = $connect->prepare($query);
+                $statement->execute();
 
-            <div class="row g-4">
-
-                <?php 
-
-$query = "SELECT * FROM about_school_administration";
-
-$statement = $connect->prepare($query);
-
-$statement->execute();
-
-$limit = 4;
-$rowCount = 0;
-
-if($statement->rowCount() > 0)
-{
-    foreach ($statement->fetchAll() as $row) {
-
-        $rowCount++;
-    
-        ?>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid"
-                                src="/content/img/img-about/administration/<?php echo $row["img"]; ?>"
-                                alt="<?php echo $row["name"]; ?>" style="width: auto;">
+                if ($statement->rowCount() > 0) {
+                    $delay = 0.1;
+                    foreach ($statement->fetchAll() as $row) {
+                ?>
+                        <div class="strip-card wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
+                            <div class="strip-card-img">
+                                <img src="/content/img/img-about/administration/<?php echo $row["img"]; ?>"
+                                    alt="<?php echo htmlspecialchars($row["name"]); ?>" />
+                            </div>
+                            <div class="strip-card-text">
+                                <small><?php echo htmlspecialchars($row["post"]); ?></small>
+                                <h5><?php echo htmlspecialchars($row["name"]); ?></h5>
+                                <small><?php echo htmlspecialchars($row["quali"]); ?></small>
+                            </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0"><?php echo $row["name"]; ?></h5>
-                            <small><?php echo $row["post"]; ?>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-
-                <?php 
-                if ($rowCount >= $limit) {
-         
-                    break;
+                <?php
+                        $delay += 0.1;
+                    }
                 }
-					}
-		}	
-        ?>
+                ?>
+            </div>
 
+            
+<br>
                 <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="about/school-administration"
                         data-wow-delay="0.1s">View All</a></center>
 
-            </div>
 
         </div>
     </div>
@@ -656,49 +683,33 @@ if($statement->rowCount() > 0)
 
             <div class="row g-4">
 
-                <?php 
+                <div class="d-flex flex-column gap-4">
+                <?php
+                $query = "SELECT * FROM about_prefect_topboard LIMIT 1";
+                $statement = $connect->prepare($query);
+                $statement->execute();
 
-$query = "SELECT * FROM about_prefect_topboard";
-
-$statement = $connect->prepare($query);
-
-$statement->execute();
-
-$limit = 4;
-$rowCount = 0;
-
-if($statement->rowCount() > 0)
-{
-    foreach ($statement->fetchAll() as $row) {
-
-        $rowCount++;
-    
-        ?>
-                <center>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item bg-light">
-                            <div class="overflow-hidden">
-                                <img class="img-fluid" src="/content/img/img-about/prefects/<?php echo $row["img"]; ?>"
-                                    alt="Deputy Head Prefect" style="width: auto;">
+                if ($statement->rowCount() > 0) {
+                    $delay = 0.1;
+                    foreach ($statement->fetchAll() as $row) {
+                ?>
+                        <div class="strip-card wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
+                            <div class="strip-card-img">
+                                <img src="/content/img/img-about/administration/<?php echo $row["img"]; ?>"
+                                    alt="<?php echo htmlspecialchars($row["name"]); ?>" />
                             </div>
-
-                            <div class="text-center p-4">
-                                <h5 class="mb-0"><?php echo $row["name"]; ?></h5>
-                                <small><?php echo $row["post"]; ?></small>
+                            <div class="strip-card-text">
+                                <small><?php echo htmlspecialchars($row["post"]); ?></small>
+                                <h5><?php echo htmlspecialchars($row["name"]); ?></h5>
                             </div>
                         </div>
-                    </div>
-                </center>
-
-                <?php 
-                if ($rowCount >= $limit) {
-         
-                    break;
+                <?php
+                        $delay += 0.1;
+                    }
                 }
-					}
-		}	
-        ?>
-
+                ?>
+            </div>
+<br>
                 <center><a class="btn btn-primary py-3 px-5 mt-2 wow zoomIn" href="clubs/prefects-guild"
                         data-wow-delay="0.1s">Explore Prefects Guild</a></center>
 
