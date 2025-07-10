@@ -18,13 +18,7 @@ $stmt->execute(array(':id' => (int)$_GET['id']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (count($_POST) > 0) {
-    $sql = "UPDATE about_school_administration SET name = :name, post = :post, img = :img WHERE id = :id";
-    $params = array(
-        ':name' => $_POST['name'],
-        ':post' => $_POST['post'],
-        ':img' => '',
-        ':id' => (int)$_GET['id'],
-    );
+    $imgValue = '';
 
     if (!empty($_FILES['image']['name'])) {
         $uploadDirectory = '../content/img/img-about/administration/';
@@ -32,11 +26,28 @@ if (count($_POST) > 0) {
         $uploadFilePath = $uploadDirectory . $uploadedFileName;
 
         if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFilePath)) {
-            $params[':img'] = $uploadedFileName;
+            $imgValue = $uploadedFileName;
         } else {
             $message .= "<script>alert('Error uploading the image');</script>";
+            // Keep existing image if upload fails
+            $imgValue = !empty($row['img']) ? $row['img'] : 'default.webp';
+        }
+    } else {
+        // No new image uploaded
+        if (!empty($row['img'])) {
+            $imgValue = $row['img'];
+        } else {
+            $imgValue = 'default.webp';
         }
     }
+
+    $sql = "UPDATE about_school_administration SET name = :name, post = :post, img = :img WHERE id = :id";
+    $params = array(
+        ':name' => $_POST['name'],
+        ':post' => $_POST['post'],
+        ':img' => $imgValue,
+        ':id' => (int)$_GET['id'],
+    );
 
     try {
         $stmt = $connect->prepare($sql);
@@ -97,22 +108,6 @@ if (count($_POST) > 0) {
                     </div>
                 </div>
 
-                <script>
-                    function checkFileType() {
-                        const fileInput = document.getElementById('featured_img');
-                        const fileMessage = document.getElementById('fileMessage');
-
-                        const allowedExtensions = /(\.webp)$/i;
-
-                        if (!allowedExtensions.test(fileInput.value)) {
-                            fileInput.value = '';
-                            fileMessage.innerHTML = 'Please upload a valid .webp file.';
-                        } else {
-                            fileMessage.innerHTML = '';
-                        }
-                    }
-                </script>
-
                 <div class="mt-4 mb-3 text-center">
                     <input type="submit" name="submit" class="btn btn-success" value="Edit" />
                 </div>
@@ -120,6 +115,25 @@ if (count($_POST) > 0) {
         </div>
     </div>
 </div>
+
+<script>
+function checkFileType() {
+    var fileInput = document.getElementById('featured_img');
+    var fileMessage = document.getElementById('fileMessage');
+    var allowedExtensions = /\.webp$/i;
+
+    // Only validate if a file is selected
+    if (fileInput.value) {
+        if (!allowedExtensions.test(fileInput.value)) {
+            fileMessage.innerHTML = 'Please upload a valid .webp file.';
+            fileInput.value = '';
+            return false;
+        }
+    }
+    fileMessage.innerHTML = '';
+    return true;
+}
+</script>
 
 <?php
 include 'admin-footer.php';
