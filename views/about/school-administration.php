@@ -102,6 +102,22 @@
     </style>
 </head>
 
+<?php
+$lastUpdatedText = "Unavailable";
+
+$query = "SELECT UPDATE_TIME 
+          FROM information_schema.tables 
+          WHERE TABLE_SCHEMA = 'pwc_db' 
+            AND TABLE_NAME = 'about_school_administration'";
+
+$result = mysqli_query($db, $query);
+$row = mysqli_fetch_assoc($result);
+
+if ($row && $row['UPDATE_TIME']) {
+    $lastUpdatedText = date("F j, Y", strtotime($row['UPDATE_TIME']));
+}
+?>
+
 <body>
     <div class="container-xxl py-5">
         <div class="container">
@@ -109,7 +125,7 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">School</h6>
                 <h1 class="mb-3">ADMINISTRATION</h1>
                 <p class="text-muted fst-italic mt-2">
-                    🛠️ New changes and updates to the administration section will be published here soon. Stay tuned!
+                    Last Updated: <?php echo $lastUpdatedText; ?>
                 </p>
             </div>
 

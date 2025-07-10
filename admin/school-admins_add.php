@@ -51,9 +51,8 @@ include 'admin-header.php';
 
 						<div class="col-md-6">
 							<div class="mb-3">
-								<label class="form-label">post</label>
-								<input type="text" name="post" id="post" class="form-control"
-									oninput="this.value = this.value.replace(/\s+/g, '-').toLowerCase()" />
+								<label class="form-label">Post</label>
+								<input type="text" name="post" id="post" class="form-control" />
 							</div>
 						</div>
 
