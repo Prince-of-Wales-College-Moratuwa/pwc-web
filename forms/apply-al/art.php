@@ -92,13 +92,12 @@
                         <select id="subject" name="sart1" style="min-height:30px;">
                             <option value="None"> Category 1</option>
 
-                            <option value="Sinhala"> Sinhala </option>
-                            <option value="Dancing-Indigenous">Dancing-Indigenous</option>
-                            <option value="Art">Art</option>
-                            <option value="Music Oriental">Music Oriental</option>
-                            <option value="Drama & Theatre">Drama & Theatre</option>
-                            <option value="Japanese Language">Japanese Language</option>
-                            <option value="Political Science">Political Science</option>
+                            <option value="Buddhist Civilization"> Buddhist Civilization </option>
+                            <option value="Logic">Logic and Scientific Method</option>
+                            <option value="Economics">Economics</option>
+                            <option value="French">French Language</option>
+                            <option value="Drama & Theatre">Drama and Theatre</option>
+                           
                         </select> </div>
                     <div class="col-sm-1">&nbsp;</div>
 
@@ -106,10 +105,11 @@
                         <select id="subject" name="sart2" style="min-height:30px;">
                             <option value="None"> Category 2</option>
 
-                            <option value="Media & Communication Studies"> Media & Communication Studies </option>
+                            <option value="Political Science"> Political Science</option>
                             <option value="ICT (Sinhala Medium)"> ICT (Sinhala Medium) </option>
                             <option value="ICT (English Medium)"> ICT (English Medium) </option>
                             <option value="Geography"> Geography </option>
+							<option value="Chinese"> Chinese Language </option>
                         </select>
                     </div>
                     <div class="col-sm-1">&nbsp;</div>
@@ -117,10 +117,12 @@
                     <div class="col-sm-2">
                         <select id="subject" name="sart3" style="min-height:30px;">
                             <option value="None"> Category 3</option>
-                            <option value="Economics"> Economics </option>
-                            <option value="Chinese"> Chinese </option>
-                            <option value="Logic and Scientific Method"> Logic and Scientific Method </option>
-                            <option value="Buddhist Civilization"> Buddhist Civilization </option>
+                            <option value="Media"> Communication and Media Studies </option>
+                            <option value="Art"> Art </option>
+                            <option value="Eastern Music"> Eastern Music </option>
+                            <option value="Dancing"> Dancing-Indegenious </option>
+							 <option value="Sinhala"> Sinhala </option>
+							 <option value="Japanese"> Japanese Language </option>
                         </select>
                     </div>
                     
