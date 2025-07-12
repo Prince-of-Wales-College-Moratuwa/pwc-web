@@ -38,7 +38,7 @@
 
 <?php
 $currentDate = new DateTime();
-$deadlineDate = new DateTime("2025-10-09");
+$deadlineDate = new DateTime("2025-07-28");
 
 if ($currentDate < $deadlineDate) {
     echo '<div class="container-xxl py-5">';
@@ -51,8 +51,8 @@ if ($currentDate < $deadlineDate) {
     echo '        <div class="form-group wow fadeInUp" data-wow-delay="0.1s">';
     echo '<div class="alert alert-danger">';
     echo '<ul>';
-    echo '<li>The closing date for Prince of Wales College students to apply is <b>Friday, 4 October</b>.</li>';
-    echo '<li>The deadline for out-of-school applicants is <b>Wednesday, October 9</b>.</li>';
+    echo '<li>The closing date for Prince of Wales College students to apply is <b>Monday, July 28</b>.</li>';
+    echo '<li>The deadline for out-of-school applicants is <b>Monday, July 28</b>.</li>';
     echo '</ul>';
     echo '</div>';
     echo '            <p> 1. First Select the relevant stream you wished to apply.</p>';
