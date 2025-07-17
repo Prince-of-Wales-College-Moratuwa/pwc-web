@@ -101,6 +101,12 @@ and open the template in the editor.
                 <select id="subject" name="stech" style="min-height:30px;">
                         <option value="SFT / ET / ICT (Sinhala Medium)">SFT / ET / ICT (Sinhala Medium)</option>
                         <option value="SFT / ET / ICT (English Medium)">SFT / ET / ICT (English Medium)</option>
+                        <option value="SFT / ET / Media">SFT / ET / Communication and Media Studies</option>
+                        <option value="SFT / ET / Art">SFT / ET / Art</option>
+                        <option value="SFT / ET / Eastern Music">SFT / ET / Eastern Music</option>
+                        <option value="SFT / ET / Dancing">SFT / ET / Dancing</option>
+                        <option value="SFT / ET / Sinhala">SFT / ET / Sinhala</option>
+                        <option value="SFT / ET / Japanese">SFT / ET / Japanese</option>
                     </select>
                 </div>
 

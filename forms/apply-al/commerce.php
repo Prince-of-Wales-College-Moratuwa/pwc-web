@@ -104,6 +104,7 @@ and open the template in the editor.
                         <option value="Accounting / Economics / Business Statistics"> Accounting / Economics / Business Statistics </option>
                         <option value="Accounting / Economics / ICT (Sinhala Medium)"> Accounting / Economics / ICT (Sinhala Medium)</option>
                         <option value="Accounting / Economics / ICT (English Medium)"> Accounting / Economics / ICT (English Medium)</option>
+                        <option value="Accounting (Eng) / Economics / ICT (English Medium)"> Accounting (English Medium)/ Economics / ICT (English Medium)</option>
                     </select>
                 </div>
 
