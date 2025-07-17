@@ -28,27 +28,27 @@
     animation: floatUpDown 2.5s ease-in-out infinite;
     display: block;
     max-width: 100%;
-    width: 180px;
+    width: 150px;
     height: auto;
   }
 
   #bestweb-logo .floating-logo {
     width: 100%;
     height: auto;
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 150px;
+    max-height: 150px;
     object-fit: contain;
     display: block;
   }
 
   @media (max-width: 576px) {
     #bestweb-logo {
-      width: 140px;
-      max-width: 140px;
+      width: 110px;
+      max-width: 110px;
     }
     #bestweb-logo .floating-logo {
-      max-width: 140px;
-      max-height: 140px;
+      max-width: 110px;
+      max-height: 110px;
     }
   }
 
