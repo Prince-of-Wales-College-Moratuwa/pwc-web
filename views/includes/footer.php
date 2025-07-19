@@ -254,6 +254,9 @@
           <a href="https://princeofwales.edu.lk/blog/prince-of-wales-college-website-wins-silver-at-bestweblk-2024" title="Best School Website - Silver Award at Bestweb.LK" target="_blank" rel="noopener noreferrer" class="mb-2">
             <img src="/content/img/bestweb/Silver-Best School Website.webp" alt="Best School Website - Silver Award" width="120" loading="lazy" decoding="async" style="border-radius:6px;">
           </a>
+          <a href="https://topweb.lk/winners/princeofwales-edu/" title="TopWebLK June 2025" target="_blank" rel="noopener noreferrer" class="mb-2">
+            <img src="/content/img/bestweb/topweb2025june.webp" alt="TopWebLK June 2025" width="80" loading="lazy" decoding="async" style="border-radius:6px;">
+          </a>
           <a href="https://topweb.lk/may2024/princeofwales-edu/" title="TopWebLK May 2024" target="_blank" rel="noopener noreferrer" class="mb-2">
             <img src="/content/img/bestweb/TopWebMay-150x150.jpg" alt="TopWebLK May 2024" width="80" loading="lazy" decoding="async" style="border-radius:6px;">
           </a>
