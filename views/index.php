@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta name="google-site-verification" content="jYZeftnqpxLLjE_8cKEhxIWBAB0ZD5EGWEF2z-3maLU" />
+<!-- නමෝ බුද්ධාය! -->
 
+<head>
     <?php
     $page = 'home';
     include '../sitemap-gen.php';
@@ -16,7 +16,6 @@
 
     <title>Prince of Wales' College, Moratuwa</title>
 
-    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Prince of Wales' College, Moratuwa" />
@@ -26,7 +25,6 @@
         content="prince of wales college, prince of wales college moratuwa, වේල්ස් කුමර විදුහල, prince of wales college sri lanka, charles henry de soyza, prince of wales college moratuwa website, prince of wales college moratuwa contact number, prince of wales college moratuwa logo, prince of wales college moratuwa address, prince of wales college moratuwa big match, prince of wales college moratuwa sri lanka, prince of wales college moratuwa principal" />
     <meta name="author" content="Cambrians' ICT Society" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://princeofwales.edu.lk" />
     <meta property="og:title" content="Prince of Wales' College, Moratuwa" />
@@ -34,7 +32,6 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="og:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
-    <!-- Twitter / WA / TG -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://princeofwales.edu.lk" />
     <meta property="twitter:title" content="Prince of Wales' College, Moratuwa" />
@@ -42,13 +39,14 @@
         content="Explore Prince of Wales College: Your gateway to quality education and a vibrant school community. Discover programs, resources, and more." />
     <meta property="twitter:image" content="https://princeofwales.edu.lk/content/img/img-home/header-main-pwc.webp" />
 
-    <!-- AI Meta Tags -->
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
     <meta name="revisit-after" content="1 days">
     <meta name="rating" content="general">
     <meta name="distribution" content="global">
+
+    <meta name="google-site-verification" content="jYZeftnqpxLLjE_8cKEhxIWBAB0ZD5EGWEF2z-3maLU" />
 
 
 
